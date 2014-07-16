@@ -195,40 +195,40 @@
 </UsingSymbols>
 <Body>
 <SentSignals>
+<SignalReference id="SIG15"/>
 <SignalReference id="SIG22"/>
+<SignalReference id="SIG8"/>
+<SignalReference id="SIG29"/>
+<SignalReference id="SIG4"/>
+<SignalReference id="SIG9"/>
+<SignalReference id="SIG2"/>
+<SignalReference id="SIG1"/>
+<SignalReference id="SIG24"/>
+<SignalReference id="SIG23"/>
+<SignalReference id="SIG30"/>
 <SignalReference id="SIG25"/>
 <SignalReference id="SIG6"/>
-<SignalReference id="SIG4"/>
 <SignalReference id="SIG26"/>
-<SignalReference id="SIG2"/>
 <SignalReference id="SIG7"/>
-<SignalReference id="SIG30"/>
-<SignalReference id="SIG15"/>
-<SignalReference id="SIG8"/>
-<SignalReference id="SIG23"/>
-<SignalReference id="SIG9"/>
-<SignalReference id="SIG1"/>
-<SignalReference id="SIG29"/>
-<SignalReference id="SIG24"/>
 </SentSignals>
 <ReceivedSignals>
-<SignalReference id="SIG15"/>
-<SignalReference id="SIG10"/>
-<SignalReference id="SIG19"/>
-<SignalReference id="SIG14"/>
-<SignalReference id="SIG20"/>
-<SignalReference id="SIG13"/>
-<SignalReference id="SIG3"/>
-<SignalReference id="SIG17"/>
 <SignalReference id="SIG11"/>
-<SignalReference id="SIG21"/>
-<SignalReference id="SIG18"/>
 <SignalReference id="SIG27"/>
 <SignalReference id="SIG2"/>
-<SignalReference id="SIG12"/>
+<SignalReference id="SIG19"/>
 <SignalReference id="SIG28"/>
+<SignalReference id="SIG3"/>
 <SignalReference id="SIG5"/>
 <SignalReference id="SIG16"/>
+<SignalReference id="SIG12"/>
+<SignalReference id="SIG17"/>
+<SignalReference id="SIG10"/>
+<SignalReference id="SIG14"/>
+<SignalReference id="SIG18"/>
+<SignalReference id="SIG13"/>
+<SignalReference id="SIG20"/>
+<SignalReference id="SIG15"/>
+<SignalReference id="SIG21"/>
 </ReceivedSignals>
 <Transitions>
 <Transition statesExcluded="FALSE" priorityInputNames="">
@@ -265,10 +265,6 @@
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
 <StateReference itemId="ITEM5"/>
-<SymbolReference symbolId="SYMB1542"/>
-</Transition>
-<Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM5"/>
 <SymbolReference symbolId="SYMB1547"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
@@ -278,14 +274,6 @@
 <Transition statesExcluded="FALSE" priorityInputNames="">
 <StateReference itemId="ITEM26"/>
 <SymbolReference symbolId="SYMB1553"/>
-</Transition>
-<Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM4"/>
-<SymbolReference symbolId="SYMB34"/>
-</Transition>
-<Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM4"/>
-<SymbolReference symbolId="SYMB35"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
 <StateReference itemId="ITEM25"/>
@@ -302,6 +290,18 @@
 <Transition statesExcluded="FALSE" priorityInputNames="">
 <StateReference itemId="ITEM5"/>
 <SymbolReference symbolId="SYMB1490"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM4"/>
+<SymbolReference symbolId="SYMB34"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM4"/>
+<SymbolReference symbolId="SYMB35"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM5"/>
+<SymbolReference symbolId="SYMB1542"/>
 </Transition>
 </Transitions>
 </Body>
