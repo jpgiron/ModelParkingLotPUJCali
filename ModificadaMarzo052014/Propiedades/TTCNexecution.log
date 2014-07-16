@@ -1,0 +1,224 @@
+
+
+==============================
+project c:\documents and settings\virtual machine\mis documentos\dropbox\td_jpgr\version modificada\modificadamarzo052014\lotparkingsystem.rdp
+10/03/14 at 21:02 : Simulation started
+10/03/14 at 21:03 : simulation ended
+
+
+==============================
+project c:\documents and settings\virtual machine\mis documentos\dropbox\td_jpgr\version modificada\modificadamarzo052014\lotparkingsystem.rdp
+10/03/14 at 21:05 : Simulation started
+10/03/14 at 21:05 : module 't_SystemParking_LCtrl' testcase 'tc_CreatingCtrl' verdict 'error'
+                    control part verdict 'error'
+10/03/14 at 21:05 : simulation ended
+
+
+==============================
+project c:\documents and settings\virtual machine\mis documentos\dropbox\td_jpgr\version modificada\modificadamarzo052014\lotparkingsystem.rdp
+10/03/14 at 21:08 : Simulation started
+10/03/14 at 21:10 : module 't_SystemParking_LCtrl' testcase 'tc_SetTotalPlaces' verdict 'error'
+10/03/14 at 21:11 : simulation stopped
+10/03/14 at 21:11 : simulation ended
+
+
+==============================
+project c:\documents and settings\virtual machine\mis documentos\dropbox\td_jpgr\version modificada\modificadamarzo052014\lotparkingsystem.rdp
+10/03/14 at 21:13 : Simulation started
+10/03/14 at 21:14 : simulation ended
+
+
+==============================
+project c:\documents and settings\virtual machine\mis documentos\dropbox\td_jpgr\version modificada\modificadamarzo052014\lotparkingsystem.rdp
+10/03/14 at 21:31 : Simulation started
+10/03/14 at 21:31 : simulation ended
+
+
+==============================
+project c:\documents and settings\virtual machine\mis documentos\dropbox\td_jpgr\version modificada\modificadamarzo052014\lotparkingsystem.rdp
+10/03/14 at 21:32 : Simulation started
+10/03/14 at 21:33 : simulation ended
+
+
+==============================
+project c:\documents and settings\virtual machine\mis documentos\dropbox\td_jpgr\version modificada\modificadamarzo052014\lotparkingsystem.rdp
+10/03/14 at 21:37 : Simulation started
+10/03/14 at 21:38 : simulation ended
+
+
+==============================
+project c:\documents and settings\virtual machine\mis documentos\dropbox\td_jpgr\version modificada\modificadamarzo052014\lotparkingsystem.rdp
+10/03/14 at 21:38 : Simulation started
+10/03/14 at 21:41 : simulation ended
+
+
+==============================
+project c:\documents and settings\virtual machine\mis documentos\dropbox\td_jpgr\version modificada\modificadamarzo052014\lotparkingsystem.rdp
+10/03/14 at 21:42 : Simulation started
+10/03/14 at 21:42 : module 't_SystemParking' testcase 'tc_CreatingCtrl' verdict 'pass'
+10/03/14 at 21:42 : simulation ended
+
+
+==============================
+project c:\documents and settings\virtual machine\mis documentos\dropbox\td_jpgr\version modificada\modificadamarzo052014\lotparkingsystem.rdp
+10/03/14 at 21:44 : Simulation started
+10/03/14 at 21:44 : module 't_SystemParking' testcase 'tc_CreatingCtrl' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 21:44 : module 't_SystemParking' testcase 'tc_CreatingCtrl' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 21:44 : simulation ended
+
+
+==============================
+project c:\documents and settings\virtual machine\mis documentos\dropbox\td_jpgr\version modificada\modificadamarzo052014\lotparkingsystem.rdp
+10/03/14 at 21:46 : Simulation started
+10/03/14 at 21:46 : module 't_SystemParking' testcase 'tc_CreatingCtrl' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 21:46 : module 't_SystemParking' testcase 'tc_EntryCarZone' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 21:47 : simulation ended
+
+
+==============================
+project c:\documents and settings\virtual machine\mis documentos\dropbox\td_jpgr\version modificada\modificadamarzo052014\lotparkingsystem.rdp
+10/03/14 at 21:48 : Simulation started
+10/03/14 at 21:48 : module 't_SystemParking' testcase 'tc_CreatingCtrl' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 21:48 : module 't_SystemParking' testcase 'tc_EntryCarZone' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 21:48 : module 't_SystemParking' testcase 'tc_OutCarZone' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 21:48 : module 't_SystemParking' testcase 'tc_OutCarZone' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 21:48 : module 't_SystemParking' testcase 'tc_OutCarZone' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 21:48 : module 't_SystemParking' testcase 'tc_CreatingCtrl' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 21:48 : module 't_SystemParking' testcase 'tc_EntryCarZone' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 21:48 : module 't_SystemParking' testcase 'tc_OutCarZone' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 21:48 : module 't_SystemParking' testcase 'tc_OutCarZone' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 21:48 : module 't_SystemParking' testcase 'tc_OutCarZone' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 21:50 : module 't_SystemParking' testcase 'tc_EntryCarZone' verdict 'error'
+10/03/14 at 21:54 : simulation ended
+
+
+==============================
+project c:\documents and settings\virtual machine\mis documentos\dropbox\td_jpgr\version modificada\modificadamarzo052014\lotparkingsystem.rdp
+10/03/14 at 21:56 : Simulation started
+10/03/14 at 21:56 : module 't_SystemParking' testcase 'tc_CreatingCtrl' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 21:56 : module 't_SystemParking' testcase 'tc_EntryCarZone' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 21:56 : module 't_SystemParking' testcase 'tc_OutCarZone' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 21:56 : module 't_SystemParking' testcase 'tc_OutCarZone' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 21:56 : module 't_SystemParking' testcase 'tc_OutCarZone' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 21:57 : module 't_SystemParking' testcase 'tc_CreatingCtrl' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 21:57 : module 't_SystemParking' testcase 'tc_EntryCarZone' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 21:57 : module 't_SystemParking' testcase 'tc_OutCarZone' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 21:57 : module 't_SystemParking' testcase 'tc_OutCarZone' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 21:57 : module 't_SystemParking' testcase 'tc_OutCarZone' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 21:58 : module 't_SystemParking' testcase 'tc_CreatingCtrl' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 21:58 : module 't_SystemParking' testcase 'tc_EntryCarZone' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 21:58 : module 't_SystemParking' testcase 'tc_OutCarZone' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 21:58 : module 't_SystemParking' testcase 'tc_OutCarZone' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 21:58 : module 't_SystemParking' testcase 'tc_OutCarZone' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 21:59 : module 't_SystemParking' testcase 'tc_CreatingCtrl' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 21:59 : module 't_SystemParking' testcase 'tc_EntryCarZone' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 21:59 : module 't_SystemParking' testcase 'tc_OutCarZone' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 21:59 : module 't_SystemParking' testcase 'tc_OutCarZone' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 21:59 : module 't_SystemParking' testcase 'tc_OutCarZone' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 22:00 : simulation ended
+
+
+==============================
+project c:\documents and settings\virtual machine\mis documentos\dropbox\td_jpgr\version modificada\modificadamarzo052014\lotparkingsystem.rdp
+10/03/14 at 22:04 : Simulation started
+10/03/14 at 22:05 : module 't_SystemParking' testcase 'tc_CreatingCtrl' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 22:06 : simulation ended
+
+
+==============================
+project c:\documents and settings\virtual machine\mis documentos\dropbox\td_jpgr\version modificada\modificadamarzo052014\lotparkingsystem.rdp
+10/03/14 at 22:06 : Simulation started
+10/03/14 at 22:06 : simulation ended
+
+
+==============================
+project c:\documents and settings\virtual machine\mis documentos\dropbox\td_jpgr\version modificada\modificadamarzo052014\lotparkingsystem.rdp
+10/03/14 at 22:08 : Simulation started
+10/03/14 at 22:08 : module 't_SystemParking' testcase 'tc_CreatingCtrl' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 22:09 : module 't_SystemParking' testcase 'tc_EntryCarZone' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 22:09 : module 't_SystemParking' testcase 'tc_OutCarZone' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 22:09 : module 't_SystemParking' testcase 'tc_OutCarZone' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 22:09 : module 't_SystemParking' testcase 'tc_OutCarZone' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 22:09 : simulation ended
+
+
+==============================
+project c:\documents and settings\virtual machine\mis documentos\dropbox\td_jpgr\version modificada\modificadamarzo052014\lotparkingsystem.rdp
+10/03/14 at 22:10 : Simulation started
+10/03/14 at 22:10 : module 't_SystemParking' testcase 'tc_CreatingCtrl' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 22:10 : module 't_SystemParking' testcase 'tc_EntryCarZone' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 22:10 : module 't_SystemParking' testcase 'tc_OutCarZone' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 22:10 : module 't_SystemParking' testcase 'tc_OutCarZone' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 22:10 : module 't_SystemParking' testcase 'tc_OutCarZone' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 22:11 : module 't_SystemParking' testcase 'tc_CreatingCtrl' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 22:11 : module 't_SystemParking' testcase 'tc_EntryCarZone' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 22:11 : module 't_SystemParking' testcase 'tc_OutCarZone' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 22:11 : module 't_SystemParking' testcase 'tc_OutCarZone' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 22:11 : module 't_SystemParking' testcase 'tc_OutCarZone' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 22:12 : simulation ended
+
+
+==============================
+project c:\documents and settings\virtual machine\mis documentos\dropbox\td_jpgr\version modificada\modificadamarzo052014\lotparkingsystem.rdp
+10/03/14 at 22:15 : Simulation started
+10/03/14 at 22:16 : module 't_SystemParking' testcase 'tc_CreatingCtrl' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 22:16 : module 't_SystemParking' testcase 'tc_EntryCarZone' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 22:16 : module 't_SystemParking' testcase 'tc_OutCarZone' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 22:16 : module 't_SystemParking' testcase 'tc_OutCarZone' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 22:16 : module 't_SystemParking' testcase 'tc_OutCarZone' verdict 'pass'
+                    control part verdict 'pass'
+10/03/14 at 22:18 : simulation ended
