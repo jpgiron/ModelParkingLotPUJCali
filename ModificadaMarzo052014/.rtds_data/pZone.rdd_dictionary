@@ -90,22 +90,22 @@
 </UsingSymbols>
 <Body>
 <SentSignals>
+<SignalReference id="SIG11"/>
 <SignalReference id="SIG7"/>
 <SignalReference id="SIG14"/>
 <SignalReference id="SIG4"/>
 <SignalReference id="SIG12"/>
-<SignalReference id="SIG11"/>
 </SentSignals>
 <ReceivedSignals>
+<SignalReference id="SIG8"/>
+<SignalReference id="SIG5"/>
+<SignalReference id="SIG3"/>
+<SignalReference id="SIG2"/>
 <SignalReference id="SIG13"/>
 <SignalReference id="SIG6"/>
-<SignalReference id="SIG3"/>
-<SignalReference id="SIG9"/>
-<SignalReference id="SIG2"/>
-<SignalReference id="SIG10"/>
 <SignalReference id="SIG1"/>
-<SignalReference id="SIG5"/>
-<SignalReference id="SIG8"/>
+<SignalReference id="SIG9"/>
+<SignalReference id="SIG10"/>
 </ReceivedSignals>
 <Transitions>
 <Transition statesExcluded="FALSE" priorityInputNames="">

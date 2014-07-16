@@ -1,0 +1,9 @@
+Propiedades a verificar.
+
+Propiedad 1.
+
+Procesos Involucrados: pTesting, pMainSystemManager, pZone, pCtrl.
+
+Definicion de la propiedad: Una zona de parqueo debe retornar la señal sEntered_Car y retornar a su estado Idle siempre que un vehiculo ingrese a dicha zona de parqueo.
+
+
