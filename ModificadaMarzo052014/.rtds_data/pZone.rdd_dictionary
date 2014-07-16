@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
+
+<DictionaryObjects language="sdl" diagramType="prcs">
+<Signal id="SIG1" name="sIR2_Zone">
+<InputSymbols>
+<SymbolReference symbolId="SYMB7"/>
+</InputSymbols>
+</Signal>
+<Signal id="SIG10" name="sIR1_Zone">
+<InputSymbols>
+<SymbolReference symbolId="SYMB5"/>
+</InputSymbols>
+</Signal>
+<Signal id="SIG11" name="sOkInitPid">
+<SendSymbols>
+<SymbolReference symbolId="SYMB246"/>
+</SendSymbols>
+</Signal>
+<Signal id="SIG12" name="sEntered_Car">
+<SignalParameterType>infoZone</SignalParameterType>
+<SendSymbols>
+<SymbolReference symbolId="SYMB79"/>
+</SendSymbols>
+</Signal>
+<Signal id="SIG13" name="sLoopInductive_Zone">
+<InputSymbols>
+<SymbolReference symbolId="SYMB77"/>
+<SymbolReference symbolId="SYMB124"/>
+</InputSymbols>
+</Signal>
+<Signal id="SIG14" name="sOut_Car">
+<SignalParameterType>infoZone</SignalParameterType>
+<SendSymbols>
+<SymbolReference symbolId="SYMB123"/>
+</SendSymbols>
+</Signal>
+<Signal id="SIG2" name="sInitPidCtrl">
+<SignalParameterType>PID</SignalParameterType>
+<InputSymbols>
+<SymbolReference symbolId="SYMB244"/>
+</InputSymbols>
+</Signal>
+<Signal id="SIG3" name="sInitFreeSpot">
+<SignalParameterType>i_spots</SignalParameterType>
+<InputSymbols>
+<SymbolReference symbolId="SYMB44"/>
+</InputSymbols>
+</Signal>
+<Signal id="SIG4" name="sOkInit">
+<SignalParameterType>InfoZone</SignalParameterType>
+<SendSymbols>
+<SymbolReference symbolId="SYMB194"/>
+<SymbolReference symbolId="SYMB48"/>
+</SendSymbols>
+</Signal>
+<Signal id="SIG5" name="sIR3_Zone">
+<InputSymbols>
+<SymbolReference symbolId="SYMB39"/>
+</InputSymbols>
+</Signal>
+<Signal id="SIG6" name="sIR4_Zone">
+<InputSymbols>
+<SymbolReference symbolId="SYMB35"/>
+</InputSymbols>
+</Signal>
+<Signal id="SIG7" name="sInfoZone">
+<SignalParameterType>InfoZone</SignalParameterType>
+<SendSymbols>
+<SymbolReference symbolId="SYMB52"/>
+</SendSymbols>
+</Signal>
+<Signal id="SIG8" name="sReqInfo">
+<InputSymbols>
+<SymbolReference symbolId="SYMB50"/>
+</InputSymbols>
+</Signal>
+<Signal id="SIG9" name="sInitTotalSpots">
+<SignalParameterType>i_spots</SignalParameterType>
+<InputSymbols>
+<SymbolReference symbolId="SYMB193"/>
+</InputSymbols>
+</Signal>
+<Item id="ITEM1" type="process" name="pZone" scope="current">
+<UsingSymbols>
+<SymbolReference symbolId="SYMB76"/>
+<SymbolReference symbolId="SYMB1"/>
+<SymbolReference symbolId="SYMB119"/>
+</UsingSymbols>
+<Body>
+<SentSignals>
+<SignalReference id="SIG7"/>
+<SignalReference id="SIG14"/>
+<SignalReference id="SIG4"/>
+<SignalReference id="SIG12"/>
+<SignalReference id="SIG11"/>
+</SentSignals>
+<ReceivedSignals>
+<SignalReference id="SIG13"/>
+<SignalReference id="SIG6"/>
+<SignalReference id="SIG3"/>
+<SignalReference id="SIG9"/>
+<SignalReference id="SIG2"/>
+<SignalReference id="SIG10"/>
+<SignalReference id="SIG1"/>
+<SignalReference id="SIG5"/>
+<SignalReference id="SIG8"/>
+</ReceivedSignals>
+<Transitions>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM14"/>
+<SymbolReference symbolId="SYMB77"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM11"/>
+<SymbolReference symbolId="SYMB124"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM2"/>
+<SymbolReference symbolId="SYMB7"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM13"/>
+<SymbolReference symbolId="SYMB193"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM13"/>
+<SymbolReference symbolId="SYMB44"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM13"/>
+<SymbolReference symbolId="SYMB244"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM13"/>
+<SymbolReference symbolId="SYMB50"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM13"/>
+<SymbolReference symbolId="SYMB39"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM13"/>
+<SymbolReference symbolId="SYMB5"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM12"/>
+<SymbolReference symbolId="SYMB35"/>
+</Transition>
+</Transitions>
+</Body>
+</Item>
+<Item id="ITEM10" type="variable" name="p_totalSpots" parentId="ITEM1" scope="none" variableTypeName="i_spots">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB42"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM11" type="state" name="VerifyIsaCarOut" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB122"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB37"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM12" type="state" name="WaitSensorIR4" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB36"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB36"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM13" type="state" name="Idle" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB4"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB127"/>
+<SymbolReference symbolId="SYMB78"/>
+<SymbolReference symbolId="SYMB129"/>
+<SymbolReference symbolId="SYMB4"/>
+<SymbolReference symbolId="SYMB121"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM14" type="state" name="VerifyIsaCarEntering" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB81"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB9"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM2" type="state" name="WaitSensorIR2" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB6"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB6"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM3" type="variable" name="pid_Ctrl" parentId="ITEM1" scope="none" variableTypeName="Pid">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB42"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM4" type="variable" name="pidCtrl" parentId="ITEM1" scope="none" variableTypeName="Pid">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB42"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM5" type="variable" name="PidZone" parentId="ITEM1" scope="none" variableTypeName="Pid">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB42"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM6" type="variable" name="p_freeSpots" parentId="ITEM1" scope="none" variableTypeName="i_spots">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB42"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM7" type="variable" name="freeSpots" parentId="ITEM1" scope="none" variableTypeName="i_spots">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB42"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM8" type="variable" name="infoTableZone" parentId="ITEM1" scope="none" variableTypeName="InfoZone">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB42"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM9" type="variable" name="totalSpots" parentId="ITEM1" scope="none" variableTypeName="i_spots">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB42"/>
+</DefiningSymbols>
+</Item>
+</DictionaryObjects>

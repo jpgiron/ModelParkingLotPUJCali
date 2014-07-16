@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
+
+<DictionaryObjects language="sdl" diagramType="prcd">
+<Item id="ITEM1" type="procedure" name="proc_FindIndexPIDZone" scope="current" procedureKind="NORMAL_PROCEDURE" procedureParamTypes="PID table_Zones INTEGER" procedureReturnType="INTEGER">
+<UsingSymbols>
+<SymbolReference symbolId="SYMB2"/>
+</UsingSymbols>
+<Prototype>
+<Signature>proc_FindIndexPIDZone</Signature>
+<PrototypeSymbol>
+<SymbolReference symbolId="SYMB3"/>
+<PrototypeText>proc_FindIndexPIDZone</PrototypeText>
+</PrototypeSymbol>
+</Prototype>
+<Body>
+</Body>
+</Item>
+<Item id="ITEM2" type="variable" name="tableZones" parentId="ITEM1" scope="none" variableTypeName="table_Zones" isFormalParam="TRUE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB5"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM3" type="variable" name="PidZone" parentId="ITEM1" scope="none" variableTypeName="PID" isFormalParam="TRUE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB5"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM4" type="variable" name="indexList" parentId="ITEM1" scope="none" variableTypeName="INTEGER" isFormalParam="TRUE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB5"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM5" type="variable" name="index" parentId="ITEM1" scope="none" variableTypeName="INTEGER">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB5"/>
+</DefiningSymbols>
+</Item>
+</DictionaryObjects>
