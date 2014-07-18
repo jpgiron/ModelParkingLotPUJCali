@@ -811,32 +811,18 @@ state sWaitConfirmInitPid #stable ;
 deadline delayable;
 input sOkInitPid(SENDER);
 output sReqInfo(self) to SENDER;
-nextstatia {P_pCtrl_C_cCtrl_ZoneManager_M_sConfirmZoneManager_i}0;
-nextstate sWaitConfirmZoneManager;
-
-deadline delayable;
-input sCreateZone_(SENDER, p_totalSpots,p_freeSpots);
-nextstate RTDS_decision_SYMB690;
-endstate;
-
-state RTDS_decision_SYMB690 #unstable ;
-
-provided ( not (assignedZoneManager) );
-output sCreateZoneManager(self, self) via {P_pCtrl_C_cCtrl_CreatorZoneManager_M_sCreateZoneManager}0;
-nextstate sWaitCreationZoneManager;
-
-provided ( assignedZoneManager );
-output sCreateZone(self, p_totalSpots, p_freeSpots, self) to pidZoneManager;
-nextstate sWaitAck_BZone;
-endstate;
-
-
-state sWaitConfirmInitPid #stable ;
-
-deadline delayable;
-input sOkInitPid(SENDER);
-output sReqInfo(self) to SENDER;
 nextstate sWaitInfoZoneZero;
+endstate;
+
+
+state sWaitConfirmZoneManager #stable ;
+
+deadline delayable;
+input sIamZoneManager(SENDER, pid_ZoneManager);
+task assignedZoneManager := true;
+task pidZoneManager := pid_ZoneManager;
+output sInitPidCtrl(self, self) via {P_pCtrl_C_cCtrl_Zone_M_sInitPidCtrl}0;
+nextstate sWaitConfirmInitPid;
 endstate;
 
 
@@ -847,6 +833,22 @@ input sInfoZone(SENDER, infoTableZone);
 task infoCtrlG.listZones[indexList] := infoTableZone;
 task indexList := indexList + 1;
 output sOkCreationCtrl_i(self, infoCtrlG) /* via {P_pCtrl_C_cMain_CtrlZone_M_sOkCreationCtrl_i}0 */;
+nextstate Idle;
+endstate;
+
+
+state sWaitCreationZoneManager #stable ;
+
+deadline delayable;
+input sOkCreateZoneManager(SENDER, pid_ZoneManager);
+task pidZoneManager := pid_ZoneManager;
+task assignedZoneManager := true;
+output sCreateZone(self, p_totalSpots, p_freeSpots, self) to pidZoneManager;
+nextstate sWaitAck_BZone;
+
+deadline delayable;
+input sExcZoneManager(SENDER);
+output sExcZoneManager(self) /* via {P_pCtrl_C_cMain_CtrlZone_M_sExcZoneManager}0 */;
 nextstate Idle;
 endstate;
 
@@ -872,3 +874,27 @@ task index := 0;
 task infoCtrlG.allfreeSpots := 0;
 task infoCtrlG.alltotalSpots := 0;
 nextstate RTDS_LABEL_RTDS_label1;
+endstate;
+
+state RTDS_decision_SYMB1494 #unstable ;
+
+provided ( not (index < indexList) );
+task index := 0;
+set timerWaitInfoZones := -(20);
+nextstate sWaitInfoZone;
+
+provided ( index < indexList );
+task tmpTblZone := infoCtrlG.listZones;
+task tmpInfoZone := tmpTblZone[index];
+task PidZone := tmpInfoZone.ID;
+task infoCtrlG.tableConnectionOkZones[index] := false;
+task index := index + 1;
+output sReqInfo(self) to PidZone;
+nextstate RTDS_end_decision_SYMB1494;
+endstate;
+
+
+state Idle #stable ;
+
+deadline delayable;
+input sInitFreeSpotZone(SENDER, Zone,freeSpots);
