@@ -11,7 +11,7 @@
 <Description></Description>
 <Text></Text>
 
-<Symbol symbolId="SYMB177" type="sdlSendSig" xCenter="605" yCenter="363" fixedDimensions="FALSE" width="418" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB177" type="sdlSendSig" xCenter="605" yCenter="363" fixedDimensions="FALSE" width="396" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sInitialConnection VIA cMain_CtrlZone</Text>
 </Symbol>
@@ -26,7 +26,7 @@
 <Text>DCL
 
 infoCtrlGral InfoCtrl,tableCtrls tableInfoGralCtrl,indexList,index,indexPid INTEGER,
-PidCtrl,PidCtrlManager,PidZone PID,numCtrl,numZone INTEGER,totalSpots,freeSpots i_spots,infoSystem InfoMainSystem;</Text>
+PidCtrl,PidCtrlManager,PidZone PID,numCtrl,numZone INTEGER,totalSpots,freeSpots i_spots,infoSystem InfoMainSystem,tmpTblCtrl InfoCtrl,tmpInfoZone InfoZone;</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB4" type="sdlState" xCenter="605" yCenter="418" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
@@ -77,7 +77,7 @@ infoSystem!freeSpotsSystem:=0</Text>
 <Text>sCreateZone_(totalSpots,freeSpots) TO PidCtrl</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB75" type="sdlState" xCenter="352" yCenter="726" fixedDimensions="FALSE" width="264" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB75" type="sdlState" xCenter="352" yCenter="726" fixedDimensions="FALSE" width="242" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sWaitConfirmCreateZone</Text>
 </Symbol>
@@ -686,7 +686,7 @@ index:=index+1</Text>
 <Text>sWaitInit</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB311" type="sdlInputSig" xCenter="330" yCenter="132" fixedDimensions="FALSE" width="462" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB311" type="sdlInputSig" xCenter="330" yCenter="132" fixedDimensions="FALSE" width="440" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sSetUpFreeSpot(numCtrl,numZone,freeSpots)</Text>
 </Symbol>
@@ -706,7 +706,7 @@ index:=index+1</Text>
 <Text>sWaitInit</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB315" type="sdlInputSig" xCenter="330" yCenter="407" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB315" type="sdlInputSig" xCenter="330" yCenter="407" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sOkSetUp</Text>
 </Symbol>
@@ -897,140 +897,146 @@ TO PidCtrl</Text>
 </Link>
 </DiagramPartition>
 
-<DiagramPartition name="Part. 0.3" nbPagesH="2" nbPagesV="1">
+<DiagramPartition name="Part. 0.3" nbPagesH="2" nbPagesV="2">
 <PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="0.0" bottomMargin="0.0" leftMargin="0.0" rightMargin="0.0" pageFooter="FALSE"/>
 
-<Symbol symbolId="SYMB347" type="sdlPrcsDgmFrm" xCenter="595" yCenter="420" fixedDimensions="TRUE" width="1146" height="775" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB347" type="sdlPrcsDgmFrm" xCenter="595" yCenter="841" fixedDimensions="TRUE" width="1146" height="1617" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text></Text>
 
-<Symbol symbolId="SYMB348" type="sdlText" xCenter="121" yCenter="33" fixedDimensions="FALSE" width="264" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB348" type="sdlText" xCenter="154" yCenter="33" fixedDimensions="FALSE" width="264" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>TIMER timerWaitSignalIR;</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB349" type="sdlState" xCenter="495" yCenter="33" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB349" type="sdlState" xCenter="583" yCenter="33" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>Idle</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB350" type="sdlInputSig" xCenter="242" yCenter="110" fixedDimensions="FALSE" width="308" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB350" type="sdlInputSig" xCenter="297" yCenter="121" fixedDimensions="FALSE" width="308" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sEntryCar(NumCtrl,NumZone)</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB351" type="sdlInputSig" xCenter="869" yCenter="110" fixedDimensions="FALSE" width="286" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB351" type="sdlInputSig" xCenter="880" yCenter="110" fixedDimensions="FALSE" width="286" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sOutCar(NumCtrl,NumZone)</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB352" type="sdlInitTimer" xCenter="242" yCenter="297" fixedDimensions="FALSE" width="330" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB352" type="sdlInitTimer" xCenter="242" yCenter="462" fixedDimensions="FALSE" width="330" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>SET(Now+1, timerWaitSignalIR)</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB353" type="sdlState" xCenter="242" yCenter="363" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB353" type="sdlState" xCenter="242" yCenter="528" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sWaitTimerIR1</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB354" type="sdlInputSig" xCenter="242" yCenter="429" fixedDimensions="FALSE" width="220" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB354" type="sdlInputSig" xCenter="242" yCenter="594" fixedDimensions="FALSE" width="220" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>timerWaitSignalIR</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB356" type="sdlTask" xCenter="242" yCenter="176" fixedDimensions="FALSE" width="528" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB356" type="sdlTask" xCenter="297" yCenter="231" fixedDimensions="FALSE" width="572" height="110" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>PidZone:=tableCtrls(NumCtrl)!listZones(NumZone)!ID</Text>
+<Text>/*PidZone:=tableCtrls(NumCtrl)!listZones(NumZone)!ID*/
+tmpTblCtrl:=tableCtrls(NumCtrl),
+tmpInfoZone:=tmpTblCtrl!listZones(NumZone),
+PidZone:=tmpInfoZone!ID</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB357" type="sdlSendSig" xCenter="242" yCenter="231" fixedDimensions="FALSE" width="242" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB357" type="sdlSendSig" xCenter="242" yCenter="396" fixedDimensions="FALSE" width="286" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>sIR1_Zone to PidZone</Text>
+<Text>sIR1_ZoneTest to PidZone</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB358" type="sdlSendSig" xCenter="242" yCenter="495" fixedDimensions="FALSE" width="242" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB358" type="sdlSendSig" xCenter="242" yCenter="660" fixedDimensions="FALSE" width="286" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>sIR2_Zone TO PidZone</Text>
+<Text>sIR2_ZoneTest TO PidZone</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB359" type="sdlInitTimer" xCenter="242" yCenter="561" fixedDimensions="FALSE" width="330" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB359" type="sdlInitTimer" xCenter="242" yCenter="726" fixedDimensions="FALSE" width="330" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>SET(Now+1, timerWaitSignalIR)</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB360" type="sdlInputSig" xCenter="242" yCenter="671" fixedDimensions="FALSE" width="220" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB360" type="sdlInputSig" xCenter="242" yCenter="836" fixedDimensions="FALSE" width="220" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>timerWaitSignalIR</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB361" type="sdlState" xCenter="242" yCenter="616" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB361" type="sdlState" xCenter="242" yCenter="781" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sWaitTimerIR2</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB362" type="sdlSendSig" xCenter="242" yCenter="726" fixedDimensions="FALSE" width="330" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB362" type="sdlSendSig" xCenter="242" yCenter="924" fixedDimensions="FALSE" width="374" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>sLoopInductive_Zone TO PidZone</Text>
+<Text>sLoopInductive_ZoneTest TO PidZone</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB363" type="sdlState" xCenter="583" yCenter="748" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB363" type="sdlState" xCenter="583" yCenter="1045" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>Idle</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB364" type="sdlState" xCenter="869" yCenter="352" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB364" type="sdlState" xCenter="869" yCenter="528" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sWaitTimerIR3</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB365" type="sdlInputSig" xCenter="869" yCenter="418" fixedDimensions="FALSE" width="220" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB365" type="sdlInputSig" xCenter="869" yCenter="594" fixedDimensions="FALSE" width="220" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>timerWaitSignalIR</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB366" type="sdlTask" xCenter="869" yCenter="165" fixedDimensions="FALSE" width="528" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB366" type="sdlTask" xCenter="880" yCenter="231" fixedDimensions="FALSE" width="572" height="110" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>PidZone:=tableCtrls(NumCtrl)!listZones(NumZone)!ID</Text>
+<Text>/*PidZone:=tableCtrls(NumCtrl)!listZones(NumZone)!ID*/
+tmpTblCtrl:=tableCtrls(NumCtrl),
+tmpInfoZone:=tmpTblCtrl!listZones(NumZone),
+PidZone:=tmpInfoZone!ID</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB367" type="sdlInitTimer" xCenter="869" yCenter="286" fixedDimensions="FALSE" width="330" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB367" type="sdlInitTimer" xCenter="869" yCenter="462" fixedDimensions="FALSE" width="330" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>SET(Now+1, timerWaitSignalIR)</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB368" type="sdlSendSig" xCenter="869" yCenter="220" fixedDimensions="FALSE" width="242" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB368" type="sdlSendSig" xCenter="869" yCenter="396" fixedDimensions="FALSE" width="286" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>sIR3_Zone To PidZone</Text>
+<Text>sIR3_ZoneTest To PidZone</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB369" type="sdlSendSig" xCenter="869" yCenter="484" fixedDimensions="FALSE" width="242" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB369" type="sdlSendSig" xCenter="869" yCenter="660" fixedDimensions="FALSE" width="286" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>sIR4_Zone TO PidZone</Text>
+<Text>sIR4_ZoneTest TO PidZone</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB370" type="sdlSendSig" xCenter="869" yCenter="715" fixedDimensions="FALSE" width="330" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB370" type="sdlSendSig" xCenter="869" yCenter="913" fixedDimensions="FALSE" width="374" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>sLoopInductive_Zone TO PidZone</Text>
+<Text>sLoopInductive_ZoneTest TO PidZone</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB371" type="sdlState" xCenter="869" yCenter="605" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB371" type="sdlState" xCenter="869" yCenter="781" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sWaitTimerIR4</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB372" type="sdlInputSig" xCenter="869" yCenter="660" fixedDimensions="FALSE" width="220" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB372" type="sdlInputSig" xCenter="869" yCenter="847" fixedDimensions="FALSE" width="220" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>timerWaitSignalIR</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB373" type="sdlInitTimer" xCenter="869" yCenter="550" fixedDimensions="FALSE" width="330" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB373" type="sdlInitTimer" xCenter="869" yCenter="726" fixedDimensions="FALSE" width="330" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>SET(Now+1, timerWaitSignalIR)</Text>
 </Symbol>
 </Symbol>
 
-<Link linkId="LINK974" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK1248" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB349" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -1041,12 +1047,12 @@ TO PidCtrl</Text>
 <Text id="2"></Text>
 </Connector>
 <LinkSegment orientation="v" length="33"/>
-<LinkSegment orientation="h" length="-253"/>
-<LinkSegment orientation="v" length="44"/>
+<LinkSegment orientation="h" length="-286"/>
+<LinkSegment orientation="v" length="55"/>
 
 </Link>
 
-<Link linkId="LINK1013" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK1249" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB349" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -1057,12 +1063,12 @@ TO PidCtrl</Text>
 <Text id="2"></Text>
 </Connector>
 <LinkSegment orientation="v" length="33"/>
-<LinkSegment orientation="h" length="374"/>
+<LinkSegment orientation="h" length="297"/>
 <LinkSegment orientation="v" length="44"/>
 
 </Link>
 
-<Link linkId="LINK969" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK1251" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB350" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -1072,11 +1078,11 @@ TO PidCtrl</Text>
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="66"/>
+<LinkSegment orientation="v" length="110"/>
 
 </Link>
 
-<Link linkId="LINK1014" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK1246" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB351" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -1086,11 +1092,11 @@ TO PidCtrl</Text>
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="55"/>
+<LinkSegment orientation="v" length="121"/>
 
 </Link>
 
-<Link linkId="LINK972" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK1216" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB352" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -1104,7 +1110,7 @@ TO PidCtrl</Text>
 
 </Link>
 
-<Link linkId="LINK973" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK1219" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB353" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -1118,7 +1124,7 @@ TO PidCtrl</Text>
 
 </Link>
 
-<Link linkId="LINK977" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK1215" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB354" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -1132,9 +1138,9 @@ TO PidCtrl</Text>
 
 </Link>
 
-<Link linkId="LINK963" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK1250" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
-<Connector attachedSymbolId="SYMB356" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Connector attachedSymbolId="SYMB356" type="void" isOutside="TRUE" side="x" position="-0.192307692308" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -1142,11 +1148,11 @@ TO PidCtrl</Text>
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="55"/>
+<LinkSegment orientation="v" length="165"/>
 
 </Link>
 
-<Link linkId="LINK966" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK1220" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB357" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -1160,7 +1166,7 @@ TO PidCtrl</Text>
 
 </Link>
 
-<Link linkId="LINK979" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK1212" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB358" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -1174,7 +1180,7 @@ TO PidCtrl</Text>
 
 </Link>
 
-<Link linkId="LINK980" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK1214" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB359" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -1188,7 +1194,7 @@ TO PidCtrl</Text>
 
 </Link>
 
-<Link linkId="LINK982" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK1223" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB360" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -1198,11 +1204,11 @@ TO PidCtrl</Text>
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="55"/>
+<LinkSegment orientation="v" length="88"/>
 
 </Link>
 
-<Link linkId="LINK981" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK1221" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB361" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -1216,25 +1222,23 @@ TO PidCtrl</Text>
 
 </Link>
 
-<Link linkId="LINK983" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK1222" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB362" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB363" type="sdlarrow" isOutside="TRUE" side="x" position="-0.0606060606061" endType="arrow">
+<Connector attachedSymbolId="SYMB363" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="36"/>
-<LinkSegment orientation="h" length="248"/>
-<LinkSegment orientation="v" length="-54"/>
-<LinkSegment orientation="h" length="91"/>
-<LinkSegment orientation="v" length="40"/>
+<LinkSegment orientation="v" length="55"/>
+<LinkSegment orientation="h" length="341"/>
+<LinkSegment orientation="v" length="66"/>
 
 </Link>
 
-<Link linkId="LINK997" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK1210" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB364" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -1248,7 +1252,7 @@ TO PidCtrl</Text>
 
 </Link>
 
-<Link linkId="LINK1003" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK1207" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB365" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -1262,21 +1266,21 @@ TO PidCtrl</Text>
 
 </Link>
 
-<Link linkId="LINK1002" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK1245" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB366" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB368" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
+<Connector attachedSymbolId="SYMB368" type="sdlarrow" isOutside="TRUE" side="x" position="0.0769230769231" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="55"/>
+<LinkSegment orientation="v" length="165"/>
 
 </Link>
 
-<Link linkId="LINK1000" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK1209" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB367" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -1290,7 +1294,7 @@ TO PidCtrl</Text>
 
 </Link>
 
-<Link linkId="LINK1001" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK1204" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB368" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -1304,7 +1308,7 @@ TO PidCtrl</Text>
 
 </Link>
 
-<Link linkId="LINK1011" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK1211" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB369" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -1318,25 +1322,23 @@ TO PidCtrl</Text>
 
 </Link>
 
-<Link linkId="LINK1012" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK1225" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB370" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB363" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
+<Connector attachedSymbolId="SYMB363" type="sdlarrow" isOutside="TRUE" side="x" position="0.333333333333" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="36"/>
-<LinkSegment orientation="h" length="-228"/>
-<LinkSegment orientation="v" length="-43"/>
-<LinkSegment orientation="h" length="-58"/>
-<LinkSegment orientation="v" length="40"/>
+<LinkSegment orientation="v" length="66"/>
+<LinkSegment orientation="h" length="-275"/>
+<LinkSegment orientation="v" length="66"/>
 
 </Link>
 
-<Link linkId="LINK1009" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK1227" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB371" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -1346,11 +1348,11 @@ TO PidCtrl</Text>
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="55"/>
+<LinkSegment orientation="v" length="66"/>
 
 </Link>
 
-<Link linkId="LINK1008" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK1226" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB372" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -1360,11 +1362,11 @@ TO PidCtrl</Text>
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="55"/>
+<LinkSegment orientation="v" length="66"/>
 
 </Link>
 
-<Link linkId="LINK1010" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK1202" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB373" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -1570,7 +1572,7 @@ cEnv_Main</Text>
 <Text>-</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB33" type="sdlTask" xCenter="440" yCenter="374" fixedDimensions="FALSE" width="880" height="154" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB33" type="sdlTask" xCenter="440" yCenter="374" fixedDimensions="FALSE" width="858" height="132" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>PidCtrl:=infoCtrlGral!IDCtrl,
 indexPid:=CALL proc_FindIndexPIDCtrl(PidCtrl,tableCtrls,indexList),
@@ -1709,7 +1711,7 @@ cEnv_Main</Text>
 
 <Link linkId="LINK1109" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
-<Connector attachedSymbolId="SYMB33" type="void" isOutside="TRUE" side="x" position="-0.2" endType="voidend">
+<Connector attachedSymbolId="SYMB33" type="void" isOutside="TRUE" side="x" position="-0.205128205128" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -1727,7 +1729,7 @@ cEnv_Main</Text>
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB33" type="sdlarrow" isOutside="TRUE" side="x" position="-0.175" endType="arrow">
+<Connector attachedSymbolId="SYMB33" type="sdlarrow" isOutside="TRUE" side="x" position="-0.179487179487" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>

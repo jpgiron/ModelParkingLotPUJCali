@@ -1452,7 +1452,7 @@ indexList:=indexList+1</Text>
 cMain_CtrlZone</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB486" type="sdlTask" xCenter="407" yCenter="286" fixedDimensions="FALSE" width="792" height="132" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB486" type="sdlTask" xCenter="407" yCenter="286" fixedDimensions="FALSE" width="792" height="154" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>PidZone:=infoTableZone!ID,
 indexPid:=CALL proc_FindIndexPIDZone(PidZone,infoCtrlG!listZones,indexList),
@@ -1477,10 +1477,9 @@ infoCtrlG!tableConnectionOkZones(indexPid):=TRUE</Text>
 <Text>sWaitInfoZone</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB546" type="sdlSendSig" xCenter="803" yCenter="682" fixedDimensions="FALSE" width="330" height="66" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB546" type="sdlSendSig" xCenter="803" yCenter="682" fixedDimensions="FALSE" width="484" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>sInfoTotalCtrl(infoCtrlG) VIA 
-Main_CtrlZone</Text>
+<Text>sInfoTotalCtrl(infoCtrlG) VIA cMain_CtrlZone</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB70" type="sdlTask" xCenter="385" yCenter="418" fixedDimensions="TRUE" width="220" height="44" color="#000000" fillColor="#ffffff">

@@ -92,13 +92,13 @@
 <SymbolReference symbolId="SYMB351"/>
 </InputSymbols>
 </Signal>
-<Signal id="SIG21" name="sLoopInductive_Zone">
+<Signal id="SIG21" name="sLoopInductive_ZoneTest">
 <SendSymbols>
 <SymbolReference symbolId="SYMB362"/>
 <SymbolReference symbolId="SYMB370"/>
 </SendSymbols>
 </Signal>
-<Signal id="SIG22" name="sIR2_Zone">
+<Signal id="SIG22" name="sIR2_ZoneTest">
 <SendSymbols>
 <SymbolReference symbolId="SYMB358"/>
 </SendSymbols>
@@ -110,17 +110,17 @@
 <SymbolReference symbolId="SYMB350"/>
 </InputSymbols>
 </Signal>
-<Signal id="SIG24" name="sIR1_Zone">
+<Signal id="SIG24" name="sIR1_ZoneTest">
 <SendSymbols>
 <SymbolReference symbolId="SYMB357"/>
 </SendSymbols>
 </Signal>
-<Signal id="SIG25" name="sIR4_Zone">
+<Signal id="SIG25" name="sIR4_ZoneTest">
 <SendSymbols>
 <SymbolReference symbolId="SYMB369"/>
 </SendSymbols>
 </Signal>
-<Signal id="SIG26" name="sIR3_Zone">
+<Signal id="SIG26" name="sIR3_ZoneTest">
 <SendSymbols>
 <SymbolReference symbolId="SYMB368"/>
 </SendSymbols>
@@ -216,54 +216,54 @@
 </UsingSymbols>
 <Body>
 <SentSignals>
-<SignalReference id="SIG5"/>
-<SignalReference id="SIG2"/>
-<SignalReference id="SIG24"/>
-<SignalReference id="SIG7"/>
-<SignalReference id="SIG26"/>
-<SignalReference id="SIG3"/>
-<SignalReference id="SIG10"/>
-<SignalReference id="SIG8"/>
-<SignalReference id="SIG21"/>
-<SignalReference id="SIG14"/>
-<SignalReference id="SIG4"/>
-<SignalReference id="SIG11"/>
 <SignalReference id="SIG22"/>
-<SignalReference id="SIG32"/>
-<SignalReference id="SIG33"/>
+<SignalReference id="SIG19"/>
+<SignalReference id="SIG15"/>
+<SignalReference id="SIG10"/>
+<SignalReference id="SIG11"/>
+<SignalReference id="SIG3"/>
+<SignalReference id="SIG14"/>
+<SignalReference id="SIG18"/>
+<SignalReference id="SIG8"/>
+<SignalReference id="SIG2"/>
 <SignalReference id="SIG25"/>
 <SignalReference id="SIG27"/>
+<SignalReference id="SIG4"/>
+<SignalReference id="SIG5"/>
+<SignalReference id="SIG32"/>
+<SignalReference id="SIG21"/>
+<SignalReference id="SIG26"/>
+<SignalReference id="SIG33"/>
 <SignalReference id="SIG28"/>
-<SignalReference id="SIG15"/>
-<SignalReference id="SIG18"/>
-<SignalReference id="SIG19"/>
+<SignalReference id="SIG7"/>
+<SignalReference id="SIG24"/>
 </SentSignals>
 <ReceivedSignals>
-<SignalReference id="SIG13"/>
-<SignalReference id="SIG9"/>
+<SignalReference id="SIG23"/>
 <SignalReference id="SIG16"/>
-<SignalReference id="SIG29"/>
-<SignalReference id="SIG20"/>
-<SignalReference id="SIG12"/>
-<SignalReference id="SIG10"/>
+<SignalReference id="SIG19"/>
 <SignalReference id="SIG6"/>
+<SignalReference id="SIG10"/>
+<SignalReference id="SIG20"/>
+<SignalReference id="SIG31"/>
+<SignalReference id="SIG13"/>
 <SignalReference id="SIG3"/>
 <SignalReference id="SIG14"/>
-<SignalReference id="SIG7"/>
-<SignalReference id="SIG17"/>
-<SignalReference id="SIG31"/>
-<SignalReference id="SIG23"/>
+<SignalReference id="SIG12"/>
+<SignalReference id="SIG29"/>
+<SignalReference id="SIG9"/>
 <SignalReference id="SIG1"/>
+<SignalReference id="SIG17"/>
+<SignalReference id="SIG7"/>
 <SignalReference id="SIG30"/>
-<SignalReference id="SIG19"/>
 </ReceivedSignals>
 <Transitions>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM17"/>
+<StateReference itemId="ITEM19"/>
 <SymbolReference symbolId="SYMB5"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM17"/>
+<StateReference itemId="ITEM19"/>
 <SymbolReference symbolId="SYMB72"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
@@ -279,47 +279,47 @@
 <SymbolReference symbolId="SYMB80"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM17"/>
+<StateReference itemId="ITEM19"/>
 <SymbolReference symbolId="SYMB301"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM17"/>
+<StateReference itemId="ITEM19"/>
 <SymbolReference symbolId="SYMB304"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM20"/>
+<StateReference itemId="ITEM22"/>
 <SymbolReference symbolId="SYMB315"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM17"/>
+<StateReference itemId="ITEM19"/>
 <SymbolReference symbolId="SYMB311"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM17"/>
+<StateReference itemId="ITEM19"/>
 <SymbolReference symbolId="SYMB313"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM17"/>
+<StateReference itemId="ITEM19"/>
 <SymbolReference symbolId="SYMB350"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM17"/>
+<StateReference itemId="ITEM19"/>
 <SymbolReference symbolId="SYMB351"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM24"/>
+<StateReference itemId="ITEM26"/>
 <SymbolReference symbolId="SYMB354"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM25"/>
+<StateReference itemId="ITEM27"/>
 <SymbolReference symbolId="SYMB360"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM23"/>
+<StateReference itemId="ITEM25"/>
 <SymbolReference symbolId="SYMB365"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM22"/>
+<StateReference itemId="ITEM24"/>
 <SymbolReference symbolId="SYMB372"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
@@ -331,11 +331,11 @@
 <SymbolReference symbolId="SYMB12"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM19"/>
+<StateReference itemId="ITEM21"/>
 <SymbolReference symbolId="SYMB44"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM19"/>
+<StateReference itemId="ITEM21"/>
 <SymbolReference symbolId="SYMB30"/>
 </Transition>
 </Transitions>
@@ -366,17 +366,27 @@
 <SymbolReference symbolId="SYMB23"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM15" type="variable" name="PidZone" parentId="ITEM1" scope="none" variableTypeName="PID">
+<Item id="ITEM15" type="variable" name="tmpInfoZone" parentId="ITEM1" scope="none" variableTypeName="InfoZone">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB23"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM16" type="variable" name="index" parentId="ITEM1" scope="none" variableTypeName="INTEGER">
+<Item id="ITEM16" type="variable" name="PidZone" parentId="ITEM1" scope="none" variableTypeName="PID">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB23"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM17" type="state" name="Idle" parentId="ITEM1" scope="none">
+<Item id="ITEM17" type="variable" name="tmpTblCtrl" parentId="ITEM1" scope="none" variableTypeName="InfoCtrl">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB23"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM18" type="variable" name="index" parentId="ITEM1" scope="none" variableTypeName="INTEGER">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB23"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM19" type="state" name="Idle" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB349"/>
 <SymbolReference symbolId="SYMB307"/>
@@ -396,7 +406,15 @@
 <SymbolReference symbolId="SYMB4"/>
 </UsingSymbols>
 </Item>
-<Item id="ITEM18" type="timer" name="timerWaitCtrl" parentId="ITEM1" scope="none">
+<Item id="ITEM2" type="state" name="sWaitAckCtrlManager" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB14"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB9"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM20" type="timer" name="timerWaitCtrl" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB109"/>
 <SymbolReference symbolId="SYMB297"/>
@@ -406,7 +424,7 @@
 <SymbolReference symbolId="SYMB34"/>
 </UsingSymbols>
 </Item>
-<Item id="ITEM19" type="state" name="sWaitInfoCtrl" parentId="ITEM1" scope="none">
+<Item id="ITEM21" type="state" name="sWaitInfoCtrl" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB29"/>
 </DefiningSymbols>
@@ -414,15 +432,7 @@
 <SymbolReference symbolId="SYMB298"/>
 </UsingSymbols>
 </Item>
-<Item id="ITEM2" type="state" name="sWaitAckCtrlManager" parentId="ITEM1" scope="none">
-<DefiningSymbols>
-<SymbolReference symbolId="SYMB14"/>
-</DefiningSymbols>
-<UsingSymbols>
-<SymbolReference symbolId="SYMB9"/>
-</UsingSymbols>
-</Item>
-<Item id="ITEM20" type="state" name="sWaitInit" parentId="ITEM1" scope="none">
+<Item id="ITEM22" type="state" name="sWaitInit" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB314"/>
 </DefiningSymbols>
@@ -431,7 +441,7 @@
 <SymbolReference symbolId="SYMB314"/>
 </UsingSymbols>
 </Item>
-<Item id="ITEM21" type="timer" name="timerWaitSignalIR" parentId="ITEM1" scope="none">
+<Item id="ITEM23" type="timer" name="timerWaitSignalIR" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB373"/>
 <SymbolReference symbolId="SYMB359"/>
@@ -439,7 +449,7 @@
 <SymbolReference symbolId="SYMB367"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM22" type="state" name="sWaitTimerIR4" parentId="ITEM1" scope="none">
+<Item id="ITEM24" type="state" name="sWaitTimerIR4" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB371"/>
 </DefiningSymbols>
@@ -447,7 +457,7 @@
 <SymbolReference symbolId="SYMB371"/>
 </UsingSymbols>
 </Item>
-<Item id="ITEM23" type="state" name="sWaitTimerIR3" parentId="ITEM1" scope="none">
+<Item id="ITEM25" type="state" name="sWaitTimerIR3" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB364"/>
 </DefiningSymbols>
@@ -455,7 +465,7 @@
 <SymbolReference symbolId="SYMB364"/>
 </UsingSymbols>
 </Item>
-<Item id="ITEM24" type="state" name="sWaitTimerIR1" parentId="ITEM1" scope="none">
+<Item id="ITEM26" type="state" name="sWaitTimerIR1" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB353"/>
 </DefiningSymbols>
@@ -463,7 +473,7 @@
 <SymbolReference symbolId="SYMB353"/>
 </UsingSymbols>
 </Item>
-<Item id="ITEM25" type="state" name="sWaitTimerIR2" parentId="ITEM1" scope="none">
+<Item id="ITEM27" type="state" name="sWaitTimerIR2" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB361"/>
 </DefiningSymbols>
@@ -471,7 +481,7 @@
 <SymbolReference symbolId="SYMB361"/>
 </UsingSymbols>
 </Item>
-<Item id="ITEM26" type="procedure" name="proc_FindIndexPIDCtrl" parentId="ITEM1" scope="none" procedureKind="NORMAL_PROCEDURE" procedureParamTypes="PID tableInfoGralCtrl INTEGER" procedureReturnType="INTEGER">
+<Item id="ITEM28" type="procedure" name="proc_FindIndexPIDCtrl" parentId="ITEM1" scope="none" procedureKind="NORMAL_PROCEDURE" procedureParamTypes="PID tableInfoGralCtrl INTEGER" procedureReturnType="INTEGER">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB231"/>
 </DefiningSymbols>

@@ -1,0 +1,42 @@
+Ä}q(UversionqU4.4.1qUobjectq]q]q((crtds.editor.business.SyntaxChecker
+SyntaxTreeNodeAdapter
+qoq}q	(Utextq
+U"p_freeSpots , p_totalSpots i_spotsqU
+identifierqU3UtypeqUvardeclqUchildrenq]q((hoq}q(h
+Ui_spotsqhU3hUtypenameqh]qU_SyntaxTreeNodeAdapter__parentqhub(crtds.editor.business.SyntaxChecker
+SyntaxTreeNode
+qoq}q(h
+Up_freeSpotsqhNhUsnglvardeclqh]q(hoq}q(h
+hhU3hUvarnameqh]q hhubaub(hoq!}q"(h
+Up_totalSpotsq#hNhhh]q$(hoq%}q&(h
+h#hU3hUvarnameq'h]q(hhubaubeh(hoq)}q*(h
+UÖDCL p_freeSpots , p_totalSpots i_spots , freeSpots , totalSpots i_spots , PidZone , pid_Ctrl , pidCtrl Pid , infoTableZone InfoZone ;q+hU0hU	cmpnddeclq,h]q-(h(hoq.}q/(h
+UfreeSpots , totalSpots i_spotsq0hU6hUvardeclq1h]q2((hoq3}q4(h
+Ui_spotsq5hU6hUtypenameq6h]q7hh.ub(hoq8}q9(h
+U	freeSpotsq:hNhhh]q;(hoq<}q=(h
+h:hU6hUvarnameq>h]q?hh.ubaub(hoq@}qA(h
+U
+totalSpotsqBhNhhh]qC(hoqD}qE(h
+hBhU6hUvarnameqFh]qGhh.ubaubehh)ub(hoqH}qI(h
+U PidZone , pid_Ctrl , pidCtrl PidqJhU7hUvardeclqKh]qL((hoqM}qN(h
+UPidqOhU7hUtypenameqPh]qQhhHub(hoqR}qS(h
+UPidZoneqThNhhh]qU(hoqV}qW(h
+hThU7hUvarnameqXh]qYhhHubaub(hoqZ}q[(h
+Upid_Ctrlq\hNhhh]q](hoq^}q_(h
+h\hU7hUvarnameq`h]qahhHubaub(hoqb}qc(h
+UpidCtrlqdhNhhh]qe(hoqf}qg(h
+hdhU7hUvarnameqhh]qihhHubaubehh)ub(hoqj}qk(h
+UinfoTableZone InfoZoneqlhU7hUvardeclqmh]qn((hoqo}qp(h
+UInfoZoneqqhU7hUtypenameqrh]qshhjub(hoqt}qu(h
+UinfoTableZoneqvhNhhh]qw(hoqx}qy(h
+hvhU7hUvarnameqzh]q{hhjubaubehh)ubeh(hoq|}q}(h
+U≠DCL
+
+/* Params Signals */
+p_freeSpots,p_totalSpots i_spots,
+
+/*Block Zone's Registers */
+freeSpots,totalSpots i_spots,
+PidZone,pid_Ctrl,pidCtrl Pid, infoTableZone InfoZone ;q~hNhUdatadeclqh]qÄh)ahNubububcrtds.editor.business.ElementReference
+SymbolReference
+qÅ)ÅqÇ}qÉ(UprojectqÑhÑQUsymbolIdqÖUSYMB42qÜUdiagramFileNameqáU]/home/ubuntu/Documents/ModificadaMarzo052014/ModificadaMarzo052014/ModeloOrganizado/pZone.rddqàubKáqâh.hÅ)Åqä}qã(hÑhÑQhÖhÜháhàubKáqåhHhÅ)Åqç}qé(hÑhÑQhÖhÜháhàubKáqèhjhÅ)Åqê}që(hÑhÑQhÖhÜháhàubKáqíeÜqìu.
