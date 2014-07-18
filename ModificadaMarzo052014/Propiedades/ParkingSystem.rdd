@@ -146,7 +146,7 @@ sInitPidCtrl]</Text>
 <Description></Description>
 <Text></Text>
 
-<Symbol symbolId="SYMB7" type="sdlText" xCenter="297" yCenter="517" fixedDimensions="FALSE" width="506" height="1386" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB7" type="sdlText" xCenter="275" yCenter="671" fixedDimensions="FALSE" width="506" height="1320" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>/* Declarations of constants */
 
@@ -227,7 +227,7 @@ ENDNEWTYPE;</Text>
 <Description></Description>
 <Text></Text>
 
-<Symbol symbolId="SYMB10" type="sdlText" xCenter="561" yCenter="605" fixedDimensions="FALSE" width="1232" height="1584" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB10" type="sdlText" xCenter="572" yCenter="814" fixedDimensions="TRUE" width="1144" height="1606" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>/*SIGNALS */
 
