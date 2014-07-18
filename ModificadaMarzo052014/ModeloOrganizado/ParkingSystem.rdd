@@ -60,23 +60,6 @@ sExcZoneManager]</Text>
 
 </Link>
 
-<Link linkId="LINK280" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cCtrl_ZoneManager</Text>
-<Connector attachedSymbolId="SYMB4" type="chnl" isOutside="TRUE" side="x" position="-0.344827586207" endType="midarrow">
-<Text id="1">[sOkCreation,
-sExcQuantityZones,
-sIamZoneManager]</Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB3" type="chnl" isOutside="TRUE" side="x" position="-0.407407407407" endType="midarrow">
-<Text id="1">[sCreateZone,
-sConfirmZoneManager_i]</Text>
-<Text id="2"></Text>
-</Connector>
-<LinkSegment orientation="v" length="341"/>
-
-</Link>
-
 <Link linkId="LINK278" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cCtrl_Zone</Text>
 <Connector attachedSymbolId="SYMB4" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
@@ -101,18 +84,20 @@ sInitPidCtrl]</Text>
 
 </Link>
 
-<Link linkId="LINK288" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cEnv_pTesting</Text>
-<Connector attachedSymbolId="SYMB5" type="chnl" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
-<Text id="1">[sEntryCar,
-sOutCar]</Text>
+<Link linkId="LINK280" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cCtrl_ZoneManager</Text>
+<Connector attachedSymbolId="SYMB4" type="chnl" isOutside="TRUE" side="x" position="-0.344827586207" endType="midarrow">
+<Text id="1">[sOkCreation,
+sExcQuantityZones,
+sIamZoneManager]</Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="n" position="-0.342331993107" endType="midarrow">
-<Text id="1">[]</Text>
+<Connector attachedSymbolId="SYMB3" type="chnl" isOutside="TRUE" side="x" position="-0.407407407407" endType="midarrow">
+<Text id="1">[sCreateZone,
+sConfirmZoneManager_i]</Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="-187"/>
+<LinkSegment orientation="v" length="341"/>
 
 </Link>
 
@@ -141,6 +126,21 @@ sExcZoneManager]</Text>
 
 </Link>
 
+<Link linkId="LINK288" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cEnv_pTesting</Text>
+<Connector attachedSymbolId="SYMB5" type="chnl" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[sEntryCar,
+sOutCar]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="n" position="-0.342331993107" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="-187"/>
+
+</Link>
+
 <Link linkId="LINK292" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cMain_Zone</Text>
 <Connector attachedSymbolId="SYMB5" type="chnl" isOutside="TRUE" side="x" position="0.551724137931" endType="midarrow">
@@ -148,11 +148,11 @@ sExcZoneManager]</Text>
 <Text id="2"></Text>
 </Connector>
 <Connector attachedSymbolId="SYMB3" type="chnl" isOutside="TRUE" side="x" position="0.222222222222" endType="midarrow">
-<Text id="1">[sIR1_Zone,
-sIR2_Zone,
-sIR3_Zone,
-sIR4_Zone,
-sLoopInductive_Zone]</Text>
+<Text id="1">[sIR1_ZoneTest,
+sIR2_ZoneTest,
+sIR3_ZoneTest,
+sIR4_ZoneTest,
+sLoopInductive_ZoneTest]</Text>
 <Text id="2"></Text>
 </Connector>
 <LinkSegment orientation="v" length="176"/>
@@ -299,7 +299,7 @@ ENDNEWTYPE;</Text>
 <Description></Description>
 <Text></Text>
 
-<Symbol symbolId="SYMB10" type="sdlText" xCenter="561" yCenter="605" fixedDimensions="FALSE" width="1232" height="1584" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB10" type="sdlText" xCenter="561" yCenter="803" fixedDimensions="FALSE" width="1100" height="1606" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>/*SIGNALS */
 
@@ -335,6 +335,9 @@ SIGNAL sInitFreeSpot(i_spots),sInitTotalSpots(i_spots),sReqInfo;
 
 SIGNAL sIR1_Zone,sIR2_Zone,sIR3_Zone,sIR4_Zone,sLoopInductive_Zone;
 
+/*Sensors */
+
+SIGNAL sIR1_ZoneTest,sIR2_ZoneTest,sIR3_ZoneTest,sIR4_ZoneTest,sLoopInductive_ZoneTest;
 
 /* ACKs */
 
