@@ -1,0 +1,21 @@
+€}q(UversionqU4.4.1qUobjectq]q((crtds.editor.business.SyntaxChecker
+SyntaxTreeNodeAdapter
+qoq}q(Utextq	U9i_spots = INTEGER DEFAULT 1 CONSTANTS 0 .. 3 ENDSYNTYPE ;q
+U
+identifierqU2UtypeqUsyntypedeclqUchildrenq]q((hoq}q(h	Ui_spotsqhU2hUsyntypenameqh]qU_SyntaxTreeNodeAdapter__parentq(hoq}q(h	h
+hU2hhhhhhubub(hoq}q(h	UINTEGERqhU2hUtypenameqh]qhhub(hoq}q(h	U1hU3hU	dfltvalueqh]q (hoq!}q"(h	U1hU3hUnbexprq#h]q$hhubahhub(hoq%}q&(h	UCONSTANTS 0 .. 3q'hU4hUconstraintsq(h]q)(hoq*}q+(h	U0 .. 3q,hU4hU
+constraintq-h]q.((hoq/}q0(h	U0hU4hUoperand1q1h]q2(hoq3}q4(h	U0hU4hUnbexprq5h]q6hh/ubahh*ub(hoq7}q8(h	U..q9hU4hU	cnstrntopq:h]q;hh*ub(hoq<}q=(h	U3hU4hUoperand2q>h]q?(hoq@}qA(h	U3hU4hUnbexprqBh]qChh<ubahh*ubehh%ubahhubeh(hoqD}qE(h	U¿/* Declarations of constants */
+
+SYNTYPE i_spots = INTEGER
+DEFAULT 1
+CONSTANTS 0..3
+ENDSYNTYPE;
+
+NEWTYPE InfoZone
+STRUCT
+    totalSpots i_spots;
+    freeSpots i_spots;
+    ID PID;
+ENDNEWTYPE;qFhNhUdatadeclqGh]qH(h(hoqI}qJ(h	UNInfoZone STRUCT totalSpots i_spots ; freeSpots i_spots ; ID PID ; ENDNEWTYPE ;qKhU7hUtypedeclqLh]qM((hoqN}qO(h	UInfoZoneqPhU7hUtypenameqQh]qRh(hoqS}qT(h	hKhU7hhLhhMhhIubub(hoqU}qV(h	U1totalSpots i_spots ; freeSpots i_spots ; ID PID ;qWhU9hU
+structtypeqXh]qY((hoqZ}q[(h	UtotalSpots i_spots ;q\hU9hUflddefq]h]q^((hoq_}q`(h	U
+totalSpotsqahU9hUfldnameqbh]qchhZub(hoqd}qe(h	Ui_spotsqfhU9hUfldtypeqgh]qh(hoqi}qj(h	Ui_spotsqkhU9hUtypenameqlh]qmhhdubahhZubehhUub(hoqn}qo(h	UfreeSpots i_spots ;qphU10qqhUflddefqrh]qs((hoqt}qu(h	U	freeSpotsqvhU10qwhUfldnameqxh]qyhhnub(hoqz}q{(h	Ui_spotsq|hU10q}hUfldtypeq~h]q(hoq€}q(h	Ui_spotsq‚hU10qƒhUtypenameq„h]q…hhzubahhnubehhUub(hoq†}q‡(h	UID PID ;qˆhU11q‰hUflddefqŠh]q‹((hoqŒ}q(h	UIDqŽhU11qhUfldnameqh]q‘hh†ub(hoq’}q“(h	UPIDq”hU11q•hUfldtypeq–h]q—(hoq˜}q™(h	UPIDqšhU11q›hUtypenameqœh]qhh’ubahh†ubehhUubehhSubehhDubehNububhIeu.

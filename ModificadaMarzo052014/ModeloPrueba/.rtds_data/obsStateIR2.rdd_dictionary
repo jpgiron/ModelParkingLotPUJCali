@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
+
+<DictionaryObjects language="sdl" diagramType="ifobs">
+<Item id="ITEM1" type="ifobs" name="obsStateIR2" scope="current">
+<UsingSymbols>
+<SymbolReference symbolId="SYMB1"/>
+</UsingSymbols>
+<Body>
+<ContinuousTransitions>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM7"/>
+<SymbolReference symbolId="SYMB2"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM9"/>
+<SymbolReference symbolId="SYMB45"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM4"/>
+<SymbolReference symbolId="SYMB46"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM4"/>
+<SymbolReference symbolId="SYMB48"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM5"/>
+<SymbolReference symbolId="SYMB53"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM2"/>
+<SymbolReference symbolId="SYMB37"/>
+</Transition>
+</ContinuousTransitions>
+</Body>
+</Item>
+<Item id="ITEM2" type="state" name="END" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB39"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB50"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM3" type="state" name="DEAD" parentId="ITEM1" scope="none">
+<UsingSymbols>
+<SymbolReference symbolId="SYMB38"/>
+<SymbolReference symbolId="SYMB55"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM4" type="state" name="sSignals" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB15"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB45"/>
+<SymbolReference symbolId="SYMB34"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM5" type="state" name="sError" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB54"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB57"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM6" type="state" name="testing" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB59"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB47"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM7" type="state" name="sWaitIdle" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB5"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB5"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM8" type="state" name="Idle" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB27"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB27"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM9" type="state" name="sWaitChangeState" parentId="ITEM1" scope="none">
+</Item>
+</DictionaryObjects>
