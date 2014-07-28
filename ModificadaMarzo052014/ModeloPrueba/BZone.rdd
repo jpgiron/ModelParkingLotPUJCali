@@ -15,6 +15,11 @@
 <Description></Description>
 <Text>pZone</Text>
 </Symbol>
+
+<Symbol symbolId="SYMB5" type="sdlPrcs" xCenter="484" yCenter="231" fixedDimensions="TRUE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>pTmp</Text>
+</Symbol>
 </Symbol>
 
 <Link linkId="LINK93" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
@@ -30,14 +35,27 @@ sInitPidCtrl]</Text>
 <Text id="2"></Text>
 </Connector>
 <Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="n" position="0.199637023593" endType="midarrow">
-<Text id="1">[sEntered_Car,
-sOut_Car,
+<Text id="1">[sOut_Car,
 sOkInit,
 sInfoZone,
 sOkInitPid]</Text>
 <Text id="2">__</Text>
 </Connector>
 <LinkSegment orientation="v" length="-418"/>
+
+</Link>
+
+<Link linkId="LINK95" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>a</Text>
+<Connector attachedSymbolId="SYMB5" type="chnl" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[sEntered_Car]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB3" type="chnl" isOutside="TRUE" side="x" position="0.777777777778" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="176"/>
 
 </Link>
 </DiagramPartition>

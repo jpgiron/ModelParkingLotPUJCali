@@ -1486,6 +1486,10 @@ endstate;
 
 state RTDS_wait_return_procedure_proc_FindIndexPIDCtrl_1 #stable ;
 input RTDS_Outparam_proc_FindIndexPIDCtrl(proc_FindIndexPIDCtrl_SENDER,indexPid);
+task infoSystem.freeSpotsSystem := infoSystem.freeSpotsSystem + infoCtrlGral.allfreeSpots;
+task infoSystem.totalSpotsSystem := infoSystem.totalSpotsSystem + infoCtrlGral.alltotalSpots;
+task infoSystem.tableInfoCtrl[indexPid].totalSpotsZone := infoCtrlGral.alltotalSpots;
+task infoSystem.tableInfoCtrl[indexPid].freeSpotsZone := infoCtrlGral.allfreeSpots;
 task tableCtrls[indexPid] := infoCtrlGral;
 task index := index + 1;
 nextstate RTDS_decision_SYMB38;

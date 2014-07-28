@@ -76,7 +76,7 @@ ENDNEWTYPE;</Text>
 <Description></Description>
 <Text></Text>
 
-<Symbol symbolId="SYMB10" type="sdlText" xCenter="572" yCenter="231" fixedDimensions="FALSE" width="902" height="374" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB10" type="sdlText" xCenter="528" yCenter="220" fixedDimensions="FALSE" width="902" height="330" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>/*From Zone to Ctrl */
 

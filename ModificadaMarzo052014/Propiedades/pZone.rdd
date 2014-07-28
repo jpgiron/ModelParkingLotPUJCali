@@ -16,7 +16,7 @@
 <Text>-</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB192" type="sdlTask" xCenter="1144" yCenter="396" fixedDimensions="FALSE" width="440" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB192" type="sdlTask" xCenter="1144" yCenter="396" fixedDimensions="FALSE" width="418" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>infoTableZone!totalSpots := p_totalSpots</Text>
 </Symbol>
@@ -87,7 +87,7 @@ infoTableZone!ID := PidZone</Text>
 <Text>Idle</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB42" type="sdlText" xCenter="308" yCenter="110" fixedDimensions="FALSE" width="572" height="198" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB42" type="sdlText" xCenter="308" yCenter="110" fixedDimensions="FALSE" width="572" height="176" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>DCL
 
@@ -124,7 +124,7 @@ PidZone,pid_Ctrl,pidCtrl Pid, infoTableZone InfoZone ;</Text>
 <Text>sIR1_Zone</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB50" type="sdlInputSig" xCenter="1716" yCenter="308" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB50" type="sdlInputSig" xCenter="1716" yCenter="308" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sReqInfo</Text>
 </Symbol>
@@ -525,7 +525,7 @@ PidZone,pid_Ctrl,pidCtrl Pid, infoTableZone InfoZone ;</Text>
 <Description></Description>
 <Text></Text>
 
-<Symbol symbolId="SYMB128" type="sdlDecision" xCenter="275" yCenter="209" fixedDimensions="FALSE" width="396" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB128" type="sdlDecision" xCenter="275" yCenter="209" fixedDimensions="FALSE" width="374" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>infoTableZone!freeSpots = 0</Text>
 </Symbol>
@@ -540,7 +540,7 @@ PidZone,pid_Ctrl,pidCtrl Pid, infoTableZone InfoZone ;</Text>
 <Text>infoTableZone!freeSpots := infoTableZone!freeSpots-1</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB77" type="sdlInputSig" xCenter="275" yCenter="99" fixedDimensions="FALSE" width="242" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB77" type="sdlInputSig" xCenter="275" yCenter="99" fixedDimensions="FALSE" width="220" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sLoopInductive_Zone</Text>
 </Symbol>

@@ -1585,11 +1585,11 @@ cEnv_Main</Text>
 <Symbol symbolId="SYMB33" type="sdlTask" xCenter="440" yCenter="352" fixedDimensions="FALSE" width="858" height="132" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>PidCtrl:=infoCtrlGral!IDCtrl,
-indexPid:=CALL proc_FindIndexPIDCtrl(PidCtrl,tableCtrls,indexList)
-/*infoSystem!freeSpotsSystem:=infoSystem!freeSpotsSystem+infoCtrlGral!allfreeSpots,
-infoSystem!totalSpotsSystem:=infoSystem!totalSpotsSystem+infoCtrlGral!alltotalSpots
+indexPid:=CALL proc_FindIndexPIDCtrl(PidCtrl,tableCtrls,indexList),
+infoSystem!freeSpotsSystem:=infoSystem!freeSpotsSystem+infoCtrlGral!allfreeSpots,
+infoSystem!totalSpotsSystem:=infoSystem!totalSpotsSystem+infoCtrlGral!alltotalSpots,
 infoSystem!tableInfoCtrl(indexPid)!totalSpotsZone:=infoCtrlGral!alltotalSpots,
-infoSystem!tableInfoCtrl(indexPid)!freeSpotsZone:=infoCtrlGral!allfreeSpots*/</Text>
+infoSystem!tableInfoCtrl(indexPid)!freeSpotsZone:=infoCtrlGral!allfreeSpots</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB34" type="sdlResetTimer" xCenter="352" yCenter="220" fixedDimensions="FALSE" width="242" height="44" color="#000000" fillColor="#ffffff">
