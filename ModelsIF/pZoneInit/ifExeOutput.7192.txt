@@ -1,0 +1,9 @@
+reached error state [3]
+00:00:00          5/s          4/t 
+   label table :       6 items     13/entry  0/min  4/max  0.46/avg
+   event table :       2 items     13/entry  0/min  4/max  0.15/avg
+  config table :       5 items     13/entry  0/min  4/max  0.38/avg
+   chunk table :       5 items     13/entry  0/min  4/max  0.38/avg
+instance table :       8 items     13/entry  0/min  4/max  0.62/avg
+   queue table :       0 items     13/entry  0/min  0/max  0.00/avg
+ message table :       0 items     13/entry  0/min  0/max  0.00/avg

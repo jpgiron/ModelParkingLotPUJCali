@@ -1,0 +1,614 @@
+
+system AccessControl;
+type RTDS_character = range 32..127;
+type RTDS_charstring = string[128] of RTDS_character;
+type cardInfoIndexType = range 0 .. 1;
+
+type codeInfoIndexType = range 0 .. 1;
+
+type AddorDelIndex = range 0 .. 1;
+
+type codeInfoType = record
+  figure1 codeInfoIndexType;
+  figure2 codeInfoIndexType;
+  figure3 codeInfoIndexType;
+endrecord;
+type UserInfoType = record
+  cardInfo cardInfoIndexType;
+  codeInfo codeInfoType;
+endrecord;
+type RegisteredUserIndexType = range 0 .. 10;
+
+type RegisteredUserListType = array[10] of UserInfoType;
+
+signal displayMessage(pid, RTDS_charstring);
+signal open(pid, integer);
+signal close(pid, RTDS_charstring);
+signal key(pid, codeInfoIndexType);
+signal card(pid, cardInfoIndexType);
+signal keyAddorDelete(pid, AddorDelIndex);
+signal checkCardAndCode(pid, UserInfoType);
+signal addUser(pid, UserInfoType);
+signal deleteUser(pid, UserInfoType);
+signal administrator(pid);
+signal intruder(pid);
+signal employee(pid);
+signal accepted(pid);
+signal refused(pid);
+
+
+signalroute ENV_C_cEnv_M_key_P_local(1) #fifo
+from env
+to local
+with key;
+
+signalroute ENV_C_cEnv_M_keyAddorDelete_P_local(1) #fifo
+from env
+to local
+with keyAddorDelete;
+
+signalroute ENV_C_cEnv_M_card_P_local(1) #fifo
+from env
+to local
+with card;
+
+/*
+==========
+Messages name and corresponding channel received by the environment
+channel cEnv : open displayMessage close
+==========;
+*/
+
+/*
+signalroute P_local_C_toExternal_M_displayMessage(1) #fifo #reliable #unicast #urgent
+from local
+to env
+with displayMessage;
+*/
+
+signalroute P_local_C_toInternal_M_deleteUser(1) #fifo #reliable #unicast #urgent
+from local
+to central
+with deleteUser;
+
+signalroute P_local_C_toInternal_M_addUser(1) #fifo #reliable #unicast #urgent
+from local
+to central
+with addUser;
+
+/*
+signalroute P_local_C_toExternal_M_close(1) #fifo #reliable #unicast #urgent
+from local
+to env
+with close;
+*/
+
+signalroute P_local_C_toInternal_M_checkCardAndCode(1) #fifo #reliable #unicast #urgent
+from local
+to central
+with checkCardAndCode;
+
+/*
+signalroute P_local_C_toExternal_M_open(1) #fifo #reliable #unicast #urgent
+from local
+to env
+with open;
+*/
+
+process local(0);
+fpar PARENT pid;
+const CODE_LENGTH = 3;
+
+var OFFSPRING pid;
+var SENDER pid;
+var RTDS_skip boolean;
+var RTDS_stop boolean;
+var INITIAL_COD_INFO codeInfoType;
+
+var cardId integer;
+var newKey integer;
+var counter integer;
+var userCardNCode UserInfoType;
+var starMessage RTDS_charstring;
+var doorNumber integer;
+var doorNumber_char RTDS_charstring;
+var messagetoSend RTDS_charstring;
+var AddorDel AddorDelIndex;
+var tMessage clock;
+var codeTimer clock;
+
+state RTDS_START #start #stable ;
+provided true;
+task INITIAL_COD_INFO := codeInfoType(0, 0, 0);
+output displayMessage(self, RTDS_charstring(69) ^ RTDS_charstring(110) ^ RTDS_charstring(116) ^ RTDS_charstring(101) ^ RTDS_charstring(114) ^ RTDS_charstring(32) ^ RTDS_charstring(99) ^ RTDS_charstring(97) ^ RTDS_charstring(114) ^ RTDS_charstring(100)) /* via {P_local_C_toExternal_M_displayMessage}0 */;
+nextstate idle;
+endstate;
+
+
+state idle #stable ;
+
+deadline delayable;
+input card(SENDER, cardId);
+output displayMessage(self, RTDS_charstring(69) ^ RTDS_charstring(110) ^ RTDS_charstring(116) ^ RTDS_charstring(101) ^ RTDS_charstring(114) ^ RTDS_charstring(32) ^ RTDS_charstring(99) ^ RTDS_charstring(111) ^ RTDS_charstring(100) ^ RTDS_charstring(101)) /* via {P_local_C_toExternal_M_displayMessage}0 */;
+task userCardNCode.cardInfo := cardId;
+task cardId := 0;
+task userCardNCode.codeInfo := INITIAL_COD_INFO;
+task counter := 0;
+set codeTimer := -(5);
+task starMessage := RTDS_charstring();
+nextstate wait4Code;
+endstate;
+
+
+state wait4Code #stable ;
+
+deadline delayable;
+input key(SENDER, newKey);
+if counter = 0 then
+if RTDS_skip = false then
+task userCardNCode.codeInfo.figure1 := newKey;
+endif
+endif
+if counter = 1 then
+if RTDS_skip = false then
+task userCardNCode.codeInfo.figure2 := newKey;
+endif
+endif
+if counter = 2 then
+if RTDS_skip = false then
+task userCardNCode.codeInfo.figure3 := newKey;
+endif
+endif
+task counter := counter + 1;
+task starMessage := starMessage ^ RTDS_charstring(42);
+nextstate RTDS_decision_SYMB30;
+
+when codeTimer = 0;
+reset codeTimer;
+output displayMessage(self, RTDS_charstring(79) ^ RTDS_charstring(107)) /* via {P_local_C_toExternal_M_displayMessage}0 */;
+set tMessage := -(5);
+nextstate wait4tMessage;
+endstate;
+
+state RTDS_decision_SYMB30 #unstable ;
+
+provided ( not (counter >= CODE_LENGTH) );
+output displayMessage(self, starMessage) /* via {P_local_C_toExternal_M_displayMessage}0 */;
+nextstate wait4Code;
+
+provided ( counter >= CODE_LENGTH );
+reset codeTimer;
+output checkCardAndCode(self, userCardNCode) to {central}0;
+task userCardNCode.cardInfo := 0;
+task userCardNCode.codeInfo := INITIAL_COD_INFO;
+nextstate wait4Central;
+endstate;
+
+
+state waitForDoorNumber #stable ;
+
+deadline delayable;
+input key(SENDER, doorNumber);
+task doorNumber_char := RTDS_charstring(doorNumber);
+task messagetoSend := RTDS_charstring(68) ^ RTDS_charstring(111) ^ RTDS_charstring(111) ^ RTDS_charstring(114) ^ RTDS_charstring(32) ^ doorNumber_char ^ RTDS_charstring(32) ^ RTDS_charstring(111) ^ RTDS_charstring(112) ^ RTDS_charstring(101) ^ RTDS_charstring(110);
+output displayMessage(self, messagetoSend) /* via {P_local_C_toExternal_M_displayMessage}0 */;
+output open(self, doorNumber) /* via {P_local_C_toExternal_M_open}0 */;
+set tMessage := -(5);
+nextstate wait4tMessage;
+endstate;
+
+
+state wait4Central #stable ;
+
+deadline delayable;
+input accepted(SENDER);
+output displayMessage(self, RTDS_charstring(79) ^ RTDS_charstring(107)) /* via {P_local_C_toExternal_M_displayMessage}0 */;
+set tMessage := -(5);
+nextstate wait4tMessage;
+
+deadline delayable;
+input administrator(SENDER);
+output displayMessage(self, RTDS_charstring(48) ^ RTDS_charstring(32) ^ RTDS_charstring(116) ^ RTDS_charstring(111) ^ RTDS_charstring(32) ^ RTDS_charstring(97) ^ RTDS_charstring(100) ^ RTDS_charstring(100) ^ RTDS_charstring(32) ^ RTDS_charstring(59) ^ RTDS_charstring(32) ^ RTDS_charstring(49) ^ RTDS_charstring(32) ^ RTDS_charstring(116) ^ RTDS_charstring(111) ^ RTDS_charstring(32) ^ RTDS_charstring(100) ^ RTDS_charstring(101) ^ RTDS_charstring(108) ^ RTDS_charstring(101) ^ RTDS_charstring(116) ^ RTDS_charstring(101)) /* via {P_local_C_toExternal_M_displayMessage}0 */;
+nextstate wait4AddOrDelete;
+
+deadline delayable;
+input employee(SENDER);
+output displayMessage(self, RTDS_charstring(83) ^ RTDS_charstring(101) ^ RTDS_charstring(108) ^ RTDS_charstring(101) ^ RTDS_charstring(99) ^ RTDS_charstring(116) ^ RTDS_charstring(32) ^ RTDS_charstring(100) ^ RTDS_charstring(111) ^ RTDS_charstring(111) ^ RTDS_charstring(114)) /* via {P_local_C_toExternal_M_displayMessage}0 */;
+nextstate waitForDoorNumber;
+
+deadline delayable;
+input intruder(SENDER);
+output displayMessage(self, RTDS_charstring(87) ^ RTDS_charstring(114) ^ RTDS_charstring(111) ^ RTDS_charstring(110) ^ RTDS_charstring(103) ^ RTDS_charstring(32) ^ RTDS_charstring(99) ^ RTDS_charstring(97) ^ RTDS_charstring(114) ^ RTDS_charstring(100) ^ RTDS_charstring(32) ^ RTDS_charstring(111) ^ RTDS_charstring(114) ^ RTDS_charstring(32) ^ RTDS_charstring(99) ^ RTDS_charstring(111) ^ RTDS_charstring(100) ^ RTDS_charstring(101)) /* via {P_local_C_toExternal_M_displayMessage}0 */;
+set tMessage := -(5);
+nextstate wait4tMessage;
+
+deadline delayable;
+input refused(SENDER);
+output displayMessage(self, RTDS_charstring(69) ^ RTDS_charstring(114) ^ RTDS_charstring(114) ^ RTDS_charstring(111) ^ RTDS_charstring(114)) /* via {P_local_C_toExternal_M_displayMessage}0 */;
+set tMessage := -(5);
+nextstate wait4tMessage;
+endstate;
+
+
+state wait4tMessage #stable ;
+
+when tMessage = 0;
+reset tMessage;
+output close(self, RTDS_charstring(45)) /* via {P_local_C_toExternal_M_close}0 */;
+output displayMessage(self, RTDS_charstring(69) ^ RTDS_charstring(110) ^ RTDS_charstring(116) ^ RTDS_charstring(101) ^ RTDS_charstring(114) ^ RTDS_charstring(32) ^ RTDS_charstring(99) ^ RTDS_charstring(97) ^ RTDS_charstring(114) ^ RTDS_charstring(100)) /* via {P_local_C_toExternal_M_displayMessage}0 */;
+task userCardNCode.cardInfo := 0;
+task userCardNCode.codeInfo := INITIAL_COD_INFO;
+nextstate idle;
+endstate;
+
+
+state wait4NewUserCard #stable ;
+
+deadline delayable;
+input card(SENDER, cardId);
+task userCardNCode.cardInfo := cardId;
+task userCardNCode.codeInfo := INITIAL_COD_INFO;
+task counter := 0;
+task starMessage := RTDS_charstring();
+output displayMessage(self, RTDS_charstring(69) ^ RTDS_charstring(110) ^ RTDS_charstring(116) ^ RTDS_charstring(101) ^ RTDS_charstring(114) ^ RTDS_charstring(32) ^ RTDS_charstring(110) ^ RTDS_charstring(101) ^ RTDS_charstring(119) ^ RTDS_charstring(32) ^ RTDS_charstring(117) ^ RTDS_charstring(115) ^ RTDS_charstring(101) ^ RTDS_charstring(114) ^ RTDS_charstring(32) ^ RTDS_charstring(99) ^ RTDS_charstring(111) ^ RTDS_charstring(100) ^ RTDS_charstring(101)) /* via {P_local_C_toExternal_M_displayMessage}0 */;
+nextstate wait4NewUserCode;
+endstate;
+
+
+state wait4NewUserCode #stable ;
+
+deadline delayable;
+input key(SENDER, newKey);
+if counter = 0 then
+if RTDS_skip = false then
+task userCardNCode.codeInfo.figure1 := newKey;
+endif
+endif
+if counter = 1 then
+if RTDS_skip = false then
+task userCardNCode.codeInfo.figure2 := newKey;
+endif
+endif
+if counter = 2 then
+if RTDS_skip = false then
+task userCardNCode.codeInfo.figure3 := newKey;
+endif
+endif
+task counter := counter + 1;
+task starMessage := starMessage ^ RTDS_charstring(42);
+nextstate RTDS_decision_SYMB928;
+endstate;
+
+state RTDS_decision_SYMB928 #unstable ;
+
+provided ( not (counter >= CODE_LENGTH) );
+output displayMessage(self, starMessage) /* via {P_local_C_toExternal_M_displayMessage}0 */;
+nextstate wait4NewUserCode;
+
+provided ( counter >= CODE_LENGTH );
+output addUser(self, userCardNCode) to {central}0;
+nextstate wait4Central;
+endstate;
+
+
+state wait4OldUserCard #stable ;
+
+deadline delayable;
+input card(SENDER, cardId);
+task userCardNCode.cardInfo := cardId;
+task userCardNCode.codeInfo := INITIAL_COD_INFO;
+task counter := 0;
+task starMessage := RTDS_charstring();
+output displayMessage(self, RTDS_charstring(69) ^ RTDS_charstring(110) ^ RTDS_charstring(116) ^ RTDS_charstring(101) ^ RTDS_charstring(114) ^ RTDS_charstring(32) ^ RTDS_charstring(117) ^ RTDS_charstring(115) ^ RTDS_charstring(101) ^ RTDS_charstring(114) ^ RTDS_charstring(32) ^ RTDS_charstring(99) ^ RTDS_charstring(111) ^ RTDS_charstring(100) ^ RTDS_charstring(101) ^ RTDS_charstring(32) ^ RTDS_charstring(116) ^ RTDS_charstring(111) ^ RTDS_charstring(32) ^ RTDS_charstring(100) ^ RTDS_charstring(101) ^ RTDS_charstring(108) ^ RTDS_charstring(101) ^ RTDS_charstring(116) ^ RTDS_charstring(101)) /* via {P_local_C_toExternal_M_displayMessage}0 */;
+nextstate wait4OldUserCode;
+endstate;
+
+
+state wait4OldUserCode #stable ;
+
+deadline delayable;
+input key(SENDER, newKey);
+if counter = 0 then
+if RTDS_skip = false then
+task userCardNCode.codeInfo.figure1 := newKey;
+endif
+endif
+if counter = 1 then
+if RTDS_skip = false then
+task userCardNCode.codeInfo.figure2 := newKey;
+endif
+endif
+if counter = 2 then
+if RTDS_skip = false then
+task userCardNCode.codeInfo.figure3 := newKey;
+endif
+endif
+task counter := counter + 1;
+task starMessage := starMessage ^ RTDS_charstring(42);
+nextstate RTDS_decision_SYMB930;
+endstate;
+
+state RTDS_decision_SYMB930 #unstable ;
+
+provided ( not (counter >= CODE_LENGTH) );
+output displayMessage(self, starMessage) /* via {P_local_C_toExternal_M_displayMessage}0 */;
+nextstate wait4OldUserCode;
+
+provided ( counter >= CODE_LENGTH );
+output deleteUser(self, userCardNCode) to {central}0;
+nextstate wait4Central;
+endstate;
+
+
+state wait4AddOrDelete #stable ;
+
+deadline delayable;
+input keyAddorDelete(SENDER, AddorDel);
+nextstate RTDS_decision_SYMB912;
+endstate;
+
+state RTDS_decision_SYMB912 #unstable ;
+
+provided ( AddorDel = 0 );
+output displayMessage(self, RTDS_charstring(73) ^ RTDS_charstring(110) ^ RTDS_charstring(115) ^ RTDS_charstring(101) ^ RTDS_charstring(114) ^ RTDS_charstring(116) ^ RTDS_charstring(32) ^ RTDS_charstring(110) ^ RTDS_charstring(101) ^ RTDS_charstring(119) ^ RTDS_charstring(32) ^ RTDS_charstring(117) ^ RTDS_charstring(115) ^ RTDS_charstring(101) ^ RTDS_charstring(114) ^ RTDS_charstring(32) ^ RTDS_charstring(99) ^ RTDS_charstring(97) ^ RTDS_charstring(114) ^ RTDS_charstring(100)) /* via {P_local_C_toExternal_M_displayMessage}0 */;
+nextstate wait4NewUserCard;
+
+provided ( AddorDel = 1 );
+output displayMessage(self, RTDS_charstring(73) ^ RTDS_charstring(110) ^ RTDS_charstring(115) ^ RTDS_charstring(101) ^ RTDS_charstring(114) ^ RTDS_charstring(116) ^ RTDS_charstring(32) ^ RTDS_charstring(117) ^ RTDS_charstring(115) ^ RTDS_charstring(101) ^ RTDS_charstring(114) ^ RTDS_charstring(32) ^ RTDS_charstring(99) ^ RTDS_charstring(97) ^ RTDS_charstring(114) ^ RTDS_charstring(100) ^ RTDS_charstring(32) ^ RTDS_charstring(116) ^ RTDS_charstring(111) ^ RTDS_charstring(32) ^ RTDS_charstring(100) ^ RTDS_charstring(101) ^ RTDS_charstring(108) ^ RTDS_charstring(101) ^ RTDS_charstring(116) ^ RTDS_charstring(101)) /* via {P_local_C_toExternal_M_displayMessage}0 */;
+nextstate wait4OldUserCard;
+endstate;
+endprocess;
+
+
+signalroute P_central_C_toInternal_M_employee(1) #fifo #reliable #unicast #urgent
+from central
+to local
+with employee;
+
+signalroute P_central_C_toInternal_M_administrator(1) #fifo #reliable #unicast #urgent
+from central
+to local
+with administrator;
+
+signalroute P_central_C_toInternal_M_accepted(1) #fifo #reliable #unicast #urgent
+from central
+to local
+with accepted;
+
+signalroute P_central_C_toInternal_M_intruder(1) #fifo #reliable #unicast #urgent
+from central
+to local
+with intruder;
+
+signalroute P_central_C_toInternal_M_refused(1) #fifo #reliable #unicast #urgent
+from central
+to local
+with refused;
+
+process central(0);
+fpar PARENT pid;
+var OFFSPRING pid;
+var SENDER pid;
+var RTDS_skip boolean;
+var RTDS_stop boolean;
+var MASTER_CODE codeInfoType;
+
+var MASTER_CARD_AND_CODE UserInfoType;
+
+var INITIAL_CODE_INFO codeInfoType;
+
+var userCardNCode UserInfoType;
+var userNumber integer;
+var counter integer;
+var registeredUserList RegisteredUserListType;
+
+state RTDS_START #start #stable ;
+provided true;
+task MASTER_CODE := codeInfoType(0, 0, 1);
+task MASTER_CARD_AND_CODE := UserInfoType(0, MASTER_CODE);
+task INITIAL_CODE_INFO := codeInfoType(0, 0, 0);
+task userNumber := 0;
+nextstate idle;
+endstate;
+
+
+state idle #stable ;
+
+deadline delayable;
+input checkCardAndCode(SENDER, userCardNCode);
+nextstate RTDS_decision_SYMB200;
+endstate;
+
+state RTDS_decision_SYMB200 #unstable ;
+
+provided ( not (userCardNCode = MASTER_CARD_AND_CODE) );
+task counter := 0;
+nextstate RTDS_end_decision_SYMB200;
+
+provided ( userCardNCode = MASTER_CARD_AND_CODE );
+output administrator(self) to SENDER;
+nextstate administrator;
+endstate;
+
+state RTDS_decision_SYMB194 #unstable ;
+
+provided ( not (counter < userNumber) );
+task userCardNCode.cardInfo := 0;
+task userCardNCode.codeInfo := INITIAL_CODE_INFO;
+output intruder(self) to SENDER;
+nextstate idle;
+
+provided ( counter < userNumber );
+nextstate RTDS_decision_SYMB195;
+endstate;
+
+state RTDS_decision_SYMB195 #unstable ;
+
+provided ( not (userCardNCode = registeredUserList[counter]) );
+task counter := counter + 1;
+nextstate RTDS_end_decision_SYMB195;
+
+provided ( userCardNCode = registeredUserList[counter] );
+task userCardNCode.cardInfo := 0;
+task userCardNCode.codeInfo := INITIAL_CODE_INFO;
+output employee(self) to SENDER;
+nextstate idle;
+endstate;
+
+
+state administrator #stable ;
+
+deadline delayable;
+input deleteUser(SENDER, userCardNCode);
+task counter := 0;
+nextstate RTDS_LABEL_find;
+
+deadline delayable;
+input addUser(SENDER, userCardNCode);
+task registeredUserList[userNumber] := userCardNCode;
+task userNumber := userNumber + 1;
+task userCardNCode.cardInfo := 0;
+task userCardNCode.codeInfo := INITIAL_CODE_INFO;
+output accepted(self) to SENDER;
+nextstate idle;
+endstate;
+
+state RTDS_LABEL_shift #unstable ;
+provided true;
+nextstate RTDS_decision_SYMB284;
+endstate;
+
+state RTDS_decision_SYMB284 #unstable ;
+
+provided ( not (counter < userNumber) );
+output accepted(self) to SENDER;
+task userNumber := userNumber - 1;
+nextstate idle;
+
+provided ( counter < userNumber );
+task registeredUserList[counter] := registeredUserList[counter + 1];
+task counter := counter + 1;
+nextstate RTDS_LABEL_shift;
+endstate;
+
+state RTDS_LABEL_find #unstable ;
+provided true;
+nextstate RTDS_decision_SYMB283;
+endstate;
+
+state RTDS_decision_SYMB283 #unstable ;
+
+provided ( not (counter < userNumber) );
+task userCardNCode.cardInfo := 0;
+task userCardNCode.codeInfo := INITIAL_CODE_INFO;
+output refused(self) to SENDER;
+nextstate idle;
+
+provided ( counter < userNumber );
+nextstate RTDS_decision_SYMB288;
+endstate;
+
+state RTDS_decision_SYMB288 #unstable ;
+
+provided ( not (registeredUserList[counter] = userCardNCode) );
+task counter := counter + 1;
+nextstate RTDS_LABEL_find;
+
+provided ( registeredUserList[counter] = userCardNCode );
+task userCardNCode.cardInfo := 0;
+task userCardNCode.codeInfo := INITIAL_CODE_INFO;
+nextstate RTDS_LABEL_shift;
+endstate;
+
+state RTDS_end_decision_SYMB195 #unstable ;
+provided true;
+nextstate RTDS_LABEL_RTDS_label1;
+endstate;
+
+state RTDS_LABEL_RTDS_label1 #unstable ;
+provided true;
+nextstate RTDS_decision_SYMB194;
+endstate;
+
+state RTDS_end_decision_SYMB200 #unstable ;
+provided true;
+nextstate RTDS_LABEL_RTDS_label1;
+endstate;
+endprocess;
+
+
+process RTDS_start_process(1);
+state RTDS_START #start ;
+provided true;
+fork central(nil);
+fork local(nil);
+kill self;
+stop;
+endstate;
+endprocess;
+
+endsystem;
+
+
+cut observer Obs_open;
+var pidSender pid;
+var pidCentral pid;
+var pidLocal pid;
+var door_to_open integer;
+var Last_Signal integer := 0;
+state RTDS_START #start #stable ;
+provided true;
+nextstate init;
+endstate;
+
+
+state right_error
+#error ;
+provided true;
+cut;
+nextstate DEAD;
+endstate;
+
+
+state init ;
+match input employee(pidSender)
+in pidLocal;
+task Last_Signal := Last_Signal+1;
+nextstate init;
+match input administrator(pidSender)
+in pidLocal;
+task Last_Signal := 0;
+nextstate init;
+match output open(pidSender,door_to_open)
+from pidLocal;
+task door_to_open := 0;
+nextstate RTDS_decision_SYMB34;
+match input intruder(pidSender)
+in pidLocal;
+task Last_Signal := 0;
+nextstate init;
+match input accepted(pidSender)
+in pidLocal;
+task Last_Signal := 0;
+nextstate init;
+match input refused(pidSender)
+in pidLocal;
+task Last_Signal := 0;
+nextstate init;
+endstate;
+
+state RTDS_decision_SYMB34 #unstable ;
+
+provided not (Last_Signal = 1);
+nextstate right_error;
+
+provided Last_Signal = 1;
+task Last_Signal := 0;
+nextstate init;
+endstate;
+
+
+state DEAD ;
+endstate;
+endobserver;
+

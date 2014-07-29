@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
+
+<DictionaryObjects language="sdl">
+<Item id="ITEM1" type="ttcn_module" name="t_SystemParking" scope="current">
+</Item>
+<Item id="ITEM10" type="ttcn_port" name="cEnv_pTesting" parentId="ITEM6" scope="none" instanciatedTypeId="ITEM11">
+</Item>
+<Item id="ITEM11" type="ttcn_port_type" name="cEnv_pTesting_type" parentId="ITEM1" scope="none">
+<TtcnPortTypeElement way="out" typeId="ITEM12"/>
+<TtcnPortTypeElement way="out" typeId="ITEM13"/>
+</Item>
+<Item id="ITEM12" type="type" name="sEntryCar" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM13" type="type" name="sOutCar" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM14" type="ttcn_port" name="cEnv_Main" parentId="ITEM6" scope="none" instanciatedTypeId="ITEM15">
+</Item>
+<Item id="ITEM15" type="ttcn_port_type" name="cEnv_Main_type" parentId="ITEM1" scope="none">
+<TtcnPortTypeElement way="out" typeId="ITEM16"/>
+<TtcnPortTypeElement way="out" typeId="ITEM17"/>
+<TtcnPortTypeElement way="out" typeId="ITEM2"/>
+<TtcnPortTypeElement way="out" typeId="ITEM18"/>
+<TtcnPortTypeElement way="out" typeId="ITEM19"/>
+<TtcnPortTypeElement way="in" typeId="ITEM20"/>
+<TtcnPortTypeElement way="in" typeId="ITEM3"/>
+<TtcnPortTypeElement way="in" typeId="ITEM21"/>
+<TtcnPortTypeElement way="in" typeId="ITEM4"/>
+<TtcnPortTypeElement way="in" typeId="ITEM22"/>
+<TtcnPortTypeElement way="in" typeId="ITEM23"/>
+<TtcnPortTypeElement way="in" typeId="ITEM24"/>
+</Item>
+<Item id="ITEM16" type="type" name="sCreateCtrlZone" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM17" type="type" name="sReqInfoCtrlZone" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM18" type="type" name="sSetUpFreeSpot" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM19" type="type" name="sSetUpTotalSpot" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM2" type="type" name="sAddZone" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM20" type="type" name="sExcLimitCtrl" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM21" type="type" name="sOkCreateCtrl" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM22" type="type" name="sOkCreationZone" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM23" type="type" name="sOkSetUp" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM24" type="type" name="sInfoSystem" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM25" type="ttcn_test_case" name="tc_RequestInformationGral" parentId="ITEM1" scope="none" runsOn="ITEM6" systemInterface="ITEM6">
+</Item>
+<Item id="ITEM26" type="variable" name="RTDS_param3" parentId="ITEM25" scope="none" variableTypeName="listInfoCtrl" isFormalParam="TRUE">
+</Item>
+<Item id="ITEM27" type="variable" name="RTDS_param1" parentId="ITEM25" scope="none" variableTypeName="Spots" isFormalParam="TRUE">
+</Item>
+<Item id="ITEM28" type="variable" name="RTDS_param2" parentId="ITEM25" scope="none" variableTypeName="Spots" isFormalParam="TRUE">
+</Item>
+<Item id="ITEM29" type="ttcn_test_case" name="tc_SetFreeSpot" parentId="ITEM1" scope="none" runsOn="ITEM6" systemInterface="ITEM6">
+</Item>
+<Item id="ITEM3" type="type" name="sImpossibleGetInfoCtrls" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM30" type="variable" name="RTDS_param3" parentId="ITEM29" scope="none" variableTypeName="Spots" isFormalParam="TRUE">
+</Item>
+<Item id="ITEM31" type="variable" name="RTDS_param2" parentId="ITEM29" scope="none" variableTypeName="NroZone" isFormalParam="TRUE">
+</Item>
+<Item id="ITEM32" type="variable" name="RTDS_param1" parentId="ITEM29" scope="none" variableTypeName="NroCtrl" isFormalParam="TRUE">
+</Item>
+<Item id="ITEM33" type="ttcn_test_case" name="tc_CreatingCtrl" parentId="ITEM1" scope="none" runsOn="ITEM6" systemInterface="ITEM6">
+</Item>
+<Item id="ITEM34" type="ttcn_function" name="f_timerWaitSystem" parentId="ITEM1" scope="none" runsOn="ITEM6">
+</Item>
+<Item id="ITEM35" type="ttcn_test_case" name="tc_OutCarZone" parentId="ITEM1" scope="none" runsOn="ITEM6" systemInterface="ITEM6">
+</Item>
+<Item id="ITEM36" type="variable" name="RTDS_param1" parentId="ITEM35" scope="none" variableTypeName="NroCtrl" isFormalParam="TRUE">
+</Item>
+<Item id="ITEM37" type="variable" name="RTDS_param2" parentId="ITEM35" scope="none" variableTypeName="NroZone" isFormalParam="TRUE">
+</Item>
+<Item id="ITEM38" type="ttcn_test_case" name="tc_CreatingZone" parentId="ITEM1" scope="none" runsOn="ITEM6" systemInterface="ITEM6">
+</Item>
+<Item id="ITEM39" type="variable" name="RTDS_param3" parentId="ITEM38" scope="none" variableTypeName="Spots" isFormalParam="TRUE">
+</Item>
+<Item id="ITEM4" type="type" name="sExcLimitZones" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM40" type="variable" name="RTDS_param2" parentId="ITEM38" scope="none" variableTypeName="Spots" isFormalParam="TRUE">
+</Item>
+<Item id="ITEM41" type="variable" name="RTDS_param1" parentId="ITEM38" scope="none" variableTypeName="NroCtrl" isFormalParam="TRUE">
+</Item>
+<Item id="ITEM42" type="ttcn_test_case" name="tc_EntryCarZone" parentId="ITEM1" scope="none" runsOn="ITEM6" systemInterface="ITEM6">
+</Item>
+<Item id="ITEM43" type="variable" name="RTDS_param1" parentId="ITEM42" scope="none" variableTypeName="NroCtrl" isFormalParam="TRUE">
+</Item>
+<Item id="ITEM44" type="variable" name="RTDS_param2" parentId="ITEM42" scope="none" variableTypeName="NroZone" isFormalParam="TRUE">
+</Item>
+<Item id="ITEM5" type="ttcn_test_case" name="tc_SetTotalPlaces" parentId="ITEM1" scope="none" runsOn="ITEM6" systemInterface="ITEM6">
+</Item>
+<Item id="ITEM6" type="ttcn_component" name="ParkingSystem" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM7" type="variable" name="RTDS_param3" parentId="ITEM5" scope="none" variableTypeName="Spots" isFormalParam="TRUE">
+</Item>
+<Item id="ITEM8" type="variable" name="RTDS_param2" parentId="ITEM5" scope="none" variableTypeName="NroZone" isFormalParam="TRUE">
+</Item>
+<Item id="ITEM9" type="variable" name="RTDS_param1" parentId="ITEM5" scope="none" variableTypeName="NroCtrl" isFormalParam="TRUE">
+</Item>
+</DictionaryObjects>

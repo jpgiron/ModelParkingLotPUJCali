@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Diagram SYSTEM "rtdsDiagram.dtd">
+
+<Diagram language="sdl" type="msc" name="ExternalMsc1" showMsgData="full" linksCrossingAllowed="FALSE" cellWidthMm="4">
+
+<DiagramPartition name="Part. 0" nbPagesH="2" nbPagesV="3">
+<PageSpecification pageWidth="21" pageHeight="29.7" topMargin="0" bottomMargin="0" leftMargin="0" rightMargin="0" pageFooter="FALSE"/>
+
+<Symbol symbolId="SYMB1" type="mscExternalFrm" xCenter="595" yCenter="1262" fixedDimensions="TRUE" width="1146" height="2459" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text></Text>
+
+<Symbol symbolId="SYMB10" type="mscCondition" xCenter="231" yCenter="231" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>top:Idle</Text>
+<SpannedLifeline lifelineId="SYMB3"/>
+</Symbol>
+
+<Symbol symbolId="SYMB11" type="mscAbsTimeConstr" xCenter="30" yCenter="220" fixedDimensions="FALSE" width="38" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>60</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB12" type="mscLifeline" xCenter="887" yCenter="1334" fixedDimensions="FALSE" width="80" height="2228" color="#000000" fillColor="#ffffff" dies="FALSE">
+<Description></Description>
+<Text>pZone
+(3)</Text>
+<LifelineComponent type="norm" height="2228" color="#000000"/>
+</Symbol>
+
+<Symbol symbolId="SYMB13" type="mscAbsTimeConstr" xCenter="30" yCenter="260" fixedDimensions="FALSE" width="38" height="36" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>60</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB14" type="mscAbsTimeConstr" xCenter="30" yCenter="300" fixedDimensions="FALSE" width="38" height="50" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>60</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB15" type="mscCondition" xCenter="887" yCenter="300" fixedDimensions="FALSE" width="168" height="50" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>top:RTDS_START</Text>
+<SpannedLifeline lifelineId="SYMB12"/>
+</Symbol>
+
+<Symbol symbolId="SYMB16" type="mscAbsTimeConstr" xCenter="30" yCenter="340" fixedDimensions="FALSE" width="38" height="42" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>70</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB17" type="mscCondition" xCenter="230" yCenter="340" fixedDimensions="FALSE" width="174" height="42" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>top:sWaitIdle</Text>
+<SpannedLifeline lifelineId="SYMB3"/>
+</Symbol>
+
+<Symbol symbolId="SYMB18" type="mscAbsTimeConstr" xCenter="30" yCenter="380" fixedDimensions="FALSE" width="38" height="56" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>80</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB19" type="mscCondition" xCenter="887" yCenter="380" fixedDimensions="FALSE" width="124" height="56" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>top:Idle</Text>
+<SpannedLifeline lifelineId="SYMB12"/>
+</Symbol>
+
+<Symbol symbolId="SYMB2" type="mscLifeline" xCenter="80" yCenter="1249" fixedDimensions="FALSE" width="94" height="2388" color="#000000" fillColor="#ffffff" dies="FALSE">
+<Description></Description>
+<Text>RTDS_Env
+(0)</Text>
+<LifelineComponent type="norm" height="2388" color="#000000"/>
+</Symbol>
+
+<Symbol symbolId="SYMB20" type="mscAbsTimeConstr" xCenter="30" yCenter="420" fixedDimensions="FALSE" width="38" height="48" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>90</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB21" type="mscCondition" xCenter="230" yCenter="420" fixedDimensions="FALSE" width="152" height="48" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>top:testing</Text>
+<SpannedLifeline lifelineId="SYMB3"/>
+</Symbol>
+
+<Symbol symbolId="SYMB22" type="mscAbsTimeConstr" xCenter="30" yCenter="460" fixedDimensions="FALSE" width="60" height="40" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>100</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB23" type="mscAbsTimeConstr" xCenter="30" yCenter="500" fixedDimensions="FALSE" width="60" height="54" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>100</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB24" type="mscAbsTimeConstr" xCenter="30" yCenter="540" fixedDimensions="FALSE" width="60" height="46" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>100</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB25" type="mscAbsTimeConstr" xCenter="30" yCenter="580" fixedDimensions="FALSE" width="60" height="38" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>100</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB26" type="mscAbsTimeConstr" xCenter="30" yCenter="620" fixedDimensions="FALSE" width="60" height="52" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>110</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB27" type="mscAbsTimeConstr" xCenter="30" yCenter="660" fixedDimensions="FALSE" width="60" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>110</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB28" type="mscAbsTimeConstr" xCenter="30" yCenter="700" fixedDimensions="FALSE" width="60" height="36" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>110</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB29" type="mscAbsTimeConstr" xCenter="30" yCenter="740" fixedDimensions="FALSE" width="60" height="50" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>110</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB3" type="mscLifeline" xCenter="230" yCenter="1249" fixedDimensions="FALSE" width="130" height="2388" color="#000000" fillColor="#ffffff" dies="FALSE">
+<Description></Description>
+<Text>obsStateIR2
+(2)</Text>
+<LifelineComponent type="norm" height="2388" color="#000000"/>
+</Symbol>
+
+<Symbol symbolId="SYMB30" type="mscAbsTimeConstr" xCenter="30" yCenter="780" fixedDimensions="FALSE" width="60" height="42" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>120</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB31" type="mscAbsTimeConstr" xCenter="30" yCenter="820" fixedDimensions="FALSE" width="60" height="56" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>120</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB32" type="mscAbsTimeConstr" xCenter="30" yCenter="860" fixedDimensions="FALSE" width="60" height="48" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>120</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB33" type="mscAbsTimeConstr" xCenter="30" yCenter="900" fixedDimensions="FALSE" width="60" height="40" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>120</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB34" type="mscAbsTimeConstr" xCenter="30" yCenter="940" fixedDimensions="FALSE" width="60" height="54" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>130</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB35" type="mscAbsTimeConstr" xCenter="30" yCenter="980" fixedDimensions="FALSE" width="60" height="46" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>130</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB36" type="mscAbsTimeConstr" xCenter="30" yCenter="1020" fixedDimensions="FALSE" width="60" height="38" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>130</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB37" type="mscAbsTimeConstr" xCenter="30" yCenter="1060" fixedDimensions="FALSE" width="60" height="52" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>130</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB38" type="mscAbsTimeConstr" xCenter="30" yCenter="1100" fixedDimensions="FALSE" width="60" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>140</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB39" type="mscAbsTimeConstr" xCenter="30" yCenter="1140" fixedDimensions="FALSE" width="60" height="36" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>140</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB4" type="mscLifeline" xCenter="461" yCenter="170" fixedDimensions="FALSE" width="196" height="230" color="#000000" fillColor="#ffffff" dies="TRUE">
+<Description></Description>
+<Text>RTDS_start_process
+(1)</Text>
+<LifelineComponent type="norm" height="230" color="#000000"/>
+</Symbol>
+
+<Symbol symbolId="SYMB40" type="mscAbsTimeConstr" xCenter="30" yCenter="1180" fixedDimensions="FALSE" width="60" height="50" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>140</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB41" type="mscAbsTimeConstr" xCenter="30" yCenter="1220" fixedDimensions="FALSE" width="60" height="42" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>140</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB42" type="mscAbsTimeConstr" xCenter="30" yCenter="1260" fixedDimensions="FALSE" width="60" height="56" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>150</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB43" type="mscAbsTimeConstr" xCenter="30" yCenter="1300" fixedDimensions="FALSE" width="60" height="48" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>150</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB44" type="mscAbsTimeConstr" xCenter="30" yCenter="1340" fixedDimensions="FALSE" width="60" height="40" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>150</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB45" type="mscAbsTimeConstr" xCenter="30" yCenter="1380" fixedDimensions="FALSE" width="60" height="54" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>150</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB46" type="mscAbsTimeConstr" xCenter="30" yCenter="1420" fixedDimensions="FALSE" width="60" height="46" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>160</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB47" type="mscAbsTimeConstr" xCenter="30" yCenter="1460" fixedDimensions="FALSE" width="60" height="38" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>160</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB48" type="mscAbsTimeConstr" xCenter="30" yCenter="1500" fixedDimensions="FALSE" width="60" height="52" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>160</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB49" type="mscAbsTimeConstr" xCenter="30" yCenter="1540" fixedDimensions="FALSE" width="60" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>160</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB5" type="mscAbsTimeConstr" xCenter="30" yCenter="100" fixedDimensions="FALSE" width="38" height="46" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>30</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB50" type="mscAbsTimeConstr" xCenter="30" yCenter="1580" fixedDimensions="FALSE" width="60" height="36" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>170</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB51" type="mscAbsTimeConstr" xCenter="30" yCenter="1620" fixedDimensions="FALSE" width="60" height="50" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>170</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB52" type="mscAbsTimeConstr" xCenter="30" yCenter="1660" fixedDimensions="FALSE" width="60" height="42" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>170</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB53" type="mscAbsTimeConstr" xCenter="30" yCenter="1700" fixedDimensions="FALSE" width="60" height="56" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>170</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB54" type="mscAbsTimeConstr" xCenter="30" yCenter="1740" fixedDimensions="FALSE" width="60" height="48" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>180</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB55" type="mscAbsTimeConstr" xCenter="30" yCenter="1780" fixedDimensions="FALSE" width="60" height="40" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>180</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB56" type="mscAbsTimeConstr" xCenter="30" yCenter="1820" fixedDimensions="FALSE" width="60" height="54" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>180</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB57" type="mscAbsTimeConstr" xCenter="30" yCenter="1860" fixedDimensions="FALSE" width="60" height="46" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>180</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB58" type="mscAbsTimeConstr" xCenter="30" yCenter="1900" fixedDimensions="FALSE" width="60" height="38" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>190</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB59" type="mscAbsTimeConstr" xCenter="30" yCenter="1940" fixedDimensions="FALSE" width="60" height="52" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>190</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB6" type="mscCondition" xCenter="231" yCenter="143" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>top:RTDS_START</Text>
+<SpannedLifeline lifelineId="SYMB3"/>
+</Symbol>
+
+<Symbol symbolId="SYMB60" type="mscAbsTimeConstr" xCenter="30" yCenter="1980" fixedDimensions="FALSE" width="60" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>190</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB61" type="mscCondition" xCenter="887" yCenter="1980" fixedDimensions="FALSE" width="212" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>top:WaitSensorIR2</Text>
+<SpannedLifeline lifelineId="SYMB12"/>
+</Symbol>
+
+<Symbol symbolId="SYMB62" type="mscAbsTimeConstr" xCenter="30" yCenter="2020" fixedDimensions="FALSE" width="60" height="36" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>200</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB63" type="mscCondition" xCenter="230" yCenter="2020" fixedDimensions="FALSE" width="130" height="36" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>top:sError</Text>
+<SpannedLifeline lifelineId="SYMB3"/>
+</Symbol>
+
+<Symbol symbolId="SYMB7" type="mscAbsTimeConstr" xCenter="30" yCenter="140" fixedDimensions="FALSE" width="38" height="38" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>30</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB8" type="mscCondition" xCenter="473" yCenter="143" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>top:RTDS_START</Text>
+<SpannedLifeline lifelineId="SYMB4"/>
+</Symbol>
+
+<Symbol symbolId="SYMB9" type="mscAbsTimeConstr" xCenter="30" yCenter="180" fixedDimensions="FALSE" width="38" height="52" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>50</Text>
+</Symbol>
+</Symbol>
+
+<Link linkId="LINK21" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sOkInitPid</Text>
+<Connector attachedSymbolId="SYMB12" type="mscvoid" isOutside="TRUE" side="y" position="0.00538599640934" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB2" type="mscvoid" isOutside="TRUE" side="y" position="0.105527638191" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK24" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sOkInitPid</Text>
+<Connector attachedSymbolId="SYMB12" type="mscvoid" isOutside="TRUE" side="y" position="0.149012567325" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB2" type="mscvoid" isOutside="TRUE" side="y" position="0.239530988275" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK28" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sOkInitPid</Text>
+<Connector attachedSymbolId="SYMB12" type="mscvoid" isOutside="TRUE" side="y" position="-0.712746858169" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB2" type="mscvoid" isOutside="TRUE" side="y" position="-0.564489112228" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK29" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sInfoZone({totalSpots = 2, freeSpots = 0, ID = {pZone}0})</Text>
+<Connector attachedSymbolId="SYMB12" type="mscvoid" isOutside="TRUE" side="y" position="0.436265709156" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB2" type="mscvoid" isOutside="TRUE" side="y" position="0.507537688442" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK31" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sOkInit({totalSpots = 2, freeSpots = 0, ID = {pZone}0})</Text>
+<Connector attachedSymbolId="SYMB12" type="mscvoid" isOutside="TRUE" side="y" position="-0.138240574506" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB2" type="mscvoid" isOutside="TRUE" side="y" position="-0.0284757118928" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK32" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sOkInitPid</Text>
+<Connector attachedSymbolId="SYMB12" type="mscvoid" isOutside="TRUE" side="y" position="-0.569120287253" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB2" type="mscvoid" isOutside="TRUE" side="y" position="-0.430485762144" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK36" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sInfoZone({totalSpots = 2, freeSpots = 2, ID = {pZone}0})</Text>
+<Connector attachedSymbolId="SYMB12" type="mscvoid" isOutside="TRUE" side="y" position="-0.281867145422" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB2" type="mscvoid" isOutside="TRUE" side="y" position="-0.162479061977" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK39" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sInfoZone({totalSpots = 2, freeSpots = 2, ID = {pZone}0})</Text>
+<Connector attachedSymbolId="SYMB12" type="mscvoid" isOutside="TRUE" side="y" position="-0.425493716338" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB2" type="mscvoid" isOutside="TRUE" side="y" position="-0.29648241206" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK40" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sInfoZone({totalSpots = 2, freeSpots = 0, ID = {pZone}0})</Text>
+<Connector attachedSymbolId="SYMB12" type="mscvoid" isOutside="TRUE" side="y" position="0.292639138241" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB2" type="mscvoid" isOutside="TRUE" side="y" position="0.373534338358" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK22" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sInitPidCtrl({nil}0)</Text>
+<Connector attachedSymbolId="SYMB2" type="mscvoid" isOutside="TRUE" side="y" position="0.139028475712" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB12" type="mscvoid" isOutside="TRUE" side="y" position="0.113105924596" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK23" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sReqInfo</Text>
+<Connector attachedSymbolId="SYMB2" type="mscvoid" isOutside="TRUE" side="y" position="-0.396984924623" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB12" type="mscvoid" isOutside="TRUE" side="y" position="-0.461400359066" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK25" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sInitPidCtrl({nil}0)</Text>
+<Connector attachedSymbolId="SYMB2" type="mscvoid" isOutside="TRUE" side="y" position="-0.530988274707" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB12" type="mscvoid" isOutside="TRUE" side="y" position="-0.605026929982" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK26" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sReqInfo</Text>
+<Connector attachedSymbolId="SYMB2" type="mscvoid" isOutside="TRUE" side="y" position="0.273031825796" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB12" type="mscvoid" isOutside="TRUE" side="y" position="0.256732495512" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK27" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sReqInfo</Text>
+<Connector attachedSymbolId="SYMB2" type="mscvoid" isOutside="TRUE" side="y" position="-0.262981574539" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB12" type="mscvoid" isOutside="TRUE" side="y" position="-0.317773788151" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK30" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sInitPidCtrl({nil}0)</Text>
+<Connector attachedSymbolId="SYMB2" type="mscvoid" isOutside="TRUE" side="y" position="0.00502512562814" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB12" type="mscvoid" isOutside="TRUE" side="y" position="-0.0305206463196" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK33" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sIR1_Zone</Text>
+<Connector attachedSymbolId="SYMB2" type="mscvoid" isOutside="TRUE" side="y" position="0.541038525963" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB12" type="mscvoid" isOutside="TRUE" side="y" position="0.543985637343" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK34" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sInitFreeSpot(0)</Text>
+<Connector attachedSymbolId="SYMB2" type="mscvoid" isOutside="TRUE" side="y" position="-0.128978224456" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB12" type="mscvoid" isOutside="TRUE" side="y" position="-0.174147217235" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK35" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sInitPidCtrl({nil}0)</Text>
+<Connector attachedSymbolId="SYMB2" type="mscvoid" isOutside="TRUE" side="y" position="-0.664991624791" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB12" type="mscvoid" isOutside="TRUE" side="y" position="-0.748653500898" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK38" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sReqInfo</Text>
+<Connector attachedSymbolId="SYMB2" type="mscvoid" isOutside="TRUE" side="y" position="0.407035175879" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB12" type="mscvoid" isOutside="TRUE" side="y" position="0.400359066427" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK41" type="instcre" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text></Text>
+<Connector attachedSymbolId="SYMB4" type="mscvoid" isOutside="TRUE" side="y" position="0.391304347826" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB12" type="mscvoid" isOutside="TRUE" side="y" position="-1.0" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+</DiagramPartition>
+
+</Diagram>

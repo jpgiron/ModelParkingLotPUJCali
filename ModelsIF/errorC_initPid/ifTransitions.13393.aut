@@ -1,0 +1,6 @@
+des(0,5,6)            
+(0,"<<{obsInitPid}0 i>> ",1)
+(1,"<<{RTDS_start_process}0 #pZone{pZone}0>> <<{RTDS_start_process}0 k{RTDS_start_process}0>> ",2)
+(2,"<<{pZone}0 !sTemp{p1={pZone}0}>> ",3)
+(3,"<<{obsInitPid}0 i>> &error ",4)
+(4,"<<{obsInitPid}0 i>> ",5)

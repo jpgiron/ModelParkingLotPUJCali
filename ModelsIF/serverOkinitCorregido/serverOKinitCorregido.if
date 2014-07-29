@@ -1,0 +1,154 @@
+
+system server_test;
+type RTDS_character = range 32..127;
+type RTDS_charstring = string[128] of RTDS_character;
+signal Done(pid);
+signal Request(pid);
+
+
+signalroute P_client_C_cs_M_Done(1) #fifo #reliable #unicast #urgent
+from client
+to server
+with Done;
+
+signalroute ENV_C_es_M_Request_P_server(1) #fifo
+from env
+to server
+with Request;
+
+/*
+==========
+Messages name and corresponding channel received by the environment
+channel es : 
+==========;
+*/
+
+process server(0);
+fpar PARENT pid;
+var OFFSPRING pid;
+var SENDER pid;
+var RTDS_skip boolean;
+var RTDS_stop boolean;
+var i integer;
+
+state RTDS_START #start #stable ;
+provided true;
+task i := 0;
+nextstate Idle;
+endstate;
+
+
+state Stalled #stable ;
+save Request;
+
+deadline delayable;
+input Done(SENDER);
+task i := i - 1;
+nextstate RTDS_decision_SYMB77;
+endstate;
+
+state RTDS_decision_SYMB77 #unstable ;
+
+provided ( not (i >= 2) );
+nextstate Idle;
+
+provided ( i >= 2 );
+nextstate Stalled;
+endstate;
+
+
+state Idle #stable ;
+
+deadline delayable;
+input Request(SENDER);
+OFFSPRING := fork client(self);
+task i := i + 1;
+nextstate RTDS_decision_SYMB75;
+
+deadline delayable;
+input Done(SENDER);
+task i := i - 1;
+nextstate Idle;
+endstate;
+
+state RTDS_decision_SYMB75 #unstable ;
+
+provided ( not (i < 2) );
+nextstate Stalled;
+
+provided ( i < 2 );
+nextstate Idle;
+endstate;
+endprocess;
+
+
+process client(0);
+fpar PARENT pid;
+var OFFSPRING pid;
+var SENDER pid;
+var RTDS_skip boolean;
+var RTDS_stop boolean;
+var work_done clock;
+
+state RTDS_START #start #stable ;
+provided true;
+set work_done := -(2);
+nextstate Working;
+endstate;
+
+
+state Working #stable ;
+
+when work_done = 0;
+reset work_done;
+reset work_done;
+output Done(self) to PARENT;
+kill self; stop;
+endstate;
+endprocess;
+
+
+process RTDS_start_process(1);
+state RTDS_START #start ;
+provided true;
+fork server(nil);
+kill self;
+stop;
+endstate;
+endprocess;
+
+endsystem;
+
+
+cut observer obsInit2;
+var pidSender pid;
+var pidCreator pid;
+state RTDS_START #start #stable ;
+provided true;
+nextstate Idle;
+endstate;
+
+
+state waitInit ;
+provided ({server}0) instate Idle;
+nextstate END;
+endstate;
+
+
+state Idle ;
+match fork(pidServer) in pidCreator;
+nextstate waitInit;
+endstate;
+
+
+state END ;
+provided true;
+cut;
+nextstate DEAD;
+endstate;
+
+
+state DEAD ;
+endstate;
+endobserver;
+

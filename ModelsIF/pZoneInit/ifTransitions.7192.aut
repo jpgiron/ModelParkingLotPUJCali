@@ -1,0 +1,5 @@
+des(0,4,5)            
+(0,"<<{obsPrueba}0 i>> ",1)
+(1,"<<{RTDS_start_process}0 #pZone{pZone}0>> <<{RTDS_start_process}0 k{RTDS_start_process}0>> ",2)
+(2,"<<{obsPrueba}0 <{pZone}0>> &error ",3)
+(3,"<<{obsPrueba}0 i>> ",4)

@@ -1,0 +1,40 @@
+
+0:
+{RTDS_start_process}0		{}
+  @top:RTDS_START		{} {}
+{obsPrueba}0		{{}} 
+  @top:RTDS_START		{pidSender={nil}0,pidZone={nil}0,pidCreator={nil}0}
+{time}0		{}
+  @run		0/0 
+
+1:
+{RTDS_start_process}0		{}
+  @top:RTDS_START		{} {}
+{obsPrueba}0		{{}} 
+  @top:Idle		{pidSender={nil}0,pidZone={nil}0,pidCreator={nil}0}
+{time}0		{}
+  @run		0/0 
+
+2:
+{pZone}0		{}
+  @top:RTDS_START		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=1,p_totalSpots=1,TmpfreeSpots=1,TmptotalSpots=1,freeSpots=1,totalSpots=1,PidZone={nil}0,pid_Ctrl={nil}0,pidCtrl={nil}0,infoTableZone={totalSpots=0,freeSpots=0,ID={nil}0}} {PARENT={nil}0}
+{obsPrueba}0		{{<<{RTDS_start_process}0 #pZone{pZone}0>> <<{RTDS_start_process}0 k{RTDS_start_process}0>> }} 
+  @top:Idle		{pidSender={nil}0,pidZone={nil}0,pidCreator={nil}0}
+{time}0		{}
+  @run		0/0 
+
+3:
+{pZone}0		{}
+  @top:RTDS_START		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=1,p_totalSpots=1,TmpfreeSpots=1,TmptotalSpots=1,freeSpots=1,totalSpots=1,PidZone={nil}0,pid_Ctrl={nil}0,pidCtrl={nil}0,infoTableZone={totalSpots=0,freeSpots=0,ID={nil}0}} {PARENT={nil}0}
+{obsPrueba}0		{{<<{RTDS_start_process}0 k{RTDS_start_process}0>> }} 
+  @top:sError		{pidSender={nil}0,pidZone={pZone}0,pidCreator={RTDS_start_process}0}
+{time}0		{}
+  @run		0/0 
+
+4:
+{pZone}0		{}
+  @top:RTDS_START		{OFFSPRING={nil}0,SENDER={nil}0,RTDS_skip=f,RTDS_stop=f,p_freeSpots=1,p_totalSpots=1,TmpfreeSpots=1,TmptotalSpots=1,freeSpots=1,totalSpots=1,PidZone={nil}0,pid_Ctrl={nil}0,pidCtrl={nil}0,infoTableZone={totalSpots=0,freeSpots=0,ID={nil}0}} {PARENT={nil}0}
+{obsPrueba}0		{{<<{RTDS_start_process}0 k{RTDS_start_process}0>> }} cut!
+  @top:DEAD		{pidSender={nil}0,pidZone={pZone}0,pidCreator={RTDS_start_process}0}
+{time}0		{}
+  @run		0/0 
