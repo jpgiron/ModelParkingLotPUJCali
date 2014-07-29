@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
+
+<DictionaryObjects language="sdl" diagramType="ifobs">
+<Item id="ITEM1" type="ifobs" name="obsTestP1" scope="current">
+<UsingSymbols>
+<SymbolReference symbolId="SYMB1"/>
+</UsingSymbols>
+<Body>
+<ContinuousTransitions>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM2"/>
+<SymbolReference symbolId="SYMB30"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM3"/>
+<SymbolReference symbolId="SYMB49"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM5"/>
+<SymbolReference symbolId="SYMB39"/>
+</Transition>
+</ContinuousTransitions>
+</Body>
+</Item>
+<Item id="ITEM2" type="state" name="end" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB43"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB50"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM3" type="state" name="init" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB37"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB37"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM4" type="state" name="DEAD" parentId="ITEM1" scope="none">
+<UsingSymbols>
+<SymbolReference symbolId="SYMB27"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM5" type="state" name="s_error" parentId="ITEM1" scope="none">
+</Item>
+</DictionaryObjects>

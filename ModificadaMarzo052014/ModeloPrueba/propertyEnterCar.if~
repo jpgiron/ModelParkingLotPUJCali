@@ -1,0 +1,366 @@
+
+system ParkingSystem;
+type RTDS_character = range 32..127;
+type RTDS_charstring = string[128] of RTDS_character;
+type i_spots = range 0 .. 1;
+
+type InfoZone = record
+  totalSpots i_spots;
+  freeSpots i_spots;
+  ID pid;
+endrecord;
+signal sEntered_Car(pid, InfoZone);
+signal sOut_Car(pid, InfoZone);
+signal sOkInit(pid, InfoZone);
+signal sInfoZone(pid, InfoZone);
+signal sInitFreeSpot(pid, i_spots);
+signal sInitTotalSpots(pid, i_spots);
+signal sReqInfo(pid);
+signal sLoopInductive_Zone(pid);
+signal sIR1_Zone(pid);
+signal sIR2_Zone(pid);
+signal sIR3_Zone(pid);
+signal sIR4_Zone(pid);
+signal sOkInitPid(pid);
+signal sInitPidCtrl(pid, pid);
+
+
+signalroute ENV_C_cEnv_Zone_M_sInitTotalSpots_P_pZone(1) #fifo
+from env
+to pZone
+with sInitTotalSpots;
+
+signalroute ENV_C_cEnv_Zone_M_sIR3_Zone_P_pZone(1) #fifo
+from env
+to pZone
+with sIR3_Zone;
+
+signalroute ENV_C_cEnv_Zone_M_sIR4_Zone_P_pZone(1) #fifo
+from env
+to pZone
+with sIR4_Zone;
+
+signalroute ENV_C_cEnv_Zone_M_sIR2_Zone_P_pZone(1) #fifo
+from env
+to pZone
+with sIR2_Zone;
+
+signalroute ENV_C_cEnv_Zone_M_sInitPidCtrl_P_pZone(1) #fifo
+from env
+to pZone
+with sInitPidCtrl;
+
+signalroute ENV_C_cEnv_Zone_M_sIR1_Zone_P_pZone(1) #fifo
+from env
+to pZone
+with sIR1_Zone;
+
+signalroute ENV_C_cEnv_Zone_M_sInitFreeSpot_P_pZone(1) #fifo
+from env
+to pZone
+with sInitFreeSpot;
+
+signalroute ENV_C_cEnv_Zone_M_sLoopInductive_Zone_P_pZone(1) #fifo
+from env
+to pZone
+with sLoopInductive_Zone;
+
+signalroute ENV_C_cEnv_Zone_M_sReqInfo_P_pZone(1) #fifo
+from env
+to pZone
+with sReqInfo;
+
+/*
+==========
+Messages name and corresponding channel received by the environment
+channel cEnv_Zone : sOkInitPid sOut_Car sOkInit sInfoZone sEntered_Car
+==========;
+*/
+
+/*
+signalroute P_pZone_C_cEnv_Zone_M_sOkInit(1) #fifo #reliable #unicast #urgent
+from pZone
+to env
+with sOkInit;
+*/
+
+/*
+signalroute P_pZone_C_cEnv_Zone_M_sInfoZone(1) #fifo #reliable #unicast #urgent
+from pZone
+to env
+with sInfoZone;
+*/
+
+/*
+signalroute P_pZone_C_cEnv_Zone_M_sOkInitPid(1) #fifo #reliable #unicast #urgent
+from pZone
+to env
+with sOkInitPid;
+*/
+
+/*
+signalroute P_pZone_C_cEnv_Zone_M_sOut_Car(1) #fifo #reliable #unicast #urgent
+from pZone
+to env
+with sOut_Car;
+*/
+
+/*
+signalroute P_pZone_C_cEnv_Zone_M_sEntered_Car(1) #fifo #reliable #unicast #urgent
+from pZone
+to env
+with sEntered_Car;
+*/
+
+process pZone(0);
+fpar PARENT pid;
+var OFFSPRING pid;
+var SENDER pid;
+var RTDS_skip boolean;
+var RTDS_stop boolean;
+var p_freeSpots i_spots;
+var p_totalSpots i_spots;
+var TmpfreeSpots i_spots;
+var TmptotalSpots i_spots;
+var freeSpots i_spots;
+var totalSpots i_spots;
+var PidZone pid;
+var pid_Ctrl pid;
+var pidCtrl pid;
+var infoTableZone InfoZone;
+
+state RTDS_START #start #stable ;
+provided true;
+task PidZone := self;
+task infoTableZone.ID := PidZone;
+task infoTableZone.freeSpots := 2;
+task infoTableZone.totalSpots := 2;
+nextstate Idle;
+endstate;
+
+
+state WaitSensorIR2 #stable ;
+
+deadline delayable;
+input sIR2_Zone(SENDER);
+nextstate VerifyIsaCarEntering;
+endstate;
+
+
+state WaitSensorIR4 #stable ;
+
+deadline delayable;
+input sIR4_Zone(SENDER);
+nextstate VerifyIsaCarOut;
+endstate;
+
+
+state Idle #stable ;
+
+deadline delayable;
+input sInitFreeSpot(SENDER, p_freeSpots);
+task infoTableZone.freeSpots := p_freeSpots;
+output sOkInit(self, infoTableZone) /* via {P_pZone_C_cEnv_Zone_M_sOkInit}0 */;
+nextstate Idle;
+
+deadline delayable;
+input sInitPidCtrl(SENDER, pidCtrl);
+task pid_Ctrl := pidCtrl;
+output sOkInitPid(self) /* via {P_pZone_C_cEnv_Zone_M_sOkInitPid}0 */;
+nextstate Idle;
+
+deadline delayable;
+input sIR3_Zone(SENDER);
+nextstate WaitSensorIR4;
+
+deadline delayable;
+input sReqInfo(SENDER);
+output sInfoZone(self, infoTableZone) /* via {P_pZone_C_cEnv_Zone_M_sInfoZone}0 */;
+nextstate Idle;
+
+deadline delayable;
+input sInitTotalSpots(SENDER, p_totalSpots);
+task infoTableZone.totalSpots := p_totalSpots;
+output sOkInit(self, infoTableZone) /* via {P_pZone_C_cEnv_Zone_M_sOkInit}0 */;
+nextstate Idle;
+
+deadline delayable;
+input sIR1_Zone(SENDER);
+nextstate WaitSensorIR2;
+endstate;
+
+
+state sEvaluatingFreeSpots #stable ;
+provided TmpfreeSpots = 0;
+output sEntered_Car(self, infoTableZone) /* via {P_pZone_C_cEnv_Zone_M_sEntered_Car}0 */;
+nextstate Idle;
+provided TmpfreeSpots > 0;
+task TmpfreeSpots := TmpfreeSpots - 1;
+task infoTableZone.freeSpots := TmpfreeSpots;
+output sEntered_Car(self, infoTableZone) /* via {P_pZone_C_cEnv_Zone_M_sEntered_Car}0 */;
+nextstate Idle;
+endstate;
+
+
+state VerifyIsaCarEntering #stable ;
+
+deadline delayable;
+input sLoopInductive_Zone(SENDER);
+task TmpfreeSpots := infoTableZone.freeSpots;
+nextstate sEvaluatingFreeSpots;
+endstate;
+
+
+state VerifyIsaCarOut #stable ;
+
+deadline delayable;
+input sLoopInductive_Zone(SENDER);
+task TmpfreeSpots := infoTableZone.freeSpots;
+task TmptotalSpots := infoTableZone.totalSpots;
+nextstate sEvaluatingTotalSpots;
+endstate;
+
+
+state sEvaluatingTotalSpots #stable ;
+provided TmpfreeSpots = TmptotalSpots;
+output sOut_Car(self, infoTableZone) /* via {P_pZone_C_cEnv_Zone_M_sOut_Car}0 */;
+nextstate Idle;
+provided TmpfreeSpots < TmptotalSpots;
+task TmpfreeSpots := TmpfreeSpots + 1;
+task infoTableZone.freeSpots := TmpfreeSpots;
+output sOut_Car(self, infoTableZone) /* via {P_pZone_C_cEnv_Zone_M_sOut_Car}0 */;
+nextstate Idle;
+endstate;
+endprocess;
+
+
+process RTDS_start_process(1);
+state RTDS_START #start ;
+provided true;
+fork pZone(nil);
+kill self;
+stop;
+endstate;
+endprocess;
+
+endsystem;
+
+
+cut observer obsEnteringCar2;
+
+type InfoZone = record
+  totalSpots integer;
+  freeSpots integer;
+  ID pid;
+endrecord;
+
+var pidSender pid;
+var pidCreator pid;
+var pidZone pid;
+var infZ InfoZone;
+var n_depth integer:=0;
+state RTDS_START #start #stable ;
+provided true;
+nextstate Idle;
+endstate;
+
+
+state waitIdle ;
+provided ({pZone}0) instate Idle;
+nextstate testing;
+endstate;
+
+
+state sError #error ;
+provided true;
+cut;
+nextstate DEAD;
+endstate;
+
+
+state sSignalIR2 ;
+match input sIR2_Zone(pidSender) in pidZone;
+nextstate RTDS_decision_SYMB33;
+endstate;
+
+state RTDS_decision_SYMB33 #unstable ;
+
+provided not (({pZone}0) instate VerifyIsaCarEntering);
+nextstate sError;
+
+provided ({pZone}0) instate VerifyIsaCarEntering;
+nextstate sSignalLoopInductive;
+endstate;
+
+
+state testing #unstable ;
+provided n_depth >= 10;
+nextstate END;
+provided n_depth < 10;
+nextstate sSignalsSystem;
+endstate;
+
+
+state Idle ;
+match fork(pidZone) in pidCreator;
+nextstate waitIdle;
+endstate;
+
+
+state sSignalsSystem ;
+match input sIR1_Zone(pidSender) in pidZone;
+nextstate RTDS_decision_SYMB27;
+endstate;
+
+state RTDS_decision_SYMB27 #unstable ;
+
+provided not (({pZone}0) instate WaitSensorIR2);
+nextstate sError;
+
+provided ({pZone}0) instate WaitSensorIR2;
+nextstate sSignalIR2;
+endstate;
+
+
+state sEnteredCar ;
+match output sEntered_Car(pidSender,infZ) from pidZone;
+nextstate RTDS_decision_SYMB40;
+endstate;
+
+state RTDS_decision_SYMB40 #unstable ;
+
+provided not (({pZone}0) instate Idle);
+nextstate sError;
+
+provided ({pZone}0) instate Idle;
+task n_depth:=n_depth+1;
+nextstate testing;
+endstate;
+
+
+state sSignalLoopInductive ;
+match input sLoopInductive_Zone(pidSender) in pidZone;
+nextstate RTDS_decision_SYMB36;
+endstate;
+
+state RTDS_decision_SYMB36 #unstable ;
+
+provided not (({pZone}0) instate sEvaluatingFreeSpots);
+nextstate sError;
+
+provided ({pZone}0) instate sEvaluatingFreeSpots;
+nextstate sEnteredCar;
+endstate;
+
+
+state END ;
+provided true;
+cut;
+nextstate DEAD;
+endstate;
+
+
+state DEAD ;
+endstate;
+endobserver;
+

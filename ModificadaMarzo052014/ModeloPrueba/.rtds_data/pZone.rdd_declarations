@@ -1,0 +1,50 @@
+Ä}q(UversionqU4.4.1qUobjectq]q]q((crtds.editor.business.SyntaxChecker
+SyntaxTreeNodeAdapter
+qoq}q	(Utextq
+U"p_freeSpots , p_totalSpots i_spotsqU
+identifierqU2UtypeqUvardeclqUchildrenq]q((hoq}q(h
+Ui_spotsqhU2hUtypenameqh]qU_SyntaxTreeNodeAdapter__parentqhub(crtds.editor.business.SyntaxChecker
+SyntaxTreeNode
+qoq}q(h
+Up_freeSpotsqhNhUsnglvardeclqh]q(hoq}q(h
+hhU2hUvarnameqh]q hhubaub(hoq!}q"(h
+Up_totalSpotsq#hNhhh]q$(hoq%}q&(h
+h#hU2hUvarnameq'h]q(hhubaubeh(hoq)}q*(h
+U¨DCL p_freeSpots , p_totalSpots i_spots , TmpfreeSpots , TmptotalSpots i_spots , freeSpots , totalSpots i_spots , PidZone , pid_Ctrl , pidCtrl Pid , infoTableZone InfoZone ;q+hU0hU	cmpnddeclq,h]q-(h(hoq.}q/(h
+U$TmpfreeSpots , TmptotalSpots i_spotsq0hU5hUvardeclq1h]q2((hoq3}q4(h
+Ui_spotsq5hU5hUtypenameq6h]q7hh.ub(hoq8}q9(h
+UTmpfreeSpotsq:hNhhh]q;(hoq<}q=(h
+h:hU5hUvarnameq>h]q?hh.ubaub(hoq@}qA(h
+UTmptotalSpotsqBhNhhh]qC(hoqD}qE(h
+hBhU5hUvarnameqFh]qGhh.ubaubehh)ub(hoqH}qI(h
+UfreeSpots , totalSpots i_spotsqJhU8hUvardeclqKh]qL((hoqM}qN(h
+Ui_spotsqOhU8hUtypenameqPh]qQhhHub(hoqR}qS(h
+U	freeSpotsqThNhhh]qU(hoqV}qW(h
+hThU8hUvarnameqXh]qYhhHubaub(hoqZ}q[(h
+U
+totalSpotsq\hNhhh]q](hoq^}q_(h
+h\hU8hUvarnameq`h]qahhHubaubehh)ub(hoqb}qc(h
+U PidZone , pid_Ctrl , pidCtrl PidqdhU9hUvardeclqeh]qf((hoqg}qh(h
+UPidqihU9hUtypenameqjh]qkhhbub(hoql}qm(h
+UPidZoneqnhNhhh]qo(hoqp}qq(h
+hnhU9hUvarnameqrh]qshhbubaub(hoqt}qu(h
+Upid_CtrlqvhNhhh]qw(hoqx}qy(h
+hvhU9hUvarnameqzh]q{hhbubaub(hoq|}q}(h
+UpidCtrlq~hNhhh]q(hoqÄ}qÅ(h
+h~hU9hUvarnameqÇh]qÉhhbubaubehh)ub(hoqÑ}qÖ(h
+UinfoTableZone InfoZoneqÜhU9hUvardeclqáh]qà((hoqâ}qä(h
+UInfoZoneqãhU9hUtypenameqåh]qçhhÑub(hoqé}qè(h
+UinfoTableZoneqêhNhhh]që(hoqí}qì(h
+hêhU9hUvarnameqîh]qïhhÑubaubehh)ubeh(hoqñ}qó(h
+U‚DCL
+/* Params Signals */
+p_freeSpots,p_totalSpots i_spots,
+
+/*Tmp Signals */
+TmpfreeSpots,TmptotalSpots i_spots,
+
+/*Block Zone's Registers */
+freeSpots,totalSpots i_spots,
+PidZone,pid_Ctrl,pidCtrl Pid, infoTableZone InfoZone ;qòhNhUdatadeclqôh]qöh)ahNubububcrtds.editor.business.ElementReference
+SymbolReference
+qõ)Åqú}qù(UprojectqûhûQUsymbolIdqüUSYMB42q†UdiagramFileNameq°UY/home/ubuntu/Documents/ModificadaMarzo052014/ModificadaMarzo052014/ModeloPrueba/pZone.rddq¢ubKáq£h.hõ)Åq§}q•(hûhûQhüh†h°h¢ubKáq¶hHhõ)Åqß}q®(hûhûQhüh†h°h¢ubKáq©hbhõ)Åq™}q´(hûhûQhüh†h°h¢ubK	áq¨hÑhõ)Åq≠}qÆ(hûhûQhüh†h°h¢ubK	áqØeÜq∞u.

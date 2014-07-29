@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Diagram SYSTEM "rtdsDiagram.dtd">
+
+<Diagram language="sdl" type="blk" name="BZone" showMsgData="full" linksCrossingAllowed="FALSE" cellWidthMm="4">
+
+<DiagramPartition name="ArchitectureZone" nbPagesH="1" nbPagesV="1">
+<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="0.0" bottomMargin="0.0" leftMargin="0.0" rightMargin="0.0" pageFooter="FALSE"/>
+
+<Symbol symbolId="SYMB1" type="sdlBlkDgmFrm" xCenter="297" yCenter="420" fixedDimensions="TRUE" width="551" height="775" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text></Text>
+
+<Symbol symbolId="SYMB3" type="sdlPrcs" xCenter="330" yCenter="407" fixedDimensions="TRUE" width="396" height="66" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>pZone</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB5" type="sdlPrcs" xCenter="484" yCenter="231" fixedDimensions="TRUE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>pTmp</Text>
+</Symbol>
+</Symbol>
+
+<Link linkId="LINK93" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cEnv_Zone</Text>
+<Connector attachedSymbolId="SYMB3" type="chnl" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[sIR1_Zone,sIR2_Zone,
+sIR3_Zone,sIR4_Zone,
+sLoopInductive_Zone,
+sInitFreeSpot,
+sInitTotalSpots,
+sReqInfo,
+sInitPidCtrl]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="n" position="0.199637023593" endType="midarrow">
+<Text id="1">[sOut_Car,
+sOkInit,
+sInfoZone,
+sOkInitPid]</Text>
+<Text id="2">__</Text>
+</Connector>
+<LinkSegment orientation="v" length="-418"/>
+
+</Link>
+
+<Link linkId="LINK95" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>a</Text>
+<Connector attachedSymbolId="SYMB5" type="chnl" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[sEntered_Car]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB3" type="chnl" isOutside="TRUE" side="x" position="0.777777777778" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="176"/>
+
+</Link>
+</DiagramPartition>
+
+<DiagramPartition name="Definitions" nbPagesH="1" nbPagesV="2">
+<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="0.0" bottomMargin="0.0" leftMargin="0.0" rightMargin="0.0" pageFooter="FALSE"/>
+
+<Symbol symbolId="SYMB4" type="sdlBlkDgmFrm" xCenter="297" yCenter="841" fixedDimensions="TRUE" width="551" height="1617" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text></Text>
+</Symbol>
+</DiagramPartition>
+
+</Diagram>
