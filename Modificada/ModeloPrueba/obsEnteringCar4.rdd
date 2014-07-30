@@ -81,7 +81,7 @@
 <Text>sError</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB69" type="sdlState" xCenter="759" yCenter="682" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB69" type="sdlState" xCenter="737" yCenter="682" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sError</Text>
 </Symbol>
@@ -126,9 +126,9 @@
 <Text>DEAD</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB79" type="sdlDecision" xCenter="869" yCenter="528" fixedDimensions="FALSE" width="242" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB79" type="sdlDecision" xCenter="869" yCenter="528" fixedDimensions="FALSE" width="418" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>({pZone}0) instate Idle</Text>
+<Text>({pZone}0) instate sEvaluatingFreeSpots</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB80" type="sdlState" xCenter="198" yCenter="154" fixedDimensions="TRUE" width="154" height="44" color="#000000" fillColor="#ffffff">
@@ -141,18 +141,12 @@
 <Text>sSignalEnterCar</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB83" type="sdlText" xCenter="407" yCenter="165" fixedDimensions="FALSE" width="176" height="242" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB83" type="sdlText" xCenter="396" yCenter="99" fixedDimensions="FALSE" width="154" height="110" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>type InfoZ = record
-  vtotalSpots integer;
-  vfreeSpots integer;
-  vID pid;
-endrecord;
-
-var pidSender pid;
+<Text>var pidSender pid;
 var pidZone pid;
 var pidTmp pid;
-var infZ InfoZ;</Text>
+var infZ InfoZone;</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB84" type="sdlState" xCenter="1474" yCenter="55" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
@@ -165,7 +159,17 @@ var infZ InfoZ;</Text>
 <Text>output sEntered_Car(pidSender,infZ) from pidZone</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB87" type="sdlState" xCenter="1474" yCenter="231" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB88" type="sdlDecision" xCenter="1474" yCenter="209" fixedDimensions="FALSE" width="242" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>({pZone}0) instate Idle</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB89" type="sdlState" xCenter="1353" yCenter="297" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>sError</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB90" type="sdlState" xCenter="1595" yCenter="297" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>END</Text>
 </Symbol>
@@ -261,7 +265,7 @@ var infZ InfoZ;</Text>
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB66" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
+<Connector attachedSymbolId="SYMB66" type="sdlarrow" isOutside="TRUE" side="x" position="0.333333333333" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -311,7 +315,7 @@ var infZ InfoZ;</Text>
 
 </Link>
 
-<Link linkId="LINK126" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK157" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB70" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -373,11 +377,12 @@ var infZ InfoZ;</Text>
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB72" type="sdlarrow" isOutside="TRUE" side="x" position="0.666666666667" endType="arrow">
+<Connector attachedSymbolId="SYMB72" type="sdlarrow" isOutside="TRUE" side="y" position="0.0" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
 <LinkSegment orientation="v" length="77"/>
+<LinkSegment orientation="h" length="-44"/>
 
 </Link>
 
@@ -387,7 +392,7 @@ var infZ InfoZ;</Text>
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB76" type="sdlarrow" isOutside="TRUE" side="x" position="-0.2" endType="arrow">
+<Connector attachedSymbolId="SYMB76" type="sdlarrow" isOutside="TRUE" side="x" position="-0.6" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -395,13 +400,13 @@ var infZ InfoZ;</Text>
 
 </Link>
 
-<Link linkId="LINK155" type="dec" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK158" type="dec" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>false</Text>
-<Connector attachedSymbolId="SYMB79" type="void" isOutside="TRUE" side="x" position="-1.0" endType="voidend">
+<Connector attachedSymbolId="SYMB79" type="void" isOutside="TRUE" side="x" position="-0.631578947368" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB69" type="sdlarrow" isOutside="TRUE" side="x" position="-0.333333333333" endType="arrow">
+<Connector attachedSymbolId="SYMB69" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -409,9 +414,9 @@ var infZ InfoZ;</Text>
 
 </Link>
 
-<Link linkId="LINK139" type="dec" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK159" type="dec" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>true</Text>
-<Connector attachedSymbolId="SYMB79" type="void" isOutside="TRUE" side="x" position="1.0" endType="voidend">
+<Connector attachedSymbolId="SYMB79" type="void" isOutside="TRUE" side="x" position="0.789473684211" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -451,17 +456,45 @@ var infZ InfoZ;</Text>
 
 </Link>
 
-<Link linkId="LINK154" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK161" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB85" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB87" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
+<Connector attachedSymbolId="SYMB88" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="99"/>
+<LinkSegment orientation="v" length="77"/>
+
+</Link>
+
+<Link linkId="LINK167" type="dec" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>false</Text>
+<Connector attachedSymbolId="SYMB88" type="void" isOutside="TRUE" side="x" position="-1.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB89" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="88"/>
+
+</Link>
+
+<Link linkId="LINK169" type="dec" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>true</Text>
+<Connector attachedSymbolId="SYMB88" type="void" isOutside="TRUE" side="x" position="1.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB90" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="88"/>
 
 </Link>
 </DiagramPartition>

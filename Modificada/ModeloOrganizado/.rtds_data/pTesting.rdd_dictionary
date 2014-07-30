@@ -29,8 +29,8 @@
 </UsingSymbols>
 <Body>
 <SentSignals>
-<SignalReference id="SIG1"/>
 <SignalReference id="SIG2"/>
+<SignalReference id="SIG1"/>
 </SentSignals>
 <ReceivedSignals>
 <SignalReference id="SIG2"/>

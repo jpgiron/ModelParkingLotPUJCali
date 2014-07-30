@@ -16,17 +16,12 @@
 <Text>output sEntered_Car(pidSender,InfZ) from pidZone</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB11" type="sdlText" xCenter="220" yCenter="143" fixedDimensions="FALSE" width="198" height="264" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB11" type="sdlText" xCenter="198" yCenter="187" fixedDimensions="FALSE" width="198" height="132" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>type InfoZ = record
-  totalSpots integer;
-  freeSpots integer;
-  ID pid;
-endrecord;
-var tmpVar integer:=0;
+<Text>var tmpVar integer:=0;
 var pidSender pid;
 var pidZone pid;
-var InfZ InfoZ;
+var InfZ InfoZone;
 var n_depth integer:=0;</Text>
 </Symbol>
 
@@ -50,7 +45,7 @@ var n_depth integer:=0;</Text>
 <Text>END</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB199" type="sdlState" xCenter="1991" yCenter="748" fixedDimensions="FALSE" width="88" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB199" type="sdlState" xCenter="1991" yCenter="748" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sError</Text>
 </Symbol>
@@ -85,7 +80,7 @@ var n_depth integer:=0;</Text>
 <Text>tmpVar=3</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB205" type="sdlState" xCenter="2211" yCenter="539" fixedDimensions="FALSE" width="88" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB205" type="sdlState" xCenter="2211" yCenter="539" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sError</Text>
 </Symbol>
@@ -145,12 +140,12 @@ var n_depth integer:=0;</Text>
 <Text>sSignals</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB7" type="ifObsMatch" xCenter="297" yCenter="407" fixedDimensions="FALSE" width="330" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB7" type="ifObsMatch" xCenter="297" yCenter="407" fixedDimensions="FALSE" width="308" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>input sIR1_Zone(pidSender) in pidZone</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB8" type="ifObsMatch" xCenter="748" yCenter="407" fixedDimensions="FALSE" width="330" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB8" type="ifObsMatch" xCenter="748" yCenter="407" fixedDimensions="FALSE" width="308" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>input sIR2_Zone(pidSender) in pidZone</Text>
 </Symbol>

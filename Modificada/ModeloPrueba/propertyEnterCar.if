@@ -25,20 +25,25 @@ signal sOkInitPid(pid);
 signal sInitPidCtrl(pid, pid);
 
 
+signalroute ENV_C_cEnv_Zone_M_sLoopInductive_Zone_P_pZone(1) #fifo
+from env
+to pZone
+with sLoopInductive_Zone;
+
 signalroute ENV_C_cEnv_Zone_M_sInitTotalSpots_P_pZone(1) #fifo
 from env
 to pZone
 with sInitTotalSpots;
 
-signalroute ENV_C_cEnv_Zone_M_sReqInfo_P_pZone(1) #fifo
-from env
-to pZone
-with sReqInfo;
-
 signalroute ENV_C_cEnv_Zone_M_sIR1_Zone_P_pZone(1) #fifo
 from env
 to pZone
 with sIR1_Zone;
+
+signalroute ENV_C_cEnv_Zone_M_sIR3_Zone_P_pZone(1) #fifo
+from env
+to pZone
+with sIR3_Zone;
 
 signalroute ENV_C_cEnv_Zone_M_sInitFreeSpot_P_pZone(1) #fifo
 from env
@@ -55,25 +60,20 @@ from env
 to pZone
 with sIR4_Zone;
 
+signalroute ENV_C_cEnv_Zone_M_sReqInfo_P_pZone(1) #fifo
+from env
+to pZone
+with sReqInfo;
+
 signalroute ENV_C_cEnv_Zone_M_sInitPidCtrl_P_pZone(1) #fifo
 from env
 to pZone
 with sInitPidCtrl;
 
-signalroute ENV_C_cEnv_Zone_M_sIR3_Zone_P_pZone(1) #fifo
-from env
-to pZone
-with sIR3_Zone;
-
-signalroute ENV_C_cEnv_Zone_M_sLoopInductive_Zone_P_pZone(1) #fifo
-from env
-to pZone
-with sLoopInductive_Zone;
-
 /*
 ==========
 Messages name and corresponding channel received by the environment
-channel cEnv_Zone : sOkInit sOut_Car sInfoZone sEntered_Car sOkInitPid
+channel cEnv_Zone : sOkInitPid sOut_Car sOkInit sEntered_Car sInfoZone
 ==========;
 */
 
@@ -139,6 +139,13 @@ nextstate Idle;
 endstate;
 
 
+state sWait #stable ;
+provided true;
+output sOkInitPid(self) /* via {P_pZone_C_cEnv_Zone_M_sOkInitPid}0 */;
+nextstate sWait;
+endstate;
+
+
 state WaitSensorIR2 #stable ;
 
 deadline delayable;
@@ -147,22 +154,7 @@ nextstate VerifyIsaCarEntering;
 endstate;
 
 
-state sWait #stable ;
-provided true;
-output sOkInitPid(self) /* via {P_pZone_C_cEnv_Zone_M_sOkInitPid}0 */;
-nextstate sWait;
-endstate;
-
-
 state Idle #stable ;
-
-deadline delayable;
-input sIR1_Zone(SENDER);
-nextstate WaitSensorIR2;
-
-deadline delayable;
-input sIR3_Zone(SENDER);
-nextstate WaitSensorIR4;
 
 deadline delayable;
 input sInitPidCtrl(SENDER, pidCtrl);
@@ -170,9 +162,12 @@ task pid_Ctrl := pidCtrl;
 nextstate sWait;
 
 deadline delayable;
-input sInitFreeSpot(SENDER, p_freeSpots);
-task infoTableZone.freeSpots := p_freeSpots;
-output sOkInit(self, infoTableZone) /* via {P_pZone_C_cEnv_Zone_M_sOkInit}0 */;
+input sIR1_Zone(SENDER);
+nextstate WaitSensorIR2;
+
+deadline delayable;
+input sReqInfo(SENDER);
+output sInfoZone(self, infoTableZone) /* via {P_pZone_C_cEnv_Zone_M_sInfoZone}0 */;
 nextstate Idle;
 
 deadline delayable;
@@ -182,8 +177,13 @@ output sOkInit(self, infoTableZone) /* via {P_pZone_C_cEnv_Zone_M_sOkInit}0 */;
 nextstate Idle;
 
 deadline delayable;
-input sReqInfo(SENDER);
-output sInfoZone(self, infoTableZone) /* via {P_pZone_C_cEnv_Zone_M_sInfoZone}0 */;
+input sIR3_Zone(SENDER);
+nextstate WaitSensorIR4;
+
+deadline delayable;
+input sInitFreeSpot(SENDER, p_freeSpots);
+task infoTableZone.freeSpots := p_freeSpots;
+output sOkInit(self, infoTableZone) /* via {P_pZone_C_cEnv_Zone_M_sOkInit}0 */;
 nextstate Idle;
 endstate;
 
@@ -253,15 +253,10 @@ endsystem;
 
 
 cut observer obsEnteringCar;
-type InfoZ = record
-  totalSpots integer;
-  freeSpots integer;
-  ID pid;
-endrecord;
 var tmpVar integer:=0;
 var pidSender pid;
 var pidZone pid;
-var InfZ InfoZ;
+var InfZ InfoZone;
 var n_depth integer:=0;
 state RTDS_START #start #stable ;
 provided true;
@@ -269,15 +264,22 @@ nextstate sSignals;
 endstate;
 
 
+state END ;
+provided true;
+cut;
+nextstate DEAD;
+endstate;
+
+
 state sSignals ;
 match input sIR1_Zone(pidSender) in pidZone;
 task tmpVar:=1;
 nextstate sSignals;
-match output sEntered_Car(pidSender,InfZ) from pidZone;
-nextstate RTDS_decision_SYMB204;
 match input sLoopInductive_Zone(pidSender) in pidZone;
 task tmpVar:=3;
 nextstate sSignals;
+match output sEntered_Car(pidSender,InfZ) from pidZone;
+nextstate RTDS_decision_SYMB204;
 match input sIR2_Zone(pidSender) in pidZone;
 task tmpVar:=2;
 nextstate sSignals;
@@ -304,13 +306,6 @@ endstate;
 
 
 state sError #error ;
-provided true;
-cut;
-nextstate DEAD;
-endstate;
-
-
-state END ;
 provided true;
 cut;
 nextstate DEAD;
