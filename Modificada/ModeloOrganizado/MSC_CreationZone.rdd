@@ -11,25 +11,25 @@
 <Description></Description>
 <Text></Text>
 
-<Symbol symbolId="SYMB17" type="mscComment" xCenter="858" yCenter="825" fixedDimensions="TRUE" width="242" height="44" color="#000000" fillColor="#ffffa9">
+<Symbol symbolId="SYMB17" type="mscComment" xCenter="902" yCenter="825" fixedDimensions="FALSE" width="330" height="66" color="#000000" fillColor="#ffffa9">
 <Description></Description>
 <Text>Se efectúa estas acciones 
 si el pCtrl tiene asignado un pZoneManager</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB2" type="mscLifeline" xCenter="66" yCenter="550" fixedDimensions="TRUE" width="88" height="1078" color="#000000" fillColor="#ffffff" dies="FALSE">
+<Symbol symbolId="SYMB2" type="mscLifeline" xCenter="66" yCenter="550" fixedDimensions="FALSE" width="110" height="1078" color="#000000" fillColor="#ffffff" dies="FALSE">
 <Description></Description>
 <Text>Enviroment</Text>
 <LifelineComponent type="norm" height="1078" color="#000000"/>
 </Symbol>
 
-<Symbol symbolId="SYMB3" type="mscLifeline" xCenter="363" yCenter="550" fixedDimensions="TRUE" width="154" height="1078" color="#000000" fillColor="#ffffff" dies="FALSE">
+<Symbol symbolId="SYMB3" type="mscLifeline" xCenter="363" yCenter="550" fixedDimensions="FALSE" width="176" height="1078" color="#000000" fillColor="#ffffff" dies="FALSE">
 <Description></Description>
 <Text>pMainSystemManager</Text>
 <LifelineComponent type="norm" height="1078" color="#000000"/>
 </Symbol>
 
-<Symbol symbolId="SYMB4" type="mscLifeline" xCenter="704" yCenter="550" fixedDimensions="TRUE" width="44" height="1078" color="#000000" fillColor="#ffffff" dies="FALSE">
+<Symbol symbolId="SYMB4" type="mscLifeline" xCenter="704" yCenter="550" fixedDimensions="FALSE" width="44" height="1078" color="#000000" fillColor="#ffffff" dies="FALSE">
 <Description></Description>
 <Text>pCtrl</Text>
 <LifelineComponent type="norm" height="143" color="#000000"/>
@@ -39,25 +39,25 @@ si el pCtrl tiene asignado un pZoneManager</Text>
 <LifelineComponent type="norm" height="121" color="#000000"/>
 </Symbol>
 
-<Symbol symbolId="SYMB5" type="mscLifeline" xCenter="1056" yCenter="550" fixedDimensions="FALSE" width="154" height="1078" color="#000000" fillColor="#ffffff" dies="FALSE">
+<Symbol symbolId="SYMB5" type="mscLifeline" xCenter="1056" yCenter="550" fixedDimensions="FALSE" width="176" height="1078" color="#000000" fillColor="#ffffff" dies="FALSE">
 <Description></Description>
 <Text>pCreatorZoneManager</Text>
 <LifelineComponent type="norm" height="1078" color="#000000"/>
 </Symbol>
 
-<Symbol symbolId="SYMB7" type="mscLifeline" xCenter="1342" yCenter="638" fixedDimensions="FALSE" width="110" height="902" color="#000000" fillColor="#ffffff" dies="FALSE">
+<Symbol symbolId="SYMB7" type="mscLifeline" xCenter="1342" yCenter="638" fixedDimensions="FALSE" width="132" height="902" color="#000000" fillColor="#ffffff" dies="FALSE">
 <Description></Description>
 <Text>pZoneManager</Text>
 <LifelineComponent type="norm" height="902" color="#000000"/>
 </Symbol>
 
-<Symbol symbolId="SYMB8" type="mscLifeline" xCenter="1650" yCenter="713" fixedDimensions="TRUE" width="88" height="770" color="#000000" fillColor="#ffffff" dies="FALSE">
+<Symbol symbolId="SYMB8" type="mscLifeline" xCenter="1650" yCenter="713" fixedDimensions="FALSE" width="66" height="788" color="#000000" fillColor="#ffffff" dies="FALSE">
 <Description></Description>
 <Text>Zone</Text>
-<LifelineComponent type="norm" height="770" color="#000000"/>
+<LifelineComponent type="norm" height="788" color="#000000"/>
 </Symbol>
 
-<Symbol symbolId="SYMB9" type="mscComment" xCenter="847" yCenter="374" fixedDimensions="TRUE" width="242" height="44" color="#000000" fillColor="#ffffa9">
+<Symbol symbolId="SYMB9" type="mscComment" xCenter="891" yCenter="374" fixedDimensions="FALSE" width="352" height="66" color="#000000" fillColor="#ffffa9">
 <Description></Description>
 <Text>Se efectúa estas acciones 
 si el pCtrl no tiene asignado un pZoneManager</Text>
@@ -129,19 +129,6 @@ si el pCtrl no tiene asignado un pZoneManager</Text>
 
 </Link>
 
-<Link linkId="LINK51" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>sCreateZone(totalSpots,freeSpots,pidCtrl)</Text>
-<Connector attachedSymbolId="SYMB4" type="mscvoid" isOutside="TRUE" side="y" position="0.265306122449" endType="voidend">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB7" type="mscvoid" isOutside="TRUE" side="y" position="0.121951219512" endType="arrow">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-
-</Link>
-
 <Link linkId="LINK84" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>sCreateZone(totalSpots,freeSpots,pidCtrl)</Text>
 <Connector attachedSymbolId="SYMB4" type="mscvoid" isOutside="TRUE" side="y" position="-0.448979591837" endType="voidend">
@@ -149,6 +136,19 @@ si el pCtrl no tiene asignado un pZoneManager</Text>
 <Text id="2"></Text>
 </Connector>
 <Connector attachedSymbolId="SYMB7" type="mscvoid" isOutside="TRUE" side="y" position="-0.731707317073" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK51" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sCreateZone(totalSpots,freeSpots,pidCtrl)</Text>
+<Connector attachedSymbolId="SYMB4" type="mscvoid" isOutside="TRUE" side="y" position="0.265306122449" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB7" type="mscvoid" isOutside="TRUE" side="y" position="0.121951219512" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -168,19 +168,6 @@ si el pCtrl no tiene asignado un pZoneManager</Text>
 
 </Link>
 
-<Link linkId="LINK72" type="instcre" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text></Text>
-<Connector attachedSymbolId="SYMB5" type="mscvoid" isOutside="TRUE" side="y" position="-0.65306122449" endType="voidend">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB7" type="mscvoid" isOutside="TRUE" side="y" position="-0.975609756098" endType="arrow">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-
-</Link>
-
 <Link linkId="LINK90" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>sConfirmZoneManager(pidCtrl)</Text>
 <Connector attachedSymbolId="SYMB5" type="mscvoid" isOutside="TRUE" side="y" position="-0.593692022263" endType="voidend">
@@ -188,6 +175,19 @@ si el pCtrl no tiene asignado un pZoneManager</Text>
 <Text id="2"></Text>
 </Connector>
 <Connector attachedSymbolId="SYMB7" type="mscvoid" isOutside="TRUE" side="y" position="-0.90243902439" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK72" type="instcre" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text></Text>
+<Connector attachedSymbolId="SYMB5" type="mscvoid" isOutside="TRUE" side="y" position="-0.65306122449" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB7" type="mscvoid" isOutside="TRUE" side="y" position="-0.975609756098" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -239,33 +239,7 @@ si el pCtrl no tiene asignado un pZoneManager</Text>
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB8" type="mscvoid" isOutside="TRUE" side="y" position="0.0649350649351" endType="arrow">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-
-</Link>
-
-<Link linkId="LINK123" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>sInitTotalSpots(totalSpots)</Text>
-<Connector attachedSymbolId="SYMB7" type="mscvoid" isOutside="TRUE" side="y" position="0.463414634146" endType="voidend">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB8" type="mscvoid" isOutside="TRUE" side="y" position="0.350649350649" endType="arrow">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-
-</Link>
-
-<Link linkId="LINK121" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>sInitPidCtrl(pidCtrl)</Text>
-<Connector attachedSymbolId="SYMB7" type="mscvoid" isOutside="TRUE" side="y" position="-0.585365853659" endType="voidend">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB8" type="mscvoid" isOutside="TRUE" side="y" position="-0.877922077922" endType="arrow">
+<Connector attachedSymbolId="SYMB8" type="mscvoid" isOutside="TRUE" side="y" position="0.0406091370558" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -278,59 +252,20 @@ si el pCtrl no tiene asignado un pZoneManager</Text>
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB8" type="mscvoid" isOutside="TRUE" side="y" position="0.464935064935" endType="arrow">
+<Connector attachedSymbolId="SYMB8" type="mscvoid" isOutside="TRUE" side="y" position="0.431472081218" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
 
 </Link>
 
-<Link linkId="LINK137" type="instcre" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text></Text>
-<Connector attachedSymbolId="SYMB7" type="mscvoid" isOutside="TRUE" side="y" position="-0.658536585366" endType="voidend">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB8" type="mscvoid" isOutside="TRUE" side="y" position="-0.966233766234" endType="arrow">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-
-</Link>
-
-<Link linkId="LINK134" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>sReqInfo</Text>
-<Connector attachedSymbolId="SYMB7" type="mscvoid" isOutside="TRUE" side="y" position="-0.170731707317" endType="voidend">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB8" type="mscvoid" isOutside="TRUE" side="y" position="-0.392207792208" endType="arrow">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-
-</Link>
-
-<Link linkId="LINK131" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK123" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>sInitTotalSpots(totalSpots)</Text>
-<Connector attachedSymbolId="SYMB7" type="mscvoid" isOutside="TRUE" side="y" position="-0.317073170732" endType="voidend">
+<Connector attachedSymbolId="SYMB7" type="mscvoid" isOutside="TRUE" side="y" position="0.463414634146" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB8" type="mscvoid" isOutside="TRUE" side="y" position="-0.563636363636" endType="arrow">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-
-</Link>
-
-<Link linkId="LINK128" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>sInitFreeSpot(freeSpots)</Text>
-<Connector attachedSymbolId="SYMB7" type="mscvoid" isOutside="TRUE" side="y" position="0.341463414634" endType="voidend">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB8" type="mscvoid" isOutside="TRUE" side="y" position="0.207792207792" endType="arrow">
+<Connector attachedSymbolId="SYMB8" type="mscvoid" isOutside="TRUE" side="y" position="0.319796954315" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -343,33 +278,85 @@ si el pCtrl no tiene asignado un pZoneManager</Text>
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB8" type="mscvoid" isOutside="TRUE" side="y" position="-0.706493506494" endType="arrow">
+<Connector attachedSymbolId="SYMB8" type="mscvoid" isOutside="TRUE" side="y" position="-0.713197969543" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
 
 </Link>
 
-<Link linkId="LINK124" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK121" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sInitPidCtrl(pidCtrl)</Text>
+<Connector attachedSymbolId="SYMB7" type="mscvoid" isOutside="TRUE" side="y" position="-0.585365853659" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB8" type="mscvoid" isOutside="TRUE" side="y" position="-0.880710659898" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK131" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sInitTotalSpots(totalSpots)</Text>
+<Connector attachedSymbolId="SYMB7" type="mscvoid" isOutside="TRUE" side="y" position="-0.317073170732" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB8" type="mscvoid" isOutside="TRUE" side="y" position="-0.573604060914" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK128" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sInitFreeSpot(freeSpots)</Text>
+<Connector attachedSymbolId="SYMB7" type="mscvoid" isOutside="TRUE" side="y" position="0.341463414634" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB8" type="mscvoid" isOutside="TRUE" side="y" position="0.180203045685" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK137" type="instcre" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text></Text>
+<Connector attachedSymbolId="SYMB7" type="mscvoid" isOutside="TRUE" side="y" position="-0.658536585366" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB8" type="mscvoid" isOutside="TRUE" side="y" position="-0.967005076142" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK134" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sReqInfo</Text>
+<Connector attachedSymbolId="SYMB7" type="mscvoid" isOutside="TRUE" side="y" position="-0.170731707317" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB8" type="mscvoid" isOutside="TRUE" side="y" position="-0.406091370558" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK129" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>sOkInit(infoZone)</Text>
-<Connector attachedSymbolId="SYMB8" type="mscvoid" isOutside="TRUE" side="y" position="-0.649350649351" endType="voidend">
+<Connector attachedSymbolId="SYMB8" type="mscvoid" isOutside="TRUE" side="y" position="-0.489847715736" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB7" type="mscvoid" isOutside="TRUE" side="y" position="-0.390243902439" endType="arrow">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-
-</Link>
-
-<Link linkId="LINK126" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>sOkInitPid</Text>
-<Connector attachedSymbolId="SYMB8" type="mscvoid" isOutside="TRUE" side="y" position="0.150649350649" endType="voidend">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB7" type="mscvoid" isOutside="TRUE" side="y" position="0.292682926829" endType="arrow">
+<Connector attachedSymbolId="SYMB7" type="mscvoid" isOutside="TRUE" side="y" position="-0.243902439024" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -378,7 +365,7 @@ si el pCtrl no tiene asignado un pZoneManager</Text>
 
 <Link linkId="LINK136" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>sOkInit(infoZone)</Text>
-<Connector attachedSymbolId="SYMB8" type="mscvoid" isOutside="TRUE" side="y" position="0.264935064935" endType="voidend">
+<Connector attachedSymbolId="SYMB8" type="mscvoid" isOutside="TRUE" side="y" position="0.236040609137" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -391,7 +378,7 @@ si el pCtrl no tiene asignado un pZoneManager</Text>
 
 <Link linkId="LINK133" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>sInfoZone(infoTableZone)</Text>
-<Connector attachedSymbolId="SYMB8" type="mscvoid" isOutside="TRUE" side="y" position="0.522077922078" endType="voidend">
+<Connector attachedSymbolId="SYMB8" type="mscvoid" isOutside="TRUE" side="y" position="0.48730964467" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -402,22 +389,9 @@ si el pCtrl no tiene asignado un pZoneManager</Text>
 
 </Link>
 
-<Link linkId="LINK122" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>sInfoZone(infoTableZone)</Text>
-<Connector attachedSymbolId="SYMB8" type="mscvoid" isOutside="TRUE" side="y" position="-0.335064935065" endType="voidend">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB7" type="mscvoid" isOutside="TRUE" side="y" position="-0.121951219512" endType="arrow">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-
-</Link>
-
 <Link linkId="LINK130" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>sOkInitPid</Text>
-<Connector attachedSymbolId="SYMB8" type="mscvoid" isOutside="TRUE" side="y" position="-0.792207792208" endType="voidend">
+<Connector attachedSymbolId="SYMB8" type="mscvoid" isOutside="TRUE" side="y" position="-0.796954314721" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -428,9 +402,35 @@ si el pCtrl no tiene asignado un pZoneManager</Text>
 
 </Link>
 
+<Link linkId="LINK126" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sOkInitPid</Text>
+<Connector attachedSymbolId="SYMB8" type="mscvoid" isOutside="TRUE" side="y" position="0.124365482234" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB7" type="mscvoid" isOutside="TRUE" side="y" position="0.292682926829" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK122" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sInfoZone(infoTableZone)</Text>
+<Connector attachedSymbolId="SYMB8" type="mscvoid" isOutside="TRUE" side="y" position="-0.350253807107" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB7" type="mscvoid" isOutside="TRUE" side="y" position="-0.121951219512" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
 <Link linkId="LINK125" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>sOkInit(infoZone)</Text>
-<Connector attachedSymbolId="SYMB8" type="mscvoid" isOutside="TRUE" side="y" position="0.407792207792" endType="voidend">
+<Connector attachedSymbolId="SYMB8" type="mscvoid" isOutside="TRUE" side="y" position="0.375634517766" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -441,13 +441,13 @@ si el pCtrl no tiene asignado un pZoneManager</Text>
 
 </Link>
 
-<Link linkId="LINK129" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK124" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>sOkInit(infoZone)</Text>
-<Connector attachedSymbolId="SYMB8" type="mscvoid" isOutside="TRUE" side="y" position="-0.477922077922" endType="voidend">
+<Connector attachedSymbolId="SYMB8" type="mscvoid" isOutside="TRUE" side="y" position="-0.657360406091" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB7" type="mscvoid" isOutside="TRUE" side="y" position="-0.243902439024" endType="arrow">
+<Connector attachedSymbolId="SYMB7" type="mscvoid" isOutside="TRUE" side="y" position="-0.390243902439" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>

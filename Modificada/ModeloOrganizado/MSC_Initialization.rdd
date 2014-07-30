@@ -11,31 +11,31 @@
 <Description></Description>
 <Text></Text>
 
-<Symbol symbolId="SYMB2" type="mscLifeline" xCenter="132" yCenter="209" fixedDimensions="TRUE" width="132" height="396" color="#000000" fillColor="#ffffff" dies="FALSE">
+<Symbol symbolId="SYMB2" type="mscLifeline" xCenter="132" yCenter="209" fixedDimensions="FALSE" width="176" height="396" color="#000000" fillColor="#ffffff" dies="FALSE">
 <Description></Description>
 <Text>pMainSystemManager</Text>
 <LifelineComponent type="norm" height="396" color="#000000"/>
 </Symbol>
 
-<Symbol symbolId="SYMB3" type="mscLifeline" xCenter="341" yCenter="209" fixedDimensions="TRUE" width="66" height="396" color="#000000" fillColor="#ffffff" dies="FALSE">
+<Symbol symbolId="SYMB3" type="mscLifeline" xCenter="341" yCenter="209" fixedDimensions="FALSE" width="44" height="396" color="#000000" fillColor="#ffffff" dies="FALSE">
 <Description></Description>
 <Text>pCtrl</Text>
 <LifelineComponent type="norm" height="396" color="#000000"/>
 </Symbol>
 
-<Symbol symbolId="SYMB4" type="mscLifeline" xCenter="506" yCenter="209" fixedDimensions="TRUE" width="88" height="396" color="#000000" fillColor="#ffffff" dies="FALSE">
+<Symbol symbolId="SYMB4" type="mscLifeline" xCenter="506" yCenter="209" fixedDimensions="FALSE" width="110" height="396" color="#000000" fillColor="#ffffff" dies="FALSE">
 <Description></Description>
 <Text>pCtrlManager</Text>
 <LifelineComponent type="norm" height="396" color="#000000"/>
 </Symbol>
 
-<Symbol symbolId="SYMB5" type="mscLifeline" xCenter="693" yCenter="209" fixedDimensions="TRUE" width="66" height="396" color="#000000" fillColor="#ffffff" dies="FALSE">
+<Symbol symbolId="SYMB5" type="mscLifeline" xCenter="693" yCenter="209" fixedDimensions="FALSE" width="66" height="396" color="#000000" fillColor="#ffffff" dies="FALSE">
 <Description></Description>
 <Text>pZone</Text>
 <LifelineComponent type="norm" height="396" color="#000000"/>
 </Symbol>
 
-<Symbol symbolId="SYMB6" type="mscLifeline" xCenter="891" yCenter="209" fixedDimensions="TRUE" width="88" height="396" color="#000000" fillColor="#ffffff" dies="FALSE">
+<Symbol symbolId="SYMB6" type="mscLifeline" xCenter="891" yCenter="209" fixedDimensions="FALSE" width="132" height="396" color="#000000" fillColor="#ffffff" dies="FALSE">
 <Description></Description>
 <Text>pZoneManager</Text>
 <LifelineComponent type="norm" height="396" color="#000000"/>
@@ -68,19 +68,6 @@
 
 </Link>
 
-<Link linkId="LINK8" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>sInitPidCtrl(pidCtrl)</Text>
-<Connector attachedSymbolId="SYMB3" type="mscvoid" isOutside="TRUE" side="y" position="-0.0555555555556" endType="voidend">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB5" type="mscvoid" isOutside="TRUE" side="y" position="-0.0555555555556" endType="arrow">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-
-</Link>
-
 <Link linkId="LINK13" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>sReqInfo</Text>
 <Connector attachedSymbolId="SYMB3" type="mscvoid" isOutside="TRUE" side="y" position="0.277777777778" endType="voidend">
@@ -88,6 +75,19 @@
 <Text id="2"></Text>
 </Connector>
 <Connector attachedSymbolId="SYMB5" type="mscvoid" isOutside="TRUE" side="y" position="0.277777777778" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK8" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sInitPidCtrl(pidCtrl)</Text>
+<Connector attachedSymbolId="SYMB3" type="mscvoid" isOutside="TRUE" side="y" position="-0.0555555555556" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB5" type="mscvoid" isOutside="TRUE" side="y" position="-0.0555555555556" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
