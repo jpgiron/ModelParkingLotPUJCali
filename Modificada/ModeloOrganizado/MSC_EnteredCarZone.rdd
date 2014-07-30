@@ -4,10 +4,10 @@
 
 <Diagram language="sdl" type="msc" name="MSC_EnteredCarZone" showMsgData="full" linksCrossingAllowed="FALSE" cellWidthMm="4">
 
-<DiagramPartition name="Part. 0" nbPagesH="2" nbPagesV="1">
+<DiagramPartition name="Part. 0" nbPagesH="1" nbPagesV="1">
 <PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="0.0" bottomMargin="0.0" leftMargin="0.0" rightMargin="0.0" pageFooter="FALSE"/>
 
-<Symbol symbolId="SYMB1" type="mscExternalFrm" xCenter="595" yCenter="420" fixedDimensions="TRUE" width="1146" height="775" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB1" type="mscExternalFrm" xCenter="297" yCenter="420" fixedDimensions="TRUE" width="551" height="775" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text></Text>
 
@@ -26,6 +26,11 @@
 <Text>Idle</Text>
 </Symbol>
 
+<Symbol symbolId="SYMB21" type="mscCondition" xCenter="517" yCenter="660" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>Idle</Text>
+</Symbol>
+
 <Symbol symbolId="SYMB3" type="mscLifeline" xCenter="264" yCenter="396" fixedDimensions="FALSE" width="88" height="660" color="#000000" fillColor="#ffffff" dies="FALSE">
 <Description></Description>
 <Text>pZone(0)</Text>
@@ -38,7 +43,7 @@
 
 <Symbol symbolId="SYMB4" type="mscLifeline" xCenter="520" yCenter="398" fixedDimensions="FALSE" width="50" height="664" color="#000000" fillColor="#ffffff" dies="FALSE">
 <Description></Description>
-<Text>Zone</Text>
+<Text>pCtrl</Text>
 <LifelineComponent type="norm" height="664" color="#000000"/>
 </Symbol>
 
@@ -53,7 +58,7 @@
 <Text>WaitSensorIR2</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB7" type="mscAbsTimeConstr" xCenter="451" yCenter="44" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffaa">
+<Symbol symbolId="SYMB7" type="mscAbsTimeConstr" xCenter="253" yCenter="33" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffaa">
 <Description></Description>
 <Text>Scenario Entry Car</Text>
 </Symbol>
@@ -111,19 +116,6 @@
 
 </Link>
 
-<Link linkId="LINK44" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>sIR2_Zone</Text>
-<Connector attachedSymbolId="SYMB5" type="mscvoid" isOutside="TRUE" side="y" position="-0.176646706587" endType="voidend">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB3" type="mscvoid" isOutside="TRUE" side="y" position="-0.2" endType="arrow">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-
-</Link>
-
 <Link linkId="LINK43" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>sIR1_Zone</Text>
 <Connector attachedSymbolId="SYMB5" type="mscvoid" isOutside="TRUE" side="y" position="-0.604790419162" endType="voidend">
@@ -131,6 +123,19 @@
 <Text id="2"></Text>
 </Connector>
 <Connector attachedSymbolId="SYMB3" type="mscvoid" isOutside="TRUE" side="y" position="-0.633333333333" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK44" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sIR2_Zone</Text>
+<Connector attachedSymbolId="SYMB5" type="mscvoid" isOutside="TRUE" side="y" position="-0.176646706587" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB3" type="mscvoid" isOutside="TRUE" side="y" position="-0.2" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
