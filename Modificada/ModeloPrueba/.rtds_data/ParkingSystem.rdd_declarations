@@ -1,14 +1,14 @@
 €}q(UversionqU4.4.1qUobjectq]q((crtds.editor.business.SyntaxChecker
 SyntaxTreeNodeAdapter
-qoq}q(Utextq	U9i_spots = INTEGER DEFAULT 0 CONSTANTS 0 .. 2 ENDSYNTYPE ;q
+qoq}q(Utextq	U9i_spots = INTEGER DEFAULT 0 CONSTANTS 0 .. 9 ENDSYNTYPE ;q
 U
 identifierqU2UtypeqUsyntypedeclqUchildrenq]q((hoq}q(h	Ui_spotsqhU2hUsyntypenameqh]qU_SyntaxTreeNodeAdapter__parentq(hoq}q(h	h
-hU2hhhhhhubub(hoq}q(h	UINTEGERqhU2hUtypenameqh]qhhub(hoq}q(h	U0hU3hU	dfltvalueqh]q (hoq!}q"(h	U0hU3hUnbexprq#h]q$hhubahhub(hoq%}q&(h	UCONSTANTS 0 .. 2q'hU4hUconstraintsq(h]q)(hoq*}q+(h	U0 .. 2q,hU4hU
-constraintq-h]q.((hoq/}q0(h	U0hU4hUoperand1q1h]q2(hoq3}q4(h	U0hU4hUnbexprq5h]q6hh/ubahh*ub(hoq7}q8(h	U..q9hU4hU	cnstrntopq:h]q;hh*ub(hoq<}q=(h	U2hU4hUoperand2q>h]q?(hoq@}qA(h	U2hU4hUnbexprqBh]qChh<ubahh*ubehh%ubahhubeh(hoqD}qE(h	U¿/* Declarations of constants */
+hU2hhhhhhubub(hoq}q(h	UINTEGERqhU2hUtypenameqh]qhhub(hoq}q(h	U0hU3hU	dfltvalueqh]q (hoq!}q"(h	U0hU3hUnbexprq#h]q$hhubahhub(hoq%}q&(h	UCONSTANTS 0 .. 9q'hU4hUconstraintsq(h]q)(hoq*}q+(h	U0 .. 9q,hU4hU
+constraintq-h]q.((hoq/}q0(h	U0hU4hUoperand1q1h]q2(hoq3}q4(h	U0hU4hUnbexprq5h]q6hh/ubahh*ub(hoq7}q8(h	U..q9hU4hU	cnstrntopq:h]q;hh*ub(hoq<}q=(h	U9hU4hUoperand2q>h]q?(hoq@}qA(h	U9hU4hUnbexprqBh]qChh<ubahh*ubehh%ubahhubeh(hoqD}qE(h	U¿/* Declarations of constants */
 
 SYNTYPE i_spots = INTEGER
 DEFAULT 0
-CONSTANTS 0..2
+CONSTANTS 0..9
 ENDSYNTYPE;
 
 NEWTYPE InfoZone

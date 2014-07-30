@@ -27,9 +27,9 @@ UinfoTableZone InfoZoneqdhU3hUvardeclqeh]qf((hoqg}qh(h
 UInfoZoneqihU3hUtypenameqjh]qkhhbub(hoql}qm(h
 UinfoTableZoneqnhNhhh]qo(hoqp}qq(h
 hnhU3hUvarnameqrh]qshhbubaubehh!ubeh(hoqt}qu(h
-UsDCL
+UrDCL
 
 quantityZones INTEGER,
-p_freeSpots,p_totalSpots i_spots, pid_Ctrl,pidCtrl,PidZone PID,infoTableZone InfoZone ;qvhNhUdatadeclqwh]qxh!ahNubububcrtds.editor.business.ElementReference
+p_freeSpots,p_totalSpots i_spots, pid_Ctrl,pidCtrl,PidZone PID,infoTableZone InfoZone;qvhNhUdatadeclqwh]qxh!ahNubububcrtds.editor.business.ElementReference
 SymbolReference
-qy)Åqz}q{(Uprojectq|h|QUsymbolIdq}USYMB6q~UdiagramFileNameqUd/home/ubuntu/Documents/ModificadaMarzo052014/ModificadaMarzo052014/ModeloOrganizado/pZoneManager.rddqÄubKáqÅh&hy)ÅqÇ}qÉ(h|h|Qh}h~hhÄubKáqÑh@hy)ÅqÖ}qÜ(h|h|Qh}h~hhÄubKáqáhbhy)Åqà}qâ(h|h|Qh}h~hhÄubKáqäeÜqãu.
+qy)Åqz}q{(Uprojectq|h|QUsymbolIdq}USYMB6q~UdiagramFileNameqUN/home/ubuntu/Documents/ProjectSDL/Modificada/ModeloOrganizado/pZoneManager.rddqÄubKáqÅh&hy)ÅqÇ}qÉ(h|h|Qh}h~hhÄubKáqÑh@hy)ÅqÖ}qÜ(h|h|Qh}h~hhÄubKáqáhbhy)Åqà}qâ(h|h|Qh}h~hhÄubKáqäeÜqãu.

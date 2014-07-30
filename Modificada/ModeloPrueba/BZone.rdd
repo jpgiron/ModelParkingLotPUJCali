@@ -34,8 +34,7 @@ sInitPidCtrl]</Text>
 sOut_Car,
 sOkInit,
 sInfoZone,
-sOkInitPid,
-sTemp]</Text>
+sOkInitPid]</Text>
 <Text id="2">__</Text>
 </Connector>
 <LinkSegment orientation="v" length="-418"/>

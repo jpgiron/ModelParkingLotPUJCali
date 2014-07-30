@@ -16,12 +16,12 @@
 <Text>END</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB47" type="sdlState" xCenter="1034" yCenter="308" fixedDimensions="FALSE" width="242" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB47" type="sdlState" xCenter="1034" yCenter="308" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sSignalLoopInductive</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB49" type="ifObsMatch" xCenter="858" yCenter="110" fixedDimensions="FALSE" width="396" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB49" type="ifObsMatch" xCenter="858" yCenter="110" fixedDimensions="FALSE" width="308" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>input sIR2_Zone(pidSender) in pidZone</Text>
 </Symbol>
@@ -36,57 +36,57 @@
 <Text>true</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB53" type="sdlInherits" xCenter="44" yCenter="33" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB53" type="sdlInherits" xCenter="44" yCenter="33" fixedDimensions="FALSE" width="44" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>cut</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB56" type="sdlState" xCenter="132" yCenter="88" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB56" type="sdlState" xCenter="132" yCenter="88" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sSignalsSystem</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB57" type="sdlTask" xCenter="55" yCenter="275" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB57" type="sdlTask" xCenter="55" yCenter="275" fixedDimensions="FALSE" width="44" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>cut</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB60" type="sdlDecision" xCenter="858" yCenter="187" fixedDimensions="FALSE" width="550" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB60" type="sdlDecision" xCenter="858" yCenter="187" fixedDimensions="FALSE" width="396" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>({pZone}0) instate VerifyIsaCarEntering</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB61" type="ifObsMatch" xCenter="286" yCenter="473" fixedDimensions="FALSE" width="396" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB61" type="ifObsMatch" xCenter="286" yCenter="473" fixedDimensions="FALSE" width="308" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>input sIR1_Zone(pidSender) in pidZone</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB62" type="sdlState" xCenter="869" yCenter="385" fixedDimensions="FALSE" width="242" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB62" type="sdlState" xCenter="869" yCenter="385" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sSignalLoopInductive</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB63" type="sdlState" xCenter="198" yCenter="330" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB63" type="sdlState" xCenter="198" yCenter="330" fixedDimensions="FALSE" width="88" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>DEAD</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB65" type="sdlState" xCenter="286" yCenter="396" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB65" type="sdlState" xCenter="286" yCenter="396" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sSignalsSystem</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB66" type="sdlState" xCenter="649" yCenter="297" fixedDimensions="FALSE" width="88" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB66" type="sdlState" xCenter="649" yCenter="297" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sError</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB69" type="sdlState" xCenter="693" yCenter="638" fixedDimensions="FALSE" width="88" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB69" type="sdlState" xCenter="759" yCenter="682" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sError</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB70" type="ifObsMatch" xCenter="869" yCenter="451" fixedDimensions="FALSE" width="506" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB70" type="ifObsMatch" xCenter="869" yCenter="451" fixedDimensions="FALSE" width="396" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>input sLoopInductive_Zone(pidSender) in pidZone</Text>
 </Symbol>
@@ -96,37 +96,37 @@
 <Text></Text>
 </Symbol>
 
-<Symbol symbolId="SYMB72" type="sdlState" xCenter="66" yCenter="627" fixedDimensions="FALSE" width="88" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB72" type="sdlState" xCenter="66" yCenter="627" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sError</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB73" type="sdlTask" xCenter="198" yCenter="275" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB73" type="sdlTask" xCenter="198" yCenter="275" fixedDimensions="FALSE" width="44" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>cut</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB75" type="sdlState" xCenter="858" yCenter="44" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB75" type="sdlState" xCenter="858" yCenter="44" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sSignalIR2</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB76" type="sdlState" xCenter="495" yCenter="627" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB76" type="sdlState" xCenter="495" yCenter="627" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sSignalIR2</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB77" type="sdlDecision" xCenter="286" yCenter="550" fixedDimensions="FALSE" width="440" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB77" type="sdlDecision" xCenter="286" yCenter="550" fixedDimensions="FALSE" width="352" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>({pZone}0) instate WaitSensorIR2</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB78" type="sdlState" xCenter="55" yCenter="330" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB78" type="sdlState" xCenter="55" yCenter="330" fixedDimensions="FALSE" width="88" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>DEAD</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB79" type="sdlDecision" xCenter="869" yCenter="528" fixedDimensions="FALSE" width="330" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB79" type="sdlDecision" xCenter="869" yCenter="528" fixedDimensions="FALSE" width="242" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>({pZone}0) instate Idle</Text>
 </Symbol>
@@ -136,12 +136,12 @@
 <Text>sError #error</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB82" type="sdlState" xCenter="1034" yCenter="660" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB82" type="sdlState" xCenter="1034" yCenter="660" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sSignalEnterCar</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB83" type="sdlText" xCenter="407" yCenter="121" fixedDimensions="FALSE" width="242" height="220" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB83" type="sdlText" xCenter="407" yCenter="165" fixedDimensions="FALSE" width="176" height="242" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>type InfoZ = record
   vtotalSpots integer;
@@ -155,12 +155,12 @@ var pidTmp pid;
 var infZ InfoZ;</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB84" type="sdlState" xCenter="1474" yCenter="55" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB84" type="sdlState" xCenter="1474" yCenter="55" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sSignalEnterCar</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB85" type="ifObsMatch" xCenter="1474" yCenter="132" fixedDimensions="FALSE" width="506" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB85" type="ifObsMatch" xCenter="1474" yCenter="132" fixedDimensions="FALSE" width="396" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>output sEntered_Car(pidSender,infZ) from pidZone</Text>
 </Symbol>
@@ -243,11 +243,11 @@ var infZ InfoZ;</Text>
 
 <Link linkId="LINK123" type="dec" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>true</Text>
-<Connector attachedSymbolId="SYMB60" type="void" isOutside="TRUE" side="x" position="0.68" endType="voidend">
+<Connector attachedSymbolId="SYMB60" type="void" isOutside="TRUE" side="x" position="0.944444444444" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB47" type="sdlarrow" isOutside="TRUE" side="x" position="0.0909090909091" endType="arrow">
+<Connector attachedSymbolId="SYMB47" type="sdlarrow" isOutside="TRUE" side="x" position="0.125" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -257,7 +257,7 @@ var infZ InfoZ;</Text>
 
 <Link linkId="LINK124" type="dec" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>false</Text>
-<Connector attachedSymbolId="SYMB60" type="void" isOutside="TRUE" side="x" position="-0.76" endType="voidend">
+<Connector attachedSymbolId="SYMB60" type="void" isOutside="TRUE" side="x" position="-1.0" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -369,11 +369,11 @@ var infZ InfoZ;</Text>
 
 <Link linkId="LINK121" type="dec" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>false</Text>
-<Connector attachedSymbolId="SYMB77" type="void" isOutside="TRUE" side="x" position="-0.9" endType="voidend">
+<Connector attachedSymbolId="SYMB77" type="void" isOutside="TRUE" side="x" position="-1.0" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB72" type="sdlarrow" isOutside="TRUE" side="x" position="0.5" endType="arrow">
+<Connector attachedSymbolId="SYMB72" type="sdlarrow" isOutside="TRUE" side="x" position="0.666666666667" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -383,11 +383,11 @@ var infZ InfoZ;</Text>
 
 <Link linkId="LINK119" type="dec" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>true</Text>
-<Connector attachedSymbolId="SYMB77" type="void" isOutside="TRUE" side="x" position="0.9" endType="voidend">
+<Connector attachedSymbolId="SYMB77" type="void" isOutside="TRUE" side="x" position="1.0" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB76" type="sdlarrow" isOutside="TRUE" side="x" position="-0.166666666667" endType="arrow">
+<Connector attachedSymbolId="SYMB76" type="sdlarrow" isOutside="TRUE" side="x" position="-0.2" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -395,17 +395,17 @@ var infZ InfoZ;</Text>
 
 </Link>
 
-<Link linkId="LINK127" type="dec" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK155" type="dec" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>false</Text>
 <Connector attachedSymbolId="SYMB79" type="void" isOutside="TRUE" side="x" position="-1.0" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB69" type="sdlarrow" isOutside="TRUE" side="x" position="0.25" endType="arrow">
+<Connector attachedSymbolId="SYMB69" type="sdlarrow" isOutside="TRUE" side="x" position="-0.333333333333" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="110"/>
+<LinkSegment orientation="v" length="154"/>
 
 </Link>
 

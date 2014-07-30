@@ -2,7 +2,7 @@
 system ParkingSystem;
 type RTDS_character = range 32..127;
 type RTDS_charstring = string[128] of RTDS_character;
-type i_spots = range 0 .. 1;
+type i_spots = range 0 .. 9;
 
 type InfoZone = record
   totalSpots i_spots;
@@ -30,25 +30,10 @@ from env
 to pZone
 with sInitTotalSpots;
 
-signalroute ENV_C_cEnv_Zone_M_sIR3_Zone_P_pZone(1) #fifo
+signalroute ENV_C_cEnv_Zone_M_sReqInfo_P_pZone(1) #fifo
 from env
 to pZone
-with sIR3_Zone;
-
-signalroute ENV_C_cEnv_Zone_M_sIR4_Zone_P_pZone(1) #fifo
-from env
-to pZone
-with sIR4_Zone;
-
-signalroute ENV_C_cEnv_Zone_M_sIR2_Zone_P_pZone(1) #fifo
-from env
-to pZone
-with sIR2_Zone;
-
-signalroute ENV_C_cEnv_Zone_M_sInitPidCtrl_P_pZone(1) #fifo
-from env
-to pZone
-with sInitPidCtrl;
+with sReqInfo;
 
 signalroute ENV_C_cEnv_Zone_M_sIR1_Zone_P_pZone(1) #fifo
 from env
@@ -60,20 +45,35 @@ from env
 to pZone
 with sInitFreeSpot;
 
+signalroute ENV_C_cEnv_Zone_M_sIR2_Zone_P_pZone(1) #fifo
+from env
+to pZone
+with sIR2_Zone;
+
+signalroute ENV_C_cEnv_Zone_M_sIR4_Zone_P_pZone(1) #fifo
+from env
+to pZone
+with sIR4_Zone;
+
+signalroute ENV_C_cEnv_Zone_M_sInitPidCtrl_P_pZone(1) #fifo
+from env
+to pZone
+with sInitPidCtrl;
+
+signalroute ENV_C_cEnv_Zone_M_sIR3_Zone_P_pZone(1) #fifo
+from env
+to pZone
+with sIR3_Zone;
+
 signalroute ENV_C_cEnv_Zone_M_sLoopInductive_Zone_P_pZone(1) #fifo
 from env
 to pZone
 with sLoopInductive_Zone;
 
-signalroute ENV_C_cEnv_Zone_M_sReqInfo_P_pZone(1) #fifo
-from env
-to pZone
-with sReqInfo;
-
 /*
 ==========
 Messages name and corresponding channel received by the environment
-channel cEnv_Zone : sOkInitPid sOut_Car sOkInit sInfoZone sEntered_Car
+channel cEnv_Zone : sOkInit sOut_Car sInfoZone sEntered_Car sOkInitPid
 ==========;
 */
 
@@ -147,35 +147,32 @@ nextstate VerifyIsaCarEntering;
 endstate;
 
 
-state WaitSensorIR4 #stable ;
-
-deadline delayable;
-input sIR4_Zone(SENDER);
-nextstate VerifyIsaCarOut;
+state sWait #stable ;
+provided true;
+output sOkInitPid(self) /* via {P_pZone_C_cEnv_Zone_M_sOkInitPid}0 */;
+nextstate sWait;
 endstate;
 
 
 state Idle #stable ;
 
 deadline delayable;
-input sInitFreeSpot(SENDER, p_freeSpots);
-task infoTableZone.freeSpots := p_freeSpots;
-output sOkInit(self, infoTableZone) /* via {P_pZone_C_cEnv_Zone_M_sOkInit}0 */;
-nextstate Idle;
-
-deadline delayable;
-input sInitPidCtrl(SENDER, pidCtrl);
-task pid_Ctrl := pidCtrl;
-output sOkInitPid(self) /* via {P_pZone_C_cEnv_Zone_M_sOkInitPid}0 */;
-nextstate Idle;
+input sIR1_Zone(SENDER);
+nextstate WaitSensorIR2;
 
 deadline delayable;
 input sIR3_Zone(SENDER);
 nextstate WaitSensorIR4;
 
 deadline delayable;
-input sReqInfo(SENDER);
-output sInfoZone(self, infoTableZone) /* via {P_pZone_C_cEnv_Zone_M_sInfoZone}0 */;
+input sInitPidCtrl(SENDER, pidCtrl);
+task pid_Ctrl := pidCtrl;
+nextstate sWait;
+
+deadline delayable;
+input sInitFreeSpot(SENDER, p_freeSpots);
+task infoTableZone.freeSpots := p_freeSpots;
+output sOkInit(self, infoTableZone) /* via {P_pZone_C_cEnv_Zone_M_sOkInit}0 */;
 nextstate Idle;
 
 deadline delayable;
@@ -185,8 +182,17 @@ output sOkInit(self, infoTableZone) /* via {P_pZone_C_cEnv_Zone_M_sOkInit}0 */;
 nextstate Idle;
 
 deadline delayable;
-input sIR1_Zone(SENDER);
-nextstate WaitSensorIR2;
+input sReqInfo(SENDER);
+output sInfoZone(self, infoTableZone) /* via {P_pZone_C_cEnv_Zone_M_sInfoZone}0 */;
+nextstate Idle;
+endstate;
+
+
+state WaitSensorIR4 #stable ;
+
+deadline delayable;
+input sIR4_Zone(SENDER);
+nextstate VerifyIsaCarOut;
 endstate;
 
 
@@ -246,43 +252,54 @@ endprocess;
 endsystem;
 
 
-cut observer obsEnteringCar2;
-
+cut observer obsEnteringCar;
 type InfoZ = record
-  vtotalSpots integer;
-  vfreeSpots integer;
-  vID pid;
+  totalSpots integer;
+  freeSpots integer;
+  ID pid;
 endrecord;
-
+var tmpVar integer:=0;
 var pidSender pid;
-var pidCreator pid;
 var pidZone pid;
-var infZ InfoZ;
+var InfZ InfoZ;
 var n_depth integer:=0;
 state RTDS_START #start #stable ;
 provided true;
-nextstate Idle;
+nextstate sSignals;
 endstate;
 
 
-state END ;
-provided true;
-cut;
-nextstate DEAD;
+state sSignals ;
+match input sIR1_Zone(pidSender) in pidZone;
+task tmpVar:=1;
+nextstate sSignals;
+match output sEntered_Car(pidSender,InfZ) from pidZone;
+nextstate RTDS_decision_SYMB204;
+match input sLoopInductive_Zone(pidSender) in pidZone;
+task tmpVar:=3;
+nextstate sSignals;
+match input sIR2_Zone(pidSender) in pidZone;
+task tmpVar:=2;
+nextstate sSignals;
 endstate;
 
+state RTDS_decision_SYMB204 #unstable ;
 
-state Idle ;
-match fork(pidZone) in pidCreator;
-nextstate waitIdle;
+provided not (tmpVar=3);
+nextstate sError;
+
+provided tmpVar=3;
+task tmpVar:=0;
+nextstate RTDS_decision_SYMB197;
 endstate;
 
+state RTDS_decision_SYMB197 #unstable ;
 
-state testing #unstable ;
-provided n_depth >= 10;
+provided not (({pZone}0) instate Idle);
+nextstate sError;
+
+provided ({pZone}0) instate Idle;
 nextstate END;
-provided n_depth < 10;
-nextstate sSignalsSystem;
 endstate;
 
 
@@ -293,55 +310,10 @@ nextstate DEAD;
 endstate;
 
 
-state sSignalIR2 ;
-match input sIR2_Zone(pidSender) in pidZone;
-nextstate RTDS_decision_SYMB33;
-endstate;
-
-state RTDS_decision_SYMB33 #unstable ;
-
-provided not (({pZone}0) instate VerifyIsaCarEntering);
-nextstate sError;
-
-provided ({pZone}0) instate VerifyIsaCarEntering;
-nextstate sSignalLoopInductive;
-endstate;
-
-
-state waitIdle ;
-provided ({pZone}0) instate Idle;
-nextstate testing;
-endstate;
-
-
-state sSignalLoopInductive ;
-match input sLoopInductive_Zone(pidSender) in pidZone;
-nextstate RTDS_decision_SYMB36;
-endstate;
-
-state RTDS_decision_SYMB36 #unstable ;
-
-provided not (({pZone}0) instate Idle);
-nextstate sError;
-
-provided ({pZone}0) instate Idle;
-task n_depth:=n_depth+1;
-nextstate testing;
-endstate;
-
-
-state sSignalsSystem ;
-match input sIR1_Zone(pidSender) in pidZone;
-nextstate RTDS_decision_SYMB27;
-endstate;
-
-state RTDS_decision_SYMB27 #unstable ;
-
-provided not (({pZone}0) instate WaitSensorIR2);
-nextstate sError;
-
-provided ({pZone}0) instate WaitSensorIR2;
-nextstate sSignalIR2;
+state END ;
+provided true;
+cut;
+nextstate DEAD;
 endstate;
 
 

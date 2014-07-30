@@ -16,22 +16,22 @@
 <Text>-</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB192" type="sdlTask" xCenter="1144" yCenter="396" fixedDimensions="FALSE" width="418" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB192" type="sdlTask" xCenter="1144" yCenter="396" fixedDimensions="FALSE" width="330" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>infoTableZone!totalSpots := p_totalSpots</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB193" type="sdlInputSig" xCenter="1133" yCenter="319" fixedDimensions="FALSE" width="330" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB193" type="sdlInputSig" xCenter="1133" yCenter="319" fixedDimensions="FALSE" width="242" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sInitTotalSpots(p_totalSpots)</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB194" type="sdlSendSig" xCenter="1155" yCenter="473" fixedDimensions="FALSE" width="264" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB194" type="sdlSendSig" xCenter="1155" yCenter="473" fixedDimensions="FALSE" width="330" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>sOkInit(infoTableZone)</Text>
+<Text>sOkInit(infoTableZone) VIA cEnv_Zone</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB195" type="sdlTask" xCenter="825" yCenter="88" fixedDimensions="FALSE" width="308" height="110" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB195" type="sdlTask" xCenter="825" yCenter="121" fixedDimensions="FALSE" width="242" height="110" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>PidZone:=SELF,
 infoTableZone!ID := PidZone,
@@ -39,7 +39,7 @@ infoTableZone!freeSpots := 2,
 infoTableZone!totalSpots := 2</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB2" type="sdlStart" xCenter="825" yCenter="11" fixedDimensions="TRUE" width="66" height="22" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB2" type="sdlStart" xCenter="825" yCenter="33" fixedDimensions="TRUE" width="88" height="22" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text></Text>
 </Symbol>
@@ -49,14 +49,14 @@ infoTableZone!totalSpots := 2</Text>
 <Text>sInitPidCtrl(pidCtrl)</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB245" type="sdlTask" xCenter="1980" yCenter="396" fixedDimensions="FALSE" width="198" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB245" type="sdlTask" xCenter="1980" yCenter="396" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>pid_Ctrl:=pidCtrl</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB246" type="sdlSendSig" xCenter="1980" yCenter="605" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB246" type="sdlSendSig" xCenter="1980" yCenter="605" fixedDimensions="FALSE" width="242" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>sOkInitPid</Text>
+<Text>sOkInitPid VIA cEnv_Zone</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB247" type="sdlState" xCenter="1980" yCenter="693" fixedDimensions="TRUE" width="66" height="44" color="#000000" fillColor="#ffffff">
@@ -74,12 +74,12 @@ infoTableZone!totalSpots := 2</Text>
 <Text>WaitSensorIR4</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB37" type="sdlState" xCenter="374" yCenter="528" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB37" type="sdlState" xCenter="374" yCenter="528" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>VerifyIsaCarOut</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB386" type="sdlState" xCenter="1980" yCenter="462" fixedDimensions="FALSE" width="88" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB386" type="sdlState" xCenter="1980" yCenter="462" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sWait</Text>
 </Symbol>
@@ -87,11 +87,6 @@ infoTableZone!totalSpots := 2</Text>
 <Symbol symbolId="SYMB387" type="sdlContSig" xCenter="1980" yCenter="539" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>true</Text>
-</Symbol>
-
-<Symbol symbolId="SYMB388" type="sdlSendSig" xCenter="825" yCenter="176" fixedDimensions="FALSE" width="220" height="44" color="#000000" fillColor="#ffffff">
-<Description></Description>
-<Text>sTemp VIA cEnv_Zone</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB39" type="sdlInputSig" xCenter="374" yCenter="319" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
@@ -104,7 +99,7 @@ infoTableZone!totalSpots := 2</Text>
 <Text>Idle</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB42" type="sdlText" xCenter="308" yCenter="121" fixedDimensions="FALSE" width="572" height="220" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB42" type="sdlText" xCenter="308" yCenter="121" fixedDimensions="FALSE" width="418" height="242" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>DCL
 /* Params Signals */
@@ -118,19 +113,19 @@ freeSpots,totalSpots i_spots,
 PidZone,pid_Ctrl,pidCtrl Pid, infoTableZone InfoZone ;</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB44" type="sdlInputSig" xCenter="682" yCenter="319" fixedDimensions="FALSE" width="308" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB44" type="sdlInputSig" xCenter="682" yCenter="319" fixedDimensions="FALSE" width="242" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sInitFreeSpot(p_freeSpots)</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB46" type="sdlTask" xCenter="682" yCenter="396" fixedDimensions="FALSE" width="418" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB46" type="sdlTask" xCenter="682" yCenter="396" fixedDimensions="FALSE" width="308" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>infoTableZone!freeSpots := p_freeSpots</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB48" type="sdlSendSig" xCenter="682" yCenter="473" fixedDimensions="FALSE" width="264" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB48" type="sdlSendSig" xCenter="682" yCenter="473" fixedDimensions="FALSE" width="330" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>sOkInit(infoTableZone)</Text>
+<Text>sOkInit(infoTableZone) VIA cEnv_Zone</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB49" type="sdlState" xCenter="682" yCenter="539" fixedDimensions="FALSE" width="44" height="44" color="#000000" fillColor="#ffffff">
@@ -138,7 +133,7 @@ PidZone,pid_Ctrl,pidCtrl Pid, infoTableZone InfoZone ;</Text>
 <Text>-</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB5" type="sdlInputSig" xCenter="143" yCenter="319" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB5" type="sdlInputSig" xCenter="143" yCenter="319" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sIR1_Zone</Text>
 </Symbol>
@@ -148,9 +143,9 @@ PidZone,pid_Ctrl,pidCtrl Pid, infoTableZone InfoZone ;</Text>
 <Text>sReqInfo</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB52" type="sdlSendSig" xCenter="1595" yCenter="418" fixedDimensions="FALSE" width="286" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB52" type="sdlSendSig" xCenter="1595" yCenter="418" fixedDimensions="FALSE" width="352" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>sInfoZone(infoTableZone)</Text>
+<Text>sInfoZone(infoTableZone) VIA cEnv_Zone</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB53" type="sdlState" xCenter="1595" yCenter="495" fixedDimensions="TRUE" width="44" height="44" color="#000000" fillColor="#ffffff">
@@ -163,12 +158,12 @@ PidZone,pid_Ctrl,pidCtrl Pid, infoTableZone InfoZone ;</Text>
 <Text>WaitSensorIR2</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB7" type="sdlInputSig" xCenter="143" yCenter="462" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB7" type="sdlInputSig" xCenter="143" yCenter="462" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sIR2_Zone</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB9" type="sdlState" xCenter="143" yCenter="528" fixedDimensions="FALSE" width="242" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB9" type="sdlState" xCenter="143" yCenter="528" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>VerifyIsaCarEntering</Text>
 </Symbol>
@@ -180,7 +175,7 @@ PidZone,pid_Ctrl,pidCtrl Pid, infoTableZone InfoZone ;</Text>
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB194" type="sdlarrow" isOutside="TRUE" side="x" position="-0.0833333333333" endType="arrow">
+<Connector attachedSymbolId="SYMB194" type="sdlarrow" isOutside="TRUE" side="x" position="-0.0666666666667" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -190,7 +185,7 @@ PidZone,pid_Ctrl,pidCtrl Pid, infoTableZone InfoZone ;</Text>
 
 <Link linkId="LINK867" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
-<Connector attachedSymbolId="SYMB193" type="void" isOutside="TRUE" side="x" position="0.0666666666667" endType="voidend">
+<Connector attachedSymbolId="SYMB193" type="void" isOutside="TRUE" side="x" position="0.0909090909091" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -204,7 +199,7 @@ PidZone,pid_Ctrl,pidCtrl Pid, infoTableZone InfoZone ;</Text>
 
 <Link linkId="LINK868" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
-<Connector attachedSymbolId="SYMB194" type="void" isOutside="TRUE" side="x" position="-0.0833333333333" endType="voidend">
+<Connector attachedSymbolId="SYMB194" type="void" isOutside="TRUE" side="x" position="-0.0666666666667" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -216,21 +211,21 @@ PidZone,pid_Ctrl,pidCtrl Pid, infoTableZone InfoZone ;</Text>
 
 </Link>
 
-<Link linkId="LINK1226" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK1235" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB195" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB388" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
+<Connector attachedSymbolId="SYMB4" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="88"/>
+<LinkSegment orientation="v" length="110"/>
 
 </Link>
 
-<Link linkId="LINK1219" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK1236" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB2" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -240,7 +235,7 @@ PidZone,pid_Ctrl,pidCtrl Pid, infoTableZone InfoZone ;</Text>
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="77"/>
+<LinkSegment orientation="v" length="88"/>
 
 </Link>
 
@@ -342,20 +337,6 @@ PidZone,pid_Ctrl,pidCtrl Pid, infoTableZone InfoZone ;</Text>
 
 </Link>
 
-<Link linkId="LINK1227" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text></Text>
-<Connector attachedSymbolId="SYMB388" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB4" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-<LinkSegment orientation="v" length="55"/>
-
-</Link>
-
 <Link linkId="LINK912" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB39" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
@@ -376,7 +357,7 @@ PidZone,pid_Ctrl,pidCtrl Pid, infoTableZone InfoZone ;</Text>
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB193" type="void" isOutside="TRUE" side="x" position="0.0666666666667" endType="voidend">
+<Connector attachedSymbolId="SYMB193" type="void" isOutside="TRUE" side="x" position="0.0909090909091" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -591,38 +572,38 @@ PidZone,pid_Ctrl,pidCtrl Pid, infoTableZone InfoZone ;</Text>
 <Text>Idle</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB197" type="sdlTask" xCenter="341" yCenter="440" fixedDimensions="FALSE" width="418" height="66" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB197" type="sdlTask" xCenter="341" yCenter="440" fixedDimensions="FALSE" width="330" height="66" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>TmpfreeSpots := TmpfreeSpots-1,
 infoTableZone!freeSpots := TmpfreeSpots</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB282" type="sdlTask" xCenter="528" yCenter="198" fixedDimensions="FALSE" width="418" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB282" type="sdlTask" xCenter="594" yCenter="187" fixedDimensions="FALSE" width="330" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>TmpfreeSpots := infoTableZone!freeSpots</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB296" type="sdlContSig" xCenter="341" yCenter="363" fixedDimensions="FALSE" width="308" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB296" type="sdlContSig" xCenter="341" yCenter="363" fixedDimensions="FALSE" width="264" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>TmpfreeSpots &gt; 0 PRIORITY 0</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB367" type="sdlContSig" xCenter="836" yCenter="363" fixedDimensions="FALSE" width="308" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB367" type="sdlContSig" xCenter="836" yCenter="363" fixedDimensions="FALSE" width="264" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>TmpfreeSpots = 0 PRIORITY 1</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB368" type="sdlState" xCenter="594" yCenter="264" fixedDimensions="FALSE" width="242" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB368" type="sdlState" xCenter="594" yCenter="264" fixedDimensions="FALSE" width="198" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sEvaluatingFreeSpots</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB369" type="sdlSendSig" xCenter="847" yCenter="440" fixedDimensions="FALSE" width="440" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB369" type="sdlSendSig" xCenter="847" yCenter="440" fixedDimensions="FALSE" width="374" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sEntered_Car(infoTableZone) VIA cEnv_Zone</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB77" type="sdlInputSig" xCenter="528" yCenter="121" fixedDimensions="FALSE" width="220" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB77" type="sdlInputSig" xCenter="594" yCenter="110" fixedDimensions="FALSE" width="198" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sLoopInductive_Zone</Text>
 </Symbol>
@@ -632,12 +613,12 @@ infoTableZone!freeSpots := TmpfreeSpots</Text>
 <Text>Idle</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB79" type="sdlSendSig" xCenter="330" yCenter="517" fixedDimensions="FALSE" width="440" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB79" type="sdlSendSig" xCenter="330" yCenter="517" fixedDimensions="FALSE" width="374" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sEntered_Car(infoTableZone) VIA cEnv_Zone</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB81" type="sdlState" xCenter="528" yCenter="55" fixedDimensions="FALSE" width="242" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB81" type="sdlState" xCenter="594" yCenter="44" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>VerifyIsaCarEntering</Text>
 </Symbol>
@@ -649,7 +630,7 @@ infoTableZone!freeSpots := TmpfreeSpots</Text>
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB79" type="sdlarrow" isOutside="TRUE" side="x" position="0.05" endType="arrow">
+<Connector attachedSymbolId="SYMB79" type="sdlarrow" isOutside="TRUE" side="x" position="0.0588235294118" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -657,7 +638,7 @@ infoTableZone!freeSpots := TmpfreeSpots</Text>
 
 </Link>
 
-<Link linkId="LINK1209" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK1228" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB282" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -667,9 +648,7 @@ infoTableZone!freeSpots := TmpfreeSpots</Text>
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="33"/>
-<LinkSegment orientation="h" length="66"/>
-<LinkSegment orientation="v" length="33"/>
+<LinkSegment orientation="v" length="77"/>
 
 </Link>
 
@@ -689,7 +668,7 @@ infoTableZone!freeSpots := TmpfreeSpots</Text>
 
 <Link linkId="LINK1194" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
-<Connector attachedSymbolId="SYMB367" type="void" isOutside="TRUE" side="x" position="0.0714285714286" endType="voidend">
+<Connector attachedSymbolId="SYMB367" type="void" isOutside="TRUE" side="x" position="0.0833333333333" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -747,7 +726,7 @@ infoTableZone!freeSpots := TmpfreeSpots</Text>
 
 </Link>
 
-<Link linkId="LINK1091" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK1230" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB77" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -763,7 +742,7 @@ infoTableZone!freeSpots := TmpfreeSpots</Text>
 
 <Link linkId="LINK1204" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
-<Connector attachedSymbolId="SYMB79" type="void" isOutside="TRUE" side="x" position="0.05" endType="voidend">
+<Connector attachedSymbolId="SYMB79" type="void" isOutside="TRUE" side="x" position="0.0588235294118" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -775,7 +754,7 @@ infoTableZone!freeSpots := TmpfreeSpots</Text>
 
 </Link>
 
-<Link linkId="LINK945" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK1229" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB81" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -802,17 +781,17 @@ infoTableZone!freeSpots := TmpfreeSpots</Text>
 <Text>Idle</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB122" type="sdlState" xCenter="484" yCenter="44" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB122" type="sdlState" xCenter="484" yCenter="44" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>VerifyIsaCarOut</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB123" type="sdlSendSig" xCenter="286" yCenter="583" fixedDimensions="FALSE" width="396" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB123" type="sdlSendSig" xCenter="286" yCenter="583" fixedDimensions="FALSE" width="330" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sOut_Car(infoTableZone) VIA cEnv_Zone</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB124" type="sdlInputSig" xCenter="484" yCenter="110" fixedDimensions="FALSE" width="220" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB124" type="sdlInputSig" xCenter="484" yCenter="110" fixedDimensions="FALSE" width="198" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sLoopInductive_Zone</Text>
 </Symbol>
@@ -822,34 +801,34 @@ infoTableZone!freeSpots := TmpfreeSpots</Text>
 <Text>Idle</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB196" type="sdlTask" xCenter="286" yCenter="495" fixedDimensions="FALSE" width="396" height="66" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB196" type="sdlTask" xCenter="286" yCenter="495" fixedDimensions="FALSE" width="330" height="66" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>TmpfreeSpots := TmpfreeSpots+1,
 infoTableZone!freeSpots:=TmpfreeSpots</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB283" type="sdlTask" xCenter="484" yCenter="209" fixedDimensions="FALSE" width="440" height="66" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB283" type="sdlTask" xCenter="484" yCenter="209" fixedDimensions="FALSE" width="352" height="66" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>TmpfreeSpots := infoTableZone!freeSpots,
 TmptotalSpots := infoTableZone!totalSpots</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB370" type="sdlState" xCenter="484" yCenter="297" fixedDimensions="FALSE" width="242" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB370" type="sdlState" xCenter="484" yCenter="297" fixedDimensions="FALSE" width="198" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sEvaluatingTotalSpots</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB371" type="sdlContSig" xCenter="286" yCenter="407" fixedDimensions="FALSE" width="418" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB371" type="sdlContSig" xCenter="286" yCenter="407" fixedDimensions="FALSE" width="374" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>TmpfreeSpots &lt; TmptotalSpots PRIORITY 0</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB372" type="sdlContSig" xCenter="924" yCenter="407" fixedDimensions="FALSE" width="418" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB372" type="sdlContSig" xCenter="924" yCenter="407" fixedDimensions="FALSE" width="374" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>TmpfreeSpots = TmptotalSpots PRIORITY 1</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB373" type="sdlSendSig" xCenter="924" yCenter="528" fixedDimensions="FALSE" width="396" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB373" type="sdlSendSig" xCenter="924" yCenter="528" fixedDimensions="FALSE" width="330" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sOut_Car(infoTableZone) VIA cEnv_Zone</Text>
 </Symbol>

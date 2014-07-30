@@ -5,18 +5,18 @@
 <Diagram language="sdl" type="ifobs" name="obsInitPid" showMsgData="full" linksCrossingAllowed="TRUE" cellWidthMm="4">
 
 <DiagramPartition name="Part. 0" nbPagesH="2" nbPagesV="1">
-<PageSpecification pageWidth="21" pageHeight="29.7" topMargin="0" bottomMargin="0" leftMargin="0" rightMargin="0" pageFooter="FALSE"/>
+<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="0.0" bottomMargin="0.0" leftMargin="0.0" rightMargin="0.0" pageFooter="FALSE"/>
 
 <Symbol symbolId="SYMB1" type="ifObsDgmFrm" xCenter="595" yCenter="420" fixedDimensions="TRUE" width="1146" height="775" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text></Text>
 
-<Symbol symbolId="SYMB10" type="sdlDecision" xCenter="836" yCenter="374" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB10" type="sdlDecision" xCenter="836" yCenter="374" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>tmpVar=1</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB11" type="sdlState" xCenter="891" yCenter="33" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB11" type="sdlState" xCenter="891" yCenter="33" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sError #error</Text>
 </Symbol>
@@ -26,22 +26,22 @@
 <Text>true</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB13" type="sdlTask" xCenter="891" yCenter="165" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB13" type="sdlTask" xCenter="891" yCenter="165" fixedDimensions="FALSE" width="44" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>cut</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB14" type="sdlState" xCenter="891" yCenter="220" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB14" type="sdlState" xCenter="891" yCenter="220" fixedDimensions="FALSE" width="88" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>DEAD</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB15" type="sdlState" xCenter="1056" yCenter="220" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB15" type="sdlState" xCenter="1056" yCenter="220" fixedDimensions="FALSE" width="88" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>DEAD</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB16" type="sdlTask" xCenter="1056" yCenter="165" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB16" type="sdlTask" xCenter="1056" yCenter="165" fixedDimensions="FALSE" width="44" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>cut</Text>
 </Symbol>
@@ -61,12 +61,12 @@
 <Text>sOk</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB2" type="sdlInherits" xCenter="66" yCenter="44" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB2" type="sdlInherits" xCenter="66" yCenter="44" fixedDimensions="FALSE" width="44" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>cut</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB20" type="sdlState" xCenter="726" yCenter="451" fixedDimensions="FALSE" width="88" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB20" type="sdlState" xCenter="726" yCenter="451" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sError</Text>
 </Symbol>
@@ -74,22 +74,6 @@
 <Symbol symbolId="SYMB21" type="sdlTask" xCenter="979" yCenter="451" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>tmpVar:=0</Text>
-</Symbol>
-
-<Symbol symbolId="SYMB22" type="sdlText" xCenter="517" yCenter="561" fixedDimensions="FALSE" width="308" height="264" color="#000000" fillColor="#ffffff">
-<Description></Description>
-<Text>type i_spots = range 0 .. 2;
-
-type InfoZone = record
-  totalSpots i_spots;
-  freeSpots i_spots;
-  ID pid;
-endrecord;
-var pidSender pid;
-var pidCtrl pid;
-var pidZone pid;
-var tmpVar integer:=0;
-var info InfoZone;</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB3" type="sdlStart" xCenter="242" yCenter="22" fixedDimensions="TRUE" width="60" height="25" color="#000000" fillColor="#ffffff">
@@ -107,12 +91,12 @@ var info InfoZone;</Text>
 <Text>Idle</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB6" type="ifObsMatch" xCenter="297" yCenter="275" fixedDimensions="FALSE" width="506" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB6" type="ifObsMatch" xCenter="297" yCenter="275" fixedDimensions="FALSE" width="374" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>input sInitPidCtrl(pidSender,pidCtrl) in pidZone</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB7" type="ifObsMatch" xCenter="836" yCenter="286" fixedDimensions="FALSE" width="286" height="66" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB7" type="ifObsMatch" xCenter="836" yCenter="286" fixedDimensions="FALSE" width="220" height="66" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>output sTemp(pidSender) 
 from pidZone</Text>

@@ -10,85 +10,60 @@
 <Body>
 <ContinuousTransitions>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM8"/>
+<StateReference itemId="ITEM6"/>
 <SymbolReference symbolId="SYMB12"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM3"/>
-<SymbolReference symbolId="SYMB201"/>
-</Transition>
-<Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM2"/>
-<SymbolReference symbolId="SYMB285"/>
-</Transition>
-<Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM2"/>
+<StateReference itemId="ITEM7"/>
 <SymbolReference symbolId="SYMB286"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM6"/>
+<StateReference itemId="ITEM4"/>
+<SymbolReference symbolId="SYMB201"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM5"/>
 <SymbolReference symbolId="SYMB290"/>
 </Transition>
 </ContinuousTransitions>
 </Body>
 </Item>
-<Item id="ITEM2" type="state" name="initTesting" parentId="ITEM1" scope="none">
-<DefiningSymbols>
-<SymbolReference symbolId="SYMB218"/>
-</DefiningSymbols>
-<UsingSymbols>
-<SymbolReference symbolId="SYMB217"/>
-<SymbolReference symbolId="SYMB198"/>
-</UsingSymbols>
-</Item>
-<Item id="ITEM3" type="state" name="sError" parentId="ITEM1" scope="none">
-<DefiningSymbols>
-<SymbolReference symbolId="SYMB200"/>
-</DefiningSymbols>
-<UsingSymbols>
-<SymbolReference symbolId="SYMB199"/>
-<SymbolReference symbolId="SYMB205"/>
-</UsingSymbols>
-</Item>
-<Item id="ITEM4" type="state" name="sSignals" parentId="ITEM1" scope="none">
-<DefiningSymbols>
-<SymbolReference symbolId="SYMB6"/>
-</DefiningSymbols>
-<UsingSymbols>
-<SymbolReference symbolId="SYMB194"/>
-<SymbolReference symbolId="SYMB287"/>
-<SymbolReference symbolId="SYMB16"/>
-<SymbolReference symbolId="SYMB24"/>
-</UsingSymbols>
-</Item>
-<Item id="ITEM5" type="state" name="DEAD" parentId="ITEM1" scope="none">
+<Item id="ITEM2" type="state" name="DEAD" parentId="ITEM1" scope="none">
 <UsingSymbols>
 <SymbolReference symbolId="SYMB203"/>
 <SymbolReference symbolId="SYMB292"/>
 </UsingSymbols>
 </Item>
-<Item id="ITEM6" type="state" name="END" parentId="ITEM1" scope="none">
+<Item id="ITEM3" type="state" name="sSignals" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB6"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB376"/>
+<SymbolReference symbolId="SYMB16"/>
+<SymbolReference symbolId="SYMB6"/>
+<SymbolReference symbolId="SYMB24"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM4" type="state" name="sError" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB200"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB205"/>
+<SymbolReference symbolId="SYMB199"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM5" type="state" name="END" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB291"/>
 </DefiningSymbols>
 <UsingSymbols>
-<SymbolReference symbolId="SYMB288"/>
+<SymbolReference symbolId="SYMB198"/>
 </UsingSymbols>
 </Item>
-<Item id="ITEM7" type="state" name="Idle" parentId="ITEM1" scope="none">
-<DefiningSymbols>
-<SymbolReference symbolId="SYMB4"/>
-</DefiningSymbols>
-<UsingSymbols>
-<SymbolReference symbolId="SYMB4"/>
-</UsingSymbols>
+<Item id="ITEM6" type="state" name="sWaitIdle" parentId="ITEM1" scope="none">
 </Item>
-<Item id="ITEM8" type="state" name="sWaitIdle" parentId="ITEM1" scope="none">
-<DefiningSymbols>
-<SymbolReference symbolId="SYMB13"/>
-</DefiningSymbols>
-<UsingSymbols>
-<SymbolReference symbolId="SYMB13"/>
-</UsingSymbols>
+<Item id="ITEM7" type="state" name="initTesting" parentId="ITEM1" scope="none">
 </Item>
 </DictionaryObjects>

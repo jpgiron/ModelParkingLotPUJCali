@@ -6,19 +6,17 @@
 <Signal id="SIG1" name="sEntered_Car">
 <SignalParameterType>InfoZone</SignalParameterType>
 </Signal>
-<Signal id="SIG10" name="sIR4_Zone">
+<Signal id="SIG10" name="sLoopInductive_Zone">
 </Signal>
-<Signal id="SIG11" name="sLoopInductive_Zone">
-</Signal>
-<Signal id="SIG12" name="sInitFreeSpot">
+<Signal id="SIG11" name="sInitFreeSpot">
 <SignalParameterType>i_spots</SignalParameterType>
 </Signal>
-<Signal id="SIG13" name="sInitTotalSpots">
+<Signal id="SIG12" name="sInitTotalSpots">
 <SignalParameterType>i_spots</SignalParameterType>
 </Signal>
-<Signal id="SIG14" name="sReqInfo">
+<Signal id="SIG13" name="sReqInfo">
 </Signal>
-<Signal id="SIG15" name="sInitPidCtrl">
+<Signal id="SIG14" name="sInitPidCtrl">
 <SignalParameterType>PID</SignalParameterType>
 </Signal>
 <Signal id="SIG2" name="sOut_Car">
@@ -32,13 +30,13 @@
 </Signal>
 <Signal id="SIG5" name="sOkInitPid">
 </Signal>
-<Signal id="SIG6" name="sTemp">
+<Signal id="SIG6" name="sIR1_Zone">
 </Signal>
-<Signal id="SIG7" name="sIR1_Zone">
+<Signal id="SIG7" name="sIR2_Zone">
 </Signal>
-<Signal id="SIG8" name="sIR2_Zone">
+<Signal id="SIG8" name="sIR3_Zone">
 </Signal>
-<Signal id="SIG9" name="sIR3_Zone">
+<Signal id="SIG9" name="sIR4_Zone">
 </Signal>
 <Item id="ITEM1" type="block" name="BZone" scope="current">
 <UsingSymbols>
@@ -48,6 +46,7 @@
 <SignalWindow id="SIGWDW2" insideDiagram="TRUE">
 <ConnectorReference linkId="LINK93" isFrom="FALSE"/>
 <SentSignals>
+<SignalReference id="SIG6"/>
 <SignalReference id="SIG7"/>
 <SignalReference id="SIG8"/>
 <SignalReference id="SIG9"/>
@@ -56,7 +55,6 @@
 <SignalReference id="SIG12"/>
 <SignalReference id="SIG13"/>
 <SignalReference id="SIG14"/>
-<SignalReference id="SIG15"/>
 </SentSignals>
 <ReceivedSignals>
 <SignalReference id="SIG1"/>
@@ -64,7 +62,6 @@
 <SignalReference id="SIG3"/>
 <SignalReference id="SIG4"/>
 <SignalReference id="SIG5"/>
-<SignalReference id="SIG6"/>
 </ReceivedSignals>
 </SignalWindow>
 <Channel name="cEnv_Zone" fromSignalWindow="SIGWDW1" toSignalWindow="SIGWDW2"/>
@@ -84,9 +81,9 @@
 <SignalReference id="SIG3"/>
 <SignalReference id="SIG4"/>
 <SignalReference id="SIG5"/>
-<SignalReference id="SIG6"/>
 </SentSignals>
 <ReceivedSignals>
+<SignalReference id="SIG6"/>
 <SignalReference id="SIG7"/>
 <SignalReference id="SIG8"/>
 <SignalReference id="SIG9"/>
@@ -95,7 +92,6 @@
 <SignalReference id="SIG12"/>
 <SignalReference id="SIG13"/>
 <SignalReference id="SIG14"/>
-<SignalReference id="SIG15"/>
 </ReceivedSignals>
 </SignalWindow>
 </Item>
