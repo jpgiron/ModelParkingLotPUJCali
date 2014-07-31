@@ -131,31 +131,31 @@
 </UsingSymbols>
 <Body>
 <SentSignals>
-<SignalReference id="SIG2"/>
-<SignalReference id="SIG14"/>
 <SignalReference id="SIG3"/>
-<SignalReference id="SIG20"/>
 <SignalReference id="SIG15"/>
 <SignalReference id="SIG17"/>
 <SignalReference id="SIG21"/>
+<SignalReference id="SIG2"/>
+<SignalReference id="SIG14"/>
+<SignalReference id="SIG20"/>
 </SentSignals>
 <ReceivedSignals>
-<SignalReference id="SIG2"/>
+<SignalReference id="SIG9"/>
+<SignalReference id="SIG16"/>
+<SignalReference id="SIG13"/>
 <SignalReference id="SIG3"/>
-<SignalReference id="SIG19"/>
-<SignalReference id="SIG1"/>
+<SignalReference id="SIG7"/>
 <SignalReference id="SIG4"/>
+<SignalReference id="SIG2"/>
+<SignalReference id="SIG6"/>
+<SignalReference id="SIG8"/>
+<SignalReference id="SIG1"/>
+<SignalReference id="SIG11"/>
+<SignalReference id="SIG19"/>
+<SignalReference id="SIG18"/>
 <SignalReference id="SIG5"/>
 <SignalReference id="SIG10"/>
-<SignalReference id="SIG6"/>
-<SignalReference id="SIG11"/>
-<SignalReference id="SIG16"/>
-<SignalReference id="SIG8"/>
-<SignalReference id="SIG13"/>
 <SignalReference id="SIG12"/>
-<SignalReference id="SIG18"/>
-<SignalReference id="SIG7"/>
-<SignalReference id="SIG9"/>
 </ReceivedSignals>
 <Transitions>
 <Transition statesExcluded="FALSE" priorityInputNames="">
@@ -241,20 +241,20 @@
 </Transitions>
 <ContinuousTransitions>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM20"/>
-<SymbolReference symbolId="SYMB609"/>
-</Transition>
-<Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM20"/>
-<SymbolReference symbolId="SYMB610"/>
-</Transition>
-<Transition statesExcluded="FALSE" priorityInputNames="">
 <StateReference itemId="ITEM19"/>
 <SymbolReference symbolId="SYMB440"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
 <StateReference itemId="ITEM19"/>
 <SymbolReference symbolId="SYMB441"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM20"/>
+<SymbolReference symbolId="SYMB609"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM20"/>
+<SymbolReference symbolId="SYMB610"/>
 </Transition>
 </ContinuousTransitions>
 </Body>
