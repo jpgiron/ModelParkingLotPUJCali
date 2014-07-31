@@ -146,22 +146,24 @@ sInitPidCtrl]</Text>
 <Description></Description>
 <Text></Text>
 
-<Symbol symbolId="SYMB7" type="sdlText" xCenter="275" yCenter="671" fixedDimensions="FALSE" width="506" height="1320" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB7" type="sdlText" xCenter="264" yCenter="759" fixedDimensions="FALSE" width="440" height="1496" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>/* Declarations of constants */
 
 SYNONYM cNUMMAXCTRL INTEGER = 5;
-SYNONYM cMAX_ZONES INTEGER = 5;
-SYNONYM CNUMMAXZONES_SYSTEM INTEGER = 25;
+SYNONYM cMAX_ZONES INTEGER = 2;
+SYNONYM CNUMMAXZONES_SYSTEM INTEGER = 10;
+SYNONYM cNUMMAXSPOTS INTEGER = 10;
 
 SYNTYPE i_spots = INTEGER
+DEFAULT 0;
+    CONSTANTS 0..cNUMMAXSPOTS
 ENDSYNTYPE;
-
 
 NEWTYPE InfoZone
 STRUCT
-    totalSpots INTEGER;
-    freeSpots INTEGER;
+    totalSpots i_spots;
+    freeSpots i_spots;
     ID PID;
 ENDNEWTYPE;
 
@@ -220,14 +222,14 @@ ENDNEWTYPE;</Text>
 </Symbol>
 </DiagramPartition>
 
-<DiagramPartition name="Signals" nbPagesH="2" nbPagesV="2">
+<DiagramPartition name="Signals" nbPagesH="2" nbPagesV="3">
 <PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="0.0" bottomMargin="0.0" leftMargin="0.0" rightMargin="0.0" pageFooter="FALSE"/>
 
-<Symbol symbolId="SYMB9" type="sdlSysDgmFrm" xCenter="595" yCenter="841" fixedDimensions="TRUE" width="1146" height="1617" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB9" type="sdlSysDgmFrm" xCenter="595" yCenter="1262" fixedDimensions="TRUE" width="1146" height="2459" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text></Text>
 
-<Symbol symbolId="SYMB10" type="sdlText" xCenter="572" yCenter="814" fixedDimensions="TRUE" width="1144" height="1606" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB10" type="sdlText" xCenter="561" yCenter="858" fixedDimensions="FALSE" width="1034" height="1672" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>/*SIGNALS */
 

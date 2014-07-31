@@ -386,7 +386,7 @@
 <SymbolReference symbolId="SYMB7"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM13" type="type" name="InfoMainSystem" parentId="ITEM1" scope="none">
+<Item id="ITEM13" type="type" name="itIndext_Ctrl" parentId="ITEM1" scope="none" isSyntype="TRUE">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB7"/>
 </DefiningSymbols>
@@ -396,7 +396,7 @@
 <SymbolReference symbolId="SYMB7"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM15" type="type" name="tableMainInfoCtrls" parentId="ITEM1" scope="none">
+<Item id="ITEM15" type="type" name="InfoMainSystem" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB7"/>
 </DefiningSymbols>
@@ -412,6 +412,11 @@
 </DefiningSymbols>
 </Item>
 <Item id="ITEM18" type="variable" name="CNUMMAXZONES_SYSTEM" parentId="ITEM1" scope="none" variableTypeName="INTEGER" isSynonym="TRUE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB7"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM19" type="variable" name="cNUMMAXSPOTS" parentId="ITEM1" scope="none" variableTypeName="INTEGER" isSynonym="TRUE">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB7"/>
 </DefiningSymbols>
@@ -550,27 +555,27 @@
 </ReceivedSignals>
 </SignalWindow>
 </Item>
-<Item id="ITEM4" type="type" name="tableVeriFyCon_Zone" parentId="ITEM1" scope="none">
+<Item id="ITEM4" type="type" name="tableMainInfoCtrls" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB7"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM5" type="type" name="tableVerifyCon_Ctrl" parentId="ITEM1" scope="none">
+<Item id="ITEM5" type="type" name="tableInfoGralCtrl" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB7"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM6" type="type" name="table_Zones" parentId="ITEM1" scope="none">
+<Item id="ITEM6" type="type" name="tableVeriFyCon_Zone" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB7"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM7" type="type" name="itIndext_Ctrl" parentId="ITEM1" scope="none" isSyntype="TRUE">
+<Item id="ITEM7" type="type" name="tableVerifyCon_Ctrl" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB7"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM8" type="type" name="tableInfoGralCtrl" parentId="ITEM1" scope="none">
+<Item id="ITEM8" type="type" name="table_Zones" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB7"/>
 </DefiningSymbols>

@@ -13,7 +13,7 @@
 
 <Symbol symbolId="SYMB3" type="sdlPrcs" xCenter="363" yCenter="308" fixedDimensions="TRUE" width="308" height="66" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>pZone(1,CNUMMAXZONES_SYSTEM)</Text>
+<Text>pZone2(1,CNUMMAXZONES_SYSTEM)</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB7" type="sdlPrcs" xCenter="1012" yCenter="319" fixedDimensions="TRUE" width="352" height="66" color="#000000" fillColor="#ffffff">
@@ -45,25 +45,6 @@ sLoopInductive_Zone]</Text>
 
 </Link>
 
-<Link linkId="LINK73" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cEnv_Zone</Text>
-<Connector attachedSymbolId="SYMB3" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
-<Text id="1">[
-sIR1_Zone,sIR2_Zone,
-sIR3_Zone,sIR4_Zone,
-sLoopInductive_Zone
-]</Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="n" position="-0.961516369902" endType="midarrow">
-<Text id="1">[]</Text>
-<Text id="2">__</Text>
-</Connector>
-<LinkSegment orientation="h" length="-330"/>
-<LinkSegment orientation="v" length="-308"/>
-
-</Link>
-
 <Link linkId="LINK75" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cCtrl_Zone</Text>
 <Connector attachedSymbolId="SYMB3" type="chnl" isOutside="TRUE" side="x" position="0.285714285714" endType="midarrow">
@@ -83,6 +64,25 @@ sOkInitPid
 ]</Text>
 <Text id="2">__</Text>
 </Connector>
+<LinkSegment orientation="v" length="-308"/>
+
+</Link>
+
+<Link linkId="LINK73" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cEnv_Zone</Text>
+<Connector attachedSymbolId="SYMB3" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[
+sIR1_Zone,sIR2_Zone,
+sIR3_Zone,sIR4_Zone,
+sLoopInductive_Zone
+]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="n" position="-0.961516369902" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+<LinkSegment orientation="h" length="-330"/>
 <LinkSegment orientation="v" length="-308"/>
 
 </Link>
