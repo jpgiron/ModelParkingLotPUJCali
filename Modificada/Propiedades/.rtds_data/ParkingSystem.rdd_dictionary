@@ -177,13 +177,12 @@
 <SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
-<Signal id="SIG38" name="sOkCreateCtrl">
+<Signal id="SIG38" name="sIR2_ZoneTest">
 <DeclarationSymbols>
 <SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
-<Signal id="SIG39" name="sIamZone">
-<SignalParameterType>InfoZone</SignalParameterType>
+<Signal id="SIG39" name="sOkCreateCtrl">
 <DeclarationSymbols>
 <SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
@@ -193,65 +192,58 @@
 <SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
-<Signal id="SIG40" name="sConfirmZoneManager">
+<Signal id="SIG40" name="sIamZone">
+<SignalParameterType>InfoZone</SignalParameterType>
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG41" name="sConfirmZoneManager">
 <SignalParameterType>PID</SignalParameterType>
 <DeclarationSymbols>
 <SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
-<Signal id="SIG41" name="sInfoSystem">
+<Signal id="SIG42" name="sInfoSystem">
 <SignalParameterType>InfoMainSystem</SignalParameterType>
 <DeclarationSymbols>
 <SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
-<Signal id="SIG42" name="sOutCar">
+<Signal id="SIG43" name="sOutCar">
 <SignalParameterType>itIndext_Ctrl</SignalParameterType>
 <SignalParameterType>itIndex</SignalParameterType>
 <DeclarationSymbols>
 <SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
-<Signal id="SIG43" name="sExcLimitCtrl">
+<Signal id="SIG44" name="sExcLimitCtrl">
 <DeclarationSymbols>
 <SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
-<Signal id="SIG44" name="sOkCreationZone">
+<Signal id="SIG45" name="sIR4_ZoneTest">
 <DeclarationSymbols>
 <SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
-<Signal id="SIG45" name="sIamCtrl">
+<Signal id="SIG46" name="sOkCreationZone">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG47" name="sIR3_ZoneTest">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG48" name="sIamCtrl">
 <SignalParameterType>InfoCtrl</SignalParameterType>
 <DeclarationSymbols>
 <SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
-<Signal id="SIG46" name="sReqInfoCtrlZone">
-<DeclarationSymbols>
-<SymbolReference symbolId="SYMB10"/>
-</DeclarationSymbols>
-</Signal>
-<Signal id="SIG47" name="sSetUpTotalSpot">
-<SignalParameterType>itIndext_Ctrl</SignalParameterType>
-<SignalParameterType>itIndex</SignalParameterType>
-<SignalParameterType>i_spots</SignalParameterType>
-<DeclarationSymbols>
-<SymbolReference symbolId="SYMB10"/>
-</DeclarationSymbols>
-</Signal>
-<Signal id="SIG48" name="sEntryCar">
-<SignalParameterType>itIndext_Ctrl</SignalParameterType>
-<SignalParameterType>itIndex</SignalParameterType>
-<DeclarationSymbols>
-<SymbolReference symbolId="SYMB10"/>
-</DeclarationSymbols>
-</Signal>
-<Signal id="SIG49" name="sSetUpFreeSpot">
-<SignalParameterType>itIndext_Ctrl</SignalParameterType>
-<SignalParameterType>itIndex</SignalParameterType>
-<SignalParameterType>i_spots</SignalParameterType>
+<Signal id="SIG49" name="sReqInfoCtrlZone">
 <DeclarationSymbols>
 <SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
@@ -261,7 +253,30 @@
 <SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
-<Signal id="SIG50" name="sAddZone">
+<Signal id="SIG50" name="sSetUpTotalSpot">
+<SignalParameterType>itIndext_Ctrl</SignalParameterType>
+<SignalParameterType>itIndex</SignalParameterType>
+<SignalParameterType>i_spots</SignalParameterType>
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG51" name="sEntryCar">
+<SignalParameterType>itIndext_Ctrl</SignalParameterType>
+<SignalParameterType>itIndex</SignalParameterType>
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG52" name="sSetUpFreeSpot">
+<SignalParameterType>itIndext_Ctrl</SignalParameterType>
+<SignalParameterType>itIndex</SignalParameterType>
+<SignalParameterType>i_spots</SignalParameterType>
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG53" name="sAddZone">
 <SignalParameterType>itIndext_Ctrl</SignalParameterType>
 <SignalParameterType>i_spots</SignalParameterType>
 <SignalParameterType>i_spots</SignalParameterType>
@@ -269,17 +284,27 @@
 <SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
-<Signal id="SIG51" name="sConfirmCtrl">
+<Signal id="SIG54" name="sIR1_ZoneTest">
 <DeclarationSymbols>
 <SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
-<Signal id="SIG52" name="sImpossibleGetInfoCtrls">
+<Signal id="SIG55" name="sConfirmCtrl">
 <DeclarationSymbols>
 <SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
-<Signal id="SIG53" name="sCreateCtrlZone">
+<Signal id="SIG56" name="sImpossibleGetInfoCtrls">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG57" name="sCreateCtrlZone">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG58" name="sLoopInductive_ZoneTest">
 <DeclarationSymbols>
 <SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
@@ -371,32 +396,32 @@
 <Channel name="cMain_CtrlManager" fromSignalWindow="SIGWDW10" toSignalWindow="SIGWDW5"/>
 <Channel name="cMain_CtrlZone" fromSignalWindow="SIGWDW7" toSignalWindow="SIGWDW12"/>
 </Item>
-<Item id="ITEM10" type="type" name="infoMainCtrls" parentId="ITEM1" scope="none">
+<Item id="ITEM10" type="type" name="i_spots" parentId="ITEM1" scope="none" isSyntype="TRUE">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB7"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM11" type="type" name="InfoZone" parentId="ITEM1" scope="none">
+<Item id="ITEM11" type="type" name="table_Zones" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB7"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM12" type="type" name="i_spots" parentId="ITEM1" scope="none" isSyntype="TRUE">
+<Item id="ITEM12" type="type" name="tableInfoGralCtrl" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB7"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM13" type="type" name="itIndext_Ctrl" parentId="ITEM1" scope="none" isSyntype="TRUE">
+<Item id="ITEM13" type="type" name="tableVerifyCon_Ctrl" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB7"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM14" type="type" name="InfoCtrl" parentId="ITEM1" scope="none">
+<Item id="ITEM14" type="type" name="itIndext_Ctrl" parentId="ITEM1" scope="none" isSyntype="TRUE">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB7"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM15" type="type" name="InfoMainSystem" parentId="ITEM1" scope="none">
+<Item id="ITEM15" type="type" name="InfoCtrl" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB7"/>
 </DefiningSymbols>
@@ -411,12 +436,12 @@
 <SymbolReference symbolId="SYMB7"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM18" type="variable" name="CNUMMAXZONES_SYSTEM" parentId="ITEM1" scope="none" variableTypeName="INTEGER" isSynonym="TRUE">
+<Item id="ITEM18" type="variable" name="cNUMMAXSPOTS" parentId="ITEM1" scope="none" variableTypeName="INTEGER" isSynonym="TRUE">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB7"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM19" type="variable" name="cNUMMAXSPOTS" parentId="ITEM1" scope="none" variableTypeName="INTEGER" isSynonym="TRUE">
+<Item id="ITEM19" type="variable" name="CNUMMAXZONES_SYSTEM" parentId="ITEM1" scope="none" variableTypeName="INTEGER" isSynonym="TRUE">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB7"/>
 </DefiningSymbols>
@@ -555,27 +580,27 @@
 </ReceivedSignals>
 </SignalWindow>
 </Item>
-<Item id="ITEM4" type="type" name="tableMainInfoCtrls" parentId="ITEM1" scope="none">
+<Item id="ITEM4" type="type" name="InfoZone" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB7"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM5" type="type" name="tableInfoGralCtrl" parentId="ITEM1" scope="none">
+<Item id="ITEM5" type="type" name="tableMainInfoCtrls" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB7"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM6" type="type" name="tableVeriFyCon_Zone" parentId="ITEM1" scope="none">
+<Item id="ITEM6" type="type" name="InfoMainSystem" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB7"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM7" type="type" name="tableVerifyCon_Ctrl" parentId="ITEM1" scope="none">
+<Item id="ITEM7" type="type" name="infoMainCtrls" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB7"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM8" type="type" name="table_Zones" parentId="ITEM1" scope="none">
+<Item id="ITEM8" type="type" name="tableVeriFyCon_Zone" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB7"/>
 </DefiningSymbols>

@@ -16,17 +16,17 @@
 <Text></Text>
 </Symbol>
 
-<Symbol symbolId="SYMB243" type="sdlInputSig" xCenter="979" yCenter="209" fixedDimensions="FALSE" width="286" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB243" type="sdlInputSig" xCenter="979" yCenter="209" fixedDimensions="FALSE" width="264" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sConfirmZoneManager(pidCtrl)</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB244" type="sdlSendSig" xCenter="979" yCenter="341" fixedDimensions="FALSE" width="308" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB244" type="sdlSendSig" xCenter="979" yCenter="341" fixedDimensions="FALSE" width="330" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sIamZoneManager(SELF) TO SENDER</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB245" type="sdlTask" xCenter="979" yCenter="275" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB245" type="sdlTask" xCenter="979" yCenter="275" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>pid_Ctrl:=pidCtrl</Text>
 </Symbol>
@@ -36,29 +36,29 @@
 <Text>Idle</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB247" type="sdlTask" xCenter="572" yCenter="561" fixedDimensions="FALSE" width="308" height="66" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB247" type="sdlTask" xCenter="572" yCenter="561" fixedDimensions="FALSE" width="264" height="66" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>quantityZones:=quantityZones+1,
 PidZone:=OFFSPRING</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB249" type="sdlSendSig" xCenter="572" yCenter="649" fixedDimensions="FALSE" width="242" height="66" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB249" type="sdlSendSig" xCenter="572" yCenter="649" fixedDimensions="FALSE" width="198" height="66" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sInitPidCtrl(pidCtrl) TO
 PidZone</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB250" type="sdlState" xCenter="572" yCenter="726" fixedDimensions="FALSE" width="220" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB250" type="sdlState" xCenter="572" yCenter="726" fixedDimensions="FALSE" width="198" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sWaitInitPidCtrl_Zone</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB273" type="sdlInputSig" xCenter="1397" yCenter="209" fixedDimensions="FALSE" width="308" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB273" type="sdlInputSig" xCenter="1397" yCenter="209" fixedDimensions="FALSE" width="264" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sConfirmZoneManager_i(pidCtrl)</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB274" type="sdlSendSig" xCenter="1397" yCenter="341" fixedDimensions="FALSE" width="308" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB274" type="sdlSendSig" xCenter="1397" yCenter="341" fixedDimensions="FALSE" width="330" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sIamZoneManager(SELF) TO SENDER</Text>
 </Symbol>
@@ -68,7 +68,7 @@ PidZone</Text>
 <Text>Idle</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB276" type="sdlTask" xCenter="1397" yCenter="275" fixedDimensions="FALSE" width="308" height="66" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB276" type="sdlTask" xCenter="1397" yCenter="275" fixedDimensions="FALSE" width="264" height="66" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>pid_Ctrl:=pidCtrl,
 quantityZones:=quantityZones+1</Text>
@@ -79,12 +79,12 @@ quantityZones:=quantityZones+1</Text>
 <Text>Idle</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB298" type="sdlState" xCenter="957" yCenter="506" fixedDimensions="FALSE" width="220" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB298" type="sdlState" xCenter="957" yCenter="506" fixedDimensions="FALSE" width="198" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sWaitInitPidCtrl_Zone</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB299" type="sdlSendSig" xCenter="957" yCenter="649" fixedDimensions="FALSE" width="286" height="66" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB299" type="sdlSendSig" xCenter="957" yCenter="649" fixedDimensions="FALSE" width="264" height="66" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sInitFreeSpot(p_freeSpots) TO
 PidZone</Text>
@@ -95,7 +95,7 @@ PidZone</Text>
 <Text>Idle</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB30" type="sdlTask" xCenter="385" yCenter="275" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB30" type="sdlTask" xCenter="385" yCenter="275" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>pid_Ctrl:=pidCtrl</Text>
 </Symbol>
@@ -105,12 +105,12 @@ PidZone</Text>
 <Text>sWaitAck_Ok1</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB301" type="sdlInputSig" xCenter="957" yCenter="572" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB301" type="sdlInputSig" xCenter="957" yCenter="572" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sOkInitPid</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB4" type="sdlInputSig" xCenter="385" yCenter="209" fixedDimensions="FALSE" width="440" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB4" type="sdlInputSig" xCenter="385" yCenter="209" fixedDimensions="FALSE" width="374" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sCreateZone(p_totalSpots,p_freeSpots,pidCtrl)</Text>
 </Symbol>
@@ -120,7 +120,7 @@ PidZone</Text>
 <Text>quantityZones &lt; cMAX_ZONES</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB53" type="sdlComment" xCenter="1155" yCenter="77" fixedDimensions="FALSE" width="506" height="66" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB53" type="sdlComment" xCenter="1155" yCenter="77" fixedDimensions="FALSE" width="396" height="66" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>InfoTable es la estructra de informacion de una zona
 representada como TotalSpots, FreeSpots, PID</Text>
@@ -134,19 +134,19 @@ quantityZones INTEGER,
 p_freeSpots,p_totalSpots i_spots, pid_Ctrl,pidCtrl,PidZone PID,infoTableZone InfoZone ;</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB7" type="sdlTask" xCenter="737" yCenter="77" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB7" type="sdlTask" xCenter="737" yCenter="77" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>quantityZones:=0</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB8" type="sdlSendSig" xCenter="154" yCenter="451" fixedDimensions="FALSE" width="286" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB8" type="sdlSendSig" xCenter="154" yCenter="451" fixedDimensions="FALSE" width="242" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sExcQuantityZones TO pidCtrl</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB9" type="sdlPrcsCreation" xCenter="572" yCenter="473" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB9" type="sdlPrcsCreation" xCenter="572" yCenter="473" fixedDimensions="FALSE" width="88" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>pZone</Text>
+<Text>pZone2</Text>
 </Symbol>
 </Symbol>
 

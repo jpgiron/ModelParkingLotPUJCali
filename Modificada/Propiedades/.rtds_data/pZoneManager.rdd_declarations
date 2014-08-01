@@ -1,0 +1,35 @@
+Ä}q(UversionqU4.4.1qUobjectq]q]q((crtds.editor.business.SyntaxChecker
+SyntaxTreeNodeAdapter
+qoq}q	(Utextq
+UquantityZones INTEGERqU
+identifierqU2UtypeqUvardeclqUchildrenq]q((hoq}q(h
+UINTEGERqhU2hUtypenameqh]qU_SyntaxTreeNodeAdapter__parentqhub(crtds.editor.business.SyntaxChecker
+SyntaxTreeNode
+qoq}q(h
+UquantityZonesqhNhUsnglvardeclqh]q(hoq}q(h
+hhU2hUvarnameqh]q hhubaubeh(hoq!}q"(h
+U|DCL quantityZones INTEGER , p_freeSpots , p_totalSpots i_spots , pid_Ctrl , pidCtrl , PidZone PID , infoTableZone InfoZone ;q#hU0hU	cmpnddeclq$h]q%(h(hoq&}q'(h
+U"p_freeSpots , p_totalSpots i_spotsq(hU3hUvardeclq)h]q*((hoq+}q,(h
+Ui_spotsq-hU3hUtypenameq.h]q/hh&ub(hoq0}q1(h
+Up_freeSpotsq2hNhhh]q3(hoq4}q5(h
+h2hU3hUvarnameq6h]q7hh&ubaub(hoq8}q9(h
+Up_totalSpotsq:hNhhh]q;(hoq<}q=(h
+h:hU3hUvarnameq>h]q?hh&ubaubehh!ub(hoq@}qA(h
+U pid_Ctrl , pidCtrl , PidZone PIDqBhU3hUvardeclqCh]qD((hoqE}qF(h
+UPIDqGhU3hUtypenameqHh]qIhh@ub(hoqJ}qK(h
+Upid_CtrlqLhNhhh]qM(hoqN}qO(h
+hLhU3hUvarnameqPh]qQhh@ubaub(hoqR}qS(h
+UpidCtrlqThNhhh]qU(hoqV}qW(h
+hThU3hUvarnameqXh]qYhh@ubaub(hoqZ}q[(h
+UPidZoneq\hNhhh]q](hoq^}q_(h
+h\hU3hUvarnameq`h]qahh@ubaubehh!ub(hoqb}qc(h
+UinfoTableZone InfoZoneqdhU3hUvardeclqeh]qf((hoqg}qh(h
+UInfoZoneqihU3hUtypenameqjh]qkhhbub(hoql}qm(h
+UinfoTableZoneqnhNhhh]qo(hoqp}qq(h
+hnhU3hUvarnameqrh]qshhbubaubehh!ubeh(hoqt}qu(h
+UsDCL
+
+quantityZones INTEGER,
+p_freeSpots,p_totalSpots i_spots, pid_Ctrl,pidCtrl,PidZone PID,infoTableZone InfoZone ;qvhNhUdatadeclqwh]qxh!ahNubububcrtds.editor.business.ElementReference
+SymbolReference
+qy)Åqz}q{(Uprojectq|h|QUsymbolIdq}USYMB6q~UdiagramFileNameqUI/home/ubuntu/Documents/ProjectSDL/Modificada/Propiedades/pZoneManager.rddqÄubKáqÅh&hy)ÅqÇ}qÉ(h|h|Qh}h~hhÄubKáqÑh@hy)ÅqÖ}qÜ(h|h|Qh}h~hhÄubKáqáhbhy)Åqà}qâ(h|h|Qh}h~hhÄubKáqäeÜqãu.
