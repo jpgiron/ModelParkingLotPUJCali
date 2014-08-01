@@ -16,7 +16,7 @@
 <Text>pCtrl(1,cNUMMAXCTRL)</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB6" type="sdlPrcs" xCenter="682" yCenter="671" fixedDimensions="FALSE" width="198" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB6" type="sdlPrcs" xCenter="682" yCenter="671" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>pCtrlManager(1,1)</Text>
 </Symbol>
@@ -386,15 +386,17 @@
 
 </Link>
 
-<Link linkId="LINK147" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cCtrl_CreatorZoneManager</Text>
-<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="x" position="0.8" endType="midarrow">
-<Text id="1">[sOkCreateZoneManager,
-sExcZoneManager]</Text>
+<Link linkId="LINK150" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cCtrl_ZoneManager</Text>
+<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="x" position="0.0333333333333" endType="midarrow">
+<Text id="1">[sOkCreation,
+sExcQuantityZones,
+sIamZoneManager]</Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="n" position="0.650959860384" endType="midarrow">
-<Text id="1">[sCreateZoneManager]</Text>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="n" position="0.20942408377" endType="midarrow">
+<Text id="1">[sCreateZone,
+sConfirmZoneManager_i]</Text>
 <Text id="2">__</Text>
 </Connector>
 <LinkSegment orientation="v" length="-462"/>
@@ -454,17 +456,15 @@ sExcZoneManager]</Text>
 
 </Link>
 
-<Link linkId="LINK150" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cCtrl_ZoneManager</Text>
-<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="x" position="0.0333333333333" endType="midarrow">
-<Text id="1">[sOkCreation,
-sExcQuantityZones,
-sIamZoneManager]</Text>
+<Link linkId="LINK147" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cCtrl_CreatorZoneManager</Text>
+<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="x" position="0.8" endType="midarrow">
+<Text id="1">[sOkCreateZoneManager,
+sExcZoneManager]</Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="n" position="0.20942408377" endType="midarrow">
-<Text id="1">[sCreateZone,
-sConfirmZoneManager_i]</Text>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="n" position="0.650959860384" endType="midarrow">
+<Text id="1">[sCreateZoneManager]</Text>
 <Text id="2">__</Text>
 </Connector>
 <LinkSegment orientation="v" length="-462"/>
