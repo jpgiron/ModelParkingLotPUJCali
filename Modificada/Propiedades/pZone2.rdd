@@ -32,7 +32,7 @@ infoTableZone!ID := PidZone</Text>
 <Text>sIR3_ZoneTest</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB341" type="sdlInputSig" xCenter="385" yCenter="550" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffff00">
+<Symbol symbolId="SYMB341" type="sdlInputSig" xCenter="385" yCenter="539" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffff00">
 <Description></Description>
 <Text>sIR2_ZoneTest</Text>
 </Symbol>
@@ -89,27 +89,27 @@ freeSpots,totalSpots i_spots,tmpfreeSpots,tmptotalSpots i_spots,
 PidZone,pid_Ctrl,pidCtrl Pid, infoTableZone InfoZone;</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB430" type="sdlInputSig" xCenter="616" yCenter="550" fixedDimensions="FALSE" width="88" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB430" type="sdlInputSig" xCenter="616" yCenter="539" fixedDimensions="FALSE" width="88" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>tEnter</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB431" type="sdlResetTimer" xCenter="264" yCenter="638" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB431" type="sdlResetTimer" xCenter="264" yCenter="627" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>RESET(tEnter)</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB432" type="sdlState" xCenter="616" yCenter="682" fixedDimensions="TRUE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB432" type="sdlState" xCenter="616" yCenter="671" fixedDimensions="TRUE" width="66" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>Idle</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB433" type="sdlInitTimer" xCenter="264" yCenter="693" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB433" type="sdlInitTimer" xCenter="264" yCenter="682" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>SET(NOW+3,tEnter)</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB443" type="sdlResetTimer" xCenter="616" yCenter="616" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB443" type="sdlResetTimer" xCenter="616" yCenter="605" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>RESET(tEnter)</Text>
 </Symbol>
@@ -154,12 +154,12 @@ PidZone,pid_Ctrl,pidCtrl Pid, infoTableZone InfoZone;</Text>
 <Text>RESET(tOut)</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB7" type="sdlInputSig" xCenter="165" yCenter="550" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB7" type="sdlInputSig" xCenter="165" yCenter="539" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sIR2_Zone</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB9" type="sdlState" xCenter="264" yCenter="748" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB9" type="sdlState" xCenter="264" yCenter="737" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>VerifyIsaCarEntering</Text>
 </Symbol>
@@ -225,7 +225,7 @@ PidZone,pid_Ctrl,pidCtrl Pid, infoTableZone InfoZone;</Text>
 
 </Link>
 
-<Link linkId="LINK1149" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK1391" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB341" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -415,7 +415,7 @@ PidZone,pid_Ctrl,pidCtrl Pid, infoTableZone InfoZone;</Text>
 
 </Link>
 
-<Link linkId="LINK1242" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK1398" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB430" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -429,7 +429,7 @@ PidZone,pid_Ctrl,pidCtrl Pid, infoTableZone InfoZone;</Text>
 
 </Link>
 
-<Link linkId="LINK1178" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK1396" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB431" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -443,7 +443,7 @@ PidZone,pid_Ctrl,pidCtrl Pid, infoTableZone InfoZone;</Text>
 
 </Link>
 
-<Link linkId="LINK1179" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK1394" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB433" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -457,7 +457,7 @@ PidZone,pid_Ctrl,pidCtrl Pid, infoTableZone InfoZone;</Text>
 
 </Link>
 
-<Link linkId="LINK1243" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK1393" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB443" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -487,7 +487,7 @@ PidZone,pid_Ctrl,pidCtrl Pid, infoTableZone InfoZone;</Text>
 
 </Link>
 
-<Link linkId="LINK1143" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK1392" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB6" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -497,11 +497,11 @@ PidZone,pid_Ctrl,pidCtrl Pid, infoTableZone InfoZone;</Text>
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="88"/>
+<LinkSegment orientation="v" length="77"/>
 
 </Link>
 
-<Link linkId="LINK1145" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK1395" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB6" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -513,11 +513,11 @@ PidZone,pid_Ctrl,pidCtrl Pid, infoTableZone InfoZone;</Text>
 </Connector>
 <LinkSegment orientation="v" length="44"/>
 <LinkSegment orientation="h" length="231"/>
-<LinkSegment orientation="v" length="44"/>
+<LinkSegment orientation="v" length="33"/>
 
 </Link>
 
-<Link linkId="LINK1144" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK1390" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB6" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -529,7 +529,7 @@ PidZone,pid_Ctrl,pidCtrl Pid, infoTableZone InfoZone;</Text>
 </Connector>
 <LinkSegment orientation="v" length="44"/>
 <LinkSegment orientation="h" length="-220"/>
-<LinkSegment orientation="v" length="44"/>
+<LinkSegment orientation="v" length="33"/>
 
 </Link>
 
@@ -603,7 +603,7 @@ PidZone,pid_Ctrl,pidCtrl Pid, infoTableZone InfoZone;</Text>
 
 </Link>
 
-<Link linkId="LINK1148" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK1397" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB7" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>

@@ -22,6 +22,22 @@
 </Symbol>
 </Symbol>
 
+<Link linkId="LINK302" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>(new channel)</Text>
+<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="s" position="-0.337736932797" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB3" type="chnl" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="-483"/>
+<LinkSegment orientation="h" length="-37"/>
+<LinkSegment orientation="v" length="-341"/>
+
+</Link>
+
 <Link linkId="LINK301" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cMain_CtrlManager</Text>
 <Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="n" position="-0.380241240666" endType="midarrow">

@@ -338,7 +338,26 @@
 <SymbolReference symbolId="SYMB6"/>
 <SymbolReference symbolId="SYMB9"/>
 </UsingSymbols>
+<SignalWindow id="SIGWDW14" insideDiagram="TRUE">
+<ConnectorReference linkId="LINK302" isFrom="TRUE"/>
+<Connections>
+<Connection name="(new channel)"/>
+</Connections>
+</SignalWindow>
 <SignalWindow id="SIGWDW12" insideDiagram="TRUE">
+<ConnectorReference linkId="LINK277" isFrom="FALSE"/>
+<Connections>
+<Connection name="cEnv_Zone"/>
+</Connections>
+<SentSignals>
+<SignalReference id="SIG1"/>
+<SignalReference id="SIG2"/>
+<SignalReference id="SIG3"/>
+<SignalReference id="SIG4"/>
+<SignalReference id="SIG5"/>
+</SentSignals>
+</SignalWindow>
+<SignalWindow id="SIGWDW13" insideDiagram="TRUE">
 <ConnectorReference linkId="LINK298" isFrom="FALSE"/>
 <Connections>
 <Connection name="cMain_CtrlZone"/>
@@ -363,7 +382,7 @@
 <SignalReference id="SIG7"/>
 </ReceivedSignals>
 </SignalWindow>
-<SignalWindow id="SIGWDW10" insideDiagram="TRUE">
+<SignalWindow id="SIGWDW11" insideDiagram="TRUE">
 <ConnectorReference linkId="LINK301" isFrom="TRUE"/>
 <Connections>
 <Connection name="cMain_CtrlManager"/>
@@ -376,25 +395,13 @@
 <SignalReference id="SIG24"/>
 </ReceivedSignals>
 </SignalWindow>
-<SignalWindow id="SIGWDW11" insideDiagram="TRUE">
-<ConnectorReference linkId="LINK277" isFrom="FALSE"/>
-<Connections>
-<Connection name="cEnv_Zone"/>
-</Connections>
-<SentSignals>
-<SignalReference id="SIG1"/>
-<SignalReference id="SIG2"/>
-<SignalReference id="SIG3"/>
-<SignalReference id="SIG4"/>
-<SignalReference id="SIG5"/>
-</SentSignals>
-</SignalWindow>
-<Channel name="cEnv_Zone" fromSignalWindow="SIGWDW1" toSignalWindow="SIGWDW11"/>
-<Channel name="cCtrl_CreatorZoneManager" fromSignalWindow="SIGWDW2" toSignalWindow="SIGWDW6"/>
-<Channel name="cCtrl_ZoneManager" fromSignalWindow="SIGWDW8" toSignalWindow="SIGWDW3"/>
-<Channel name="cCtrl_Zone" fromSignalWindow="SIGWDW9" toSignalWindow="SIGWDW4"/>
-<Channel name="cMain_CtrlManager" fromSignalWindow="SIGWDW10" toSignalWindow="SIGWDW5"/>
-<Channel name="cMain_CtrlZone" fromSignalWindow="SIGWDW7" toSignalWindow="SIGWDW12"/>
+<Channel name="cEnv_Zone" fromSignalWindow="SIGWDW1" toSignalWindow="SIGWDW12"/>
+<Channel name="cCtrl_CreatorZoneManager" fromSignalWindow="SIGWDW2" toSignalWindow="SIGWDW7"/>
+<Channel name="cCtrl_ZoneManager" fromSignalWindow="SIGWDW9" toSignalWindow="SIGWDW3"/>
+<Channel name="cCtrl_Zone" fromSignalWindow="SIGWDW10" toSignalWindow="SIGWDW4"/>
+<Channel name="(new channel)" fromSignalWindow="SIGWDW14" toSignalWindow="SIGWDW5"/>
+<Channel name="cMain_CtrlManager" fromSignalWindow="SIGWDW11" toSignalWindow="SIGWDW6"/>
+<Channel name="cMain_CtrlZone" fromSignalWindow="SIGWDW8" toSignalWindow="SIGWDW13"/>
 </Item>
 <Item id="ITEM10" type="type" name="i_spots" parentId="ITEM1" scope="none" isSyntype="TRUE">
 <DefiningSymbols>
@@ -469,6 +476,9 @@
 <SignalReference id="SIG22"/>
 </ReceivedSignals>
 </SignalWindow>
+<SignalWindow id="SIGWDW5" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK302" isFrom="FALSE"/>
+</SignalWindow>
 <SignalWindow id="SIGWDW1" insideDiagram="FALSE">
 <ConnectorReference linkId="LINK277" isFrom="TRUE"/>
 <ReceivedSignals>
@@ -509,7 +519,7 @@
 <UsingSymbols>
 <SymbolReference symbolId="SYMB4"/>
 </UsingSymbols>
-<SignalWindow id="SIGWDW5" insideDiagram="FALSE">
+<SignalWindow id="SIGWDW6" insideDiagram="FALSE">
 <ConnectorReference linkId="LINK301" isFrom="FALSE"/>
 <SentSignals>
 <SignalReference id="SIG23"/>
@@ -519,7 +529,7 @@
 <SignalReference id="SIG25"/>
 </ReceivedSignals>
 </SignalWindow>
-<SignalWindow id="SIGWDW6" insideDiagram="FALSE">
+<SignalWindow id="SIGWDW7" insideDiagram="FALSE">
 <ConnectorReference linkId="LINK279" isFrom="FALSE"/>
 <SentSignals>
 <SignalReference id="SIG8"/>
@@ -529,7 +539,7 @@
 <SignalReference id="SIG7"/>
 </ReceivedSignals>
 </SignalWindow>
-<SignalWindow id="SIGWDW7" insideDiagram="FALSE">
+<SignalWindow id="SIGWDW8" insideDiagram="FALSE">
 <ConnectorReference linkId="LINK298" isFrom="TRUE"/>
 <SentSignals>
 <SignalReference id="SIG26"/>
@@ -551,7 +561,7 @@
 <SignalReference id="SIG37"/>
 </ReceivedSignals>
 </SignalWindow>
-<SignalWindow id="SIGWDW8" insideDiagram="FALSE">
+<SignalWindow id="SIGWDW9" insideDiagram="FALSE">
 <ConnectorReference linkId="LINK280" isFrom="TRUE"/>
 <SentSignals>
 <SignalReference id="SIG12"/>
@@ -563,7 +573,7 @@
 <SignalReference id="SIG11"/>
 </ReceivedSignals>
 </SignalWindow>
-<SignalWindow id="SIGWDW9" insideDiagram="FALSE">
+<SignalWindow id="SIGWDW10" insideDiagram="FALSE">
 <ConnectorReference linkId="LINK278" isFrom="TRUE"/>
 <SentSignals>
 <SignalReference id="SIG19"/>
