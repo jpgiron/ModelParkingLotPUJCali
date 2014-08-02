@@ -22,19 +22,19 @@ pidCtrl</Text>
 <Text>Idle</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB12" type="sdlTask" xCenter="275" yCenter="88" fixedDimensions="FALSE" width="220" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB12" type="sdlTask" xCenter="275" yCenter="88" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>cantidadZoneManager:=0</Text>
+<Text>cZoneManager:=0</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB13" type="sdlTask" xCenter="275" yCenter="682" fixedDimensions="FALSE" width="374" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB13" type="sdlTask" xCenter="275" yCenter="682" fixedDimensions="FALSE" width="286" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>cantidadZoneManager:=cantidadZoneManager+1</Text>
+<Text>cZoneManager:=cZoneManager+1</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB14" type="sdlDecision" xCenter="275" yCenter="275" fixedDimensions="FALSE" width="418" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB14" type="sdlDecision" xCenter="275" yCenter="275" fixedDimensions="FALSE" width="352" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>cantidadZoneManager&lt;cNUMMAXCTRL</Text>
+<Text>cZoneManager&lt;cNUMMAXCTRL</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB15" type="sdlSendSig" xCenter="704" yCenter="352" fixedDimensions="FALSE" width="242" height="44" color="#000000" fillColor="#ffffff">
@@ -62,12 +62,12 @@ pidCtrl</Text>
 <Text>Idle</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB5" type="sdlText" xCenter="583" yCenter="99" fixedDimensions="FALSE" width="264" height="110" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB5" type="sdlText" xCenter="572" yCenter="99" fixedDimensions="FALSE" width="242" height="110" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>DCL
 
 pidCtrl,pidZoneManager PID,
-cantidadZoneManager INTEGER;</Text>
+cZoneManager INTEGER;</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB6" type="sdlPrcsCreation" xCenter="275" yCenter="352" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
@@ -85,9 +85,9 @@ cantidadZoneManager INTEGER;</Text>
 <Text>sIamZoneManager(pidZoneManager)</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB9" type="sdlState" xCenter="275" yCenter="473" fixedDimensions="FALSE" width="242" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB9" type="sdlState" xCenter="275" yCenter="473" fixedDimensions="FALSE" width="220" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>sWaitCOnfirmZoneManager</Text>
+<Text>sWaitConfirmZoneManager</Text>
 </Symbol>
 </Symbol>
 
