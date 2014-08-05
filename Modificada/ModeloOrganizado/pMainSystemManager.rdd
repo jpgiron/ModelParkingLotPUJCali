@@ -11,7 +11,7 @@
 <Description></Description>
 <Text></Text>
 
-<Symbol symbolId="SYMB177" type="sdlSendSig" xCenter="605" yCenter="363" fixedDimensions="FALSE" width="308" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB177" type="sdlSendSig" xCenter="605" yCenter="352" fixedDimensions="FALSE" width="308" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sInitialConnection VIA cMain_CtrlZone</Text>
 </Symbol>
@@ -116,7 +116,7 @@ cMain_CtrlManager</Text>
 </Symbol>
 </Symbol>
 
-<Link linkId="LINK1179" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK1457" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB177" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -126,7 +126,7 @@ cMain_CtrlManager</Text>
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="55"/>
+<LinkSegment orientation="v" length="66"/>
 
 </Link>
 
@@ -176,7 +176,7 @@ cMain_CtrlManager</Text>
 
 </Link>
 
-<Link linkId="LINK1178" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK1458" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB40" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -186,7 +186,7 @@ cMain_CtrlManager</Text>
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="110"/>
+<LinkSegment orientation="v" length="99"/>
 
 </Link>
 
@@ -1513,7 +1513,7 @@ cEnv_Main</Text>
 <Text>sWaitInfoCtrl</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB30" type="sdlInputSig" xCenter="462" yCenter="121" fixedDimensions="FALSE" width="242" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB30" type="sdlInputSig" xCenter="462" yCenter="121" fixedDimensions="FALSE" width="220" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sInfoTotalCtrl(infoCtrlGral)</Text>
 </Symbol>
@@ -1523,7 +1523,7 @@ cEnv_Main</Text>
 <Text>-</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB33" type="sdlTask" xCenter="506" yCenter="308" fixedDimensions="FALSE" width="682" height="154" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB33" type="sdlTask" xCenter="506" yCenter="308" fixedDimensions="FALSE" width="638" height="154" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>PidCtrl:=infoCtrlGral!IDCtrl,
 indexPid:=CALL proc_FindIndexPIDCtrl(PidCtrl,tableCtrls,indexList),
@@ -1618,7 +1618,7 @@ infoSystem!tableInfoCtrl(indexPid)!freeSpotsZone:=infoCtrlGral!allfreeSpots</Tex
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB30" type="void" isOutside="TRUE" side="x" position="0.0909090909091" endType="voidend">
+<Connector attachedSymbolId="SYMB30" type="void" isOutside="TRUE" side="x" position="0.1" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -1646,7 +1646,7 @@ infoSystem!tableInfoCtrl(indexPid)!freeSpotsZone:=infoCtrlGral!allfreeSpots</Tex
 
 <Link linkId="LINK1448" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
-<Connector attachedSymbolId="SYMB30" type="void" isOutside="TRUE" side="x" position="0.0909090909091" endType="voidend">
+<Connector attachedSymbolId="SYMB30" type="void" isOutside="TRUE" side="x" position="0.1" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -1660,7 +1660,7 @@ infoSystem!tableInfoCtrl(indexPid)!freeSpotsZone:=infoCtrlGral!allfreeSpots</Tex
 
 <Link linkId="LINK1454" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
-<Connector attachedSymbolId="SYMB33" type="void" isOutside="TRUE" side="x" position="-0.0967741935484" endType="voidend">
+<Connector attachedSymbolId="SYMB33" type="void" isOutside="TRUE" side="x" position="-0.103448275862" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -1678,7 +1678,7 @@ infoSystem!tableInfoCtrl(indexPid)!freeSpotsZone:=infoCtrlGral!allfreeSpots</Tex
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB33" type="sdlarrow" isOutside="TRUE" side="x" position="-0.0967741935484" endType="arrow">
+<Connector attachedSymbolId="SYMB33" type="sdlarrow" isOutside="TRUE" side="x" position="-0.103448275862" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>

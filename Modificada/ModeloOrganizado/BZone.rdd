@@ -45,6 +45,23 @@ sLoopInductive_ZoneTest]</Text>
 
 </Link>
 
+<Link linkId="LINK66" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cEnv_Zone</Text>
+<Connector attachedSymbolId="SYMB3" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[sIR1_Zone,sIR2_Zone,
+sIR3_Zone,sIR4_Zone,
+sLoopInductive_Zone]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="n" position="-0.948879954049" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+<LinkSegment orientation="h" length="-330"/>
+<LinkSegment orientation="v" length="-352"/>
+
+</Link>
+
 <Link linkId="LINK67" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cCtrl_Zone</Text>
 <Connector attachedSymbolId="SYMB3" type="chnl" isOutside="TRUE" side="x" position="0.428571428571" endType="midarrow">
@@ -62,23 +79,6 @@ sInfoZone,
 sOkInitPid]</Text>
 <Text id="2">__</Text>
 </Connector>
-<LinkSegment orientation="v" length="-352"/>
-
-</Link>
-
-<Link linkId="LINK66" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cEnv_Zone</Text>
-<Connector attachedSymbolId="SYMB3" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
-<Text id="1">[sIR1_Zone,sIR2_Zone,
-sIR3_Zone,sIR4_Zone,
-sLoopInductive_Zone]</Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="n" position="-0.948879954049" endType="midarrow">
-<Text id="1">[]</Text>
-<Text id="2">__</Text>
-</Connector>
-<LinkSegment orientation="h" length="-330"/>
 <LinkSegment orientation="v" length="-352"/>
 
 </Link>

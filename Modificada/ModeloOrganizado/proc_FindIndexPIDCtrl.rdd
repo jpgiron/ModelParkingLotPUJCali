@@ -21,17 +21,17 @@
 <Text>index</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB151" type="sdlPrcdProto" xCenter="573" yCenter="25" fixedDimensions="TRUE" width="60" height="25" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB151" type="sdlPrcdProto" xCenter="627" yCenter="110" fixedDimensions="FALSE" width="198" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>proc_FindIndexPIDCtrl</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB16" type="sdlDecision" xCenter="220" yCenter="286" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB16" type="sdlDecision" xCenter="220" yCenter="286" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>index&lt;indexList</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB18" type="sdlTask" xCenter="451" yCenter="440" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB18" type="sdlTask" xCenter="451" yCenter="440" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>index:=index+1</Text>
 </Symbol>
@@ -66,7 +66,7 @@
 <Text></Text>
 </Symbol>
 
-<Symbol symbolId="SYMB5" type="sdlText" xCenter="264" yCenter="66" fixedDimensions="FALSE" width="440" height="88" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB5" type="sdlText" xCenter="264" yCenter="66" fixedDimensions="FALSE" width="506" height="132" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>FPAR 
 IN/OUT PidCtrl PID,tableCtrl tableInfoGralCtrl,indexList INTEGER;
