@@ -86,7 +86,7 @@ p_freeSpots,p_totalSpots,allfreeSpots i_spots,PidZone,pidZoneManager,pid_ZoneMan
 <Text>sExcZoneManager VIA cMain_CtrlZone</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB1675" type="sdlState" xCenter="957" yCenter="1210" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB1675" type="sdlState" xCenter="957" yCenter="1177" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>Idle</Text>
 </Symbol>
@@ -139,7 +139,7 @@ assignedZoneManager:=FALSE</Text>
 <Text>sCreateZone_(p_totalSpots,p_freeSpots)</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB516" type="sdlComment" xCenter="484" yCenter="1452" fixedDimensions="FALSE" width="330" height="88" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB516" type="sdlComment" xCenter="440" yCenter="1397" fixedDimensions="FALSE" width="330" height="88" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>IndexList indicates the current position 
 of the Array tableZones, so means allow 
@@ -355,7 +355,7 @@ TO pidZoneManager</Text>
 
 </Link>
 
-<Link linkId="LINK1593" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK1740" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB1674" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -365,7 +365,7 @@ TO pidZoneManager</Text>
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="99"/>
+<LinkSegment orientation="v" length="66"/>
 
 </Link>
 
