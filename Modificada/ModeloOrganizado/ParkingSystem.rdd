@@ -2,7 +2,7 @@
 
 <!DOCTYPE Diagram SYSTEM "rtdsDiagram.dtd">
 
-<Diagram language="sdl" type="sys" name="ParkingSystem" showMsgData="full" linksCrossingAllowed="FALSE" cellWidthMm="4">
+<Diagram language="sdl" type="sys" name="System" showMsgData="full" linksCrossingAllowed="FALSE" cellWidthMm="4">
 
 <DiagramPartition name="Architecture" nbPagesH="3" nbPagesV="2">
 <PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="0.0" bottomMargin="0.0" leftMargin="0.0" rightMargin="0.0" pageFooter="FALSE"/>
@@ -11,55 +11,80 @@
 <Description></Description>
 <Text></Text>
 
-<Symbol symbolId="SYMB3" type="sdlBlk" xCenter="539" yCenter="792" fixedDimensions="TRUE" width="594" height="88" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB11" type="sdlBlk" xCenter="869" yCenter="77" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>ParkingSystem</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB3" type="sdlBlk" xCenter="528" yCenter="847" fixedDimensions="TRUE" width="594" height="88" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>BZone(1,1)</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB4" type="sdlBlk" xCenter="528" yCenter="451" fixedDimensions="TRUE" width="638" height="88" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB4" type="sdlBlk" xCenter="517" yCenter="473" fixedDimensions="TRUE" width="638" height="88" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>BCtrlZone(1,1)</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB5" type="sdlBlk" xCenter="572" yCenter="187" fixedDimensions="TRUE" width="638" height="154" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB5" type="sdlBlk" xCenter="572" yCenter="242" fixedDimensions="TRUE" width="638" height="154" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>BMainSystemManager(1,1)</Text>
 </Symbol>
 </Symbol>
 
-<Link linkId="LINK295" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK363" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cEnv_Zone</Text>
-<Connector attachedSymbolId="SYMB3" type="chnl" isOutside="TRUE" side="y" position="0.25" endType="midarrow">
-<Text id="1">[
-sIR1_Zone,sIR2_Zone,
+<Connector attachedSymbolId="SYMB3" type="chnl" isOutside="TRUE" side="x" position="-0.740740740741" endType="midarrow">
+<Text id="1">[sIR1_Zone,sIR2_Zone,
 sIR3_Zone,sIR4_Zone,
-sLoopInductive_Zone
-]</Text>
+sLoopInductive_Zone]</Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="w" position="-0.00618429189858" endType="midarrow">
+<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="w" position="0.265924551639" endType="midarrow">
 <Text id="1">[]</Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="h" length="-550"/>
+<LinkSegment orientation="v" length="176"/>
+<LinkSegment orientation="h" length="-308"/>
 
 </Link>
 
-<Link linkId="LINK296" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK367" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cCtrl_CreatorZoneManager</Text>
-<Connector attachedSymbolId="SYMB3" type="chnl" isOutside="TRUE" side="x" position="0.703703703704" endType="midarrow">
+<Connector attachedSymbolId="SYMB3" type="chnl" isOutside="TRUE" side="x" position="0.259259259259" endType="midarrow">
 <Text id="1">[sCreateZoneManager]</Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB4" type="chnl" isOutside="TRUE" side="x" position="0.689655172414" endType="midarrow">
+<Connector attachedSymbolId="SYMB4" type="chnl" isOutside="TRUE" side="x" position="0.275862068966" endType="midarrow">
 <Text id="1">[sOkCreateZoneManager]</Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="-341"/>
+<LinkSegment orientation="v" length="-374"/>
 
 </Link>
 
-<Link linkId="LINK293" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK364" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cCtrl_Zone</Text>
+<Connector attachedSymbolId="SYMB4" type="chnl" isOutside="TRUE" side="x" position="0.931034482759" endType="midarrow">
+<Text id="1">[sEntered_Car,
+sOut_Car,
+sOkInit,
+sInfoZone,
+sOkInitPid]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB3" type="chnl" isOutside="TRUE" side="x" position="0.962962962963" endType="midarrow">
+<Text id="1">[sInitFreeSpot,
+sInitTotalSpots,
+sReqInfo,
+sInitPidCtrl]</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="374"/>
+
+</Link>
+
+<Link linkId="LINK365" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cCtrl_ZoneManager</Text>
 <Connector attachedSymbolId="SYMB4" type="chnl" isOutside="TRUE" side="x" position="-0.344827586207" endType="midarrow">
 <Text id="1">[sOkCreation,
@@ -72,37 +97,28 @@ sIamZoneManager]</Text>
 sConfirmZoneManager_i]</Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="341"/>
+<LinkSegment orientation="v" length="374"/>
 
 </Link>
 
-<Link linkId="LINK294" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cCtrl_Zone</Text>
-<Connector attachedSymbolId="SYMB4" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
-<Text id="1">[
-sEntered_Car,
-sOut_Car,
-sOkInit,
-sInfoZone,
-sOkInitPid]</Text>
+<Link linkId="LINK382" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cEnv_pTesting</Text>
+<Connector attachedSymbolId="SYMB5" type="chnl" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[sEntryCar,
+sOutCar]</Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB3" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
-<Text id="1">[sInitFreeSpot,
-sInitTotalSpots,
-sReqInfo,
-sInitPidCtrl]</Text>
+<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="n" position="-0.342331993107" endType="midarrow">
+<Text id="1">[]</Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="h" length="462"/>
-<LinkSegment orientation="v" length="341"/>
-<LinkSegment orientation="h" length="-451"/>
+<LinkSegment orientation="v" length="-242"/>
 
 </Link>
 
-<Link linkId="LINK291" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK381" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cEnv_Main</Text>
-<Connector attachedSymbolId="SYMB5" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Connector attachedSymbolId="SYMB5" type="chnl" isOutside="TRUE" side="y" position="0.714285714286" endType="midarrow">
 <Text id="1">[sCreateCtrlZone,
 sReqInfoCtrlZone,
 sAddZone,
@@ -110,7 +126,7 @@ sSetUpFreeSpot,
 sSetUpTotalSpot]</Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="e" position="-0.768089053803" endType="midarrow">
+<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="e" position="-0.632034632035" endType="midarrow">
 <Text id="1">[sExcLimitCtrl,
 sImpossibleGetInfoCtrls,
 sOkCreateCtrl,
@@ -125,24 +141,9 @@ sExcZoneManager]</Text>
 
 </Link>
 
-<Link linkId="LINK288" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cEnv_pTesting</Text>
-<Connector attachedSymbolId="SYMB5" type="chnl" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
-<Text id="1">[sEntryCar,
-sOutCar]</Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="n" position="-0.342331993107" endType="midarrow">
-<Text id="1">[]</Text>
-<Text id="2"></Text>
-</Connector>
-<LinkSegment orientation="v" length="-187"/>
-
-</Link>
-
-<Link linkId="LINK297" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK380" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cMain_Zone</Text>
-<Connector attachedSymbolId="SYMB5" type="chnl" isOutside="TRUE" side="x" position="0.551724137931" endType="midarrow">
+<Connector attachedSymbolId="SYMB5" type="chnl" isOutside="TRUE" side="x" position="0.931034482759" endType="midarrow">
 <Text id="1">[]</Text>
 <Text id="2"></Text>
 </Connector>
@@ -154,19 +155,16 @@ sIR4_ZoneTest,
 sLoopInductive_ZoneTest]</Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="176"/>
-<LinkSegment orientation="h" length="286"/>
-<LinkSegment orientation="v" length="572"/>
-<LinkSegment orientation="h" length="-429"/>
-<LinkSegment orientation="v" length="-143"/>
+<LinkSegment orientation="v" length="770"/>
+<LinkSegment orientation="h" length="-275"/>
+<LinkSegment orientation="v" length="-165"/>
 
 </Link>
 
-<Link linkId="LINK290" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK378" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cMain_CtrlZone</Text>
 <Connector attachedSymbolId="SYMB5" type="chnl" isOutside="TRUE" side="y" position="-0.571428571429" endType="midarrow">
-<Text id="1">[
-sInfoTotalCtrl,
+<Text id="1">[sInfoTotalCtrl,
 sOkCreateZone,
 sExcLimitZones,
 sOkCreateZone,
@@ -176,24 +174,22 @@ sExcZoneManager]</Text>
 <Text id="2"></Text>
 </Connector>
 <Connector attachedSymbolId="SYMB4" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
-<Text id="1">[
-sCreateZone_,
+<Text id="1">[sCreateZone_,
 sReqInfoCtrl,
 sInitFreeSpotZone,
 sInitTotalSpotZone,
-sInitialConnection
-]</Text>
+sInitialConnection]</Text>
 <Text id="2"></Text>
 </Connector>
 <LinkSegment orientation="h" length="-473"/>
-<LinkSegment orientation="v" length="308"/>
-<LinkSegment orientation="h" length="429"/>
+<LinkSegment orientation="v" length="275"/>
+<LinkSegment orientation="h" length="418"/>
 
 </Link>
 
-<Link linkId="LINK289" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK379" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cMain_CtrlManager</Text>
-<Connector attachedSymbolId="SYMB5" type="chnl" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Connector attachedSymbolId="SYMB5" type="chnl" isOutside="TRUE" side="x" position="-0.0344827586207" endType="midarrow">
 <Text id="1">[sExcQuantityCtrl,
 sOkCreationCtrl]</Text>
 <Text id="2"></Text>
@@ -202,7 +198,7 @@ sOkCreationCtrl]</Text>
 <Text id="1">[sCreateCtrl]</Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="264"/>
+<LinkSegment orientation="v" length="231"/>
 
 </Link>
 </DiagramPartition>
@@ -218,9 +214,9 @@ sOkCreationCtrl]</Text>
 <Description></Description>
 <Text>/* Declarations of constants */
 
-SYNONYM cNUMMAXCTRL INTEGER = 5;
-SYNONYM cMAX_ZONES INTEGER = 5;
-SYNONYM CNUMMAXZONES_SYSTEM INTEGER = 25;
+SYNONYM cNUMMAXCTRL INTEGER = 3;
+SYNONYM cMAX_ZONES INTEGER = 2;
+SYNONYM cNUMMAXZONES_SYSTEM INTEGER = 6;
 SYNONYM cNUMMAXSPOTS INTEGER = 10;
 
 SYNTYPE i_spots = INTEGER

@@ -143,7 +143,7 @@
 <Channel name="cCtrl_CreatorZoneManager" fromSignalWindow="SIGWDW6" toSignalWindow="SIGWDW14"/>
 <Channel name="cCtrl_ZoneManager" fromSignalWindow="SIGWDW7" toSignalWindow="SIGWDW13"/>
 </Item>
-<Item id="ITEM2" type="process" name="pZone" parentId="ITEM1" scope="none" minInstances="1" maxInstances="CNUMMAXZONES_SYSTEM">
+<Item id="ITEM2" type="process" name="pZone" parentId="ITEM1" scope="none" minInstances="1" maxInstances="cNUMMAXZONES_SYSTEM">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB3"/>
 </DefiningSymbols>

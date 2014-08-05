@@ -13,7 +13,7 @@
 
 <Symbol symbolId="SYMB3" type="sdlPrcs" xCenter="374" yCenter="352" fixedDimensions="TRUE" width="308" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>pZone(1,CNUMMAXZONES_SYSTEM)</Text>
+<Text>pZone(1,cNUMMAXZONES_SYSTEM)</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB7" type="sdlPrcs" xCenter="1056" yCenter="363" fixedDimensions="TRUE" width="352" height="44" color="#000000" fillColor="#ffffff">
@@ -26,23 +26,6 @@
 <Text>pCreatorZoneManager</Text>
 </Symbol>
 </Symbol>
-
-<Link linkId="LINK66" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cEnv_Zone</Text>
-<Connector attachedSymbolId="SYMB3" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
-<Text id="1">[sIR1_Zone,sIR2_Zone,
-sIR3_Zone,sIR4_Zone,
-sLoopInductive_Zone]</Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="n" position="-0.948879954049" endType="midarrow">
-<Text id="1">[]</Text>
-<Text id="2">__</Text>
-</Connector>
-<LinkSegment orientation="h" length="-330"/>
-<LinkSegment orientation="v" length="-352"/>
-
-</Link>
 
 <Link linkId="LINK69" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cMain_Zone</Text>
@@ -79,6 +62,23 @@ sInfoZone,
 sOkInitPid]</Text>
 <Text id="2">__</Text>
 </Connector>
+<LinkSegment orientation="v" length="-352"/>
+
+</Link>
+
+<Link linkId="LINK66" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cEnv_Zone</Text>
+<Connector attachedSymbolId="SYMB3" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[sIR1_Zone,sIR2_Zone,
+sIR3_Zone,sIR4_Zone,
+sLoopInductive_Zone]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="n" position="-0.948879954049" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+<LinkSegment orientation="h" length="-330"/>
 <LinkSegment orientation="v" length="-352"/>
 
 </Link>
