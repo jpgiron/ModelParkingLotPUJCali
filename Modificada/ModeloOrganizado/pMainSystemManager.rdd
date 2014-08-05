@@ -42,21 +42,6 @@ infoSystem!totalSpotsSystem:=0,
 infoSystem!freeSpotsSystem:=0</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB405" type="sdlInputSig" xCenter="913" yCenter="825" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
-<Description></Description>
-<Text>sExcZoneManager</Text>
-</Symbol>
-
-<Symbol symbolId="SYMB406" type="sdlSendSig" xCenter="913" yCenter="902" fixedDimensions="FALSE" width="286" height="44" color="#000000" fillColor="#ffffff">
-<Description></Description>
-<Text>sExcZoneManager VIA cEnv_Main</Text>
-</Symbol>
-
-<Symbol symbolId="SYMB407" type="sdlState" xCenter="913" yCenter="1001" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
-<Description></Description>
-<Text>Idle</Text>
-</Symbol>
-
 <Symbol symbolId="SYMB5" type="sdlInputSig" xCenter="880" yCenter="506" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sCreateCtrlZone</Text>
@@ -205,34 +190,6 @@ cMain_CtrlManager</Text>
 
 </Link>
 
-<Link linkId="LINK1165" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text></Text>
-<Connector attachedSymbolId="SYMB405" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB406" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-<LinkSegment orientation="v" length="77"/>
-
-</Link>
-
-<Link linkId="LINK1164" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text></Text>
-<Connector attachedSymbolId="SYMB406" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB407" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-<LinkSegment orientation="v" length="99"/>
-
-</Link>
-
 <Link linkId="LINK903" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB5" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
@@ -286,22 +243,6 @@ cMain_CtrlManager</Text>
 <Text id="2"></Text>
 </Connector>
 <LinkSegment orientation="v" length="55"/>
-
-</Link>
-
-<Link linkId="LINK1166" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text></Text>
-<Connector attachedSymbolId="SYMB75" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB405" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-<LinkSegment orientation="v" length="55"/>
-<LinkSegment orientation="h" length="561"/>
-<LinkSegment orientation="v" length="44"/>
 
 </Link>
 

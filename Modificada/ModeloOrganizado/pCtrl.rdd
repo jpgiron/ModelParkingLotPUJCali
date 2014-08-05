@@ -76,21 +76,6 @@ p_freeSpots,p_totalSpots,allfreeSpots i_spots,PidZone,pidZoneManager,pid_ZoneMan
 <Text>proc_FindIndexPIDZone</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB1673" type="sdlInputSig" xCenter="957" yCenter="1045" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
-<Description></Description>
-<Text>sExcZoneManager</Text>
-</Symbol>
-
-<Symbol symbolId="SYMB1674" type="sdlSendSig" xCenter="957" yCenter="1111" fixedDimensions="FALSE" width="330" height="44" color="#000000" fillColor="#ffffff">
-<Description></Description>
-<Text>sExcZoneManager VIA cMain_CtrlZone</Text>
-</Symbol>
-
-<Symbol symbolId="SYMB1675" type="sdlState" xCenter="957" yCenter="1177" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
-<Description></Description>
-<Text>Idle</Text>
-</Symbol>
-
 <Symbol symbolId="SYMB2" type="sdlStart" xCenter="638" yCenter="209" fixedDimensions="TRUE" width="88" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text></Text>
@@ -162,35 +147,35 @@ cMain_CtrlZone</Text>
 <Text>sInitialConnection</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB721" type="sdlSendSig" xCenter="759" yCenter="847" fixedDimensions="FALSE" width="264" height="66" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB721" type="sdlSendSig" xCenter="748" yCenter="770" fixedDimensions="FALSE" width="264" height="66" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sCreateZoneManager(SELF)
 VIA cCtrl_CreatorZoneManager</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB722" type="sdlState" xCenter="759" yCenter="913" fixedDimensions="FALSE" width="242" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB722" type="sdlState" xCenter="748" yCenter="836" fixedDimensions="FALSE" width="242" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sWaitCreationZoneManager</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB723" type="sdlInputSig" xCenter="484" yCenter="1045" fixedDimensions="FALSE" width="352" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB723" type="sdlInputSig" xCenter="748" yCenter="913" fixedDimensions="FALSE" width="352" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sOkCreateZoneManager(pid_ZoneManager)</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB724" type="sdlTask" xCenter="484" yCenter="1122" fixedDimensions="FALSE" width="308" height="66" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB724" type="sdlTask" xCenter="748" yCenter="990" fixedDimensions="FALSE" width="308" height="66" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>pidZoneManager:=pid_ZoneManager,
 assignedZoneManager:=TRUE</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB725" type="sdlSendSig" xCenter="484" yCenter="1199" fixedDimensions="FALSE" width="374" height="66" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB725" type="sdlSendSig" xCenter="748" yCenter="1067" fixedDimensions="FALSE" width="374" height="66" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sCreateZone(p_totalSpots,p_freeSpots,SELF)
 TO pidZoneManager</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB726" type="sdlState" xCenter="484" yCenter="1276" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB726" type="sdlState" xCenter="748" yCenter="1144" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sWaitAck_BZone</Text>
 </Symbol>
@@ -341,34 +326,6 @@ TO pidZoneManager</Text>
 
 </Link>
 
-<Link linkId="LINK1594" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text></Text>
-<Connector attachedSymbolId="SYMB1673" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB1674" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-<LinkSegment orientation="v" length="66"/>
-
-</Link>
-
-<Link linkId="LINK1740" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text></Text>
-<Connector attachedSymbolId="SYMB1674" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB1675" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-<LinkSegment orientation="v" length="66"/>
-
-</Link>
-
 <Link linkId="LINK1298" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB2" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
@@ -499,7 +456,7 @@ TO pidZoneManager</Text>
 
 </Link>
 
-<Link linkId="LINK1591" type="dec" textSegmentNum="1" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK1758" type="dec" textSegmentNum="1" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>false</Text>
 <Connector attachedSymbolId="SYMB690" type="void" isOutside="TRUE" side="y" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -509,8 +466,8 @@ TO pidZoneManager</Text>
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="h" length="418"/>
-<LinkSegment orientation="v" length="165"/>
+<LinkSegment orientation="h" length="407"/>
+<LinkSegment orientation="v" length="88"/>
 
 </Link>
 
@@ -528,7 +485,7 @@ TO pidZoneManager</Text>
 
 </Link>
 
-<Link linkId="LINK1590" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK1761" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB721" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -542,23 +499,7 @@ TO pidZoneManager</Text>
 
 </Link>
 
-<Link linkId="LINK1595" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text></Text>
-<Connector attachedSymbolId="SYMB722" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB1673" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-<LinkSegment orientation="v" length="77"/>
-<LinkSegment orientation="h" length="198"/>
-<LinkSegment orientation="v" length="55"/>
-
-</Link>
-
-<Link linkId="LINK1606" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK1763" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB722" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -569,12 +510,10 @@ TO pidZoneManager</Text>
 <Text id="2"></Text>
 </Connector>
 <LinkSegment orientation="v" length="77"/>
-<LinkSegment orientation="h" length="-275"/>
-<LinkSegment orientation="v" length="55"/>
 
 </Link>
 
-<Link linkId="LINK1608" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK1760" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB723" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -588,7 +527,7 @@ TO pidZoneManager</Text>
 
 </Link>
 
-<Link linkId="LINK1607" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK1762" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB724" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -602,7 +541,7 @@ TO pidZoneManager</Text>
 
 </Link>
 
-<Link linkId="LINK1609" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK1759" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB725" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>

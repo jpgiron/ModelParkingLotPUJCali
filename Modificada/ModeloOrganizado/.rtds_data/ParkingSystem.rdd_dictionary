@@ -535,7 +535,6 @@
 </SentSignals>
 <ReceivedSignals>
 <SignalReference id="SIG33"/>
-<SignalReference id="SIG10"/>
 </ReceivedSignals>
 </SignalWindow>
 <SignalWindow id="SIGWDW7" insideDiagram="FALSE">
@@ -629,7 +628,6 @@
 <ConnectorReference linkId="LINK296" isFrom="TRUE"/>
 <SentSignals>
 <SignalReference id="SIG33"/>
-<SignalReference id="SIG10"/>
 </SentSignals>
 <ReceivedSignals>
 <SignalReference id="SIG32"/>

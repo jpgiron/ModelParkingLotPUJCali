@@ -39,22 +39,20 @@
 <Signal id="SIG22" name="sOkCreateZoneManager">
 <SignalParameterType>PID</SignalParameterType>
 </Signal>
-<Signal id="SIG23" name="sExcZoneManager">
-</Signal>
-<Signal id="SIG24" name="sCreateZoneManager">
+<Signal id="SIG23" name="sCreateZoneManager">
 <SignalParameterType>PID</SignalParameterType>
 </Signal>
-<Signal id="SIG25" name="sOkCreation">
+<Signal id="SIG24" name="sOkCreation">
 <SignalParameterType>InfoZone</SignalParameterType>
 </Signal>
-<Signal id="SIG26" name="sExcQuantityZones">
+<Signal id="SIG25" name="sExcQuantityZones">
 </Signal>
-<Signal id="SIG27" name="sCreateZone">
+<Signal id="SIG26" name="sCreateZone">
 <SignalParameterType>i_spots</SignalParameterType>
 <SignalParameterType>i_spots</SignalParameterType>
 <SignalParameterType>PID</SignalParameterType>
 </Signal>
-<Signal id="SIG28" name="sConfirmZoneManager_i">
+<Signal id="SIG27" name="sConfirmZoneManager_i">
 <SignalParameterType>PID</SignalParameterType>
 </Signal>
 <Signal id="SIG3" name="sIR3_Zone">
@@ -83,11 +81,10 @@
 <SignalWindow id="SIGWDW14" insideDiagram="TRUE">
 <ConnectorReference linkId="LINK71" isFrom="FALSE"/>
 <SentSignals>
-<SignalReference id="SIG24"/>
+<SignalReference id="SIG23"/>
 </SentSignals>
 <ReceivedSignals>
 <SignalReference id="SIG22"/>
-<SignalReference id="SIG23"/>
 </ReceivedSignals>
 </SignalWindow>
 <SignalWindow id="SIGWDW12" insideDiagram="TRUE">
@@ -103,12 +100,12 @@
 <SignalWindow id="SIGWDW13" insideDiagram="TRUE">
 <ConnectorReference linkId="LINK61" isFrom="FALSE"/>
 <SentSignals>
+<SignalReference id="SIG26"/>
 <SignalReference id="SIG27"/>
-<SignalReference id="SIG28"/>
 </SentSignals>
 <ReceivedSignals>
+<SignalReference id="SIG24"/>
 <SignalReference id="SIG25"/>
-<SignalReference id="SIG26"/>
 <SignalReference id="SIG21"/>
 </ReceivedSignals>
 </SignalWindow>
@@ -224,10 +221,9 @@
 <ConnectorReference linkId="LINK71" isFrom="TRUE"/>
 <SentSignals>
 <SignalReference id="SIG22"/>
-<SignalReference id="SIG23"/>
 </SentSignals>
 <ReceivedSignals>
-<SignalReference id="SIG24"/>
+<SignalReference id="SIG23"/>
 </ReceivedSignals>
 </SignalWindow>
 </Item>
@@ -241,13 +237,13 @@
 <SignalWindow id="SIGWDW7" insideDiagram="FALSE">
 <ConnectorReference linkId="LINK61" isFrom="TRUE"/>
 <SentSignals>
+<SignalReference id="SIG24"/>
 <SignalReference id="SIG25"/>
-<SignalReference id="SIG26"/>
 <SignalReference id="SIG21"/>
 </SentSignals>
 <ReceivedSignals>
+<SignalReference id="SIG26"/>
 <SignalReference id="SIG27"/>
-<SignalReference id="SIG28"/>
 </ReceivedSignals>
 </SignalWindow>
 <SignalWindow id="SIGWDW8" insideDiagram="FALSE">
