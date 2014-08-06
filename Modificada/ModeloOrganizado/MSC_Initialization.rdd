@@ -16,7 +16,7 @@
 <Text>Idle</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB15" type="mscCondition" xCenter="572" yCenter="187" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB15" type="mscCondition" xCenter="572" yCenter="209" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>Idle</Text>
 </Symbol>

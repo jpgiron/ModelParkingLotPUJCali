@@ -3,28 +3,28 @@
 <!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
 
 <DictionaryObjects language="sdl" diagramType="prcs">
-<Signal id="SIG1" name="sCreateZoneManager">
-<SignalParameterType>PID</SignalParameterType>
-<InputSymbols>
-<SymbolReference symbolId="SYMB3"/>
-</InputSymbols>
-</Signal>
-<Signal id="SIG2" name="sConfirmZoneManager">
+<Signal id="SIG1" name="sConfirmZoneManager">
 <SignalParameterType>PID</SignalParameterType>
 <SendSymbols>
 <SymbolReference symbolId="SYMB7"/>
 </SendSymbols>
 </Signal>
-<Signal id="SIG3" name="sOkCreateZoneManager">
+<Signal id="SIG2" name="sOkCreateZoneManager">
 <SignalParameterType>PID</SignalParameterType>
 <SendSymbols>
 <SymbolReference symbolId="SYMB10"/>
 </SendSymbols>
 </Signal>
-<Signal id="SIG4" name="sIamZoneManager">
+<Signal id="SIG3" name="sIamZoneManager">
 <SignalParameterType>PID</SignalParameterType>
 <InputSymbols>
 <SymbolReference symbolId="SYMB8"/>
+</InputSymbols>
+</Signal>
+<Signal id="SIG4" name="sCreateZoneManager">
+<SignalParameterType>PID</SignalParameterType>
+<InputSymbols>
+<SymbolReference symbolId="SYMB3"/>
 </InputSymbols>
 </Signal>
 <Item id="ITEM1" type="process" name="pCreatorZoneManager" scope="current">
@@ -33,39 +33,26 @@
 </UsingSymbols>
 <Body>
 <SentSignals>
-<SignalReference id="SIG3"/>
 <SignalReference id="SIG2"/>
+<SignalReference id="SIG1"/>
 </SentSignals>
 <ReceivedSignals>
 <SignalReference id="SIG4"/>
-<SignalReference id="SIG1"/>
+<SignalReference id="SIG3"/>
 </ReceivedSignals>
 <Transitions>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM4"/>
+<StateReference itemId="ITEM2"/>
 <SymbolReference symbolId="SYMB3"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM2"/>
+<StateReference itemId="ITEM6"/>
 <SymbolReference symbolId="SYMB8"/>
 </Transition>
 </Transitions>
 </Body>
 </Item>
-<Item id="ITEM2" type="state" name="sWaitConfirmZoneManager" parentId="ITEM1" scope="none">
-<DefiningSymbols>
-<SymbolReference symbolId="SYMB9"/>
-</DefiningSymbols>
-<UsingSymbols>
-<SymbolReference symbolId="SYMB9"/>
-</UsingSymbols>
-</Item>
-<Item id="ITEM3" type="process" name="pZoneManager" scope="block">
-<UsingSymbols>
-<SymbolReference symbolId="SYMB6"/>
-</UsingSymbols>
-</Item>
-<Item id="ITEM4" type="state" name="Idle" parentId="ITEM1" scope="none">
+<Item id="ITEM2" type="state" name="Idle" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB4"/>
 </DefiningSymbols>
@@ -74,14 +61,27 @@
 <SymbolReference symbolId="SYMB4"/>
 </UsingSymbols>
 </Item>
-<Item id="ITEM5" type="variable" name="pidZoneManager" parentId="ITEM1" scope="none" variableTypeName="PID">
+<Item id="ITEM3" type="process" name="pZoneManager" scope="block">
+<UsingSymbols>
+<SymbolReference symbolId="SYMB6"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM4" type="variable" name="pidZoneManager" parentId="ITEM1" scope="none" variableTypeName="PID">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB5"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM6" type="variable" name="pidCtrl" parentId="ITEM1" scope="none" variableTypeName="PID">
+<Item id="ITEM5" type="variable" name="pidCtrl" parentId="ITEM1" scope="none" variableTypeName="PID">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB5"/>
 </DefiningSymbols>
+</Item>
+<Item id="ITEM6" type="state" name="sWaitConfirmZoneManager" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB9"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB9"/>
+</UsingSymbols>
 </Item>
 </DictionaryObjects>
