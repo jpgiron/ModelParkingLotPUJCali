@@ -41,7 +41,7 @@
 <Description></Description>
 <Text>pCamera</Text>
 <LifelineComponent type="norm" height="1122" color="#000000"/>
-<TimeInterval type="timeout" startpos="187" endpos="341" offset="22" color="#000000"><Text>timerProcessOCR(10)</Text></TimeInterval>
+<TimeInterval type="timeout" startpos="220" endpos="341" offset="22" color="#000000"><Text>timerProcessOCR(10)</Text></TimeInterval>
 </Symbol>
 
 <Symbol symbolId="SYMB17" type="mscCondition" xCenter="792" yCenter="88" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">

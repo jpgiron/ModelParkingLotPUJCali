@@ -16,16 +16,52 @@
 <Text>ParkingLotSystem</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB33" type="sdlBlk" xCenter="957" yCenter="539" fixedDimensions="TRUE" width="242" height="110" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB33" type="sdlBlk" xCenter="572" yCenter="660" fixedDimensions="TRUE" width="242" height="110" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>UnmodeledProcesses</Text>
 </Symbol>
+</Symbol>
 
-<Symbol symbolId="SYMB34" type="sdlBlk" xCenter="583" yCenter="539" fixedDimensions="TRUE" width="352" height="110" color="#000000" fillColor="#ffffff">
-<Description></Description>
-<Text>&lt;block name&gt;(&lt;card.&gt;)</Text>
-</Symbol>
-</Symbol>
+<Link linkId="LINK414" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cEnv_EntryWay</Text>
+<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[sLoopInductive_Entrance,
+sLoopInductive_Exit
+sCarPassedBarrier]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="e" position="-0.317419354839" endType="midarrow">
+<Text id="1">[sUpBarrier,
+sDownBarrier]</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="h" length="579"/>
+
+</Link>
+
+<Link linkId="LINK408" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cEnv_Main</Text>
+<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[sCreateCtrlZone,
+sReqInfoCtrlZone,
+sAddZone,
+sSetUpFreeSpot,
+sSetUpTotalSpot]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="w" position="-0.317419354839" endType="midarrow">
+<Text id="1">[sExcLimitCtrl,
+sImpossibleGetInfoCtrls,
+sOkCreateCtrl,
+sExcLimitZones,
+sOkCreationZone,
+sOkSetUp,
+sInfoSystem]</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="h" length="-572"/>
+
+</Link>
 
 <Link linkId="LINK407" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cEnv_Zone</Text>
@@ -58,27 +94,22 @@ sOutCar]</Text>
 
 </Link>
 
-<Link linkId="LINK408" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cEnv_Main</Text>
-<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
-<Text id="1">[sCreateCtrlZone,
-sReqInfoCtrlZone,
-sAddZone,
-sSetUpFreeSpot,
-sSetUpTotalSpot]</Text>
+<Link linkId="LINK413" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cEntryWay_UnmodeledP</Text>
+<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[sDataUser,
+sPlate]</Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="w" position="-0.317419354839" endType="midarrow">
-<Text id="1">[sExcLimitCtrl,
-sImpossibleGetInfoCtrls,
-sOkCreateCtrl,
-sExcLimitZones,
-sOkCreationZone,
-sOkSetUp,
-sInfoSystem]</Text>
+<Connector attachedSymbolId="SYMB33" type="chnl" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[sEnableReaderCard,
+sRequestPlate,
+sConfirmEntranceUser,
+sConfirmOutUser,
+sOkUser]</Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="h" length="-572"/>
+<LinkSegment orientation="v" length="396"/>
 
 </Link>
 </DiagramPartition>

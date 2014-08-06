@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
+
+<DictionaryObjects language="sdl" diagramType="blk">
+<Signal id="SIG1" name="sUpBarrier">
+</Signal>
+<Signal id="SIG10" name="sOkUser">
+</Signal>
+<Signal id="SIG11" name="sDataUser">
+</Signal>
+<Signal id="SIG12" name="sPlate">
+</Signal>
+<Signal id="SIG2" name="sDownBarrier">
+</Signal>
+<Signal id="SIG3" name="sLoopInductive_Entrance">
+</Signal>
+<Signal id="SIG4" name="sEnteredCarSystem">
+</Signal>
+<Signal id="SIG5" name="sOutCarSystem">
+</Signal>
+<Signal id="SIG6" name="sEnableReaderCard">
+</Signal>
+<Signal id="SIG7" name="sRequestPlate">
+</Signal>
+<Signal id="SIG8" name="sConfirmEntranceUser">
+</Signal>
+<Signal id="SIG9" name="sConfirmOutUser">
+</Signal>
+<Item id="ITEM1" type="block" name="BEntryWay" scope="current">
+<UsingSymbols>
+<SymbolReference symbolId="SYMB1"/>
+</UsingSymbols>
+<SignalWindow id="SIGWDW4" insideDiagram="TRUE">
+<ConnectorReference linkId="LINK0" isFrom="FALSE"/>
+<SentSignals>
+<SignalReference id="SIG3"/>
+</SentSignals>
+<ReceivedSignals>
+<SignalReference id="SIG1"/>
+<SignalReference id="SIG2"/>
+</ReceivedSignals>
+</SignalWindow>
+<SignalWindow id="SIGWDW5" insideDiagram="TRUE">
+<ConnectorReference linkId="LINK2" isFrom="FALSE"/>
+<ReceivedSignals>
+<SignalReference id="SIG4"/>
+<SignalReference id="SIG5"/>
+</ReceivedSignals>
+</SignalWindow>
+<SignalWindow id="SIGWDW6" insideDiagram="TRUE">
+<ConnectorReference linkId="LINK3" isFrom="FALSE"/>
+<SentSignals>
+<SignalReference id="SIG11"/>
+<SignalReference id="SIG12"/>
+</SentSignals>
+<ReceivedSignals>
+<SignalReference id="SIG6"/>
+<SignalReference id="SIG7"/>
+<SignalReference id="SIG8"/>
+<SignalReference id="SIG9"/>
+<SignalReference id="SIG10"/>
+</ReceivedSignals>
+</SignalWindow>
+<Channel name="cEnv_EntryWay" fromSignalWindow="SIGWDW1" toSignalWindow="SIGWDW4"/>
+<Channel name="cEntryWay_Main" fromSignalWindow="SIGWDW2" toSignalWindow="SIGWDW5"/>
+<Channel name="cEntryWay_UnmodeledP" fromSignalWindow="SIGWDW3" toSignalWindow="SIGWDW6"/>
+</Item>
+<Item id="ITEM2" type="process" name="pEntryWay" parentId="ITEM1" scope="none" minInstances="2" maxInstances="cNUMMAXENTRYWAY">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB2"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB2"/>
+</UsingSymbols>
+<SignalWindow id="SIGWDW1" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK0" isFrom="TRUE"/>
+<SentSignals>
+<SignalReference id="SIG1"/>
+<SignalReference id="SIG2"/>
+</SentSignals>
+<ReceivedSignals>
+<SignalReference id="SIG3"/>
+</ReceivedSignals>
+</SignalWindow>
+<SignalWindow id="SIGWDW2" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK2" isFrom="TRUE"/>
+<SentSignals>
+<SignalReference id="SIG4"/>
+<SignalReference id="SIG5"/>
+</SentSignals>
+</SignalWindow>
+<SignalWindow id="SIGWDW3" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK3" isFrom="TRUE"/>
+<SentSignals>
+<SignalReference id="SIG6"/>
+<SignalReference id="SIG7"/>
+<SignalReference id="SIG8"/>
+<SignalReference id="SIG9"/>
+<SignalReference id="SIG10"/>
+</SentSignals>
+<ReceivedSignals>
+<SignalReference id="SIG11"/>
+<SignalReference id="SIG12"/>
+</ReceivedSignals>
+</SignalWindow>
+</Item>
+</DictionaryObjects>
