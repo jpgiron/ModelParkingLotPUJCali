@@ -15,7 +15,33 @@
 <Description></Description>
 <Text>ParkingLotSystem</Text>
 </Symbol>
+
+<Symbol symbolId="SYMB33" type="sdlBlk" xCenter="957" yCenter="539" fixedDimensions="TRUE" width="242" height="110" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>UnmodeledProcesses</Text>
 </Symbol>
+
+<Symbol symbolId="SYMB34" type="sdlBlk" xCenter="583" yCenter="539" fixedDimensions="TRUE" width="352" height="110" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>&lt;block name&gt;(&lt;card.&gt;)</Text>
+</Symbol>
+</Symbol>
+
+<Link linkId="LINK407" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cEnv_Zone</Text>
+<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="x" position="0.8125" endType="midarrow">
+<Text id="1">[sIR1_Zone,sIR2_Zone,
+sIR3_Zone,sIR4_Zone,
+sLoopInductive_Zone]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="n" position="0.247818499127" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="-264"/>
+
+</Link>
 
 <Link linkId="LINK406" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cEnv_pTesting</Text>
@@ -53,22 +79,6 @@ sInfoSystem]</Text>
 <Text id="2"></Text>
 </Connector>
 <LinkSegment orientation="h" length="-572"/>
-
-</Link>
-
-<Link linkId="LINK407" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cEnv_Zone</Text>
-<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="x" position="0.8125" endType="midarrow">
-<Text id="1">[sIR1_Zone,sIR2_Zone,
-sIR3_Zone,sIR4_Zone,
-sLoopInductive_Zone]</Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="n" position="0.247818499127" endType="midarrow">
-<Text id="1">[]</Text>
-<Text id="2"></Text>
-</Connector>
-<LinkSegment orientation="v" length="-264"/>
 
 </Link>
 </DiagramPartition>
