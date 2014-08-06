@@ -85,12 +85,12 @@
 <Text>sWait4Sensor</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB25" type="mscCondition" xCenter="341" yCenter="1001" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB25" type="mscCondition" xCenter="352" yCenter="1001" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>Idle</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB26" type="mscCondition" xCenter="649" yCenter="990" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB26" type="mscCondition" xCenter="660" yCenter="990" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>Idle</Text>
 </Symbol>
@@ -100,7 +100,7 @@
 <Text>Idle</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB28" type="mscCondition" xCenter="1023" yCenter="990" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB28" type="mscCondition" xCenter="1034" yCenter="990" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>Idle</Text>
 </Symbol>
@@ -122,11 +122,6 @@
 <Symbol symbolId="SYMB49" type="mscCondition" xCenter="352" yCenter="836" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sWaitCarPass</Text>
-</Symbol>
-
-<Symbol symbolId="SYMB50" type="mscSave" xCenter="352" yCenter="880" fixedDimensions="TRUE" width="40" height="20" color="#000000" fillColor="#ffffff">
-<Description></Description>
-<Text></Text>
 </Symbol>
 </Symbol>
 
@@ -156,19 +151,6 @@
 
 </Link>
 
-<Link linkId="LINK15" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>sCarPassedBarrier</Text>
-<Connector attachedSymbolId="SYMB2" type="mscvoid" isOutside="TRUE" side="y" position="0.333333333333" endType="voidend">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB3" type="mscvoid" isOutside="TRUE" side="y" position="0.333333333333" endType="arrow">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-
-</Link>
-
 <Link linkId="LINK10" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>sLoopInductive_Entrance</Text>
 <Connector attachedSymbolId="SYMB2" type="mscvoid" isOutside="TRUE" side="y" position="-0.764705882353" endType="voidend">
@@ -189,6 +171,19 @@
 <Text id="2"></Text>
 </Connector>
 <Connector attachedSymbolId="SYMB3" type="mscvoid" isOutside="TRUE" side="y" position="-0.450980392157" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK15" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sCarPassedBarrier</Text>
+<Connector attachedSymbolId="SYMB2" type="mscvoid" isOutside="TRUE" side="y" position="0.333333333333" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB3" type="mscvoid" isOutside="TRUE" side="y" position="0.333333333333" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -234,19 +229,6 @@
 
 </Link>
 
-<Link linkId="LINK16" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>sDownBarrier</Text>
-<Connector attachedSymbolId="SYMB3" type="mscvoid" isOutside="TRUE" side="y" position="0.647058823529" endType="voidend">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB2" type="mscvoid" isOutside="TRUE" side="y" position="0.647058823529" endType="arrow">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-
-</Link>
-
 <Link linkId="LINK14" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>sUpBarrier</Text>
 <Connector attachedSymbolId="SYMB3" type="mscvoid" isOutside="TRUE" side="y" position="0.156862745098" endType="voidend">
@@ -254,6 +236,19 @@
 <Text id="2"></Text>
 </Connector>
 <Connector attachedSymbolId="SYMB2" type="mscvoid" isOutside="TRUE" side="y" position="0.156862745098" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK16" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sDownBarrier</Text>
+<Connector attachedSymbolId="SYMB3" type="mscvoid" isOutside="TRUE" side="y" position="0.647058823529" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB2" type="mscvoid" isOutside="TRUE" side="y" position="0.647058823529" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
