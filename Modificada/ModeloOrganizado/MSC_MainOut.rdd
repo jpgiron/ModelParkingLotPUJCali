@@ -232,19 +232,6 @@
 
 </Link>
 
-<Link linkId="LINK65" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>sCarPassedBarrier</Text>
-<Connector attachedSymbolId="SYMB63" type="mscvoid" isOutside="TRUE" side="y" position="0.333333333333" endType="voidend">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB61" type="mscvoid" isOutside="TRUE" side="y" position="0.333333333333" endType="arrow">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-
-</Link>
-
 <Link linkId="LINK64" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>sLoopInductive_Exit</Text>
 <Connector attachedSymbolId="SYMB63" type="mscvoid" isOutside="TRUE" side="y" position="-0.764705882353" endType="voidend">
@@ -252,6 +239,19 @@
 <Text id="2"></Text>
 </Connector>
 <Connector attachedSymbolId="SYMB61" type="mscvoid" isOutside="TRUE" side="y" position="-0.764705882353" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK65" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sCarPassedBarrier</Text>
+<Connector attachedSymbolId="SYMB63" type="mscvoid" isOutside="TRUE" side="y" position="0.333333333333" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB61" type="mscvoid" isOutside="TRUE" side="y" position="0.333333333333" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
