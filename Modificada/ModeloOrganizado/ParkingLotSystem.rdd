@@ -105,6 +105,7 @@ sOutCar]</Text>
 <Text>cEnv_Main</Text>
 <Connector attachedSymbolId="SYMB5" type="chnl" isOutside="TRUE" side="y" position="-0.4" endType="midarrow">
 <Text id="1">[sCreateCtrlZone,
+sCreateEntryWay,
 sReqInfoCtrlZone,
 sAddZone,
 sSetUpFreeSpot,
@@ -244,7 +245,8 @@ sOkUser]</Text>
 <Text id="2"></Text>
 </Connector>
 <Connector attachedSymbolId="SYMB5" type="chnl" isOutside="TRUE" side="x" position="0.516129032258" endType="midarrow">
-<Text id="1">[sOkCreateEntryWay]</Text>
+<Text id="1">[sOkCreateEntryWay,
+sExcEntryWay]</Text>
 <Text id="2"></Text>
 </Connector>
 <LinkSegment orientation="v" length="242"/>
