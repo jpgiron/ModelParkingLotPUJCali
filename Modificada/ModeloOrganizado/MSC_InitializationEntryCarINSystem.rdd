@@ -146,12 +146,12 @@
 <Text>Idle</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB66" type="mscCondition" xCenter="638" yCenter="374" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB66" type="mscCondition" xCenter="638" yCenter="374" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sWaitAssigned</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB67" type="mscCondition" xCenter="979" yCenter="924" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB67" type="mscCondition" xCenter="979" yCenter="924" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sWaitAssigned</Text>
 </Symbol>

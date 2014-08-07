@@ -3,96 +3,122 @@
 <!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
 
 <DictionaryObjects language="sdl" diagramType="blk">
-<Signal id="SIG1" name="sIamCamera">
+<Signal id="SIG1" name="sOkUser">
 </Signal>
-<Signal id="SIG2" name="sLoopInductive_Entrance">
+<Signal id="SIG10" name="sEnableCardReader">
 </Signal>
-<Signal id="SIG3" name="sPlate">
+<Signal id="SIG11" name="sIamCardReader">
 </Signal>
-<Signal id="SIG4" name="sRequestPlate">
+<Signal id="SIG12" name="sAssigned">
 </Signal>
-<Signal id="SIG5" name="sAssigned">
+<Signal id="SIG13" name="sAssignCardReaderNCam">
 </Signal>
-<Signal id="SIG6" name="sAssignCardReaderNCam">
+<Signal id="SIG2" name="sNoRegis_User">
 </Signal>
-<Signal id="SIG7" name="sIamCardReader">
+<Signal id="SIG3" name="sConfirmEntranceUser">
+</Signal>
+<Signal id="SIG4" name="sConfirmOutUser">
+</Signal>
+<Signal id="SIG5" name="sPlate">
+</Signal>
+<Signal id="SIG6" name="sRequestPlate">
+</Signal>
+<Signal id="SIG7" name="sLoopInductive_Entrance">
+</Signal>
+<Signal id="SIG8" name="sIamCamera">
+</Signal>
+<Signal id="SIG9" name="sDataUser">
 </Signal>
 <Item id="ITEM1" type="block" name="UnmodeledProcesses" scope="current">
 <UsingSymbols>
 <SymbolReference symbolId="SYMB1"/>
 </UsingSymbols>
-<SignalWindow id="SIGWDW12" insideDiagram="TRUE">
-<ConnectorReference linkId="LINK16" isFrom="FALSE"/>
+<SignalWindow id="SIGWDW14" insideDiagram="TRUE">
+<ConnectorReference linkId="LINK25" isFrom="FALSE"/>
 <SentSignals>
+<SignalReference id="SIG3"/>
 <SignalReference id="SIG4"/>
 </SentSignals>
 <ReceivedSignals>
-<SignalReference id="SIG3"/>
+<SignalReference id="SIG1"/>
+<SignalReference id="SIG2"/>
 </ReceivedSignals>
 </SignalWindow>
-<SignalWindow id="SIGWDW9" insideDiagram="TRUE">
-<ConnectorReference linkId="LINK3" isFrom="FALSE"/>
+<SignalWindow id="SIGWDW12" insideDiagram="TRUE">
+<ConnectorReference linkId="LINK20" isFrom="FALSE"/>
 <SentSignals>
-<SignalReference id="SIG6"/>
+<SignalReference id="SIG13"/>
 </SentSignals>
 <ReceivedSignals>
-<SignalReference id="SIG5"/>
+<SignalReference id="SIG12"/>
+</ReceivedSignals>
+</SignalWindow>
+<SignalWindow id="SIGWDW13" insideDiagram="TRUE">
+<ConnectorReference linkId="LINK24" isFrom="FALSE"/>
+<SentSignals>
+<SignalReference id="SIG10"/>
+</SentSignals>
+<ReceivedSignals>
+<SignalReference id="SIG9"/>
 </ReceivedSignals>
 </SignalWindow>
 <SignalWindow id="SIGWDW10" insideDiagram="TRUE">
-<ConnectorReference linkId="LINK14" isFrom="FALSE"/>
+<ConnectorReference linkId="LINK17" isFrom="FALSE"/>
 <SentSignals>
-<SignalReference id="SIG2"/>
+<SignalReference id="SIG6"/>
 </SentSignals>
-</SignalWindow>
-<SignalWindow id="SIGWDW11" insideDiagram="TRUE">
-<ConnectorReference linkId="LINK15" isFrom="FALSE"/>
-</SignalWindow>
-<Channel name="cCreator_Camera" fromSignalWindow="SIGWDW6" toSignalWindow="SIGWDW1"/>
-<Channel name="cEnv_Camera" fromSignalWindow="SIGWDW2" toSignalWindow="SIGWDW10"/>
-<Channel name="cEntryWay_Cam" fromSignalWindow="SIGWDW3" toSignalWindow="SIGWDW12"/>
-<Channel name="cCreatorCRNC" fromSignalWindow="SIGWDW4" toSignalWindow="SIGWDW9"/>
-<Channel name="pCreator_CardReader" fromSignalWindow="SIGWDW5" toSignalWindow="SIGWDW7"/>
-<Channel name="(new channel)" fromSignalWindow="SIGWDW8" toSignalWindow="SIGWDW11"/>
-</Item>
-<Item id="ITEM2" type="process" name="pCamera" parentId="ITEM1" scope="none" minInstances="0" maxInstances="cNUMMAXENTRYWAY">
-<DefiningSymbols>
-<SymbolReference symbolId="SYMB4"/>
-</DefiningSymbols>
-<UsingSymbols>
-<SymbolReference symbolId="SYMB4"/>
-</UsingSymbols>
-<SignalWindow id="SIGWDW1" insideDiagram="FALSE">
-<ConnectorReference linkId="LINK13" isFrom="FALSE"/>
-<SentSignals>
-<SignalReference id="SIG1"/>
-</SentSignals>
-</SignalWindow>
-<SignalWindow id="SIGWDW2" insideDiagram="FALSE">
-<ConnectorReference linkId="LINK14" isFrom="TRUE"/>
 <ReceivedSignals>
-<SignalReference id="SIG2"/>
+<SignalReference id="SIG5"/>
 </ReceivedSignals>
 </SignalWindow>
-<SignalWindow id="SIGWDW3" insideDiagram="FALSE">
-<ConnectorReference linkId="LINK16" isFrom="TRUE"/>
+<SignalWindow id="SIGWDW11" insideDiagram="TRUE">
+<ConnectorReference linkId="LINK19" isFrom="FALSE"/>
 <SentSignals>
-<SignalReference id="SIG3"/>
+<SignalReference id="SIG7"/>
+</SentSignals>
+</SignalWindow>
+<Channel name="cEntryWay_DB" fromSignalWindow="SIGWDW1" toSignalWindow="SIGWDW14"/>
+<Channel name="cEntryWay_Cam" fromSignalWindow="SIGWDW2" toSignalWindow="SIGWDW10"/>
+<Channel name="cEnv_Camera" fromSignalWindow="SIGWDW3" toSignalWindow="SIGWDW11"/>
+<Channel name="cCreator_Camera" fromSignalWindow="SIGWDW8" toSignalWindow="SIGWDW4"/>
+<Channel name="cEntryWay_CR" fromSignalWindow="SIGWDW5" toSignalWindow="SIGWDW13"/>
+<Channel name="pCreator_CardReader" fromSignalWindow="SIGWDW9" toSignalWindow="SIGWDW6"/>
+<Channel name="cCreatorCRNC" fromSignalWindow="SIGWDW7" toSignalWindow="SIGWDW12"/>
+</Item>
+<Item id="ITEM2" type="process" name="pDataBase" parentId="ITEM1" scope="none" minInstances="1">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB5"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB5"/>
+</UsingSymbols>
+<SignalWindow id="SIGWDW1" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK25" isFrom="TRUE"/>
+<SentSignals>
+<SignalReference id="SIG1"/>
+<SignalReference id="SIG2"/>
 </SentSignals>
 <ReceivedSignals>
+<SignalReference id="SIG3"/>
 <SignalReference id="SIG4"/>
 </ReceivedSignals>
 </SignalWindow>
 </Item>
-<Item id="ITEM3" type="process" name="pCreatorCardReaderNCamera" parentId="ITEM1" scope="none" minInstances="1">
+<Item id="ITEM3" type="process" name="pCamera" parentId="ITEM1" scope="none" minInstances="0" maxInstances="cNUMMAXENTRYWAY">
 <DefiningSymbols>
-<SymbolReference symbolId="SYMB2"/>
+<SymbolReference symbolId="SYMB4"/>
 </DefiningSymbols>
 <UsingSymbols>
-<SymbolReference symbolId="SYMB2"/>
+<SymbolReference symbolId="SYMB4"/>
 </UsingSymbols>
 <SignalWindow id="SIGWDW4" insideDiagram="FALSE">
-<ConnectorReference linkId="LINK3" isFrom="TRUE"/>
+<ConnectorReference linkId="LINK21" isFrom="FALSE"/>
+<SentSignals>
+<SignalReference id="SIG8"/>
+</SentSignals>
+</SignalWindow>
+<SignalWindow id="SIGWDW2" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK17" isFrom="TRUE"/>
 <SentSignals>
 <SignalReference id="SIG5"/>
 </SentSignals>
@@ -100,16 +126,10 @@
 <SignalReference id="SIG6"/>
 </ReceivedSignals>
 </SignalWindow>
-<SignalWindow id="SIGWDW5" insideDiagram="FALSE">
-<ConnectorReference linkId="LINK11" isFrom="TRUE"/>
+<SignalWindow id="SIGWDW3" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK19" isFrom="TRUE"/>
 <ReceivedSignals>
 <SignalReference id="SIG7"/>
-</ReceivedSignals>
-</SignalWindow>
-<SignalWindow id="SIGWDW6" insideDiagram="FALSE">
-<ConnectorReference linkId="LINK13" isFrom="TRUE"/>
-<ReceivedSignals>
-<SignalReference id="SIG1"/>
 </ReceivedSignals>
 </SignalWindow>
 </Item>
@@ -120,14 +140,49 @@
 <UsingSymbols>
 <SymbolReference symbolId="SYMB3"/>
 </UsingSymbols>
-<SignalWindow id="SIGWDW7" insideDiagram="FALSE">
-<ConnectorReference linkId="LINK11" isFrom="FALSE"/>
+<SignalWindow id="SIGWDW5" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK24" isFrom="TRUE"/>
 <SentSignals>
-<SignalReference id="SIG7"/>
+<SignalReference id="SIG9"/>
+</SentSignals>
+<ReceivedSignals>
+<SignalReference id="SIG10"/>
+</ReceivedSignals>
+</SignalWindow>
+<SignalWindow id="SIGWDW6" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK23" isFrom="FALSE"/>
+<SentSignals>
+<SignalReference id="SIG11"/>
 </SentSignals>
 </SignalWindow>
+</Item>
+<Item id="ITEM5" type="process" name="pCreatorCardReaderNCamera" parentId="ITEM1" scope="none" minInstances="1">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB2"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB2"/>
+</UsingSymbols>
+<SignalWindow id="SIGWDW7" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK20" isFrom="TRUE"/>
+<SentSignals>
+<SignalReference id="SIG12"/>
+</SentSignals>
+<ReceivedSignals>
+<SignalReference id="SIG13"/>
+</ReceivedSignals>
+</SignalWindow>
 <SignalWindow id="SIGWDW8" insideDiagram="FALSE">
-<ConnectorReference linkId="LINK15" isFrom="TRUE"/>
+<ConnectorReference linkId="LINK21" isFrom="TRUE"/>
+<ReceivedSignals>
+<SignalReference id="SIG8"/>
+</ReceivedSignals>
+</SignalWindow>
+<SignalWindow id="SIGWDW9" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK23" isFrom="TRUE"/>
+<ReceivedSignals>
+<SignalReference id="SIG11"/>
+</ReceivedSignals>
 </SignalWindow>
 </Item>
 </DictionaryObjects>

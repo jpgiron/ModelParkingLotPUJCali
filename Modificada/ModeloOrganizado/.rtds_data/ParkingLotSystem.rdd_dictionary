@@ -110,7 +110,7 @@
 </Signal>
 <Signal id="SIG49" name="sOkCreateCtrl">
 </Signal>
-<Signal id="SIG5" name="sEnableReaderCard">
+<Signal id="SIG5" name="sEnableCardReader">
 </Signal>
 <Signal id="SIG50" name="sExcLimitZones">
 </Signal>
