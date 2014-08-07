@@ -413,19 +413,6 @@
 
 </Link>
 
-<Link linkId="LINK48" type="instcre" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text></Text>
-<Connector attachedSymbolId="SYMB54" type="mscvoid" isOutside="TRUE" side="y" position="-0.0833333333333" endType="voidend">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB57" type="mscvoid" isOutside="TRUE" side="y" position="-0.969696969697" endType="arrow">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-
-</Link>
-
 <Link linkId="LINK46" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>sOkInitEntryWay</Text>
 <Connector attachedSymbolId="SYMB54" type="mscvoid" isOutside="TRUE" side="y" position="0.05" endType="voidend">
@@ -433,6 +420,19 @@
 <Text id="2"></Text>
 </Connector>
 <Connector attachedSymbolId="SYMB57" type="mscvoid" isOutside="TRUE" side="y" position="-0.727272727273" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK48" type="instcre" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text></Text>
+<Connector attachedSymbolId="SYMB54" type="mscvoid" isOutside="TRUE" side="y" position="-0.0833333333333" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB57" type="mscvoid" isOutside="TRUE" side="y" position="-0.969696969697" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>

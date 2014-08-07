@@ -217,6 +217,20 @@ sDownBarrier]</Text>
 
 </Link>
 
+<Link linkId="LINK96" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cCreatorCRNC</Text>
+<Connector attachedSymbolId="SYMB8" type="chnl" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[sAssigned]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="n" position="-0.173138128581" endType="midarrow">
+<Text id="1">[sAssignCardReaderNCam]</Text>
+<Text id="2">__</Text>
+</Connector>
+<LinkSegment orientation="v" length="-121"/>
+
+</Link>
+
 <Link linkId="LINK94" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cEntryWay_UnmodeledP</Text>
 <Connector attachedSymbolId="SYMB8" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
