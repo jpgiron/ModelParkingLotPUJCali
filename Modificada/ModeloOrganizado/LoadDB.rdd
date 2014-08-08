@@ -4,10 +4,10 @@
 
 <Diagram language="sdl" type="prcd" name="LoadDB" showMsgData="full" linksCrossingAllowed="TRUE" cellWidthMm="4">
 
-<DiagramPartition name="Part. 0" nbPagesH="1" nbPagesV="1">
-<PageSpecification pageWidth="21" pageHeight="29.7" topMargin="0" bottomMargin="0" leftMargin="0" rightMargin="0" pageFooter="FALSE"/>
+<DiagramPartition name="Part. 0" nbPagesH="1" nbPagesV="2">
+<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="0.0" bottomMargin="0.0" leftMargin="0.0" rightMargin="0.0" pageFooter="FALSE"/>
 
-<Symbol symbolId="SYMB2" type="sdlPrcdDgmFrm" xCenter="297" yCenter="420" fixedDimensions="TRUE" width="551" height="775" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB2" type="sdlPrcdDgmFrm" xCenter="297" yCenter="841" fixedDimensions="TRUE" width="551" height="1617" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text></Text>
 
@@ -27,9 +27,24 @@ IN/OUT dataBase tDATABASE;</Text>
 <Text></Text>
 </Symbol>
 
-<Symbol symbolId="SYMB6" type="sdlTask" xCenter="264" yCenter="407" fixedDimensions="FALSE" width="418" height="550" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB6" type="sdlTask" xCenter="275" yCenter="572" fixedDimensions="FALSE" width="418" height="858" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>dataBase!tplates(15):='VBC798',dataBase!tID(15):=15,
+<Text>dataBase!tplates(0):='ABE123',dataBase!tID(0):=0,
+dataBase!tplates(1):='AFG541',dataBase!tID(1):=1,
+dataBase!tplates(2):='JUY589',dataBase!tID(2):=2,
+dataBase!tplates(3):='JKA111',dataBase!tID(3):=3,
+dataBase!tplates(4):='AAA555',dataBase!tID(4):=4,
+dataBase!tplates(5):='RKJ012',dataBase!tID(5):=5,
+dataBase!tplates(6):='JPG528',dataBase!tID(6):=6,
+dataBase!tplates(7):='LAS842',dataBase!tID(7):=7,
+dataBase!tplates(8):='AYS532',dataBase!tID(8):=8,
+dataBase!tplates(9):='VSD215',dataBase!tID(9):=9,
+dataBase!tplates(10):='TAW514',dataBase!tID(10):=10,
+dataBase!tplates(11):='OIU985',dataBase!tID(11):=11,
+dataBase!tplates(12):='WUE216',dataBase!tID(12):=12,
+dataBase!tplates(13):='NMK385',dataBase!tID(13):=13,
+dataBase!tplates(14):='ASU325',dataBase!tID(14):=14,
+dataBase!tplates(15):='VBC798',dataBase!tID(15):=15,
 dataBase!tplates(16):='NAL642',dataBase!tID(16):=16,
 dataBase!tplates(17):='OQE562',dataBase!tID(17):=17,
 dataBase!tplates(18):='KIP738',dataBase!tID(18):=18,
@@ -56,29 +71,29 @@ dataBase!tplates(38):='KIP739',dataBase!tID(38):=38,
 dataBase!tplates(39):='KIP740',dataBase!tID(39):=39</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB7" type="sdlPrcdReturn" xCenter="264" yCenter="715" fixedDimensions="FALSE" width="22" height="22" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB7" type="sdlPrcdReturn" xCenter="264" yCenter="1056" fixedDimensions="FALSE" width="22" height="22" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>  </Text>
 </Symbol>
 </Symbol>
 
-<Link linkId="LINK2" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK19" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB5" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB6" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
+<Connector attachedSymbolId="SYMB6" type="sdlarrow" isOutside="TRUE" side="x" position="-0.0526315789474" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="308"/>
+<LinkSegment orientation="v" length="473"/>
 
 </Link>
 
-<Link linkId="LINK1" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK20" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
-<Connector attachedSymbolId="SYMB6" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Connector attachedSymbolId="SYMB6" type="void" isOutside="TRUE" side="x" position="-0.0526315789474" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -86,7 +101,7 @@ dataBase!tplates(39):='KIP740',dataBase!tID(39):=39</Text>
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="308"/>
+<LinkSegment orientation="v" length="484"/>
 
 </Link>
 </DiagramPartition>

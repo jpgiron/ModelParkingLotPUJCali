@@ -104,7 +104,7 @@
 <Channel name="cEntryWay_CR" fromSignalWindow="SIGWDW9" toSignalWindow="SIGWDW12"/>
 <Channel name="cEnv_CR" fromSignalWindow="SIGWDW10" toSignalWindow="SIGWDW14"/>
 </Item>
-<Item id="ITEM2" type="process" name="pCamera" parentId="ITEM1" scope="none" minInstances="0" maxInstances="cNUMMAXENTRYWAY">
+<Item id="ITEM2" type="process" name="pCamera" parentId="ITEM1" scope="none" minInstances="1" maxInstances="cNUMMAXENTRYWAY">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB4"/>
 </DefiningSymbols>
@@ -181,7 +181,7 @@
 </ReceivedSignals>
 </SignalWindow>
 </Item>
-<Item id="ITEM5" type="process" name="pCardReader" parentId="ITEM1" scope="none" minInstances="0" maxInstances="cNUMMAXENTRYWAY">
+<Item id="ITEM5" type="process" name="pCardReader" parentId="ITEM1" scope="none" minInstances="1" maxInstances="cNUMMAXENTRYWAY">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB3"/>
 </DefiningSymbols>
