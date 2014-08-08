@@ -38,6 +38,32 @@ sLoopInductive_Zone]</Text>
 
 </Link>
 
+<Link linkId="LINK408" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cEnv_Main</Text>
+<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[sCreateCtrlZone,
+sReqInfoCtrlZone,
+sAddZone,
+sSetUpFreeSpot,
+sSetUpTotalSpot]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="w" position="-0.317419354839" endType="midarrow">
+<Text id="1">[sExcLimitCtrl,
+sImpossibleGetInfoCtrls,
+sOkCreateCtrl,
+sExcLimitZones,
+sOkCreationZone,
+sOkSetUp,
+sInfoSystem,
+sOkCreateEntryWay,
+sExcEntryWay]</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="h" length="-572"/>
+
+</Link>
+
 <Link linkId="LINK406" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cEnv_pTesting</Text>
 <Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="x" position="-0.363636363636" endType="midarrow">
@@ -67,48 +93,6 @@ sDownBarrier]</Text>
 <Text id="2"></Text>
 </Connector>
 <LinkSegment orientation="h" length="579"/>
-
-</Link>
-
-<Link linkId="LINK408" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cEnv_Main</Text>
-<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
-<Text id="1">[sCreateCtrlZone,
-sReqInfoCtrlZone,
-sAddZone,
-sSetUpFreeSpot,
-sSetUpTotalSpot]</Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="w" position="-0.317419354839" endType="midarrow">
-<Text id="1">[sExcLimitCtrl,
-sImpossibleGetInfoCtrls,
-sOkCreateCtrl,
-sExcLimitZones,
-sOkCreationZone,
-sOkSetUp,
-sInfoSystem,
-sOkCreateEntryWay,
-sExcEntryWay]</Text>
-<Text id="2"></Text>
-</Connector>
-<LinkSegment orientation="h" length="-572"/>
-
-</Link>
-
-<Link linkId="LINK418" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cEntryWay_CR</Text>
-<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="x" position="0.318181818182" endType="midarrow">
-<Text id="1">[sDataUser]</Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB33" type="chnl" isOutside="TRUE" side="x" position="0.258064516129" endType="midarrow">
-<Text id="1">[sEnableCardReader]</Text>
-<Text id="2"></Text>
-</Connector>
-<LinkSegment orientation="v" length="198"/>
-<LinkSegment orientation="h" length="55"/>
-<LinkSegment orientation="v" length="198"/>
 
 </Link>
 
@@ -144,6 +128,22 @@ sConfirmOutUser]</Text>
 
 </Link>
 
+<Link linkId="LINK418" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cEntryWay_CR</Text>
+<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="x" position="0.318181818182" endType="midarrow">
+<Text id="1">[sDataUser]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB33" type="chnl" isOutside="TRUE" side="x" position="0.258064516129" endType="midarrow">
+<Text id="1">[sEnableCardReader]</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="198"/>
+<LinkSegment orientation="h" length="55"/>
+<LinkSegment orientation="v" length="198"/>
+
+</Link>
+
 <Link linkId="LINK423" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cEnv_Camera</Text>
 <Connector attachedSymbolId="SYMB33" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
@@ -176,37 +176,16 @@ sLoopInductive_Exit]</Text>
 </Link>
 </DiagramPartition>
 
-<DiagramPartition name="Declarations" nbPagesH="1" nbPagesV="2">
+<DiagramPartition name="Declarations" nbPagesH="2" nbPagesV="2">
 <PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="0.0" bottomMargin="0.0" leftMargin="0.0" rightMargin="0.0" pageFooter="FALSE"/>
 
-<Symbol symbolId="SYMB6" type="sdlSysDgmFrm" xCenter="297" yCenter="841" fixedDimensions="TRUE" width="551" height="1617" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB6" type="sdlSysDgmFrm" xCenter="595" yCenter="841" fixedDimensions="TRUE" width="1146" height="1617" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text></Text>
 
-<Symbol symbolId="SYMB7" type="sdlText" xCenter="275" yCenter="803" fixedDimensions="FALSE" width="440" height="1562" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB47" type="sdlText" xCenter="858" yCenter="385" fixedDimensions="FALSE" width="396" height="748" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>/* Declarations of constants */
-
-SYNONYM cNUMMAXCTRL INTEGER = 3;
-SYNONYM cMAX_ZONES INTEGER = 2;
-SYNONYM cNUMMAXZONES_SYSTEM INTEGER = 6;
-SYNONYM cNUMMAXSPOTS INTEGER = 10;
-SYNONYM cNUMMAXENTRYWAY INTEGER = 4;
-
-SYNTYPE i_spots = INTEGER
-DEFAULT 0;
-    CONSTANTS 0..cNUMMAXSPOTS
-ENDSYNTYPE;
-
-
-NEWTYPE InfoZone
-STRUCT
-    totalSpots i_spots;
-    freeSpots i_spots;
-    ID PID;
-ENDNEWTYPE;
-
-NEWTYPE infoMainCtrls
+<Text>NEWTYPE infoMainCtrls
 STRUCT
     totalSpotsZone INTEGER;
     freeSpotsZone INTEGER;
@@ -237,7 +216,36 @@ ENDSYNTYPE;
 SYNTYPE itIndext_Ctrl = INTEGER
 DEFAULT 0;
   CONSTANTS 0..cNUMMAXCTRL-1
+ENDSYNTYPE;</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB7" type="sdlText" xCenter="319" yCenter="550" fixedDimensions="TRUE" width="594" height="1078" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>/* Declarations of constants */
+
+SYNONYM cNUMMAXCTRL INTEGER = 3;
+SYNONYM cMAX_ZONES INTEGER = 2;
+SYNONYM cNUMMAXZONES_SYSTEM INTEGER = cNUMMAXCTRL*cMAX_ZONES;
+SYNONYM cNUMMAXSPOTS INTEGER = 10;
+SYNONYM cNUMMAXENTRYWAY INTEGER = 4;
+
+SYNTYPE i_spots = INTEGER
+DEFAULT 0;
+    CONSTANTS 0..cNUMMAXSPOTS
 ENDSYNTYPE;
+
+NEWTYPE DataUser
+STRUCT
+      ID_User INTEGER;
+      Plate_User charstring;
+ENDNEWTYPE; 
+
+NEWTYPE InfoZone
+STRUCT
+    totalSpots i_spots;
+    freeSpots i_spots;
+    ID PID;
+ENDNEWTYPE;
 
 NEWTYPE table_Zones
   ARRAY(itIndex, InfoZone)
@@ -269,11 +277,9 @@ ENDNEWTYPE;</Text>
 <Description></Description>
 <Text></Text>
 
-<Symbol symbolId="SYMB10" type="sdlText" xCenter="561" yCenter="627" fixedDimensions="FALSE" width="770" height="1100" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB10" type="sdlText" xCenter="561" yCenter="605" fixedDimensions="FALSE" width="770" height="1056" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>/*SIGNALS */
-
-/*-------------------------------------------------- Process called pZone --------------------------------------------------------------*/
+<Text>/*-------------------------------------------------- Process called pZone --------------------------------------------------------------*/
 
 /*Channel cEnv_Zone */
 /*----&gt;Signal from Enviroment to pZone &lt;----- */

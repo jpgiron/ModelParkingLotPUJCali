@@ -117,13 +117,13 @@
 <Signal id="SIG48" name="sReqInfoCtrl">
 </Signal>
 <Signal id="SIG49" name="sInitFreeSpotZone">
-<SignalParameterType>zone</SignalParameterType>
+<SignalParameterType>itIndex</SignalParameterType>
 <SignalParameterType>i_spots</SignalParameterType>
 </Signal>
 <Signal id="SIG5" name="sLoopInductive_Zone">
 </Signal>
 <Signal id="SIG50" name="sInitTotalSpotZone">
-<SignalParameterType>zone</SignalParameterType>
+<SignalParameterType>itIndex</SignalParameterType>
 <SignalParameterType>i_spots</SignalParameterType>
 </Signal>
 <Signal id="SIG51" name="sInitialConnection">
