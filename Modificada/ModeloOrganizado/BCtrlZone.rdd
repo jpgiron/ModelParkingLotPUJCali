@@ -386,45 +386,367 @@
 
 </Link>
 
-<Link linkId="LINK153" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cCtrl_ZoneManager</Text>
-<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="x" position="0.0333333333333" endType="midarrow">
-<Text id="1">[sOkCreation,
-sExcQuantityZones,
-sIamZoneManager]</Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="n" position="0.20942408377" endType="midarrow">
-<Text id="1">[sCreateZone,
-sConfirmZoneManager_i]</Text>
+<Link linkId="LINK25" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>---</Text>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
 <Text id="2">__</Text>
 </Connector>
-<LinkSegment orientation="v" length="-462"/>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
 
 </Link>
 
-<Link linkId="LINK152" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cCtrl_Zone</Text>
-<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
-<Text id="1">[
-sEntered_Car,
-sOut_Car,
-sOkInit,
-sInfoZone,
-sOkInitPid
-]</Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="w" position="0.165161290323" endType="midarrow">
-<Text id="1">[
-sInitFreeSpot,
-sInitTotalSpots,
-sReqInfo,
-sInitPidCtrl
-]</Text>
+<Link linkId="LINK25" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>---</Text>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
 <Text id="2">__</Text>
 </Connector>
-<LinkSegment orientation="h" length="-682"/>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK25" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>---</Text>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK25" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>---</Text>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK25" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>---</Text>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK25" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>---</Text>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK25" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>---</Text>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK25" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>---</Text>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK25" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>---</Text>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK25" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>---</Text>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK25" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>---</Text>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK25" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>---</Text>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK25" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>---</Text>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK25" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>---</Text>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK25" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>---</Text>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK25" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>---</Text>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK25" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>---</Text>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK25" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>---</Text>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK25" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>---</Text>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK25" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>---</Text>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK25" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>---</Text>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK25" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>---</Text>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK25" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>---</Text>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK25" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>---</Text>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK25" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>---</Text>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK25" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>---</Text>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK25" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>---</Text>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK25" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>---</Text>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
 
 </Link>
 
@@ -458,6 +780,48 @@ sOkCreateZone,
 sExcLimitZones,
 sOkSetUp,
 sOkCreationCtrl_i]</Text>
+<Text id="2">__</Text>
+</Connector>
+<LinkSegment orientation="v" length="-462"/>
+
+</Link>
+
+<Link linkId="LINK152" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cCtrl_Zone</Text>
+<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[
+sEntered_Car,
+sOut_Car,
+sOkInit,
+sInfoZone,
+sOkInitPid
+]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="w" position="0.165161290323" endType="midarrow">
+<Text id="1">[
+sInitFreeSpot,
+sInitTotalSpots,
+sReqInfo,
+sInitPidCtrl
+]</Text>
+<Text id="2">__</Text>
+</Connector>
+<LinkSegment orientation="h" length="-682"/>
+
+</Link>
+
+<Link linkId="LINK153" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cCtrl_ZoneManager</Text>
+<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="x" position="0.0333333333333" endType="midarrow">
+<Text id="1">[sOkCreation,
+sExcQuantityZones,
+sIamZoneManager]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="n" position="0.20942408377" endType="midarrow">
+<Text id="1">[sCreateZone,
+sConfirmZoneManager_i]</Text>
 <Text id="2">__</Text>
 </Connector>
 <LinkSegment orientation="v" length="-462"/>

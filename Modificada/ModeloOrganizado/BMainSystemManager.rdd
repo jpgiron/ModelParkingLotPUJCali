@@ -63,21 +63,6 @@ sInfoSystem]</Text>
 
 </Link>
 
-<Link linkId="LINK68" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cMain_CtrlManager</Text>
-<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
-<Text id="1">[sExcQuantityCtrl,
-sOkCreationCtrl]</Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="e" position="-0.0335483870968" endType="midarrow">
-<Text id="1">[sCreateCtrl]</Text>
-<Text id="2">__</Text>
-</Connector>
-<LinkSegment orientation="h" length="623"/>
-
-</Link>
-
 <Link linkId="LINK71" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cMain_CtrlZone</Text>
 <Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="x" position="-0.153846153846" endType="midarrow">
@@ -97,6 +82,21 @@ sInitialConnection]</Text>
 <Text id="2">__</Text>
 </Connector>
 <LinkSegment orientation="v" length="-374"/>
+
+</Link>
+
+<Link linkId="LINK68" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cMain_CtrlManager</Text>
+<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[sExcQuantityCtrl,
+sOkCreationCtrl]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="e" position="-0.0335483870968" endType="midarrow">
+<Text id="1">[sCreateCtrl]</Text>
+<Text id="2">__</Text>
+</Connector>
+<LinkSegment orientation="h" length="623"/>
 
 </Link>
 
