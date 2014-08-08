@@ -45,10 +45,20 @@
 </DeclarationSymbols>
 </Signal>
 <Signal id="SIG15" name="sUpBarrier">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB44"/>
+</DeclarationSymbols>
 </Signal>
 <Signal id="SIG16" name="sDownBarrier">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB44"/>
+</DeclarationSymbols>
 </Signal>
 <Signal id="SIG17" name="sLoopInductive_Entrance">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB46"/>
+<SymbolReference symbolId="SYMB44"/>
+</DeclarationSymbols>
 </Signal>
 <Signal id="SIG18" name="sIR1_Zone">
 <DeclarationSymbols>
@@ -83,18 +93,44 @@
 </DeclarationSymbols>
 </Signal>
 <Signal id="SIG23" name="sAssignCardReaderNCam">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB44"/>
+</DeclarationSymbols>
 </Signal>
 <Signal id="SIG24" name="sAssigned">
+<SignalParameterType>pid</SignalParameterType>
+<SignalParameterType>pid</SignalParameterType>
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB44"/>
+</DeclarationSymbols>
 </Signal>
 <Signal id="SIG25" name="sRequestPlate">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB46"/>
+</DeclarationSymbols>
 </Signal>
 <Signal id="SIG26" name="sPlate">
+<SignalParameterType>charstring</SignalParameterType>
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB46"/>
+</DeclarationSymbols>
 </Signal>
 <Signal id="SIG27" name="sEnableCardReader">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB46"/>
+</DeclarationSymbols>
 </Signal>
 <Signal id="SIG28" name="sDataUser">
+<SignalParameterType>Integer</SignalParameterType>
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB46"/>
+</DeclarationSymbols>
 </Signal>
 <Signal id="SIG29" name="sConfirmEntranceUser">
+<SignalParameterType>DataUser</SignalParameterType>
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB46"/>
+</DeclarationSymbols>
 </Signal>
 <Signal id="SIG3" name="sExcLimitCtrl">
 <DeclarationSymbols>
@@ -102,12 +138,26 @@
 </DeclarationSymbols>
 </Signal>
 <Signal id="SIG30" name="sConfirmOutUser">
+<SignalParameterType>DataUser</SignalParameterType>
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB46"/>
+</DeclarationSymbols>
 </Signal>
 <Signal id="SIG31" name="sOkUser">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB46"/>
+</DeclarationSymbols>
 </Signal>
 <Signal id="SIG32" name="sNoRegis_User">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB46"/>
+</DeclarationSymbols>
 </Signal>
 <Signal id="SIG33" name="sLoopInductive_Exit">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB46"/>
+<SymbolReference symbolId="SYMB44"/>
+</DeclarationSymbols>
 </Signal>
 <Signal id="SIG34" name="sIR2_ZoneTest">
 <DeclarationSymbols>
@@ -326,9 +376,56 @@
 <SymbolReference symbolId="SYMB39"/>
 </DeclarationSymbols>
 </Signal>
+<Signal id="SIG69" name="sOkInitEntryWay">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB44"/>
+</DeclarationSymbols>
+</Signal>
 <Signal id="SIG7" name="sOkCreationZone">
 <DeclarationSymbols>
 <SymbolReference symbolId="SYMB41"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG70" name="sOutCarSystem">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB44"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG71" name="sOkCreateEntryWay">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB44"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG72" name="sEnteredCarSystem">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB44"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG73" name="sCreateEntryWay">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB44"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG74" name="sCarPassedBarrier">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB44"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG75" name="SExcEntryWay">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB44"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG76" name="sIamCamera">
+<SignalParameterType>pid</SignalParameterType>
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB46"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG77" name="sIamCardReader">
+<SignalParameterType>pid</SignalParameterType>
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB46"/>
 </DeclarationSymbols>
 </Signal>
 <Signal id="SIG8" name="sOkSetUp">
@@ -344,11 +441,13 @@
 </Signal>
 <Item id="ITEM1" type="system" name="System" scope="current">
 <UsingSymbols>
+<SymbolReference symbolId="SYMB45"/>
+<SymbolReference symbolId="SYMB43"/>
+<SymbolReference symbolId="SYMB40"/>
 <SymbolReference symbolId="SYMB38"/>
+<SymbolReference symbolId="SYMB9"/>
 <SymbolReference symbolId="SYMB1"/>
 <SymbolReference symbolId="SYMB6"/>
-<SymbolReference symbolId="SYMB9"/>
-<SymbolReference symbolId="SYMB40"/>
 </UsingSymbols>
 <SignalWindow id="SIGWDW16" insideDiagram="TRUE">
 <ConnectorReference linkId="LINK414" isFrom="FALSE"/>

@@ -46,18 +46,20 @@ sInfoSystem]</Text>
 
 </Link>
 
-<Link linkId="LINK406" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cEnv_pTesting</Text>
-<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="x" position="-0.363636363636" endType="midarrow">
-<Text id="1">[sEntryCar,
-sOutCar]</Text>
+<Link linkId="LINK414" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cEnv_EntryWay</Text>
+<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[sLoopInductive_Entrance,
+sLoopInductive_Exit
+sCarPassedBarrier]</Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="n" position="-0.155322862129" endType="midarrow">
-<Text id="1">[]</Text>
+<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="e" position="-0.317419354839" endType="midarrow">
+<Text id="1">[sUpBarrier,
+sDownBarrier]</Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="-264"/>
+<LinkSegment orientation="h" length="579"/>
 
 </Link>
 
@@ -77,20 +79,34 @@ sLoopInductive_Zone]</Text>
 
 </Link>
 
-<Link linkId="LINK414" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cEnv_EntryWay</Text>
-<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
-<Text id="1">[sLoopInductive_Entrance,
-sLoopInductive_Exit
-sCarPassedBarrier]</Text>
+<Link linkId="LINK406" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cEnv_pTesting</Text>
+<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="x" position="-0.363636363636" endType="midarrow">
+<Text id="1">[sEntryCar,
+sOutCar]</Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="e" position="-0.317419354839" endType="midarrow">
-<Text id="1">[sUpBarrier,
-sDownBarrier]</Text>
+<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="n" position="-0.155322862129" endType="midarrow">
+<Text id="1">[]</Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="h" length="579"/>
+<LinkSegment orientation="v" length="-264"/>
+
+</Link>
+
+<Link linkId="LINK418" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cEntryWay_CR</Text>
+<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="x" position="0.318181818182" endType="midarrow">
+<Text id="1">[sDataUser]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB33" type="chnl" isOutside="TRUE" side="x" position="0.258064516129" endType="midarrow">
+<Text id="1">[sEnableCardReader]</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="198"/>
+<LinkSegment orientation="h" length="55"/>
+<LinkSegment orientation="v" length="198"/>
 
 </Link>
 
@@ -123,22 +139,6 @@ sConfirmOutUser]</Text>
 <Text id="2"></Text>
 </Connector>
 <LinkSegment orientation="v" length="396"/>
-
-</Link>
-
-<Link linkId="LINK418" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cEntryWay_CR</Text>
-<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="x" position="0.318181818182" endType="midarrow">
-<Text id="1">[sDataUser]</Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB33" type="chnl" isOutside="TRUE" side="x" position="0.258064516129" endType="midarrow">
-<Text id="1">[sEnableCardReader]</Text>
-<Text id="2"></Text>
-</Connector>
-<LinkSegment orientation="v" length="198"/>
-<LinkSegment orientation="h" length="55"/>
-<LinkSegment orientation="v" length="198"/>
 
 </Link>
 
@@ -395,6 +395,133 @@ SIGNAL sInfoSystem(InfoMainSystem);
 /*Signals from pTesting to pMainSystemManager*/
 
 SIGNAL sEntryCar(itIndext_Ctrl,itIndex),sOutCar(itIndext_Ctrl,itIndex);</Text>
+</Symbol>
+</Symbol>
+</DiagramPartition>
+
+<DiagramPartition name="Signals BEntryWay" nbPagesH="1" nbPagesV="2">
+<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="0.0" bottomMargin="0.0" leftMargin="0.0" rightMargin="0.0" pageFooter="FALSE"/>
+
+<Symbol symbolId="SYMB43" type="sdlSysDgmFrm" xCenter="297" yCenter="841" fixedDimensions="TRUE" width="551" height="1617" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text></Text>
+
+<Symbol symbolId="SYMB44" type="sdlText" xCenter="275" yCenter="583" fixedDimensions="FALSE" width="506" height="1078" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>/*---------------------------Process pEntry------------------*/
+
+/*Channel cEnv_EntryWay*/
+/*---&gt; Signals from Environment to pEntryWay &lt;---*/
+
+SIGNAL sLoopInductive_Entrance,sLoopInductive_Exit;
+SIGNAL sCarPassedBarrier;
+
+/*---&gt;Signals from pEntryWay to Enviroment&lt;---*/
+
+SIGNAL sUpBarrier,sDownBarrier;
+
+/*Channel cEntryWay_Main*/
+/*---&gt;Signals from pMainSystemManager to pEntryWay&lt;---*/
+
+SIGNAL sOkInitEntryWay;
+
+/*---&gt;Signals from pEntryWay to pMainSystemManager&lt;---*/
+
+SIGNAL sEnteredCarSystem,sOutCarSystem;
+
+/*Channel cCreatorCRNC*/
+/*---&gt;Signals from pCreatorCardReaderNCamera to pEntryWay&lt;---*/
+
+SIGNAL sAssigned(pid,pid);
+
+/*---&gt;Signals from pEntryWay to pCreatorCardReaderNCamera&lt;---*/
+
+SIGNAL sAssignCardReaderNCam;
+
+/*Channel cInternalEntryWay*/
+/*---&gt;Signals from pEntryWay to pCreatorEntryWay&lt;---*/
+
+SIGNAL sOkCreateEntryWay;
+
+/*---&gt;Signals from pCreatorEntryWay to pEntryWay&lt;---*/
+
+SIGNAL sOkInitEntryWay;
+
+/*-----------------------------Process pCreatorEntryWay--------------------*/
+
+/*Channel cCreatorEntryWay_Main*/
+
+/*---&gt;Signals from pMainSystemManager to pCreatorEntryWay&lt;---*/
+
+SIGNAL sCreateEntryWay;
+
+/*---&gt;Signals from pCreatorEntryWay to pMainSystemManager&lt;---*/
+
+SIGNAL sOkCreateEntryWay,SExcEntryWay;</Text>
+</Symbol>
+</Symbol>
+</DiagramPartition>
+
+<DiagramPartition name="Signals Unmodeled Processes" nbPagesH="1" nbPagesV="2">
+<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="0.0" bottomMargin="0.0" leftMargin="0.0" rightMargin="0.0" pageFooter="FALSE"/>
+
+<Symbol symbolId="SYMB45" type="sdlSysDgmFrm" xCenter="297" yCenter="841" fixedDimensions="TRUE" width="551" height="1617" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text></Text>
+
+<Symbol symbolId="SYMB46" type="sdlText" xCenter="275" yCenter="594" fixedDimensions="FALSE" width="528" height="1100" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>/*-----------------------------------Process pDataBase -----------------------*/
+
+/*Channel cEntryWay_DB*/
+/*---&gt;Signals from pEntryWay to pDataBase &lt;---*/
+
+SIGNAL sConfirmEntranceUser(DataUser);
+SIGNAL sConfirmOutUser(DataUser);
+
+/*---&gt;Signals from pDataBase al proceso pEntryWay &lt;---*/
+
+SIGNAL sOkUser,sNoRegis_User;
+
+/*------------------------------Process pCamera--------------------------*/
+
+/*Channel cCreator_Camera*/
+
+/*---&gt;Signal from pCamera to pCreatorCardReaderNCamera&lt;---*/
+
+SIGNAL sIamCamera(pid);
+
+/*Channel cEntryWay_Cam*/
+
+/*---&gt;Signal from pEntryWay al proceso pCamera&lt;---*/
+
+SIGNAL sRequestPlate;
+
+/*---&gt;Signal from pCamera al proceso pEntryWay &lt;---*/
+
+SIGNAL sPlate(charstring);
+
+/*Channel cEnv_Camera*/
+/*---&gt;Signal from Enviroment to pCamera&lt;---*/
+
+SIGNAL sLoopInductive_Entrance,sLoopInductive_Exit;
+
+/*---------------------------Process pCardReader-------------------------*/
+/*Channel cEntryWay_CR*/
+
+/*---&gt;Signals pEntryWay to pCardReader&lt;---*/
+
+SIGNAL sEnableCardReader;
+
+/*---&gt;Signals pCardReader al proceso pEntryWay&lt;---*/
+
+SIGNAL sDataUser(Integer);
+
+/*Channel pCreator_CardReader*/
+
+/*---&gt;Signals from pCardReader to pCreatorCardReaderNCamera&lt;---*/
+
+SIGNAL sIamCardReader(pid);</Text>
 </Symbol>
 </Symbol>
 </DiagramPartition>

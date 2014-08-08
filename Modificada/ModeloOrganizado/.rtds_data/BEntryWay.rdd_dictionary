@@ -12,10 +12,13 @@
 <Signal id="SIG12" name="sEnableCardReader">
 </Signal>
 <Signal id="SIG13" name="sDataUser">
+<SignalParameterType>Integer</SignalParameterType>
 </Signal>
 <Signal id="SIG14" name="sConfirmEntranceUser">
+<SignalParameterType>DataUser</SignalParameterType>
 </Signal>
 <Signal id="SIG15" name="sConfirmOutUser">
+<SignalParameterType>DataUser</SignalParameterType>
 </Signal>
 <Signal id="SIG16" name="sOkUser">
 </Signal>
@@ -32,10 +35,13 @@
 <Signal id="SIG4" name="sAssignCardReaderNCam">
 </Signal>
 <Signal id="SIG5" name="sAssigned">
+<SignalParameterType>pid</SignalParameterType>
+<SignalParameterType>pid</SignalParameterType>
 </Signal>
 <Signal id="SIG6" name="sRequestPlate">
 </Signal>
 <Signal id="SIG7" name="sPlate">
+<SignalParameterType>charstring</SignalParameterType>
 </Signal>
 <Signal id="SIG8" name="sOkCreateEntryWay">
 </Signal>
