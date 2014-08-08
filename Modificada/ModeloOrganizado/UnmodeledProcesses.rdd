@@ -60,7 +60,7 @@
 
 </Link>
 
-<Link linkId="LINK21" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK28" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cCreator_Camera</Text>
 <Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="x" position="0.678571428571" endType="midarrow">
 <Text id="1">[sIamCamera]</Text>
@@ -71,20 +71,6 @@
 <Text id="2"></Text>
 </Connector>
 <LinkSegment orientation="v" length="176"/>
-
-</Link>
-
-<Link linkId="LINK26" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cEnv_CR</Text>
-<Connector attachedSymbolId="SYMB3" type="chnl" isOutside="TRUE" side="x" position="0.6" endType="midarrow">
-<Text id="1">[sIDUserFromEnv]</Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="s" position="-0.404886561955" endType="midarrow">
-<Text id="1">[]</Text>
-<Text id="2">__</Text>
-</Connector>
-<LinkSegment orientation="v" length="383"/>
 
 </Link>
 
@@ -102,23 +88,21 @@
 
 </Link>
 
-<Link linkId="LINK19" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cEnv_Camera</Text>
-<Connector attachedSymbolId="SYMB4" type="chnl" isOutside="TRUE" side="x" position="-0.769230769231" endType="midarrow">
-<Text id="1">[sLoopInductive_Entrance,
-sLoopInductive_Exit,
-sPlateFromEnv]</Text>
+<Link linkId="LINK26" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cEnv_CR</Text>
+<Connector attachedSymbolId="SYMB3" type="chnl" isOutside="TRUE" side="x" position="0.6" endType="midarrow">
+<Text id="1">[sIDUserFromEnv]</Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="s" position="0.0174520069808" endType="midarrow">
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="s" position="-0.404886561955" endType="midarrow">
 <Text id="1">[]</Text>
 <Text id="2">__</Text>
 </Connector>
-<LinkSegment orientation="v" length="385"/>
+<LinkSegment orientation="v" length="383"/>
 
 </Link>
 
-<Link linkId="LINK17" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK27" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cEntryWay_Cam</Text>
 <Connector attachedSymbolId="SYMB4" type="chnl" isOutside="TRUE" side="x" position="0.846153846154" endType="midarrow">
 <Text id="1">[sRequestPlate]</Text>
@@ -128,7 +112,21 @@ sPlateFromEnv]</Text>
 <Text id="1">[sPlate]</Text>
 <Text id="2">__</Text>
 </Connector>
-<LinkSegment orientation="v" length="385"/>
+<LinkSegment orientation="v" length="383"/>
+
+</Link>
+
+<Link linkId="LINK29" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cEnv_Camera</Text>
+<Connector attachedSymbolId="SYMB4" type="chnl" isOutside="TRUE" side="x" position="-0.769230769231" endType="midarrow">
+<Text id="1">[sPlateFromEnv]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="s" position="0.0174520069808" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+<LinkSegment orientation="v" length="383"/>
 
 </Link>
 

@@ -1,15 +1,20 @@
-Ä}q(UversionqU4.4.1qUobjectq]q]q(crtds.editor.business.SyntaxChecker
+Ä}q(UversionqU4.4.1qUobjectq]q]q((crtds.editor.business.SyntaxChecker
 SyntaxTreeNodeAdapter
 qoq}q	(Utextq
 UId_user INTEGERqU
 identifierqU1UtypeqUvardeclqUchildrenq]q((hoq}q(h
-UINTEGERqhU1hUtypenameqh]qU_SyntaxTreeNodeAdapter__parentq(hoq}q(h
-hhU1hhhhhhubub(crtds.editor.business.SyntaxChecker
+UINTEGERqhU1hUtypenameqh]qU_SyntaxTreeNodeAdapter__parentqhub(crtds.editor.business.SyntaxChecker
 SyntaxTreeNode
-qoq}q(h
-UId_userqhNhUsnglvardeclqh]q(hoq}q (h
-hhU1hUvarnameq!h]q"hhubaubeh(hoq#}q$(h
-UDCL
-Id_user INTEGER;q%hNhUdatadeclq&h]q'hahNububcrtds.editor.business.ElementReference
+qoq}q(h
+UId_userqhNhUsnglvardeclqh]q(hoq}q(h
+hhU1hUvarnameqh]q hhubaubeh(hoq!}q"(h
+U'DCL Id_user INTEGER , pidEntryWay PID ;q#hU0hU	cmpnddeclq$h]q%(h(hoq&}q'(h
+UpidEntryWay PIDq(hU2hUvardeclq)h]q*((hoq+}q,(h
+UPIDq-hU2hUtypenameq.h]q/hh&ub(hoq0}q1(h
+UpidEntryWayq2hNhhh]q3(hoq4}q5(h
+h2hU2hUvarnameq6h]q7hh&ubaubehh!ubeh(hoq8}q9(h
+U%DCL
+Id_user INTEGER,
+pidEntryWay PID;q:hNhUdatadeclq;h]q<h!ahNubububcrtds.editor.business.ElementReference
 SymbolReference
-q()Åq)}q*(Uprojectq+h+QUsymbolIdq,USYMB6q-UdiagramFileNameq.UM/home/ubuntu/Documents/ProjectSDL/Modificada/ModeloOrganizado/pCardReader.rddq/ubKáq0aÜq1u.
+q=)Åq>}q?(Uprojectq@h@QUsymbolIdqAUSYMB6qBUdiagramFileNameqCUM/home/ubuntu/Documents/ProjectSDL/Modificada/ModeloOrganizado/pCardReader.rddqDubKáqEh&h=)ÅqF}qG(h@h@QhAhBhChDubKáqHeÜqIu.
