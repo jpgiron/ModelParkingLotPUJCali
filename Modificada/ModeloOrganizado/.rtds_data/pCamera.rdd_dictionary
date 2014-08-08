@@ -9,20 +9,20 @@
 <SymbolReference symbolId="SYMB30"/>
 </SendSymbols>
 </Signal>
-<Signal id="SIG2" name="sRequestPlate">
-<InputSymbols>
-<SymbolReference symbolId="SYMB11"/>
-</InputSymbols>
-</Signal>
-<Signal id="SIG3" name="sPlate">
+<Signal id="SIG2" name="sPlate">
 <SignalParameterType>charstring</SignalParameterType>
 <SendSymbols>
 <SymbolReference symbolId="SYMB12"/>
 </SendSymbols>
 </Signal>
-<Signal id="SIG4" name="timerProcessOCR" isTimer="TRUE">
+<Signal id="SIG3" name="timerProcessOCR" isTimer="TRUE">
 <InputSymbols>
 <SymbolReference symbolId="SYMB9"/>
+</InputSymbols>
+</Signal>
+<Signal id="SIG4" name="sRequestPlate">
+<InputSymbols>
+<SymbolReference symbolId="SYMB11"/>
 </InputSymbols>
 </Signal>
 <Signal id="SIG5" name="sLoopInductive_Entrance">
@@ -43,47 +43,58 @@
 </UsingSymbols>
 <Body>
 <SentSignals>
-<SignalReference id="SIG3"/>
+<SignalReference id="SIG2"/>
 <SignalReference id="SIG1"/>
-<SignalReference id="SIG4"/>
+<SignalReference id="SIG3"/>
 </SentSignals>
 <ReceivedSignals>
-<SignalReference id="SIG6"/>
 <SignalReference id="SIG4"/>
-<SignalReference id="SIG2"/>
+<SignalReference id="SIG6"/>
+<SignalReference id="SIG3"/>
 <SignalReference id="SIG5"/>
 </ReceivedSignals>
 <Transitions>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM4"/>
+<StateReference itemId="ITEM5"/>
 <SymbolReference symbolId="SYMB9"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM7"/>
+<StateReference itemId="ITEM6"/>
 <SymbolReference symbolId="SYMB11"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM6"/>
+<StateReference itemId="ITEM2"/>
 <SymbolReference symbolId="SYMB5"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM6"/>
+<StateReference itemId="ITEM2"/>
 <SymbolReference symbolId="SYMB15"/>
 </Transition>
 </Transitions>
 </Body>
 </Item>
-<Item id="ITEM2" type="variable" name="plate" parentId="ITEM1" scope="none" variableTypeName="charstring">
+<Item id="ITEM2" type="state" name="Idle" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB4"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB14"/>
+<SymbolReference symbolId="SYMB4"/>
+<SymbolReference symbolId="SYMB34"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM3" type="variable" name="plates" parentId="ITEM1" scope="none" variableTypeName="tPlates">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB32"/>
+<SymbolReference symbolId="SYMB28"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM4" type="variable" name="plate" parentId="ITEM1" scope="none" variableTypeName="charstring">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB32"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM3" type="variable" name="Plates" parentId="ITEM1" scope="none" variableTypeName="tPlates">
-<DefiningSymbols>
-<SymbolReference symbolId="SYMB32"/>
-</DefiningSymbols>
-</Item>
-<Item id="ITEM4" type="state" name="sWaitOCRPlate" parentId="ITEM1" scope="none">
+<Item id="ITEM5" type="state" name="sWaitOCRPlate" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB8"/>
 </DefiningSymbols>
@@ -92,27 +103,28 @@
 <SymbolReference symbolId="SYMB17"/>
 </UsingSymbols>
 </Item>
-<Item id="ITEM5" type="timer" name="timerProcessOCR" parentId="ITEM1" scope="none">
+<Item id="ITEM6" type="state" name="sWait4Request" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM7" type="timer" name="timerProcessOCR" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB16"/>
 <SymbolReference symbolId="SYMB7"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM6" type="state" name="Idle" parentId="ITEM1" scope="none">
+<Item id="ITEM8" type="variable" name="index" parentId="ITEM1" scope="none" variableTypeName="Integer">
 <DefiningSymbols>
-<SymbolReference symbolId="SYMB4"/>
+<SymbolReference symbolId="SYMB6"/>
 </DefiningSymbols>
-<UsingSymbols>
-<SymbolReference symbolId="SYMB14"/>
-<SymbolReference symbolId="SYMB4"/>
-</UsingSymbols>
 </Item>
-<Item id="ITEM7" type="state" name="sWait4Request" parentId="ITEM1" scope="none">
+<Item id="ITEM9" type="procedure" name="getPlate" parentId="ITEM1" scope="none" procedureKind="NORMAL_PROCEDURE" procedureParamTypes="tPlates INTEGER" procedureReturnType="charstring">
 <DefiningSymbols>
-<SymbolReference symbolId="SYMB10"/>
+<SymbolReference symbolId="SYMB35"/>
 </DefiningSymbols>
-<UsingSymbols>
-<SymbolReference symbolId="SYMB10"/>
-</UsingSymbols>
 </Item>
 </DictionaryObjects>

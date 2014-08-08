@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Diagram SYSTEM "rtdsDiagram.dtd">
+
+<Diagram language="sdl" type="prcd" name="getPlate" showMsgData="full" linksCrossingAllowed="TRUE" cellWidthMm="4">
+
+<DiagramPartition name="Part. 0" nbPagesH="1" nbPagesV="1">
+<PageSpecification pageWidth="21" pageHeight="29.7" topMargin="0" bottomMargin="0" leftMargin="0" rightMargin="0" pageFooter="FALSE"/>
+
+<Symbol symbolId="SYMB2" type="sdlPrcdDgmFrm" xCenter="297" yCenter="420" fixedDimensions="TRUE" width="551" height="775" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text></Text>
+
+<Symbol symbolId="SYMB3" type="sdlPrcdProto" xCenter="209" yCenter="33" fixedDimensions="FALSE" width="88" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>getPlate</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB4" type="sdlText" xCenter="198" yCenter="132" fixedDimensions="FALSE" width="330" height="110" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>FPAR plates tPlates,i INTEGER;
+RETURNS charstring;
+
+DCL output charstring, varTmp INTEGER;</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB5" type="sdlPrcdStart" xCenter="253" yCenter="220" fixedDimensions="TRUE" width="60" height="25" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text></Text>
+</Symbol>
+
+<Symbol symbolId="SYMB6" type="sdlTask" xCenter="253" yCenter="286" fixedDimensions="FALSE" width="396" height="66" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>varTmp:=((12*15)-4*i) mod (cNUMMAXPLATES-1),
+output:=plates(varTmp)</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB7" type="sdlPrcdReturn" xCenter="253" yCenter="363" fixedDimensions="FALSE" width="22" height="22" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>  </Text>
+</Symbol>
+
+<Symbol symbolId="SYMB8" type="sdlTextExt" xCenter="352" yCenter="363" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>output</Text>
+</Symbol>
+</Symbol>
+
+<Link linkId="LINK0" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text></Text>
+<Connector attachedSymbolId="SYMB5" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB6" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="66"/>
+
+</Link>
+
+<Link linkId="LINK1" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text></Text>
+<Connector attachedSymbolId="SYMB6" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB7" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="77"/>
+
+</Link>
+
+<Link linkId="LINK2" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text></Text>
+<Connector attachedSymbolId="SYMB7" type="void" isOutside="TRUE" side="y" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB8" type="void" isOutside="TRUE" side="y" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="h" length="99"/>
+
+</Link>
+</DiagramPartition>
+
+</Diagram>
