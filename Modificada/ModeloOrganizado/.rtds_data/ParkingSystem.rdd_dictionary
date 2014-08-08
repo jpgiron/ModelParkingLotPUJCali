@@ -6,43 +6,25 @@
 <Signal id="SIG1" name="sEntryCar">
 <SignalParameterType>itIndext_Ctrl</SignalParameterType>
 <SignalParameterType>itIndex</SignalParameterType>
-<DeclarationSymbols>
-<SymbolReference symbolId="SYMB10"/>
-</DeclarationSymbols>
 </Signal>
 <Signal id="SIG10" name="sCreateCtrlZone">
-<DeclarationSymbols>
-<SymbolReference symbolId="SYMB10"/>
-</DeclarationSymbols>
 </Signal>
 <Signal id="SIG11" name="sReqInfoCtrlZone">
-<DeclarationSymbols>
-<SymbolReference symbolId="SYMB10"/>
-</DeclarationSymbols>
 </Signal>
 <Signal id="SIG12" name="sAddZone">
 <SignalParameterType>itIndext_Ctrl</SignalParameterType>
 <SignalParameterType>i_spots</SignalParameterType>
 <SignalParameterType>i_spots</SignalParameterType>
-<DeclarationSymbols>
-<SymbolReference symbolId="SYMB10"/>
-</DeclarationSymbols>
 </Signal>
 <Signal id="SIG13" name="sSetUpFreeSpot">
 <SignalParameterType>itIndext_Ctrl</SignalParameterType>
 <SignalParameterType>itIndex</SignalParameterType>
 <SignalParameterType>i_spots</SignalParameterType>
-<DeclarationSymbols>
-<SymbolReference symbolId="SYMB10"/>
-</DeclarationSymbols>
 </Signal>
 <Signal id="SIG14" name="sSetUpTotalSpot">
 <SignalParameterType>itIndext_Ctrl</SignalParameterType>
 <SignalParameterType>itIndex</SignalParameterType>
 <SignalParameterType>i_spots</SignalParameterType>
-<DeclarationSymbols>
-<SymbolReference symbolId="SYMB10"/>
-</DeclarationSymbols>
 </Signal>
 <Signal id="SIG15" name="sUpBarrier">
 </Signal>
@@ -63,9 +45,6 @@
 <Signal id="SIG2" name="sOutCar">
 <SignalParameterType>itIndext_Ctrl</SignalParameterType>
 <SignalParameterType>itIndex</SignalParameterType>
-<DeclarationSymbols>
-<SymbolReference symbolId="SYMB10"/>
-</DeclarationSymbols>
 </Signal>
 <Signal id="SIG20" name="sIR3_Zone">
 <DeclarationSymbols>
@@ -97,9 +76,6 @@
 <Signal id="SIG29" name="sConfirmEntranceUser">
 </Signal>
 <Signal id="SIG3" name="sExcLimitCtrl">
-<DeclarationSymbols>
-<SymbolReference symbolId="SYMB10"/>
-</DeclarationSymbols>
 </Signal>
 <Signal id="SIG30" name="sConfirmOutUser">
 </Signal>
@@ -114,255 +90,228 @@
 <SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
-<Signal id="SIG35" name="sIamZone">
-<SignalParameterType>InfoZone</SignalParameterType>
-<DeclarationSymbols>
-<SymbolReference symbolId="SYMB10"/>
-</DeclarationSymbols>
-</Signal>
-<Signal id="SIG36" name="sOkCreateZone">
-<SignalParameterType>InfoCtrl</SignalParameterType>
-<DeclarationSymbols>
-<SymbolReference symbolId="SYMB10"/>
-</DeclarationSymbols>
-</Signal>
-<Signal id="SIG37" name="sExcQuantityCtrl">
-<DeclarationSymbols>
-<SymbolReference symbolId="SYMB10"/>
-</DeclarationSymbols>
-</Signal>
-<Signal id="SIG38" name="sOkCreationCtrl">
-<SignalParameterType>InfoCtrl</SignalParameterType>
-<DeclarationSymbols>
-<SymbolReference symbolId="SYMB10"/>
-</DeclarationSymbols>
-</Signal>
-<Signal id="SIG39" name="sConfirmZoneManager">
+<Signal id="SIG35" name="sOkCreateZoneManager">
 <SignalParameterType>PID</SignalParameterType>
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG36" name="sInitFreeSpot">
+<SignalParameterType>i_spots</SignalParameterType>
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG37" name="sCreateZoneManager">
+<SignalParameterType>PID</SignalParameterType>
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG38" name="sIamZoneManager">
+<SignalParameterType>PID</SignalParameterType>
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG39" name="sInitTotalSpots">
+<SignalParameterType>i_spots</SignalParameterType>
 <DeclarationSymbols>
 <SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
 <Signal id="SIG4" name="sImpossibleGetInfoCtrls">
-<DeclarationSymbols>
-<SymbolReference symbolId="SYMB10"/>
-</DeclarationSymbols>
 </Signal>
-<Signal id="SIG40" name="sOkCreateZoneManager">
-<SignalParameterType>PID</SignalParameterType>
-<DeclarationSymbols>
-<SymbolReference symbolId="SYMB10"/>
-</DeclarationSymbols>
-</Signal>
-<Signal id="SIG41" name="sInitTotalSpotZone">
-<SignalParameterType>itIndex</SignalParameterType>
-<SignalParameterType>i_spots</SignalParameterType>
-<DeclarationSymbols>
-<SymbolReference symbolId="SYMB10"/>
-</DeclarationSymbols>
-</Signal>
-<Signal id="SIG42" name="sInitFreeSpotZone">
-<SignalParameterType>itIndex</SignalParameterType>
-<SignalParameterType>i_spots</SignalParameterType>
-<DeclarationSymbols>
-<SymbolReference symbolId="SYMB10"/>
-</DeclarationSymbols>
-</Signal>
-<Signal id="SIG43" name="sInfoTotalCtrl">
-<SignalParameterType>InfoCtrl</SignalParameterType>
-<DeclarationSymbols>
-<SymbolReference symbolId="SYMB10"/>
-</DeclarationSymbols>
-</Signal>
-<Signal id="SIG44" name="sInfoZone">
+<Signal id="SIG40" name="sOkInit">
 <SignalParameterType>InfoZone</SignalParameterType>
 <DeclarationSymbols>
 <SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
-<Signal id="SIG45" name="sInitFreeSpot">
-<SignalParameterType>i_spots</SignalParameterType>
-<DeclarationSymbols>
-<SymbolReference symbolId="SYMB10"/>
-</DeclarationSymbols>
-</Signal>
-<Signal id="SIG46" name="sCreateZoneManager">
+<Signal id="SIG41" name="sConfirmZoneManager_i">
 <SignalParameterType>PID</SignalParameterType>
 <DeclarationSymbols>
 <SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
-<Signal id="SIG47" name="sReqInfo">
+<Signal id="SIG42" name="sIR4_ZoneTest">
 <DeclarationSymbols>
 <SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
-<Signal id="SIG48" name="sInitTotalSpots">
+<Signal id="SIG43" name="sInfoZone">
+<SignalParameterType>InfoZone</SignalParameterType>
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG44" name="sIR3_ZoneTest">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG45" name="sOkInitPid">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG46" name="sCreateZone">
+<SignalParameterType>i_spots</SignalParameterType>
 <SignalParameterType>i_spots</SignalParameterType>
 <DeclarationSymbols>
 <SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
-<Signal id="SIG49" name="sOkCreationCtrl_i">
-<SignalParameterType>InfoCtrl</SignalParameterType>
+<Signal id="SIG47" name="sExcQuantityZones">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG48" name="sInitPidCtrl">
+<SignalParameterType>PID</SignalParameterType>
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG49" name="sOkCreation">
+<SignalParameterType>InfoZone</SignalParameterType>
 <DeclarationSymbols>
 <SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
 <Signal id="SIG5" name="sOkCreateCtrl">
+</Signal>
+<Signal id="SIG50" name="sEntered_Car">
+<SignalParameterType>infoZone</SignalParameterType>
 <DeclarationSymbols>
 <SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
-<Signal id="SIG50" name="sOkInit">
-<SignalParameterType>InfoZone</SignalParameterType>
+<Signal id="SIG51" name="sOut_Car">
+<SignalParameterType>infoZone</SignalParameterType>
 <DeclarationSymbols>
 <SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
-<Signal id="SIG51" name="sConfirmZoneManager_i">
-<SignalParameterType>PID</SignalParameterType>
+<Signal id="SIG52" name="sIR1_ZoneTest">
 <DeclarationSymbols>
 <SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
-<Signal id="SIG52" name="sInitialConnection">
+<Signal id="SIG53" name="sReqInfo">
 <DeclarationSymbols>
 <SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
-<Signal id="SIG53" name="sCreateZone">
+<Signal id="SIG54" name="sLoopInductive_ZoneTest">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG55" name="sExcZoneManager">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG56" name="sInitFreeSpotZone">
+<SignalParameterType>zone</SignalParameterType>
 <SignalParameterType>i_spots</SignalParameterType>
-<SignalParameterType>i_spots</SignalParameterType>
-<SignalParameterType>PID</SignalParameterType>
 <DeclarationSymbols>
-<SymbolReference symbolId="SYMB10"/>
+<SymbolReference symbolId="SYMB39"/>
 </DeclarationSymbols>
 </Signal>
-<Signal id="SIG54" name="sIR4_ZoneTest">
-<DeclarationSymbols>
-<SymbolReference symbolId="SYMB10"/>
-</DeclarationSymbols>
-</Signal>
-<Signal id="SIG55" name="sIR3_ZoneTest">
-<DeclarationSymbols>
-<SymbolReference symbolId="SYMB10"/>
-</DeclarationSymbols>
-</Signal>
-<Signal id="SIG56" name="sIamCtrl">
+<Signal id="SIG57" name="sOkCreateZone">
 <SignalParameterType>InfoCtrl</SignalParameterType>
 <DeclarationSymbols>
-<SymbolReference symbolId="SYMB10"/>
+<SymbolReference symbolId="SYMB39"/>
 </DeclarationSymbols>
 </Signal>
-<Signal id="SIG57" name="sReqInfoCtrl">
+<Signal id="SIG58" name="sIamCtrl">
+<SignalParameterType>InfoCtrl</SignalParameterType>
 <DeclarationSymbols>
-<SymbolReference symbolId="SYMB10"/>
+<SymbolReference symbolId="SYMB39"/>
 </DeclarationSymbols>
 </Signal>
-<Signal id="SIG58" name="sExcQuantityZones">
+<Signal id="SIG59" name="sReqInfoCtrl">
 <DeclarationSymbols>
-<SymbolReference symbolId="SYMB10"/>
-</DeclarationSymbols>
-</Signal>
-<Signal id="SIG59" name="sInitPidCtrl">
-<SignalParameterType>PID</SignalParameterType>
-<DeclarationSymbols>
-<SymbolReference symbolId="SYMB10"/>
+<SymbolReference symbolId="SYMB39"/>
 </DeclarationSymbols>
 </Signal>
 <Signal id="SIG6" name="sExcLimitZones">
 <DeclarationSymbols>
-<SymbolReference symbolId="SYMB10"/>
+<SymbolReference symbolId="SYMB39"/>
 </DeclarationSymbols>
 </Signal>
-<Signal id="SIG60" name="sCreateZone_">
+<Signal id="SIG60" name="sExcQuantityCtrl">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB39"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG61" name="sOkCreationCtrl">
+<SignalParameterType>InfoCtrl</SignalParameterType>
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB39"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG62" name="sCreateZone_">
 <SignalParameterType>i_spots</SignalParameterType>
 <SignalParameterType>i_spots</SignalParameterType>
 <DeclarationSymbols>
-<SymbolReference symbolId="SYMB10"/>
+<SymbolReference symbolId="SYMB39"/>
 </DeclarationSymbols>
 </Signal>
-<Signal id="SIG61" name="sOkCreation">
-<SignalParameterType>InfoZone</SignalParameterType>
+<Signal id="SIG63" name="sConfirmCtrl">
 <DeclarationSymbols>
-<SymbolReference symbolId="SYMB10"/>
+<SymbolReference symbolId="SYMB39"/>
 </DeclarationSymbols>
 </Signal>
-<Signal id="SIG62" name="sEntered_Car">
-<SignalParameterType>infoZone</SignalParameterType>
+<Signal id="SIG64" name="sInitTotalSpotZone">
+<SignalParameterType>zone</SignalParameterType>
+<SignalParameterType>i_spots</SignalParameterType>
 <DeclarationSymbols>
-<SymbolReference symbolId="SYMB10"/>
+<SymbolReference symbolId="SYMB39"/>
 </DeclarationSymbols>
 </Signal>
-<Signal id="SIG63" name="sCreateCtrl">
+<Signal id="SIG65" name="sInitialConnection">
 <DeclarationSymbols>
-<SymbolReference symbolId="SYMB10"/>
+<SymbolReference symbolId="SYMB39"/>
 </DeclarationSymbols>
 </Signal>
-<Signal id="SIG64" name="sOkInitPid">
+<Signal id="SIG66" name="sOkCreationCtrl_i">
+<SignalParameterType>InfoCtrl</SignalParameterType>
 <DeclarationSymbols>
-<SymbolReference symbolId="SYMB10"/>
+<SymbolReference symbolId="SYMB39"/>
 </DeclarationSymbols>
 </Signal>
-<Signal id="SIG65" name="sIamZoneManager">
-<SignalParameterType>PID</SignalParameterType>
+<Signal id="SIG67" name="sCannotGetInfoZones">
+<SignalParameterType>InfoCtrl</SignalParameterType>
 <DeclarationSymbols>
-<SymbolReference symbolId="SYMB10"/>
+<SymbolReference symbolId="SYMB39"/>
 </DeclarationSymbols>
 </Signal>
-<Signal id="SIG66" name="sCannotGetInfoZones">
+<Signal id="SIG68" name="sInfoTotalCtrl">
+<SignalParameterType>InfoCtrl</SignalParameterType>
 <DeclarationSymbols>
-<SymbolReference symbolId="SYMB10"/>
-</DeclarationSymbols>
-</Signal>
-<Signal id="SIG67" name="sIR1_ZoneTest">
-<DeclarationSymbols>
-<SymbolReference symbolId="SYMB10"/>
-</DeclarationSymbols>
-</Signal>
-<Signal id="SIG68" name="sConfirmCtrl">
-<DeclarationSymbols>
-<SymbolReference symbolId="SYMB10"/>
-</DeclarationSymbols>
-</Signal>
-<Signal id="SIG69" name="sOut_Car">
-<SignalParameterType>infoZone</SignalParameterType>
-<DeclarationSymbols>
-<SymbolReference symbolId="SYMB10"/>
+<SymbolReference symbolId="SYMB39"/>
 </DeclarationSymbols>
 </Signal>
 <Signal id="SIG7" name="sOkCreationZone">
-<DeclarationSymbols>
-<SymbolReference symbolId="SYMB10"/>
-</DeclarationSymbols>
-</Signal>
-<Signal id="SIG70" name="sLoopInductive_ZoneTest">
-<DeclarationSymbols>
-<SymbolReference symbolId="SYMB10"/>
-</DeclarationSymbols>
-</Signal>
-<Signal id="SIG71" name="sExcZoneManager">
-<DeclarationSymbols>
-<SymbolReference symbolId="SYMB10"/>
-</DeclarationSymbols>
 </Signal>
 <Signal id="SIG8" name="sOkSetUp">
 <DeclarationSymbols>
-<SymbolReference symbolId="SYMB10"/>
+<SymbolReference symbolId="SYMB39"/>
 </DeclarationSymbols>
 </Signal>
 <Signal id="SIG9" name="sInfoSystem">
 <SignalParameterType>InfoMainSystem</SignalParameterType>
-<DeclarationSymbols>
-<SymbolReference symbolId="SYMB10"/>
-</DeclarationSymbols>
 </Signal>
 <Item id="ITEM1" type="system" name="System" scope="current">
 <UsingSymbols>
+<SymbolReference symbolId="SYMB38"/>
 <SymbolReference symbolId="SYMB1"/>
 <SymbolReference symbolId="SYMB6"/>
 <SymbolReference symbolId="SYMB9"/>
+<SymbolReference symbolId="SYMB40"/>
 </UsingSymbols>
 <SignalWindow id="SIGWDW16" insideDiagram="TRUE">
 <ConnectorReference linkId="LINK414" isFrom="FALSE"/>
