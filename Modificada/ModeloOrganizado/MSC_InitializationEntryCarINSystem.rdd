@@ -148,7 +148,7 @@
 
 <Symbol symbolId="SYMB66" type="mscCondition" xCenter="638" yCenter="374" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>sWaitAssigned</Text>
+<Text>sWaitAssigned_i</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB67" type="mscCondition" xCenter="979" yCenter="924" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
@@ -336,7 +336,7 @@
 </Link>
 
 <Link linkId="LINK3" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>sOkInitEntryWay</Text>
+<Text>sInitEntryWay_i</Text>
 <Connector attachedSymbolId="SYMB3" type="mscvoid" isOutside="TRUE" side="y" position="-0.758620689655" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>

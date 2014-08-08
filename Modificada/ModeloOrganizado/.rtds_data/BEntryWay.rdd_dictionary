@@ -5,47 +5,55 @@
 <DictionaryObjects language="sdl" diagramType="blk">
 <Signal id="SIG1" name="sEnteredCarSystem">
 </Signal>
-<Signal id="SIG10" name="sDownBarrier">
+<Signal id="SIG10" name="sOkInitEntryWay">
 </Signal>
-<Signal id="SIG11" name="sLoopInductive_Entrance">
+<Signal id="SIG11" name="sUpBarrier">
 </Signal>
-<Signal id="SIG12" name="sEnableCardReader">
+<Signal id="SIG12" name="sDownBarrier">
 </Signal>
-<Signal id="SIG13" name="sDataUser">
+<Signal id="SIG13" name="sLoopInductive_Entrance">
+</Signal>
+<Signal id="SIG14" name="sLoopInductive_Exit">
+</Signal>
+<Signal id="SIG15" name="sCarPassedBarrier">
+</Signal>
+<Signal id="SIG16" name="sEnableCardReader">
+</Signal>
+<Signal id="SIG17" name="sDataUser">
 <SignalParameterType>Integer</SignalParameterType>
 </Signal>
-<Signal id="SIG14" name="sConfirmEntranceUser">
+<Signal id="SIG18" name="sConfirmEntranceUser">
 <SignalParameterType>DataUser</SignalParameterType>
 </Signal>
-<Signal id="SIG15" name="sConfirmOutUser">
+<Signal id="SIG19" name="sConfirmOutUser">
 <SignalParameterType>DataUser</SignalParameterType>
-</Signal>
-<Signal id="SIG16" name="sOkUser">
-</Signal>
-<Signal id="SIG17" name="sNoRegis_User">
-</Signal>
-<Signal id="SIG18" name="sExcEntryWay">
-</Signal>
-<Signal id="SIG19" name="sCreateEntryWay">
 </Signal>
 <Signal id="SIG2" name="sOutCarSystem">
 </Signal>
-<Signal id="SIG3" name="sOkInitEntryWay">
+<Signal id="SIG20" name="sOkUser">
 </Signal>
-<Signal id="SIG4" name="sAssignCardReaderNCam">
+<Signal id="SIG21" name="sNoRegis_User">
 </Signal>
-<Signal id="SIG5" name="sAssigned">
+<Signal id="SIG22" name="sExcEntryWay">
+</Signal>
+<Signal id="SIG23" name="sCreateEntryWay">
+</Signal>
+<Signal id="SIG3" name="sOkEntryWay1">
+</Signal>
+<Signal id="SIG4" name="sInitEntryWay_i">
+</Signal>
+<Signal id="SIG5" name="sAssignCardReaderNCam">
+</Signal>
+<Signal id="SIG6" name="sAssigned">
 <SignalParameterType>pid</SignalParameterType>
 <SignalParameterType>pid</SignalParameterType>
 </Signal>
-<Signal id="SIG6" name="sRequestPlate">
+<Signal id="SIG7" name="sRequestPlate">
 </Signal>
-<Signal id="SIG7" name="sPlate">
+<Signal id="SIG8" name="sPlate">
 <SignalParameterType>charstring</SignalParameterType>
 </Signal>
-<Signal id="SIG8" name="sOkCreateEntryWay">
-</Signal>
-<Signal id="SIG9" name="sUpBarrier">
+<Signal id="SIG9" name="sOkCreateEntryWay">
 </Signal>
 <Item id="ITEM1" type="block" name="BEntryWay" scope="current">
 <UsingSymbols>
@@ -54,69 +62,72 @@
 <SignalWindow id="SIGWDW16" insideDiagram="TRUE">
 <ConnectorReference linkId="LINK27" isFrom="FALSE"/>
 <SentSignals>
-<SignalReference id="SIG16"/>
-<SignalReference id="SIG17"/>
+<SignalReference id="SIG20"/>
+<SignalReference id="SIG21"/>
 </SentSignals>
 <ReceivedSignals>
-<SignalReference id="SIG14"/>
-<SignalReference id="SIG15"/>
+<SignalReference id="SIG18"/>
+<SignalReference id="SIG19"/>
 </ReceivedSignals>
 </SignalWindow>
 <SignalWindow id="SIGWDW14" insideDiagram="TRUE">
 <ConnectorReference linkId="LINK22" isFrom="FALSE"/>
 <SentSignals>
-<SignalReference id="SIG11"/>
+<SignalReference id="SIG13"/>
+<SignalReference id="SIG14"/>
+<SignalReference id="SIG15"/>
 </SentSignals>
 <ReceivedSignals>
-<SignalReference id="SIG9"/>
-<SignalReference id="SIG10"/>
+<SignalReference id="SIG11"/>
+<SignalReference id="SIG12"/>
 </ReceivedSignals>
 </SignalWindow>
 <SignalWindow id="SIGWDW15" insideDiagram="TRUE">
 <ConnectorReference linkId="LINK26" isFrom="FALSE"/>
 <SentSignals>
-<SignalReference id="SIG13"/>
+<SignalReference id="SIG17"/>
 </SentSignals>
 <ReceivedSignals>
-<SignalReference id="SIG12"/>
+<SignalReference id="SIG16"/>
 </ReceivedSignals>
 </SignalWindow>
 <SignalWindow id="SIGWDW12" insideDiagram="TRUE">
 <ConnectorReference linkId="LINK21" isFrom="FALSE"/>
 <SentSignals>
-<SignalReference id="SIG5"/>
+<SignalReference id="SIG6"/>
 </SentSignals>
 <ReceivedSignals>
-<SignalReference id="SIG4"/>
+<SignalReference id="SIG5"/>
 </ReceivedSignals>
 </SignalWindow>
 <SignalWindow id="SIGWDW13" insideDiagram="TRUE">
 <ConnectorReference linkId="LINK24" isFrom="FALSE"/>
 <SentSignals>
-<SignalReference id="SIG7"/>
+<SignalReference id="SIG8"/>
 </SentSignals>
 <ReceivedSignals>
-<SignalReference id="SIG6"/>
+<SignalReference id="SIG7"/>
 </ReceivedSignals>
 </SignalWindow>
 <SignalWindow id="SIGWDW10" insideDiagram="TRUE">
 <ConnectorReference linkId="LINK14" isFrom="FALSE"/>
 <SentSignals>
-<SignalReference id="SIG19"/>
+<SignalReference id="SIG23"/>
 </SentSignals>
 <ReceivedSignals>
-<SignalReference id="SIG8"/>
-<SignalReference id="SIG18"/>
+<SignalReference id="SIG9"/>
+<SignalReference id="SIG22"/>
 </ReceivedSignals>
 </SignalWindow>
 <SignalWindow id="SIGWDW11" insideDiagram="TRUE">
 <ConnectorReference linkId="LINK23" isFrom="FALSE"/>
 <SentSignals>
-<SignalReference id="SIG3"/>
+<SignalReference id="SIG4"/>
 </SentSignals>
 <ReceivedSignals>
 <SignalReference id="SIG1"/>
 <SignalReference id="SIG2"/>
+<SignalReference id="SIG3"/>
 </ReceivedSignals>
 </SignalWindow>
 <Channel name="cEntryWay_Main" fromSignalWindow="SIGWDW1" toSignalWindow="SIGWDW11"/>
@@ -138,40 +149,42 @@
 <SignalWindow id="SIGWDW4" insideDiagram="FALSE">
 <ConnectorReference linkId="LINK25" isFrom="TRUE"/>
 <SentSignals>
-<SignalReference id="SIG8"/>
+<SignalReference id="SIG9"/>
 </SentSignals>
 <ReceivedSignals>
-<SignalReference id="SIG3"/>
+<SignalReference id="SIG10"/>
 </ReceivedSignals>
 </SignalWindow>
 <SignalWindow id="SIGWDW5" insideDiagram="FALSE">
 <ConnectorReference linkId="LINK22" isFrom="TRUE"/>
 <SentSignals>
-<SignalReference id="SIG9"/>
-<SignalReference id="SIG10"/>
+<SignalReference id="SIG11"/>
+<SignalReference id="SIG12"/>
 </SentSignals>
 <ReceivedSignals>
-<SignalReference id="SIG11"/>
+<SignalReference id="SIG13"/>
+<SignalReference id="SIG14"/>
+<SignalReference id="SIG15"/>
 </ReceivedSignals>
 </SignalWindow>
 <SignalWindow id="SIGWDW6" insideDiagram="FALSE">
 <ConnectorReference linkId="LINK26" isFrom="TRUE"/>
 <SentSignals>
-<SignalReference id="SIG12"/>
+<SignalReference id="SIG16"/>
 </SentSignals>
 <ReceivedSignals>
-<SignalReference id="SIG13"/>
+<SignalReference id="SIG17"/>
 </ReceivedSignals>
 </SignalWindow>
 <SignalWindow id="SIGWDW7" insideDiagram="FALSE">
 <ConnectorReference linkId="LINK27" isFrom="TRUE"/>
 <SentSignals>
-<SignalReference id="SIG14"/>
-<SignalReference id="SIG15"/>
+<SignalReference id="SIG18"/>
+<SignalReference id="SIG19"/>
 </SentSignals>
 <ReceivedSignals>
-<SignalReference id="SIG16"/>
-<SignalReference id="SIG17"/>
+<SignalReference id="SIG20"/>
+<SignalReference id="SIG21"/>
 </ReceivedSignals>
 </SignalWindow>
 <SignalWindow id="SIGWDW1" insideDiagram="FALSE">
@@ -179,27 +192,28 @@
 <SentSignals>
 <SignalReference id="SIG1"/>
 <SignalReference id="SIG2"/>
+<SignalReference id="SIG3"/>
 </SentSignals>
 <ReceivedSignals>
-<SignalReference id="SIG3"/>
+<SignalReference id="SIG4"/>
 </ReceivedSignals>
 </SignalWindow>
 <SignalWindow id="SIGWDW2" insideDiagram="FALSE">
 <ConnectorReference linkId="LINK21" isFrom="TRUE"/>
 <SentSignals>
-<SignalReference id="SIG4"/>
+<SignalReference id="SIG5"/>
 </SentSignals>
 <ReceivedSignals>
-<SignalReference id="SIG5"/>
+<SignalReference id="SIG6"/>
 </ReceivedSignals>
 </SignalWindow>
 <SignalWindow id="SIGWDW3" insideDiagram="FALSE">
 <ConnectorReference linkId="LINK24" isFrom="TRUE"/>
 <SentSignals>
-<SignalReference id="SIG6"/>
+<SignalReference id="SIG7"/>
 </SentSignals>
 <ReceivedSignals>
-<SignalReference id="SIG7"/>
+<SignalReference id="SIG8"/>
 </ReceivedSignals>
 </SignalWindow>
 </Item>
@@ -213,20 +227,20 @@
 <SignalWindow id="SIGWDW8" insideDiagram="FALSE">
 <ConnectorReference linkId="LINK14" isFrom="TRUE"/>
 <SentSignals>
-<SignalReference id="SIG8"/>
-<SignalReference id="SIG18"/>
+<SignalReference id="SIG9"/>
+<SignalReference id="SIG22"/>
 </SentSignals>
 <ReceivedSignals>
-<SignalReference id="SIG19"/>
+<SignalReference id="SIG23"/>
 </ReceivedSignals>
 </SignalWindow>
 <SignalWindow id="SIGWDW9" insideDiagram="FALSE">
 <ConnectorReference linkId="LINK25" isFrom="FALSE"/>
 <SentSignals>
-<SignalReference id="SIG3"/>
+<SignalReference id="SIG10"/>
 </SentSignals>
 <ReceivedSignals>
-<SignalReference id="SIG8"/>
+<SignalReference id="SIG9"/>
 </ReceivedSignals>
 </SignalWindow>
 </Item>
