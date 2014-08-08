@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Diagram SYSTEM "rtdsDiagram.dtd">
+
+<Diagram language="sdl" type="prcd" name="LoadDB" showMsgData="full" linksCrossingAllowed="TRUE" cellWidthMm="4">
+
+<DiagramPartition name="Part. 0" nbPagesH="1" nbPagesV="1">
+<PageSpecification pageWidth="21" pageHeight="29.7" topMargin="0" bottomMargin="0" leftMargin="0" rightMargin="0" pageFooter="FALSE"/>
+
+<Symbol symbolId="SYMB2" type="sdlPrcdDgmFrm" xCenter="297" yCenter="420" fixedDimensions="TRUE" width="551" height="775" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text></Text>
+
+<Symbol symbolId="SYMB3" type="sdlPrcdProto" xCenter="330" yCenter="44" fixedDimensions="FALSE" width="88" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>LoadDB</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB4" type="sdlText" xCenter="143" yCenter="44" fixedDimensions="FALSE" width="264" height="66" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>FPAR
+IN/OUT dataBase tDATABASE;</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB5" type="sdlPrcdStart" xCenter="264" yCenter="99" fixedDimensions="TRUE" width="66" height="22" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text></Text>
+</Symbol>
+
+<Symbol symbolId="SYMB6" type="sdlTask" xCenter="264" yCenter="407" fixedDimensions="FALSE" width="418" height="550" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>dataBase!tplates(15):='VBC798',dataBase!tID(15):=15,
+dataBase!tplates(16):='NAL642',dataBase!tID(16):=16,
+dataBase!tplates(17):='OQE562',dataBase!tID(17):=17,
+dataBase!tplates(18):='KIP738',dataBase!tID(18):=18,
+dataBase!tplates(19):='CFG807',dataBase!tID(19):=19,
+dataBase!tplates(20):='ABE124',dataBase!tID(20):=20,
+dataBase!tplates(21):='AFG542',dataBase!tID(21):=21,
+dataBase!tplates(22):='JUY590',dataBase!tID(22):=22,
+dataBase!tplates(23):='JKA112',dataBase!tID(23):=23,
+dataBase!tplates(24):='AAA556',dataBase!tID(24):=24,
+dataBase!tplates(25):='RKJ013',dataBase!tID(25):=25,
+dataBase!tplates(26):='JPG529',dataBase!tID(26):=26,
+dataBase!tplates(27):='LAS843',dataBase!tID(27):=27,
+dataBase!tplates(28):='AYS533',dataBase!tID(28):=28,
+dataBase!tplates(29):='VSD216',dataBase!tID(29):=29,
+dataBase!tplates(30):='TAW515',dataBase!tID(30):=30,
+dataBase!tplates(31):='OIU986',dataBase!tID(31):=31,
+dataBase!tplates(32):='WUE217',dataBase!tID(32):=32,
+dataBase!tplates(33):='NMK386',dataBase!tID(33):=33,
+dataBase!tplates(34):='ASU326',dataBase!tID(34):=34,
+dataBase!tplates(35):='VBC799',dataBase!tID(35):=35,
+dataBase!tplates(36):='NAL643',dataBase!tID(36):=36,
+dataBase!tplates(37):='OQE563',dataBase!tID(37):=37,
+dataBase!tplates(38):='KIP739',dataBase!tID(38):=38,
+dataBase!tplates(39):='KIP740',dataBase!tID(39):=39</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB7" type="sdlPrcdReturn" xCenter="264" yCenter="715" fixedDimensions="FALSE" width="22" height="22" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>  </Text>
+</Symbol>
+</Symbol>
+
+<Link linkId="LINK2" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text></Text>
+<Connector attachedSymbolId="SYMB5" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB6" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="308"/>
+
+</Link>
+
+<Link linkId="LINK1" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text></Text>
+<Connector attachedSymbolId="SYMB6" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB7" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="308"/>
+
+</Link>
+</DiagramPartition>
+
+</Diagram>

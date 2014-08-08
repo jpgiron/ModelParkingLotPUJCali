@@ -5,7 +5,7 @@
 <Diagram language="sdl" type="blk" name="UnmodeledProcesses" showMsgData="full" linksCrossingAllowed="FALSE" cellWidthMm="4">
 
 <DiagramPartition name="Part. 0" nbPagesH="2" nbPagesV="1">
-<PageSpecification pageWidth="21" pageHeight="29.7" topMargin="0" bottomMargin="0" leftMargin="0" rightMargin="0" pageFooter="FALSE"/>
+<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="0.0" bottomMargin="0.0" leftMargin="0.0" rightMargin="0.0" pageFooter="FALSE"/>
 
 <Symbol symbolId="SYMB1" type="sdlBlkDgmFrm" xCenter="595" yCenter="420" fixedDimensions="TRUE" width="1146" height="775" color="#000000" fillColor="#ffffff">
 <Description></Description>
@@ -74,14 +74,44 @@
 
 </Link>
 
+<Link linkId="LINK26" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cEnv_CR</Text>
+<Connector attachedSymbolId="SYMB3" type="chnl" isOutside="TRUE" side="x" position="0.6" endType="midarrow">
+<Text id="1">[sIDUserFromEnv]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="s" position="-0.404886561955" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+<LinkSegment orientation="v" length="383"/>
+
+</Link>
+
 <Link linkId="LINK24" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cEntryWay_CR</Text>
-<Connector attachedSymbolId="SYMB3" type="chnl" isOutside="TRUE" side="x" position="-0.133333333333" endType="midarrow">
+<Connector attachedSymbolId="SYMB3" type="chnl" isOutside="TRUE" side="x" position="-0.466666666667" endType="midarrow">
 <Text id="1">[sEnableCardReader]</Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="s" position="-0.616055846422" endType="midarrow">
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="s" position="-0.712041884817" endType="midarrow">
 <Text id="1">[sDataUser]</Text>
+<Text id="2">__</Text>
+</Connector>
+<LinkSegment orientation="v" length="385"/>
+
+</Link>
+
+<Link linkId="LINK19" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cEnv_Camera</Text>
+<Connector attachedSymbolId="SYMB4" type="chnl" isOutside="TRUE" side="x" position="-0.769230769231" endType="midarrow">
+<Text id="1">[sLoopInductive_Entrance,
+sLoopInductive_Exit,
+sPlateFromEnv]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="s" position="0.0174520069808" endType="midarrow">
+<Text id="1">[]</Text>
 <Text id="2">__</Text>
 </Connector>
 <LinkSegment orientation="v" length="385"/>
@@ -96,21 +126,6 @@
 </Connector>
 <Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="s" position="0.420593368237" endType="midarrow">
 <Text id="1">[sPlate]</Text>
-<Text id="2">__</Text>
-</Connector>
-<LinkSegment orientation="v" length="385"/>
-
-</Link>
-
-<Link linkId="LINK19" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cEnv_Camera</Text>
-<Connector attachedSymbolId="SYMB4" type="chnl" isOutside="TRUE" side="x" position="-0.769230769231" endType="midarrow">
-<Text id="1">[sLoopInductive_Entrance,
-sLoopInductive_Exit]</Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="s" position="0.0174520069808" endType="midarrow">
-<Text id="1">[]</Text>
 <Text id="2">__</Text>
 </Connector>
 <LinkSegment orientation="v" length="385"/>

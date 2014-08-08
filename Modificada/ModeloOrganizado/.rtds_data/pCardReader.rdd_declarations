@@ -1,0 +1,15 @@
+Ä}q(UversionqU4.4.1qUobjectq]q]q(crtds.editor.business.SyntaxChecker
+SyntaxTreeNodeAdapter
+qoq}q	(Utextq
+UId_user INTEGERqU
+identifierqU1UtypeqUvardeclqUchildrenq]q((hoq}q(h
+UINTEGERqhU1hUtypenameqh]qU_SyntaxTreeNodeAdapter__parentq(hoq}q(h
+hhU1hhhhhhubub(crtds.editor.business.SyntaxChecker
+SyntaxTreeNode
+qoq}q(h
+UId_userqhNhUsnglvardeclqh]q(hoq}q (h
+hhU1hUvarnameq!h]q"hhubaubeh(hoq#}q$(h
+UDCL
+Id_user INTEGER;q%hNhUdatadeclq&h]q'hahNububcrtds.editor.business.ElementReference
+SymbolReference
+q()Åq)}q*(Uprojectq+h+QUsymbolIdq,USYMB6q-UdiagramFileNameq.UM/home/ubuntu/Documents/ProjectSDL/Modificada/ModeloOrganizado/pCardReader.rddq/ubKáq0aÜq1u.

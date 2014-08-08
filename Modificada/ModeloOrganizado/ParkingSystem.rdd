@@ -22,32 +22,6 @@
 </Symbol>
 </Symbol>
 
-<Link linkId="LINK408" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cEnv_Main</Text>
-<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
-<Text id="1">[sCreateCtrlZone,
-sReqInfoCtrlZone,
-sAddZone,
-sSetUpFreeSpot,
-sSetUpTotalSpot]</Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="w" position="-0.317419354839" endType="midarrow">
-<Text id="1">[sExcLimitCtrl,
-sImpossibleGetInfoCtrls,
-sOkCreateCtrl,
-sExcLimitZones,
-sOkCreationZone,
-sOkSetUp,
-sInfoSystem,
-sOkCreateEntryWay,
-sExcEntryWay]</Text>
-<Text id="2"></Text>
-</Connector>
-<LinkSegment orientation="h" length="-572"/>
-
-</Link>
-
 <Link linkId="LINK406" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cEnv_pTesting</Text>
 <Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="x" position="-0.363636363636" endType="midarrow">
@@ -77,6 +51,32 @@ sDownBarrier]</Text>
 <Text id="2"></Text>
 </Connector>
 <LinkSegment orientation="h" length="579"/>
+
+</Link>
+
+<Link linkId="LINK408" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cEnv_Main</Text>
+<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[sCreateCtrlZone,
+sReqInfoCtrlZone,
+sAddZone,
+sSetUpFreeSpot,
+sSetUpTotalSpot]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="w" position="-0.317419354839" endType="midarrow">
+<Text id="1">[sExcLimitCtrl,
+sImpossibleGetInfoCtrls,
+sOkCreateCtrl,
+sExcLimitZones,
+sOkCreationZone,
+sOkSetUp,
+sInfoSystem,
+sOkCreateEntryWay,
+sExcEntryWay]</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="h" length="-572"/>
 
 </Link>
 
@@ -112,6 +112,20 @@ sLoopInductive_Zone]</Text>
 
 </Link>
 
+<Link linkId="LINK420" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cEntryWay_Cam</Text>
+<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="x" position="-0.227272727273" endType="midarrow">
+<Text id="1">[sPlate]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB33" type="chnl" isOutside="TRUE" side="x" position="-0.290322580645" endType="midarrow">
+<Text id="1">[sRequestPlate]</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="396"/>
+
+</Link>
+
 <Link linkId="LINK422" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cEntryWay_DB</Text>
 <Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="x" position="0.863636363636" endType="midarrow">
@@ -130,17 +144,17 @@ sConfirmOutUser]</Text>
 
 </Link>
 
-<Link linkId="LINK420" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cEntryWay_Cam</Text>
-<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="x" position="-0.227272727273" endType="midarrow">
-<Text id="1">[sPlate]</Text>
+<Link linkId="LINK424" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cEnv_CR</Text>
+<Connector attachedSymbolId="SYMB33" type="chnl" isOutside="TRUE" side="y" position="-0.2" endType="midarrow">
+<Text id="1">[sIDUserFromEnv]</Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB33" type="chnl" isOutside="TRUE" side="x" position="-0.290322580645" endType="midarrow">
-<Text id="1">[sRequestPlate]</Text>
+<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="e" position="0.676129032258" endType="midarrow">
+<Text id="1">[]</Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="396"/>
+<LinkSegment orientation="h" length="535"/>
 
 </Link>
 
@@ -148,7 +162,8 @@ sConfirmOutUser]</Text>
 <Text>cEnv_Camera</Text>
 <Connector attachedSymbolId="SYMB33" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
 <Text id="1">[sLoopInductive_Entrance,
-sLoopInductive_Exit]</Text>
+sLoopInductive_Exit,
+sPlateFromEnv]</Text>
 <Text id="2"></Text>
 </Connector>
 <Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="w" position="0.704516129032" endType="midarrow">
@@ -183,7 +198,7 @@ sLoopInductive_Exit]</Text>
 <Description></Description>
 <Text></Text>
 
-<Symbol symbolId="SYMB47" type="sdlText" xCenter="858" yCenter="506" fixedDimensions="FALSE" width="396" height="990" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB47" type="sdlText" xCenter="858" yCenter="649" fixedDimensions="FALSE" width="396" height="1210" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>NEWTYPE infoMainCtrls
 STRUCT
@@ -218,15 +233,28 @@ DEFAULT 0;
   CONSTANTS 0..cNUMMAXCTRL-1
 ENDSYNTYPE;
 
-
-SYNONYM cNUMMAXPLATES INTEGER = 20;
-
 SYNTYPE Index = INTEGER
-  CONSTANTS 0:cNUMMAXPLATES-1
+  CONSTANTS 0:cNUMMAXUSERS-1
 ENDSYNTYPE;
 
-NEWTYPE tPlates
-      ARRAY(Index, Integer);
+NEWTYPE vec_Plates
+      ARRAY(Index, charstring);
+ENDNEWTYPE;
+
+NEWTYPE vec_ID
+    ARRAY(Index, INTEGER);
+ENDNEWTYPE;
+
+NEWTYPE DataUser
+ STRUCT
+      plate charstring;
+      ID INTEGER;
+ENDNEWTYPE;
+
+NEWTYPE tDATABASE
+STRUCT
+      tplates vec_Plates;
+      tID         vec_ID;
 ENDNEWTYPE;</Text>
 </Symbol>
 
@@ -239,17 +267,12 @@ SYNONYM cMAX_ZONES INTEGER = 2;
 SYNONYM cNUMMAXZONES_SYSTEM INTEGER = cNUMMAXCTRL*cMAX_ZONES;
 SYNONYM cNUMMAXSPOTS INTEGER = 10;
 SYNONYM cNUMMAXENTRYWAY INTEGER = 4;
+SYNONYM cNUMMAXUSERS INTEGER = 40;
 
 SYNTYPE i_spots = INTEGER
 DEFAULT 0;
     CONSTANTS 0..cNUMMAXSPOTS
 ENDSYNTYPE;
-
-NEWTYPE DataUser
-STRUCT
-      ID_User INTEGER;
-      Plate_User charstring;
-ENDNEWTYPE; 
 
 NEWTYPE InfoZone
 STRUCT
@@ -490,7 +513,7 @@ SIGNAL sOkCreateEntryWay,sExcEntryWay;</Text>
 <Description></Description>
 <Text></Text>
 
-<Symbol symbolId="SYMB46" type="sdlText" xCenter="275" yCenter="539" fixedDimensions="FALSE" width="528" height="990" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB46" type="sdlText" xCenter="275" yCenter="638" fixedDimensions="FALSE" width="528" height="1188" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>/*-----------------------------------Process pDataBase -----------------------*/
 
@@ -522,6 +545,10 @@ SIGNAL sRequestPlate;
 
 SIGNAL sPlate(charstring);
 
+/*Channel cEnv_Camera
+/*---&gt;Signal from Enviroment to pCamera&lt;---*/
+SIGNAL sPlateFromEnv(charstring);
+
 /*---------------------------Process pCardReader-------------------------*/
 /*Channel cEntryWay_CR*/
 
@@ -537,7 +564,12 @@ SIGNAL sDataUser(Integer);
 
 /*---&gt;Signals from pCardReader to pCreatorCardReaderNCamera&lt;---*/
 
-SIGNAL sIamCardReader(pid);</Text>
+SIGNAL sIamCardReader(pid);
+
+/*Channel cEnv_CR*/
+/*---&gt; Signals from Enviroment to pCardReader&lt;---*/
+
+SIGNAL sIDUserFromEnv(INTEGER);</Text>
 </Symbol>
 </Symbol>
 </DiagramPartition>
