@@ -18,12 +18,12 @@
 
 <Symbol symbolId="SYMB3" type="sdlPrcs" xCenter="242" yCenter="396" fixedDimensions="FALSE" width="330" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>pCardReader(1,cNUMMAXENTRYWAY)</Text>
+<Text>pCardReader(0,cNUMMAXENTRYWAY)</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB4" type="sdlPrcs" xCenter="693" yCenter="396" fixedDimensions="TRUE" width="286" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>pCamera(1,cNUMMAXENTRYWAY)</Text>
+<Text>pCamera(0,cNUMMAXENTRYWAY)</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB5" type="sdlPrcs" xCenter="1023" yCenter="396" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#ffffff">
@@ -102,20 +102,6 @@
 
 </Link>
 
-<Link linkId="LINK27" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cEntryWay_Cam</Text>
-<Connector attachedSymbolId="SYMB4" type="chnl" isOutside="TRUE" side="x" position="0.846153846154" endType="midarrow">
-<Text id="1">[sRequestPlate]</Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="s" position="0.420593368237" endType="midarrow">
-<Text id="1">[sPlate]</Text>
-<Text id="2">__</Text>
-</Connector>
-<LinkSegment orientation="v" length="383"/>
-
-</Link>
-
 <Link linkId="LINK29" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cEnv_Camera</Text>
 <Connector attachedSymbolId="SYMB4" type="chnl" isOutside="TRUE" side="x" position="-0.769230769231" endType="midarrow">
@@ -124,6 +110,20 @@
 </Connector>
 <Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="s" position="0.0174520069808" endType="midarrow">
 <Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+<LinkSegment orientation="v" length="383"/>
+
+</Link>
+
+<Link linkId="LINK27" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cEntryWay_Cam</Text>
+<Connector attachedSymbolId="SYMB4" type="chnl" isOutside="TRUE" side="x" position="0.846153846154" endType="midarrow">
+<Text id="1">[sRequestPlate]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="s" position="0.420593368237" endType="midarrow">
+<Text id="1">[sPlate]</Text>
 <Text id="2">__</Text>
 </Connector>
 <LinkSegment orientation="v" length="383"/>

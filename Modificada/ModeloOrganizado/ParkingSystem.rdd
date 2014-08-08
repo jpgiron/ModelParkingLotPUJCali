@@ -52,7 +52,7 @@ sExcEntryWay]</Text>
 <Text>cEnv_EntryWay</Text>
 <Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
 <Text id="1">[sLoopInductive_Entrance,
-sLoopInductive_Exit
+sLoopInductive_Exit,
 sCarPassedBarrier]</Text>
 <Text id="2"></Text>
 </Connector>
@@ -96,17 +96,21 @@ sOutCar]</Text>
 
 </Link>
 
-<Link linkId="LINK420" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cEntryWay_Cam</Text>
-<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="x" position="-0.227272727273" endType="midarrow">
-<Text id="1">[sPlate]</Text>
+<Link linkId="LINK422" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cEntryWay_DB</Text>
+<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="x" position="0.863636363636" endType="midarrow">
+<Text id="1">[sOkUser,
+sNoRegis_User]</Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB33" type="chnl" isOutside="TRUE" side="x" position="-0.290322580645" endType="midarrow">
-<Text id="1">[sRequestPlate]</Text>
+<Connector attachedSymbolId="SYMB33" type="chnl" isOutside="TRUE" side="x" position="0.815249266862" endType="midarrow">
+<Text id="1">[sConfirmEntranceUser,
+sConfirmOutUser]</Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="396"/>
+<LinkSegment orientation="v" length="208"/>
+<LinkSegment orientation="h" length="113"/>
+<LinkSegment orientation="v" length="188"/>
 
 </Link>
 
@@ -126,21 +130,17 @@ sOutCar]</Text>
 
 </Link>
 
-<Link linkId="LINK422" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cEntryWay_DB</Text>
-<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="x" position="0.863636363636" endType="midarrow">
-<Text id="1">[sOkUser,
-sNoRegis_User]</Text>
+<Link linkId="LINK420" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cEntryWay_Cam</Text>
+<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="x" position="-0.227272727273" endType="midarrow">
+<Text id="1">[sPlate]</Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB33" type="chnl" isOutside="TRUE" side="x" position="0.815249266862" endType="midarrow">
-<Text id="1">[sConfirmEntranceUser,
-sConfirmOutUser]</Text>
+<Connector attachedSymbolId="SYMB33" type="chnl" isOutside="TRUE" side="x" position="-0.290322580645" endType="midarrow">
+<Text id="1">[sRequestPlate]</Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="208"/>
-<LinkSegment orientation="h" length="113"/>
-<LinkSegment orientation="v" length="188"/>
+<LinkSegment orientation="v" length="396"/>
 
 </Link>
 
