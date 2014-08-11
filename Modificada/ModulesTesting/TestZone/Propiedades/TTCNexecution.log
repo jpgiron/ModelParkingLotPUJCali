@@ -251,3 +251,135 @@ project /home/ubuntu/Documents/ProjectSDL/Modificada/Propiedades/LotParkingSyste
 11/08/14 at 13:39 : Simulation started
 11/08/14 at 13:39 : control part started
 11/08/14 at 13:42 : simulation ended
+
+
+==============================
+project /home/ubuntu/Documents/ProjectSDL/Modificada/ModulesTesting/TestZone/Propiedades/LotParkingSystem.rdp
+11/08/14 at 13:57 : Simulation started
+11/08/14 at 13:57 : control part started
+11/08/14 at 13:57 : simulation ended
+
+
+==============================
+project /home/ubuntu/Documents/ProjectSDL/Modificada/ModulesTesting/TestZone/Propiedades/LotParkingSystem.rdp
+11/08/14 at 13:59 : Simulation started
+11/08/14 at 13:59 : control part started
+11/08/14 at 13:59 : module 't_pZone' testcase 'tc_DynamicEntryZone' verdict 'error'
+                    control part verdict 'error'
+11/08/14 at 13:59 : module 't_pZone' testcase 'tc_DynamicEntryZone' verdict 'error'
+                    control part verdict 'error'
+11/08/14 at 13:59 : module 't_pZone' testcase 'tc_DynamicEntryZone' verdict 'error'
+                    control part verdict 'error'
+11/08/14 at 13:59 : module 't_pZone' testcase 'tc_DynamicEntryZone' verdict 'error'
+                    control part verdict 'error'
+11/08/14 at 13:59 : module 't_pZone' testcase 'tc_DynamicEntryZone' verdict 'error'
+                    control part verdict 'error'
+11/08/14 at 13:59 : module 't_pZone' testcase 'tc_DynamicEntryZone' verdict 'error'
+                    control part verdict 'error'
+11/08/14 at 13:59 : module 't_pZone' testcase 'tc_DynamicEntryZone' verdict 'error'
+                    control part verdict 'error'
+11/08/14 at 13:59 : module 't_pZone' testcase 'tc_DynamicEntryZone' verdict 'error'
+                    control part verdict 'error'
+11/08/14 at 13:59 : module 't_pZone' testcase 'tc_DynamicEntryZone' verdict 'error'
+                    control part verdict 'error'
+11/08/14 at 13:59 : module 't_pZone' testcase 'tc_DynamicEntryZone' verdict 'error'
+                    control part verdict 'error'
+11/08/14 at 13:59 : module 't_pZone' testcase 'tc_DynamicEntryZone' verdict 'error'
+                    control part verdict 'error'
+11/08/14 at 14:00 : module 't_pZone' testcase 'tc_DynamicEntryZone' verdict 'error'
+                    control part verdict 'error'
+11/08/14 at 14:00 : simulation ended
+
+
+==============================
+project /home/ubuntu/Documents/ProjectSDL/Modificada/ModulesTesting/TestZone/Propiedades/LotParkingSystem.rdp
+11/08/14 at 14:01 : Simulation started
+11/08/14 at 14:01 : control part started
+11/08/14 at 14:01 : module 't_pZone' testcase 'tc_DynamicEntryZone' verdict 'error'
+                    control part verdict 'error'
+11/08/14 at 14:01 : module 't_pZone' testcase 'tc_DynamicEntryZone' verdict 'error'
+                    control part verdict 'error'
+11/08/14 at 14:01 : module 't_pZone' testcase 'tc_DynamicEntryZone' verdict 'error'
+                    control part verdict 'error'
+11/08/14 at 14:01 : simulation stopped
+11/08/14 at 14:01 : simulation ended
+
+
+==============================
+project /home/ubuntu/Documents/ProjectSDL/Modificada/ModulesTesting/TestZone/Propiedades/LotParkingSystem.rdp
+11/08/14 at 14:06 : Simulation started
+11/08/14 at 14:06 : control part started
+11/08/14 at 14:06 : module 't_pZone' testcase 'tc_DynamicEntryZone' verdict 'error'
+                    control part verdict 'error'
+11/08/14 at 14:06 : module 't_pZone' testcase 'tc_DynamicEntryZone' verdict 'error'
+                    control part verdict 'error'
+11/08/14 at 14:06 : module 't_pZone' testcase 'tc_DynamicEntryZone' verdict 'error'
+                    control part verdict 'error'
+11/08/14 at 14:06 : simulation ended
+
+
+==============================
+project /home/ubuntu/Documents/ProjectSDL/Modificada/ModulesTesting/TestZone/Propiedades/LotParkingSystem.rdp
+11/08/14 at 14:14 : Simulation started
+11/08/14 at 14:14 : control part started
+11/08/14 at 14:14 : module 't_pZone' testcase 'tc_DynamicEntryZone' verdict 'error'
+                    control part verdict 'error'
+11/08/14 at 14:14 : module 't_pZone' testcase 'tc_DynamicEntryZone' verdict 'error'
+                    control part verdict 'error'
+11/08/14 at 14:15 : simulation ended
+
+
+==============================
+project /home/ubuntu/Documents/ProjectSDL/Modificada/ModulesTesting/TestZone/Propiedades/LotParkingSystem.rdp
+11/08/14 at 14:16 : Simulation started
+11/08/14 at 14:16 : control part started
+11/08/14 at 14:16 : module 't_pZone' testcase 'tc_DynamicEntryZone' verdict 'error'
+                    control part verdict 'error'
+11/08/14 at 14:17 : simulation ended
+
+
+==============================
+project /home/ubuntu/Documents/ProjectSDL/Modificada/ModulesTesting/TestZone/Propiedades/LotParkingSystem.rdp
+11/08/14 at 14:19 : Simulation started
+11/08/14 at 14:19 : control part started
+11/08/14 at 14:19 : module 't_pZone' testcase 'tc_DynamicEntryZone' verdict 'error'
+                    control part verdict 'error'
+11/08/14 at 14:19 : simulation ended
+
+
+==============================
+project /home/ubuntu/Documents/ProjectSDL/Modificada/ModulesTesting/TestZone/Propiedades/LotParkingSystemOnlyZone.rdp
+11/08/14 at 14:48 : Simulation started
+11/08/14 at 14:48 : control part started
+11/08/14 at 14:48 : module 't_pZone' testcase 'tc_DynamicEntryZone' verdict 'error'
+                    control part verdict 'error'
+11/08/14 at 14:53 : simulation ended
+
+
+==============================
+project /home/ubuntu/Documents/ProjectSDL/Modificada/ModulesTesting/TestZone/Propiedades/LotParkingSystemOnlyZone.rdp
+11/08/14 at 14:53 : Simulation started
+11/08/14 at 14:53 : control part started
+11/08/14 at 14:53 : module 't_pZone' testcase 'tc_DynamicEntryZone' verdict 'error'
+                    control part verdict 'error'
+11/08/14 at 14:53 : module 't_pZone' testcase 'tc_DynamicEntryZone' verdict 'error'
+11/08/14 at 14:54 : simulation ended
+
+
+==============================
+project /home/ubuntu/Documents/ProjectSDL/Modificada/ModulesTesting/TestZone/Propiedades/LotParkingSystemOnlyZone.rdp
+11/08/14 at 14:56 : Simulation started
+11/08/14 at 14:56 : control part started
+11/08/14 at 14:56 : module 't_pZone' testcase 'tc_DynamicEntryZone' verdict 'error'
+                    control part verdict 'error'
+11/08/14 at 14:56 : simulation ended
+
+
+==============================
+project /home/ubuntu/Documents/ProjectSDL/Modificada/ModulesTesting/TestZone/Propiedades/LotParkingSystemOnlyZone.rdp
+11/08/14 at 15:13 : Simulation started
+11/08/14 at 15:13 : control part started
+11/08/14 at 15:13 : module 't_pZone' testcase 'tc_DynamicEntryZone' verdict 'error'
+                    control part verdict 'error'
+11/08/14 at 15:15 : simulation stopped
+11/08/14 at 15:15 : simulation ended

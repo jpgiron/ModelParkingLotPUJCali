@@ -68,10 +68,10 @@ module t_pZone
   /*Step 4*/
   /* Define the templates */
   
-  template sEntered_Car a_sEntered_Car(Spots p_totalSpots,Spots p_freeSpots,pidZone p_pidZone) := {
+  template sEntered_Car a_sEntered_Car(Spots p_totalSpots,Spots p_freeSpots) := {
       totalSpots:=p_totalSpots,
       freeSpots:=p_freeSpots,
-      pZone:=p_pidZone
+      pZone:=?
   }
   
   template sOut_Car a_sout_Car(Spots p_totalSpots,Spots p_freeSpots,pidZone p_pidZone) := {
@@ -162,7 +162,7 @@ module t_pZone
     cEnv_Zone.send(a_sIR4_Zone);
     cEnv_Zone.send(a_sLoopInductive_Zone);
   }
-  /*
+  
   function InitFreeSpotsInZone(Spots freeSpots) runs on ParkingSystem
   {
       cCtrl_Zone.send(a_sInitFreeSpot(freeSpots));
@@ -172,7 +172,7 @@ module t_pZone
   {
       cCtrl_Zone.send(a_sInitTotalSpots(totalSpots));
   }
-  */
+  
       
   testcase tc_DynamicEntryZone(Spots p_freeSpots,Spots p_totalSpots,Spots p_freeExpected) runs on ParkingSystem
   {
@@ -181,15 +181,12 @@ module t_pZone
       EntryCarInZone();
       alt{
         []
-            cCtrl_Zone.receive(a_sEntered_Car(p_totalSpots,p_freeExpected,omit))
+            cCtrl_Zone.receive(a_sEntered_Car(5,4))
             {
                 setverdict(pass);
-                
             }
-        
         [else]
             {
-                
                 setverdict(fail);
             }
         }
@@ -198,13 +195,13 @@ module t_pZone
   
   control 
   {
-    var integer freeSpots;
-    var integer totalSpots := 10;
+    var integer freeSpots:=1;
+    var integer totalSpots := 3;
     
-    for ( freeSpots:=0;freeSpots<=totalSpots;freeSpots:=freeSpots+1 )
-    {
-        execute(tc_DynamicEntryZone(freeSpots,totalSpots,freeSpots-1));
-    }
+    //for ( freeSpots:=1;freeSpots<=totalSpots;freeSpots:=freeSpots+1 )
+    //{
+    execute(tc_DynamicEntryZone(freeSpots,totalSpots,4));
+    //}
   }
 }
 

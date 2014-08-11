@@ -1,0 +1,342 @@
+module t_SystemParking
+{
+  
+  /*Step 1  Define the data types that will be used en the signals*/
+  
+  type integer Spots;
+    
+  ////////////////////////////////////////////////////////////////////
+  //                          Step 2
+  //                  Definitions signal pures.      
+  //   ----> Signals in/out BMainSystemManager VIA cEnv_Main <-----
+  
+  // IN
+  
+  type enumerated sCreateCtrlZone {e_sCreateCtrlZone}
+  type enumerated sReqInfoCtrlZone {e_sReqInfoCtrlZone}
+  
+  // OUT
+  
+  type enumerated sExcLimitCtrl {e_sExcLimitCtrl}
+  type enumerated sImpossibleGetInfoCtrls {e_sImpossibleGetInfoCtrls}
+  type enumerated sOkCreateCtrl {e_sOkCreateCtrl}
+  type enumerated sExcLimitZones {e_sExcLimitZones}
+  type enumerated sOkCreationZone {e_sOkCreationZone}
+  type enumerated sOkSetUp {e_sOkSetUp }
+
+   
+  ////////////////////////////////////////////////////////////////////////////////////////
+  //                        Step 3
+  //Definition the signals no pures    
+  
+  type record sEntryCar{
+    NroCtrl numCtrl,
+    NroZone numZone}
+  
+  type record sOutCar{
+    NroCtrl numCtrl,
+    NroZone numZone}  
+  
+  type record sInfoSystem{
+      Spots totalSpots,
+      Spots freeSpots,
+      listInfoCtrl listCtrl}
+  
+  type record sAddZone{        
+        NroCtrl numCtrl,
+        Spots totalSpots,
+        Spots freeSpots}
+  
+  type record sSetUpFreeSpot{
+        NroCtrl numCtrl,
+        NroZone numZone,
+        Spots freeSpots             
+  }
+  
+  type record sSetUpTotalSpot{
+  
+        NroCtrl numCtrl,
+        NroZone numZone,
+        Spots totalSpots
+        
+  }
+ 
+  ///////////////////////////////////////////////////////////////////////////////////////////
+  //                    Step 4
+  // Declare the templates ---messages ---
+  
+  template sInfoSystem a_sInfoSystem(Spots p_totalSpots,Spots p_freeSpots,listInfoCtrl p_listCtrl) := {
+  
+        totalSpots:=p_totalSpots,
+        freeSpots:=p_freeSpots,
+        listCtrl:=p_listCtrl
+  
+  }
+  
+  template sAddZone a_sAddZone (NroCtrl p_numCtrl,Spots p_totalSpots,Spots p_freeSpots) := {
+        
+        numCtrl := p_numCtrl,
+        totalSpots := p_totalSpots,
+        freeSpots := p_freeSpots
+  
+  }
+  
+  template sSetUpFreeSpot a_sSetUpFreeSpot(NroCtrl p_numCtrl,NroZone p_numZone,Spots p_freeSpots) := {
+        
+        numCtrl:=p_numCtrl,
+        numZone:=p_numZone,
+        freeSpots:=p_freeSpots
+  
+  }
+  
+  template sSetUpTotalSpot a_sSetUpTotalSpot (NroCtrl p_numCtrl,NroZone p_numZone,Spots p_totalSpots) :=  {
+        
+        numCtrl:=p_numCtrl,
+        numZone:=p_numZone,
+        totaSpots:=p_totalSpots
+  
+  }
+ 
+  template sEntryCar a_sEntryCar(NroCtrl p_numCtrl,NroZone p_numZone):=
+  {
+        numCtrl:=p_numCtrl,
+        numZone:=p_numZone
+  }
+  
+  template sOutCar a_sOutCar(NroCtrl p_numCtrl,NroZone p_numZone):=
+  {
+        numCtrl:=p_numCtrl,
+        numZone:=p_numZone
+  }
+  
+  
+  template sCreateCtrlZone a_sCreateCtrlZone := ?
+  template sReqInfoCtrlZone a_sReqInfoCtrlZone := ?
+  template sExcLimitCtrl a_sExcLimitCtrl := ?
+  template sImpossibleGetInfoCtrls a_sImpossibleGetInfoCtrls := ?
+  template sOkCreateCtrl a_sOkCreateCtrl := ?
+  template sExcLimitZones a_sExcLimitZones := ?
+  template sOkCreationZone a_sOkCreationZone := ?
+  template sOkSetUp a_sOkSetUp := ?
+ 
+  //                        Step 5 
+  // Define the ports which send the messages
+  
+  type port cEnv_pTesting_type message{
+  
+        out sEntryCar;
+        out sOutCar
+  
+  };
+  
+  type port cEnv_Main_type message{
+  
+       out sCreateCtrlZone;
+       out sReqInfoCtrlZone;
+       out sAddZone;
+       out sSetUpFreeSpot;
+       out sSetUpTotalSpot;
+       
+       in sExcLimitCtrl;
+       in sImpossibleGetInfoCtrls;
+       in sOkCreateCtrl;
+       in sExcLimitZones;
+       in sOkCreationZone;
+       in sOkSetUp;
+       in sInfoSystem
+         
+  };
+  
+  //                Step 6
+  // Declaration component
+  
+  
+  type component ParkingSystem{
+        
+        port cEnv_Main_type cEnv_Main
+        port cEnv_pTesting_type cEnv_pTesting
+  
+  }
+  
+  /*        -----> TestCases <------            */
+  //                Step 7
+  // Defining the functions and testcase
+  
+ testcase tc_EntryCarZone(NroCtrl numCtrl,NroZone numZone) runs on ParkingSystem
+  {
+        cEnv_pTesting.send(a_sEntryCar(numCtrl,numZone));
+        setverdict(pass);   
+  }
+  
+ testcase tc_OutCarZone(NroCtrl numCtrl,NroZone numZone) runs on ParkingSystem
+  {
+        cEnv_pTesting.send(a_sOutCar(numCtrl,numZone));
+        setverdict(pass);
+  }  
+  
+  testcase tc_CreatingZone(NroCtrl numCtrl,Spots totalSpots,Spots freeSpots) runs on ParkingSystem
+  {
+        cEnv_Main.send(a_sAddZone(numCtrl,totalSpots,freeSpots));
+        
+        alt{
+        []
+            cEnv_Main.receive(a_sOkCreationZone)      
+            {
+                setverdict(pass);
+            }
+        []
+            cEnv_Main.receive(a_sExcLimitZones)
+            {
+                setverdict(pass);
+            }
+        
+        [else]
+        {
+            setverdict(fail);
+        
+        }
+        }
+        stop;
+  
+  }
+  
+  testcase tc_CreatingCtrl() runs on ParkingSystem
+  {
+        cEnv_Main.send(a_sCreateCtrlZone);
+        
+        alt{
+        []
+            cEnv_Main.receive(a_sOkCreateCtrl)      
+            {
+                setverdict(pass);
+            }
+        []
+            cEnv_Main.receive(a_sExcLimitCtrl)
+            {
+                setverdict(pass);
+            }
+        
+        [else]
+        {
+            setverdict(fail);
+        
+        }
+        }
+        stop;
+  
+  }
+  
+ testcase tc_RequestInformationGral(Spots p_totalSpots,Spots p_freeSpots,listInfoCtrl p_listCtrl) runs on ParkingSystem
+  {
+        cEnv_Main.send(a_sReqInfoZones);
+        alt
+        {
+        []
+            cEnv_Main.receive(a_sInfoSystem(p_totalSpots,p_freeSpots,p_listCtrl))
+            {
+                setverdict(pass);
+                stop;
+            }
+            
+        []
+            cEnv_Main.receive(a_sImpossibleGetInfoCtrls)
+            {
+                setverdict(pass);
+                stop;
+            }
+       
+        
+        [else]
+            {
+            setverdict(fail);
+        
+            }
+        }
+        stop;
+  
+  }
+  
+ 
+  
+ testcase tc_SetTotalPlaces(NroCtrl numCtrl,NroZone numZone,Spots totalSpots) runs on ParkingSystem
+  {
+        cEnv_Main.send(a_sSetUpTotalSpot(numCtrl,numZone,totalSpots));
+        alt{
+        []
+            cEnv_LCtrl.receive(a_sOkSetUp)
+            {
+                setverdict(pass);
+                
+            }
+        
+        [else]
+            {
+                
+                setverdict(fail);
+            }
+        }
+        stop;
+  }
+  
+  testcase tc_SetFreeSpot(NroCtrl numCtrl,NroZone numZone,Spots freeSpots) runs on ParkingSystem
+  {
+        cEnv_Main.send(a_sSetUpFreeSpot(numCtrl,numZone,freeSpots));
+        alt{
+        []
+            cEnv_LCtrl.receive(a_sOkSetUp)
+            {
+                setverdict(pass);
+                
+            }
+        
+        [else]
+            {
+                
+                setverdict(fail);
+            }
+        }
+        stop;
+  }
+  
+ function f_timerWaitSystem() runs on ParkingSystem
+ {
+      timer t_waitSystem:=5;
+      t_waitSystem.start;
+      t_waitSystem.timeout;
+      return; 
+ }
+  
+  //                    Step 8
+  // Definition Control Part
+  
+  control {
+       
+       timer t_waitInitSystem:=5;
+       
+       t_waitInitSystem.start;
+       t_waitInitSystem.timeout;
+       execute(tc_CreatingCtrl()); 
+       
+       t_waitSystem.start(5);
+       t_waitSystem.timeout;
+       
+       execute(tc_EntryCarZone(0,0));
+       
+       t_waitSystem.start(5);
+       t_waitSystem.timeout;
+       
+       execute(tc_OutCarZone(0,0));
+       
+       t_waitSystem.start(5);
+       t_waitSystem.timeout;
+       
+       execute(tc_OutCarZone(0,0));
+       
+       t_waitSystem.start(5);
+       t_waitSystem.timeout;
+       
+       execute(tc_OutCarZone(0,0));
+        
+  }
+   
+}                             
