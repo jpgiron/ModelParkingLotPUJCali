@@ -1,17 +1,13 @@
 module t_SystemParking
 {
   
-  /*  Step 1  Define the data types that will be used en the signals*/
-  const integer MAX_NUM_ZONES := 5;
-  const integer MAX_NUM_CTRL := 5;
-  type integer Spots;
-  type integer NroZone (0..MAX_NUM_ZONES);
-  type integer NroCtrl (0..MAX_NUM_CTRL);
-  type integer listInfoCtrl[2][MAX_NUM_CTRL];
+  /*Step 1  Define the data types that will be used en the signals*/
   
-  ///////////////////////////////////////////////////////////////////////////////////////////
-  //                        Step 2
-  //       Definitions signal pures.      
+  type integer Spots;
+    
+  ////////////////////////////////////////////////////////////////////
+  //                          Step 2
+  //                  Definitions signal pures.      
   //   ----> Signals in/out BMainSystemManager VIA cEnv_Main <-----
   
   // IN
@@ -34,40 +30,27 @@ module t_SystemParking
   //Definition the signals no pures    
   
   type record sEntryCar{
-    
     NroCtrl numCtrl,
-    NroZone numZone
-    
-  }
+    NroZone numZone}
   
   type record sOutCar{
-    
     NroCtrl numCtrl,
-    NroZone numZone
-  
-  }  
+    NroZone numZone}  
   
   type record sInfoSystem{
-  
       Spots totalSpots,
       Spots freeSpots,
-      listInfoCtrl listCtrl
-  }
+      listInfoCtrl listCtrl}
   
-  type record sAddZone{
-        
+  type record sAddZone{        
         NroCtrl numCtrl,
         Spots totalSpots,
-        Spots freeSpots
-  
-  }
+        Spots freeSpots}
   
   type record sSetUpFreeSpot{
-  
         NroCtrl numCtrl,
         NroZone numZone,
-        Spots freeSpots
-                
+        Spots freeSpots             
   }
   
   type record sSetUpTotalSpot{

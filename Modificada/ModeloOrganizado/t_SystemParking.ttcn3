@@ -137,7 +137,7 @@ module t_SystemParking
   template sOkSetUp a_sOkSetUp := ?
  
   //                        Step 5 
-  // Define the ports which send the messages
+  // Define the ports which themselve send the messages
   
   type port cEnv_pTesting_type message{
   

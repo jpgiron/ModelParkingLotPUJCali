@@ -27,7 +27,7 @@
 <LifelineComponent type="norm" height="1320" color="#000000"/>
 </Symbol>
 
-<Symbol symbolId="SYMB2" type="mscLifeline" xCenter="110" yCenter="671" fixedDimensions="TRUE" width="176" height="1342" color="#000000" fillColor="#ffffff" dies="FALSE">
+<Symbol symbolId="SYMB2" type="mscLifeline" xCenter="110" yCenter="671" fixedDimensions="TRUE" width="176" height="1342" color="#000000" fillColor="#ffffff" dies="TRUE">
 <Description></Description>
 <Text>RTDS_start_process</Text>
 <LifelineComponent type="norm" height="1342" color="#000000"/>
@@ -55,7 +55,7 @@
 <Text>Idle</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB37" type="mscCondition" xCenter="1220" yCenter="286" fixedDimensions="FALSE" width="218" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB37" type="mscCondition" xCenter="1220" yCenter="286" fixedDimensions="FALSE" width="196" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sWaitConfirmCardReader</Text>
 </Symbol>
@@ -66,7 +66,7 @@
 <LifelineComponent type="norm" height="924" color="#000000"/>
 </Symbol>
 
-<Symbol symbolId="SYMB39" type="mscCondition" xCenter="1220" yCenter="451" fixedDimensions="FALSE" width="196" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB39" type="mscCondition" xCenter="1220" yCenter="451" fixedDimensions="FALSE" width="174" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sWaitConfirmCamera</Text>
 </Symbol>
@@ -109,12 +109,12 @@
 <Text>Idle</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB59" type="mscCondition" xCenter="1221" yCenter="814" fixedDimensions="FALSE" width="220" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB59" type="mscCondition" xCenter="1221" yCenter="814" fixedDimensions="FALSE" width="198" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sWaitConfirmCardReader</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB60" type="mscCondition" xCenter="1221" yCenter="935" fixedDimensions="FALSE" width="198" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB60" type="mscCondition" xCenter="1221" yCenter="935" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sWaitConfirmCamera</Text>
 </Symbol>
@@ -146,22 +146,22 @@
 <Text>Idle</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB66" type="mscCondition" xCenter="638" yCenter="374" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB66" type="mscCondition" xCenter="638" yCenter="374" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sWaitAssigned_i</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB67" type="mscCondition" xCenter="979" yCenter="924" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB67" type="mscCondition" xCenter="979" yCenter="924" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sWaitAssigned</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB68" type="mscCondition" xCenter="363" yCenter="825" fixedDimensions="FALSE" width="220" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB68" type="mscCondition" xCenter="363" yCenter="825" fixedDimensions="FALSE" width="198" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sWaitOkCreationEntryWay</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB69" type="mscCondition" xCenter="803" yCenter="924" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB69" type="mscCondition" xCenter="803" yCenter="924" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sOkCreation</Text>
 </Symbol>

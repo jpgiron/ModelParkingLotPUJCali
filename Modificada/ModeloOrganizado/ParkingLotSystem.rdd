@@ -48,23 +48,6 @@ sLoopInductive_Zone]</Text>
 
 </Link>
 
-<Link linkId="LINK84" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cCtrl_ZoneManager</Text>
-<Connector attachedSymbolId="SYMB4" type="chnl" isOutside="TRUE" side="x" position="-0.464285714286" endType="midarrow">
-<Text id="1">[sOkCreation,
-sExcQuantityZones,
-sIamZoneManager]</Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB6" type="chnl" isOutside="TRUE" side="x" position="-0.518518518519" endType="midarrow">
-<Text id="1">[sCreateZone,
-sConfirmZoneManager_i]</Text>
-<Text id="2"></Text>
-</Connector>
-<LinkSegment orientation="v" length="352"/>
-
-</Link>
-
 <Link linkId="LINK80" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cCtrl_Zone</Text>
 <Connector attachedSymbolId="SYMB4" type="chnl" isOutside="TRUE" side="x" position="0.785714285714" endType="midarrow">
@@ -86,18 +69,20 @@ sInitPidCtrl]</Text>
 
 </Link>
 
-<Link linkId="LINK83" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cEnv_pTesting</Text>
-<Connector attachedSymbolId="SYMB5" type="chnl" isOutside="TRUE" side="y" position="-0.8" endType="midarrow">
-<Text id="1">[sEntryCar,
-sOutCar]</Text>
+<Link linkId="LINK84" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cCtrl_ZoneManager</Text>
+<Connector attachedSymbolId="SYMB4" type="chnl" isOutside="TRUE" side="x" position="-0.464285714286" endType="midarrow">
+<Text id="1">[sOkCreation,
+sExcQuantityZones,
+sIamZoneManager]</Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="w" position="-0.540618260244" endType="midarrow">
-<Text id="1">[]</Text>
-<Text id="2">__</Text>
+<Connector attachedSymbolId="SYMB6" type="chnl" isOutside="TRUE" side="x" position="-0.518518518519" endType="midarrow">
+<Text id="1">[sCreateZone,
+sConfirmZoneManager_i]</Text>
+<Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="h" length="-649"/>
+<LinkSegment orientation="v" length="352"/>
 
 </Link>
 
@@ -128,6 +113,23 @@ sExcEntryWay]</Text>
 
 </Link>
 
+<Link linkId="LINK83" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cEnv_pTesting</Text>
+<Connector attachedSymbolId="SYMB5" type="chnl" isOutside="TRUE" side="y" position="-0.8" endType="midarrow">
+<Text id="1">[sEntryCarCtrl,
+sOutCarCtrl,
+sEntryCarZone,
+sOutCarZone]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="w" position="-0.540618260244" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">__</Text>
+</Connector>
+<LinkSegment orientation="h" length="-649"/>
+
+</Link>
+
 <Link linkId="LINK79" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cMain_CtrlManager</Text>
 <Connector attachedSymbolId="SYMB5" type="chnl" isOutside="TRUE" side="x" position="-0.0322580645161" endType="midarrow">
@@ -145,7 +147,7 @@ sOkCreationCtrl]</Text>
 
 <Link linkId="LINK77" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cMain_CtrlZone</Text>
-<Connector attachedSymbolId="SYMB5" type="chnl" isOutside="TRUE" side="y" position="0.4" endType="midarrow">
+<Connector attachedSymbolId="SYMB5" type="chnl" isOutside="TRUE" side="y" position="1.0" endType="midarrow">
 <Text id="1">[sInfoTotalCtrl,
 sOkCreateZone,
 sExcLimitZones,
@@ -164,7 +166,7 @@ sInitialConnection]</Text>
 <Text id="2"></Text>
 </Connector>
 <LinkSegment orientation="h" length="-594"/>
-<LinkSegment orientation="v" length="231"/>
+<LinkSegment orientation="v" length="198"/>
 <LinkSegment orientation="h" length="594"/>
 
 </Link>
@@ -202,6 +204,23 @@ sLoopInductive_ZoneTest]</Text>
 
 </Link>
 
+<Link linkId="LINK98" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cEnv_EntryWay</Text>
+<Connector attachedSymbolId="SYMB8" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[sLoopInductive_Entrance,
+sLoopInductive_Exit,
+sCarPassedBarrier]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="w" position="-0.793673616104" endType="midarrow">
+<Text id="1">[sUpBarrier,
+sDownBarrier]</Text>
+<Text id="2">__</Text>
+</Connector>
+<LinkSegment orientation="h" length="-660"/>
+
+</Link>
+
 <Link linkId="LINK103" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cEntryWay_Cam</Text>
 <Connector attachedSymbolId="SYMB8" type="chnl" isOutside="TRUE" side="x" position="0.821428571429" endType="midarrow">
@@ -213,6 +232,20 @@ sLoopInductive_ZoneTest]</Text>
 <Text id="2">__</Text>
 </Connector>
 <LinkSegment orientation="v" length="-147"/>
+
+</Link>
+
+<Link linkId="LINK102" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cEntryWay_CR</Text>
+<Connector attachedSymbolId="SYMB8" type="chnl" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[sDataUser]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="n" position="-0.173138128581" endType="midarrow">
+<Text id="1">[sEnableCardReader]</Text>
+<Text id="2">__</Text>
+</Connector>
+<LinkSegment orientation="v" length="-143"/>
 
 </Link>
 
@@ -246,34 +279,19 @@ sConfirmOutUser]</Text>
 
 </Link>
 
-<Link linkId="LINK102" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cEntryWay_CR</Text>
-<Connector attachedSymbolId="SYMB8" type="chnl" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
-<Text id="1">[sDataUser]</Text>
+<Link linkId="LINK100" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cEntryWay_Main</Text>
+<Connector attachedSymbolId="SYMB8" type="chnl" isOutside="TRUE" side="x" position="-0.321428571429" endType="midarrow">
+<Text id="1">[sInitEntryWay_i]</Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="n" position="-0.173138128581" endType="midarrow">
-<Text id="1">[sEnableCardReader]</Text>
-<Text id="2">__</Text>
-</Connector>
-<LinkSegment orientation="v" length="-143"/>
-
-</Link>
-
-<Link linkId="LINK98" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cEnv_EntryWay</Text>
-<Connector attachedSymbolId="SYMB8" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
-<Text id="1">[sLoopInductive_Entrance,
-sLoopInductive_Exit,
-sCarPassedBarrier]</Text>
+<Connector attachedSymbolId="SYMB5" type="chnl" isOutside="TRUE" side="x" position="-0.290322580645" endType="midarrow">
+<Text id="1">[sEnteredCarSystem,
+sOutCarSystem,
+sOkEntryWay1]</Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="w" position="-0.793673616104" endType="midarrow">
-<Text id="1">[sUpBarrier,
-sDownBarrier]</Text>
-<Text id="2">__</Text>
-</Connector>
-<LinkSegment orientation="h" length="-660"/>
+<LinkSegment orientation="v" length="220"/>
 
 </Link>
 
@@ -286,22 +304,6 @@ sDownBarrier]</Text>
 <Connector attachedSymbolId="SYMB5" type="chnl" isOutside="TRUE" side="x" position="0.516129032258" endType="midarrow">
 <Text id="1">[sOkCreateEntryWay,
 sExcEntryWay]</Text>
-<Text id="2"></Text>
-</Connector>
-<LinkSegment orientation="v" length="220"/>
-
-</Link>
-
-<Link linkId="LINK100" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cEntryWay_Main</Text>
-<Connector attachedSymbolId="SYMB8" type="chnl" isOutside="TRUE" side="x" position="-0.321428571429" endType="midarrow">
-<Text id="1">[sInitEntryWay_i]</Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB5" type="chnl" isOutside="TRUE" side="x" position="-0.290322580645" endType="midarrow">
-<Text id="1">[sEnteredCarSystem,
-sOutCarSystem,
-sOkEntryWay1]</Text>
 <Text id="2"></Text>
 </Connector>
 <LinkSegment orientation="v" length="220"/>

@@ -3,42 +3,33 @@
 <!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
 
 <DictionaryObjects language="sdl" diagramType="prcs">
-<Signal id="SIG1" name="sPlateFromEnv">
-<InputSymbols>
-<SymbolReference symbolId="SYMB602"/>
-</InputSymbols>
-</Signal>
-<Signal id="SIG2" name="timerProcessOCR" isTimer="TRUE">
+<Signal id="SIG1" name="timerProcessOCR" isTimer="TRUE">
 <InputSymbols>
 <SymbolReference symbolId="SYMB9"/>
 </InputSymbols>
 </Signal>
-<Signal id="SIG3" name="sLoopInductive_Entrance">
+<Signal id="SIG2" name="sRequestPlate">
 <InputSymbols>
-<SymbolReference symbolId="SYMB5"/>
+<SymbolReference symbolId="SYMB609"/>
 </InputSymbols>
 </Signal>
-<Signal id="SIG4" name="sPlate">
+<Signal id="SIG3" name="sPlate">
 <SignalParameterType>charstring</SignalParameterType>
 <SendSymbols>
 <SymbolReference symbolId="SYMB12"/>
 </SendSymbols>
 </Signal>
-<Signal id="SIG5" name="sLoopInductive_Exit">
+<Signal id="SIG4" name="sPlateFromEnv">
+<SignalParameterType>charstring</SignalParameterType>
 <InputSymbols>
-<SymbolReference symbolId="SYMB15"/>
+<SymbolReference symbolId="SYMB602"/>
 </InputSymbols>
 </Signal>
-<Signal id="SIG6" name="sIamCamera">
+<Signal id="SIG5" name="sIamCamera">
 <SignalParameterType>pid</SignalParameterType>
 <SendSymbols>
 <SymbolReference symbolId="SYMB604"/>
 </SendSymbols>
-</Signal>
-<Signal id="SIG7" name="sRequestPlate">
-<InputSymbols>
-<SymbolReference symbolId="SYMB11"/>
-</InputSymbols>
 </Signal>
 <Item id="ITEM1" type="process" name="pCamera" scope="current">
 <UsingSymbols>
@@ -46,72 +37,37 @@
 </UsingSymbols>
 <Body>
 <SentSignals>
-<SignalReference id="SIG4"/>
-<SignalReference id="SIG6"/>
-<SignalReference id="SIG2"/>
-</SentSignals>
-<ReceivedSignals>
-<SignalReference id="SIG2"/>
-<SignalReference id="SIG7"/>
 <SignalReference id="SIG3"/>
 <SignalReference id="SIG1"/>
 <SignalReference id="SIG5"/>
+</SentSignals>
+<ReceivedSignals>
+<SignalReference id="SIG4"/>
+<SignalReference id="SIG2"/>
+<SignalReference id="SIG1"/>
 </ReceivedSignals>
 <Transitions>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM8"/>
-<SymbolReference symbolId="SYMB56"/>
-</Transition>
-<Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM2"/>
-<SymbolReference symbolId="SYMB11"/>
-</Transition>
-<Transition statesExcluded="FALSE" priorityInputNames="">
 <StateReference itemId="ITEM5"/>
-<SymbolReference symbolId="SYMB9"/>
+<SymbolReference symbolId="SYMB609"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM6"/>
+<StateReference itemId="ITEM3"/>
 <SymbolReference symbolId="SYMB602"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM7"/>
-<SymbolReference symbolId="SYMB5"/>
-</Transition>
-<Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM7"/>
-<SymbolReference symbolId="SYMB15"/>
+<StateReference itemId="ITEM4"/>
+<SymbolReference symbolId="SYMB9"/>
 </Transition>
 </Transitions>
 </Body>
 </Item>
-<Item id="ITEM2" type="state" name="sWait4Request" parentId="ITEM1" scope="none">
-<DefiningSymbols>
-<SymbolReference symbolId="SYMB10"/>
-</DefiningSymbols>
-<UsingSymbols>
-<SymbolReference symbolId="SYMB10"/>
-</UsingSymbols>
-</Item>
-<Item id="ITEM3" type="variable" name="plate" parentId="ITEM1" scope="none" variableTypeName="charstring">
-<DefiningSymbols>
-<SymbolReference symbolId="SYMB6"/>
-</DefiningSymbols>
-</Item>
-<Item id="ITEM4" type="timer" name="timerProcessOCR" parentId="ITEM1" scope="none">
+<Item id="ITEM2" type="timer" name="timerProcessOCR" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB7"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM5" type="state" name="sWaitOCRPlate" parentId="ITEM1" scope="none">
-<DefiningSymbols>
-<SymbolReference symbolId="SYMB8"/>
-</DefiningSymbols>
-<UsingSymbols>
-<SymbolReference symbolId="SYMB8"/>
-</UsingSymbols>
-</Item>
-<Item id="ITEM6" type="state" name="sWaitPlateFromEnv" parentId="ITEM1" scope="none">
+<Item id="ITEM3" type="state" name="sWaitPlateFromEnv" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB603"/>
 </DefiningSymbols>
@@ -119,7 +75,15 @@
 <SymbolReference symbolId="SYMB603"/>
 </UsingSymbols>
 </Item>
-<Item id="ITEM7" type="state" name="Idle" parentId="ITEM1" scope="none">
+<Item id="ITEM4" type="state" name="sWaitOCRPlate" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB8"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB8"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM5" type="state" name="Idle" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB4"/>
 </DefiningSymbols>
@@ -128,6 +92,14 @@
 <SymbolReference symbolId="SYMB4"/>
 </UsingSymbols>
 </Item>
-<Item id="ITEM8" type="state" name="sWaitTimerTakePic" parentId="ITEM1" scope="none">
+<Item id="ITEM6" type="variable" name="pidEntryWay" parentId="ITEM1" scope="none" variableTypeName="PID">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB6"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM7" type="variable" name="plate" parentId="ITEM1" scope="none" variableTypeName="charstring">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB6"/>
+</DefiningSymbols>
 </Item>
 </DictionaryObjects>

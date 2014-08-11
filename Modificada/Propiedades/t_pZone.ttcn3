@@ -1,0 +1,69 @@
+module t_pZone
+{
+  /*Step 1*/ 
+  /*Define the data types that will be used in the signals*/
+  
+  type integer Spots;
+  type integer pidCtrl;
+  type integer pidZone;
+  
+  /*Step 2*/
+  /* Define the signals that have no parameters */
+  /* Channel cEnv_Zone */
+  type enumerated sIR1_Zone {e_sIR1_Zone}
+  type enumerated sIR2_Zone {e_sIR2_Zone} 
+  type enumerated sIR3_Zone {e_sIR3_Zone}
+  type enumerated sIR4_Zone {e_sIR4_Zone}
+  type enumerated sLoopInductive {e_sLoopInductive} 
+  /* Channel cCtrl_Zone*/
+  type enumerated sReqInfo {e_sReqInfo}
+  type enumerated sOkInitPid {sOkInitPid}
+  
+  /* Step 3 */
+  /* Define the signals that have parameters */
+  /* Channel cCtrl_Zone */
+  
+  /* IN to pZone*/
+  
+  type record sInitFreeSpot
+  {
+    Spots Spots
+  }
+  type record sInitTotalSpots
+  {
+    Spots freeSpot
+  }
+  
+  type record sInitPidCtrl
+  {
+    pidCtrl nCtrl;
+  }
+  
+  /* OUT from pZone*/
+  type record sEntered_Car
+  {
+    Spots totalSpots,
+    Spots freeSpots,
+    pidZone pZone
+  }
+  type enumerated sOut_Car
+  {
+    Spots totalSpots,
+    Spots freeSpots,
+    pidZone pZone
+  }
+  type enumerated sOkInit
+  {
+    Spots totalSpots,
+    Spots freeSpots,
+    pidZone pZone
+  }
+  type enumerated sInfoZone
+  {
+    Spots totalSpots,
+    Spots freeSpots,
+    pidZone pZone
+  }
+  
+
+}
