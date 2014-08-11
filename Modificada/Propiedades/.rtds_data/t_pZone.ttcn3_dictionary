@@ -5,4 +5,78 @@
 <DictionaryObjects language="sdl">
 <Item id="ITEM1" type="ttcn_module" name="t_pZone" scope="current">
 </Item>
+<Item id="ITEM10" type="type" name="sInitFreeSpot" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM11" type="type" name="sEntered_Car" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM12" type="type" name="sReqInfo" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM13" type="ttcn_function" name="OutCarInZone" parentId="ITEM1" scope="none" runsOn="ITEM14">
+</Item>
+<Item id="ITEM14" type="ttcn_component" name="ParkingSystem" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM15" type="variable" name="RTDS_param1" parentId="ITEM13" scope="none" variableTypeName="Spots" isFormalParam="TRUE">
+</Item>
+<Item id="ITEM16" type="ttcn_port_type" name="cCtrl_Zone_type" parentId="ITEM1" scope="none">
+<TtcnPortTypeElement way="in" typeId="ITEM10"/>
+<TtcnPortTypeElement way="in" typeId="ITEM9"/>
+<TtcnPortTypeElement way="in" typeId="ITEM12"/>
+<TtcnPortTypeElement way="in" typeId="ITEM17"/>
+<TtcnPortTypeElement way="out" typeId="ITEM11"/>
+<TtcnPortTypeElement way="out" typeId="ITEM18"/>
+<TtcnPortTypeElement way="out" typeId="ITEM19"/>
+<TtcnPortTypeElement way="out" typeId="ITEM8"/>
+<TtcnPortTypeElement way="out" typeId="ITEM20"/>
+<TtcnPortTypeElement way="in" typeId="ITEM10"/>
+<TtcnPortTypeElement way="in" typeId="ITEM9"/>
+<TtcnPortTypeElement way="in" typeId="ITEM12"/>
+<TtcnPortTypeElement way="in" typeId="ITEM17"/>
+<TtcnPortTypeElement way="out" typeId="ITEM11"/>
+<TtcnPortTypeElement way="out" typeId="ITEM18"/>
+<TtcnPortTypeElement way="out" typeId="ITEM19"/>
+<TtcnPortTypeElement way="out" typeId="ITEM8"/>
+<TtcnPortTypeElement way="out" typeId="ITEM20"/>
+</Item>
+<Item id="ITEM17" type="type" name="sInitPidCtrl" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM18" type="type" name="sOut_Car" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM19" type="type" name="sOkInit" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM2" type="ttcn_port_type" name="cEnv_Zone_type" parentId="ITEM1" scope="none">
+<TtcnPortTypeElement way="in" typeId="ITEM3"/>
+<TtcnPortTypeElement way="in" typeId="ITEM4"/>
+<TtcnPortTypeElement way="in" typeId="ITEM5"/>
+<TtcnPortTypeElement way="in" typeId="ITEM6"/>
+<TtcnPortTypeElement way="in" typeId="ITEM7"/>
+<TtcnPortTypeElement way="in" typeId="ITEM3"/>
+<TtcnPortTypeElement way="in" typeId="ITEM4"/>
+<TtcnPortTypeElement way="in" typeId="ITEM5"/>
+<TtcnPortTypeElement way="in" typeId="ITEM6"/>
+<TtcnPortTypeElement way="in" typeId="ITEM7"/>
+</Item>
+<Item id="ITEM20" type="type" name="sOkInitPid" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM21" type="ttcn_function" name="EntryCarInZone" parentId="ITEM1" scope="none" runsOn="ITEM14">
+</Item>
+<Item id="ITEM22" type="ttcn_port" name="cCtrl_Zone" parentId="ITEM14" scope="none" instanciatedTypeId="ITEM16">
+</Item>
+<Item id="ITEM23" type="ttcn_port" name="cEnv_Zone" parentId="ITEM14" scope="none" instanciatedTypeId="ITEM2">
+</Item>
+<Item id="ITEM24" type="ttcn_test_case" name="tc_EntryCarInZone" parentId="ITEM1" scope="none" runsOn="ITEM14" systemInterface="ITEM14">
+</Item>
+<Item id="ITEM3" type="type" name="sIR1_Zone" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM4" type="type" name="sIR2_Zone" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM5" type="type" name="sIR3_Zone" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM6" type="type" name="sIR4_Zone" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM7" type="type" name="sLoopInductive_Zone" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM8" type="type" name="sInfoZone" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM9" type="type" name="sInitTotalSpots" parentId="ITEM1" scope="none">
+</Item>
 </DictionaryObjects>
