@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
+
+<DictionaryObjects language="sdl" diagramType="prcs">
+<Signal id="SIG1" name="sOutCarCtrl">
+<SignalParameterType>itIndext_Ctrl</SignalParameterType>
+<InputSymbols>
+<SymbolReference symbolId="SYMB5"/>
+</InputSymbols>
+</Signal>
+<Signal id="SIG2" name="sEntryCar">
+<SignalParameterType>itIndext_Ctrl</SignalParameterType>
+<SignalParameterType>itIndex</SignalParameterType>
+<SendSymbols>
+<SymbolReference symbolId="SYMB7"/>
+</SendSymbols>
+</Signal>
+<Signal id="SIG3" name="sOutCarZone">
+<SignalParameterType>itIndex</SignalParameterType>
+<InputSymbols>
+<SymbolReference symbolId="SYMB42"/>
+</InputSymbols>
+</Signal>
+<Signal id="SIG4" name="sEntryCarZone">
+<SignalParameterType>itIndex</SignalParameterType>
+<InputSymbols>
+<SymbolReference symbolId="SYMB40"/>
+</InputSymbols>
+</Signal>
+<Signal id="SIG5" name="sOutCar">
+<SignalParameterType>itIndext_Ctrl</SignalParameterType>
+<SignalParameterType>itIndex</SignalParameterType>
+<SendSymbols>
+<SymbolReference symbolId="SYMB8"/>
+</SendSymbols>
+</Signal>
+<Signal id="SIG6" name="sEntryCarCtrl">
+<SignalParameterType>itIndext_Ctrl</SignalParameterType>
+<InputSymbols>
+<SymbolReference symbolId="SYMB4"/>
+</InputSymbols>
+</Signal>
+<Item id="ITEM1" type="process" name="pTesting" scope="current">
+<UsingSymbols>
+<SymbolReference symbolId="SYMB1"/>
+</UsingSymbols>
+<Body>
+<SentSignals>
+<SignalReference id="SIG5"/>
+<SignalReference id="SIG2"/>
+</SentSignals>
+<ReceivedSignals>
+<SignalReference id="SIG3"/>
+<SignalReference id="SIG1"/>
+<SignalReference id="SIG4"/>
+<SignalReference id="SIG6"/>
+</ReceivedSignals>
+<Transitions>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM4"/>
+<SymbolReference symbolId="SYMB4"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM4"/>
+<SymbolReference symbolId="SYMB5"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM5"/>
+<SymbolReference symbolId="SYMB40"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM6"/>
+<SymbolReference symbolId="SYMB42"/>
+</Transition>
+</Transitions>
+</Body>
+</Item>
+<Item id="ITEM2" type="variable" name="NroCtrl" parentId="ITEM1" scope="none" variableTypeName="INTEGER">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB6"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM3" type="variable" name="NroZone" parentId="ITEM1" scope="none" variableTypeName="INTEGER">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB6"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM4" type="state" name="Idle" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB2"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB2"/>
+<SymbolReference symbolId="SYMB9"/>
+<SymbolReference symbolId="SYMB10"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM5" type="state" name="sWaitZoneEntry" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB38"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB38"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM6" type="state" name="sWaitZoneOut" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB39"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB39"/>
+</UsingSymbols>
+</Item>
+</DictionaryObjects>

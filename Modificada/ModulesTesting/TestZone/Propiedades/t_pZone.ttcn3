@@ -5,7 +5,6 @@ module t_pZone
   
   type integer Spots;
   type integer pidCtrl;
-  type integer pidZone;
   
   /*Step 2*/
   /* Define the signals that have no parameters */
@@ -40,50 +39,46 @@ module t_pZone
   }
   
   /* OUT from pZone*/
-  type record sEntered_Car
+  
+  type record sInfoZone
   {
     Spots totalSpots,
-    Spots freeSpots,
-    pidZone pZone
+    Spots freeSpots
+  }
+  
+  type record sEntered_Car
+  {
+      Spots totalSpots,
+      Spots freeSpots
   }
   type record sOut_Car
   {
     Spots totalSpots,
-    Spots freeSpots,
-    pidZone pZone
+    Spots freeSpots
   }
   type record sOkInit
   {
     Spots totalSpots,
-    Spots freeSpots,
-    pidZone pZone
+    Spots freeSpots
   }
-  type record sInfoZone
-  {
-    Spots totalSpots,
-    Spots freeSpots,
-    pidZone pZone
-  }
+  
   
   /*Step 4*/
   /* Define the templates */
   
   template sEntered_Car a_sEntered_Car(Spots p_totalSpots,Spots p_freeSpots) := {
       totalSpots:=p_totalSpots,
-      freeSpots:=p_freeSpots,
-      pZone:=?
+      freeSpots:=p_freeSpots
   }
   
-  template sOut_Car a_sout_Car(Spots p_totalSpots,Spots p_freeSpots,pidZone p_pidZone) := {
+  template sOut_Car a_sOut_Car(Spots p_totalSpots,Spots p_freeSpots) := {
       totalSpots:=p_totalSpots,
-      freeSpots:=p_freeSpots,
-      pZone:=p_pidZone
+      freeSpots:=p_freeSpots
   }
   
-  template sInfoZone a_sInfoZone(Spots p_totalSpots,Spots p_freeSpots,pidZone p_pidZone) := {
+  template sInfoZone a_sInfoZone(Spots p_totalSpots,Spots p_freeSpots) := {
       totalSpots:=p_totalSpots,
-      freeSpots:=p_freeSpots,
-      pZone:=p_pidZone
+      freeSpots:=p_freeSpots
   }
   
   template sInitFreeSpot a_sInitFreeSpot(Spots p_freeSpots) := {
@@ -100,7 +95,13 @@ module t_pZone
   
   template sInitPidCtrl a_sInitPidCtrl(pidCtrl p_pidCtrl) := {
   
-      n:=p_pidCtrl
+      nCtrl:=p_pidCtrl
+  }
+  
+  template sOkInit a_sOkInit(Spots p_totalSpots,Spots p_freeSpots) :=
+  {
+    totalSpots:=p_totalSpots,
+    freeSpots:=p_freeSpots
   }
   
   template sIR1_Zone a_sIR1_Zone:=?
@@ -174,14 +175,16 @@ module t_pZone
   }
   
       
-  testcase tc_DynamicEntryZone(Spots p_freeSpots,Spots p_totalSpots,Spots p_freeExpected) runs on ParkingSystem
+  testcase tc_DynamicEntryZone(Spots p_totalSpots,Spots p_freeExpected) runs on ParkingSystem
   {
-      //InitFreeSpotsInZone(p_freeSpots);
-      //InitTotalSpotsInZone(p_totalSpots);
+      //EntryCarInZone();
+      //var sInfoZone p_p;
+      //p_p:={p_totalSpots,p_freeExpected,-};
       EntryCarInZone();
+      
       alt{
         []
-            cCtrl_Zone.receive(a_sEntered_Car(5,4))
+            cCtrl_Zone.receive(a_sEntered_Car(p_totalSpots,p_freeExpected))
             {
                 setverdict(pass);
             }
@@ -195,13 +198,9 @@ module t_pZone
   
   control 
   {
-    var integer freeSpots:=1;
-    var integer totalSpots := 3;
-    
-    //for ( freeSpots:=1;freeSpots<=totalSpots;freeSpots:=freeSpots+1 )
-    //{
-    execute(tc_DynamicEntryZone(freeSpots,totalSpots,4));
-    //}
+    //var integer freeSpots:=4;
+    var integer totalSpots:=5;
+    execute(tc_DynamicEntryZone(totalSpots,4));
   }
 }
 

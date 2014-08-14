@@ -10,46 +10,33 @@ Up_freeSpotsqhNhUsnglvardeclqh]q(hoq}q(h
 hhU3hUvarnameqh]q hhubaub(hoq!}q"(h
 Up_totalSpotsq#hNhhh]q$(hoq%}q&(h
 h#hU3hUvarnameq'h]q(hhubaubeh(hoq)}q*(h
-U¨DCL p_freeSpots , p_totalSpots i_spots , freeSpots , totalSpots i_spots , tmpfreeSpots , tmptotalSpots i_spots , PidZone , pid_Ctrl , pidCtrl Pid , infoTableZone InfoZone ;q+hU0hU	cmpnddeclq,h]q-(h(hoq.}q/(h
-UfreeSpots , totalSpots i_spotsq0hU6hUvardeclq1h]q2((hoq3}q4(h
-Ui_spotsq5hU6hUtypenameq6h]q7hh.ub(hoq8}q9(h
+UlDCL p_freeSpots , p_totalSpots i_spots , freeSpots , totalSpots i_spots , PidZone , pid_Ctrl , pidCtrl PID ;q+hU0hU	cmpnddeclq,h]q-(h(hoq.}q/(h
+UfreeSpots , totalSpots i_spotsq0hU3hUvardeclq1h]q2((hoq3}q4(h
+Ui_spotsq5hU3hUtypenameq6h]q7hh.ub(hoq8}q9(h
 U	freeSpotsq:hNhhh]q;(hoq<}q=(h
-h:hU6hUvarnameq>h]q?hh.ubaub(hoq@}qA(h
+h:hU3hUvarnameq>h]q?hh.ubaub(hoq@}qA(h
 U
 totalSpotsqBhNhhh]qC(hoqD}qE(h
-hBhU6hUvarnameqFh]qGhh.ubaubehh)ub(hoqH}qI(h
-U$tmpfreeSpots , tmptotalSpots i_spotsqJhU6hUvardeclqKh]qL((hoqM}qN(h
-Ui_spotsqOhU6hUtypenameqPh]qQhhHub(hoqR}qS(h
-UtmpfreeSpotsqThNhhh]qU(hoqV}qW(h
-hThU6hUvarnameqXh]qYhhHubaub(hoqZ}q[(h
-UtmptotalSpotsq\hNhhh]q](hoq^}q_(h
-h\hU6hUvarnameq`h]qahhHubaubehh)ub(hoqb}qc(h
-U PidZone , pid_Ctrl , pidCtrl PidqdhU7hUvardeclqeh]qf((hoqg}qh(h
-UPidqihU7hUtypenameqjh]qkhhbub(hoql}qm(h
-UPidZoneqnhNhhh]qo(hoqp}qq(h
-hnhU7hUvarnameqrh]qshhbubaub(hoqt}qu(h
-Upid_CtrlqvhNhhh]qw(hoqx}qy(h
-hvhU7hUvarnameqzh]q{hhbubaub(hoq|}q}(h
-UpidCtrlq~hNhhh]q(hoqÄ}qÅ(h
-h~hU7hUvarnameqÇh]qÉhhbubaubehh)ub(hoqÑ}qÖ(h
-UinfoTableZone InfoZoneqÜhU7hUvardeclqáh]qà((hoqâ}qä(h
-UInfoZoneqãhU7hUtypenameqåh]qçhhÑub(hoqé}qè(h
-UinfoTableZoneqêhNhhh]që(hoqí}qì(h
-hêhU7hUvarnameqîh]qïhhÑubaubehh)ubeh(hoqñ}qó(h
-U„DCL
+hBhU3hUvarnameqFh]qGhh.ubaubehh)ub(hoqH}qI(h
+U PidZone , pid_Ctrl , pidCtrl PIDqJhU4hUvardeclqKh]qL((hoqM}qN(h
+UPIDqOhU4hUtypenameqPh]qQhhHub(hoqR}qS(h
+UPidZoneqThNhhh]qU(hoqV}qW(h
+hThU4hUvarnameqXh]qYhhHubaub(hoqZ}q[(h
+Upid_Ctrlq\hNhhh]q](hoq^}q_(h
+h\hU4hUvarnameq`h]qahhHubaub(hoqb}qc(h
+UpidCtrlqdhNhhh]qe(hoqf}qg(h
+hdhU4hUvarnameqhh]qihhHubaubehh)ubeh(hoqj}qk(h
+UäDCL
 
 /* Params Signals */
-p_freeSpots,p_totalSpots i_spots,
+p_freeSpots,p_totalSpots i_spots,freeSpots,totalSpots i_spots,
+PidZone,pid_Ctrl,pidCtrl PID;
 
-/*Block Zone's Registers */
-freeSpots,totalSpots i_spots,tmpfreeSpots,tmptotalSpots i_spots,
-PidZone,pid_Ctrl,pidCtrl Pid, infoTableZone InfoZone;
-
-TIMER tEnter,tOut;qòhNhUdatadeclqôh]qö(h)(hoqõ}qú(h
-UTIMER tEnter , tOut ;qùhU9hU	cmpnddeclqûh]qü((hoq†}q°(h
-UtEnterq¢hU9hU	timerdeclq£h]q§(hoq•}q¶(h
-UtEnterqßhU9hU	timernameq®h]q©hh†ubahhõub(hoq™}q´(h
-UtOutq¨hU9hU	timerdeclq≠h]qÆ(hoqØ}q∞(h
-UtOutq±hU9hU	timernameq≤h]q≥hh™ubahhõubehhñubehNubububcrtds.editor.business.ElementReference
+TIMER tEnter,tOut;qlhNhUdatadeclqmh]qn(h)(hoqo}qp(h
+UTIMER tEnter , tOut ;qqhU6hU	cmpnddeclqrh]qs((hoqt}qu(h
+UtEnterqvhU6hU	timerdeclqwh]qx(hoqy}qz(h
+UtEnterq{hU6hU	timernameq|h]q}hhtubahhoub(hoq~}q(h
+UtOutqÄhU6hU	timerdeclqÅh]qÇ(hoqÉ}qÑ(h
+UtOutqÖhU6hU	timernameqÜh]qáhh~ubahhoubehhjubehNubububcrtds.editor.business.ElementReference
 SymbolReference
-q¥)Åqµ}q∂(Uprojectq∑h∑QUsymbolIdq∏USYMB42qπUdiagramFileNameq∫U[/home/ubuntu/Documents/ProjectSDL/Modificada/ModulesTesting/TestZone/Propiedades/pZone2.rddqªubKáqºh.h¥)ÅqΩ}qæ(h∑h∑Qh∏hπh∫hªubKáqøhHh¥)Åq¿}q¡(h∑h∑Qh∏hπh∫hªubKáq¬hbh¥)Åq√}qƒ(h∑h∑Qh∏hπh∫hªubKáq≈hÑh¥)Åq∆}q«(h∑h∑Qh∏hπh∫hªubKáq»h†h¥)Åq…}q (h∑h∑Qh∏hπh∫hªubK	áqÀh™h¥)ÅqÃ}qÕ(h∑h∑Qh∏hπh∫hªubK	áqŒeÜqœu.
+qà)Åqâ}qä(UprojectqãhãQUsymbolIdqåUSYMB42qçUdiagramFileNameqéU[/home/ubuntu/Documents/ProjectSDL/Modificada/ModulesTesting/TestZone/Propiedades/pZone2.rddqèubKáqêh.hà)Åqë}qí(hãhãQhåhçhéhèubKáqìhHhà)Åqî}qï(hãhãQhåhçhéhèubKáqñhthà)Åqó}qò(hãhãQhåhçhéhèubKáqôh~hà)Åqö}qõ(hãhãQhåhçhéhèubKáqúeÜqùu.

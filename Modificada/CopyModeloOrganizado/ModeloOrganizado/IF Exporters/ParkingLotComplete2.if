@@ -1,0 +1,4 @@
+
+system System;
+type RTDS_character = range 32..127;
+type RTDS_charstring = string[128] of RTDS_character;

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
+
+<DictionaryObjects language="sdl" diagramType="prcd">
+<Item id="ITEM1" type="procedure" name="getPlate" scope="current" procedureKind="NORMAL_PROCEDURE" procedureParamTypes="tPlates INTEGER" procedureReturnType="charstring">
+<UsingSymbols>
+<SymbolReference symbolId="SYMB2"/>
+</UsingSymbols>
+<Prototype>
+<Signature>getPlate</Signature>
+<PrototypeSymbol>
+<SymbolReference symbolId="SYMB3"/>
+<PrototypeText>getPlate</PrototypeText>
+</PrototypeSymbol>
+</Prototype>
+<Body>
+</Body>
+</Item>
+<Item id="ITEM2" type="variable" name="plates" parentId="ITEM1" scope="none" variableTypeName="tPlates" isFormalParam="TRUE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB4"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM3" type="variable" name="output" parentId="ITEM1" scope="none" variableTypeName="charstring">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB4"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM4" type="variable" name="i" parentId="ITEM1" scope="none" variableTypeName="INTEGER" isFormalParam="TRUE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB4"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM5" type="variable" name="varTmp" parentId="ITEM1" scope="none" variableTypeName="INTEGER">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB4"/>
+</DefiningSymbols>
+</Item>
+</DictionaryObjects>

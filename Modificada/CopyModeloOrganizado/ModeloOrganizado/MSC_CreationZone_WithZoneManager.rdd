@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Diagram SYSTEM "rtdsDiagram.dtd">
+
+<Diagram language="sdl" type="msc" name="MSC_CreationZone_WithZoneManager" showMsgData="full" linksCrossingAllowed="FALSE" cellWidthMm="4">
+
+<DiagramPartition name="Part. 0" nbPagesH="3" nbPagesV="2">
+<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="0.0" bottomMargin="0.0" leftMargin="0.0" rightMargin="0.0" pageFooter="FALSE"/>
+
+<Symbol symbolId="SYMB1" type="mscExternalFrm" xCenter="892" yCenter="841" fixedDimensions="TRUE" width="1741" height="1617" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text></Text>
+
+<Symbol symbolId="SYMB10" type="mscLifeline" xCenter="1309" yCenter="396" fixedDimensions="TRUE" width="66" height="506" color="#000000" fillColor="#ffffff" dies="FALSE">
+<Description></Description>
+<Text>Zone</Text>
+<LifelineComponent type="norm" height="198" color="#000000"/>
+<LifelineComponent type="norm" height="176" color="#000000"/>
+<LifelineComponent type="norm" height="132" color="#000000"/>
+</Symbol>
+
+<Symbol symbolId="SYMB12" type="mscCondition" xCenter="429" yCenter="473" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>Idle</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB13" type="mscCondition" xCenter="770" yCenter="88" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>Idle</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB14" type="mscMscRef" xCenter="1232" yCenter="264" fixedDimensions="TRUE" width="396" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>MSC_SetUpParametersZone</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB15" type="mscLifeline" xCenter="429" yCenter="330" fixedDimensions="TRUE" width="176" height="616" color="#000000" fillColor="#ffffff" dies="FALSE">
+<Description></Description>
+<Text>pMainSystemManager</Text>
+<LifelineComponent type="norm" height="319" color="#000000"/>
+<LifelineComponent type="norm" height="176" color="#000000"/>
+<LifelineComponent type="norm" height="121" color="#000000"/>
+</Symbol>
+
+<Symbol symbolId="SYMB18" type="mscCondition" xCenter="429" yCenter="77" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>Idle</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB23" type="mscCondition" xCenter="1144" yCenter="99" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>Idle</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB46" type="mscCondition" xCenter="1309" yCenter="209" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>Idle</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB47" type="mscCondition" xCenter="1144" yCenter="473" fixedDimensions="TRUE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>Idle</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB48" type="mscCondition" xCenter="1309" yCenter="473" fixedDimensions="TRUE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>Idle</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB49" type="mscCondition" xCenter="429" yCenter="264" fixedDimensions="FALSE" width="220" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>sWaitConfirmCreateZone</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB5" type="mscCondition" xCenter="770" yCenter="473" fixedDimensions="TRUE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>Idle</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB50" type="mscCondition" xCenter="770" yCenter="264" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>sWaitAck_BZone</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB6" type="mscLifeline" xCenter="33" yCenter="330" fixedDimensions="TRUE" width="44" height="638" color="#000000" fillColor="#ffffff" dies="FALSE">
+<Description></Description>
+<Text>Env</Text>
+<LifelineComponent type="norm" height="330" color="#000000"/>
+<LifelineComponent type="norm" height="176" color="#000000"/>
+<LifelineComponent type="norm" height="132" color="#000000"/>
+</Symbol>
+
+<Symbol symbolId="SYMB8" type="mscLifeline" xCenter="1144" yCenter="341" fixedDimensions="TRUE" width="132" height="616" color="#000000" fillColor="#ffffff" dies="FALSE">
+<Description></Description>
+<Text>pZoneManager</Text>
+<LifelineComponent type="norm" height="308" color="#000000"/>
+<LifelineComponent type="norm" height="176" color="#000000"/>
+<LifelineComponent type="norm" height="132" color="#000000"/>
+</Symbol>
+
+<Symbol symbolId="SYMB9" type="mscLifeline" xCenter="770" yCenter="330" fixedDimensions="TRUE" width="66" height="616" color="#000000" fillColor="#ffffff" dies="FALSE">
+<Description></Description>
+<Text>pCtrl(0)</Text>
+<LifelineComponent type="norm" height="319" color="#000000"/>
+<LifelineComponent type="norm" height="176" color="#000000"/>
+<LifelineComponent type="norm" height="121" color="#000000"/>
+</Symbol>
+</Symbol>
+
+<Link linkId="LINK65" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sOkCreationZone</Text>
+<Connector attachedSymbolId="SYMB15" type="mscvoid" isOutside="TRUE" side="y" position="0.285714285714" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB6" type="mscvoid" isOutside="TRUE" side="y" position="0.275862068966" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK86" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sCreateZone_(totalSpots=20,freeSpots=15)</Text>
+<Connector attachedSymbolId="SYMB15" type="mscvoid" isOutside="TRUE" side="y" position="-0.607142857143" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB9" type="mscvoid" isOutside="TRUE" side="y" position="-0.607142857143" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK64" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sAddZone(numCtrl=0,totalSpots=20,freeSpots=15)</Text>
+<Connector attachedSymbolId="SYMB6" type="mscvoid" isOutside="TRUE" side="y" position="-0.689655172414" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB15" type="mscvoid" isOutside="TRUE" side="y" position="-0.714285714286" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK80" type="instcre" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text></Text>
+<Connector attachedSymbolId="SYMB8" type="mscvoid" isOutside="TRUE" side="y" position="-0.607142857143" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB10" type="mscvoid" isOutside="TRUE" side="y" position="-0.95652173913" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK88" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sOkCreation(InfoZone)</Text>
+<Connector attachedSymbolId="SYMB8" type="mscvoid" isOutside="TRUE" side="y" position="-0.0357142857143" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB9" type="mscvoid" isOutside="TRUE" side="y" position="0.0" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK85" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sOkCreateZone(infoCtrl)</Text>
+<Connector attachedSymbolId="SYMB9" type="mscvoid" isOutside="TRUE" side="y" position="0.142857142857" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB15" type="mscvoid" isOutside="TRUE" side="y" position="0.142857142857" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK87" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sCreateZone(totalSpots=20,freeSpots=15,pidCtrl)</Text>
+<Connector attachedSymbolId="SYMB9" type="mscvoid" isOutside="TRUE" side="y" position="-0.428571428571" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB8" type="mscvoid" isOutside="TRUE" side="y" position="-0.464285714286" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+</DiagramPartition>
+
+</Diagram>

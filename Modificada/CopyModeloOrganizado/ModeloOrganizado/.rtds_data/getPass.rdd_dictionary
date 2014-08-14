@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
+
+<DictionaryObjects language="sdl" diagramType="prcd">
+<Item id="ITEM1" type="procedure" name="getPass" scope="current" procedureKind="NORMAL_PROCEDURE" procedureParamTypes="tDATABASE DataUser" procedureReturnType="BOOLEAN">
+<UsingSymbols>
+<SymbolReference symbolId="SYMB2"/>
+</UsingSymbols>
+<Prototype>
+<Signature>getPass</Signature>
+<PrototypeSymbol>
+<SymbolReference symbolId="SYMB3"/>
+<PrototypeText>getPass</PrototypeText>
+</PrototypeSymbol>
+</Prototype>
+<Body>
+</Body>
+</Item>
+<Item id="ITEM2" type="variable" name="data_User" parentId="ITEM1" scope="none" variableTypeName="DataUser" isFormalParam="TRUE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB4"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM3" type="variable" name="vPlateTmp" parentId="ITEM1" scope="none" variableTypeName="charstring">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB4"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM4" type="variable" name="pass" parentId="ITEM1" scope="none" variableTypeName="BOOLEAN">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB4"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM5" type="variable" name="dataBase" parentId="ITEM1" scope="none" variableTypeName="tDATABASE" isFormalParam="TRUE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB4"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM6" type="variable" name="vIDTmp" parentId="ITEM1" scope="none" variableTypeName="INTEGER">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB4"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM7" type="variable" name="vPlate" parentId="ITEM1" scope="none" variableTypeName="charstring">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB4"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM8" type="variable" name="vID" parentId="ITEM1" scope="none" variableTypeName="INTEGER">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB4"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM9" type="variable" name="Index" parentId="ITEM1" scope="none" variableTypeName="INTEGER">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB4"/>
+</DefiningSymbols>
+</Item>
+</DictionaryObjects>
