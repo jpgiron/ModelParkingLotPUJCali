@@ -22,23 +22,6 @@
 </Symbol>
 </Symbol>
 
-<Link linkId="LINK406" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cEnv_pTesting</Text>
-<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="x" position="-0.363636363636" endType="midarrow">
-<Text id="1">[sEntryCarCtrl,
-sOutCarCtrl,
-sEntryCarZone,
-sOutCarZone]</Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="n" position="-0.155322862129" endType="midarrow">
-<Text id="1">[]</Text>
-<Text id="2"></Text>
-</Connector>
-<LinkSegment orientation="v" length="-264"/>
-
-</Link>
-
 <Link linkId="LINK408" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cEnv_Main</Text>
 <Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
@@ -65,20 +48,20 @@ sExcEntryWay]</Text>
 
 </Link>
 
-<Link linkId="LINK414" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cEnv_EntryWay</Text>
-<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
-<Text id="1">[sLoopInductive_Entrance,
-sLoopInductive_Exit,
-sCarPassedBarrier]</Text>
+<Link linkId="LINK406" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cEnv_pTesting</Text>
+<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="x" position="-0.363636363636" endType="midarrow">
+<Text id="1">[sEntryCarCtrl,
+sOutCarCtrl,
+sEntryCarZone,
+sOutCarZone]</Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="e" position="-0.317419354839" endType="midarrow">
-<Text id="1">[sUpBarrier,
-sDownBarrier]</Text>
+<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="n" position="-0.155322862129" endType="midarrow">
+<Text id="1">[]</Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="h" length="579"/>
+<LinkSegment orientation="v" length="-264"/>
 
 </Link>
 
@@ -98,17 +81,36 @@ sLoopInductive_Zone]</Text>
 
 </Link>
 
-<Link linkId="LINK420" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cEntryWay_Cam</Text>
-<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="x" position="-0.227272727273" endType="midarrow">
-<Text id="1">[sPlate]</Text>
+<Link linkId="LINK414" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cEnv_EntryWay</Text>
+<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[sLoopInductive_Entrance,
+sLoopInductive_Exit,
+sCarPassedBarrier]</Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB33" type="chnl" isOutside="TRUE" side="x" position="-0.290322580645" endType="midarrow">
-<Text id="1">[sRequestPlate]</Text>
+<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="e" position="-0.317419354839" endType="midarrow">
+<Text id="1">[sUpBarrier,
+sDownBarrier]</Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="396"/>
+<LinkSegment orientation="h" length="579"/>
+
+</Link>
+
+<Link linkId="LINK418" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cEntryWay_CR</Text>
+<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="x" position="0.318181818182" endType="midarrow">
+<Text id="1">[sDataUser]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB33" type="chnl" isOutside="TRUE" side="x" position="0.258064516129" endType="midarrow">
+<Text id="1">[sEnableCardReader]</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="198"/>
+<LinkSegment orientation="h" length="55"/>
+<LinkSegment orientation="v" length="198"/>
 
 </Link>
 
@@ -130,19 +132,17 @@ sConfirmOutUser]</Text>
 
 </Link>
 
-<Link linkId="LINK418" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cEntryWay_CR</Text>
-<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="x" position="0.318181818182" endType="midarrow">
-<Text id="1">[sDataUser]</Text>
+<Link linkId="LINK420" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cEntryWay_Cam</Text>
+<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="x" position="-0.227272727273" endType="midarrow">
+<Text id="1">[sPlate]</Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB33" type="chnl" isOutside="TRUE" side="x" position="0.258064516129" endType="midarrow">
-<Text id="1">[sEnableCardReader]</Text>
+<Connector attachedSymbolId="SYMB33" type="chnl" isOutside="TRUE" side="x" position="-0.290322580645" endType="midarrow">
+<Text id="1">[sRequestPlate]</Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="198"/>
-<LinkSegment orientation="h" length="55"/>
-<LinkSegment orientation="v" length="198"/>
+<LinkSegment orientation="v" length="396"/>
 
 </Link>
 
@@ -325,7 +325,7 @@ SIGNAL sInitFreeSpot(i_spots),sInitTotalSpots(i_spots),sReqInfo,sInitPidCtrl(PID
 
 /*---&gt; Signals from pZone to pCrtl &lt;----*/
 
-SIGNAL sEntered_Car(i_spots),sOut_Car(i_spots),sOkInit,sInfoZone(i_spots),sOkInitPid;
+SIGNAL sEntered_Car(i_spots),sOut_Car(i_spots),sOkInit,sInfoZone(i_spots,i_spots),sOkInitPid;
       
 /*Channel cMain_Zone*/
 /*---&gt; Signals from pTesting to pZone&lt;----*/
@@ -338,11 +338,11 @@ SIGNAL sIR1_ZoneTest,sIR2_ZoneTest,sIR3_ZoneTest,sIR4_ZoneTest,sLoopInductive_Zo
 
 /*---&gt; Signals from pCtrl to pZoneManager &lt;---*/
 
-SIGNAL sCreateZone(i_spots,i_spots,PID),sConfirmZoneManager_i(PID);
+SIGNAL sCreateZone(i_spots,i_spots),sConfirmZoneManager_i;
 
 /*---&gt;Signals from pZoneManager to pCtrl &lt;---*/
 
-SIGNAL sOkCreation(InfoZone),sExcQuantityZones,sIamZoneManager(PID);
+SIGNAL sOkCreation,sExcQuantityZones,sIamZoneManager;
 
 /*channel cCreator_ZoneManager*/
 
@@ -355,11 +355,11 @@ SIGNAL sConfirmZoneManager(PID);
 
 /*---&gt; Signals from pCtrl to pCreatorZoneManager &lt;---*/
 
-SIGNAL sCreateZoneManager(PID);
+SIGNAL sCreateZoneManager;
 
 /*---&gt;Signals from pCreatorZoneManager to pCtrl &lt;---*/
 
-SIGNAL sOkCreateZoneManager(PID),sExcZoneManager;</Text>
+SIGNAL sOkCreateZoneManager(PID);</Text>
 </Symbol>
 </Symbol>
 </DiagramPartition>

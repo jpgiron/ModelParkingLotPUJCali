@@ -619,10 +619,10 @@ freeSpots,totalSpots i_spots,pidCtrl,myCtrl PID;</Text>
 </Link>
 </DiagramPartition>
 
-<DiagramPartition name="Part. 0.1" nbPagesH="3" nbPagesV="1">
+<DiagramPartition name="Part. 0.1" nbPagesH="2" nbPagesV="1">
 <PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="0.0" bottomMargin="0.0" leftMargin="0.0" rightMargin="0.0" pageFooter="FALSE"/>
 
-<Symbol symbolId="SYMB408" type="sdlPrcsDgmFrm" xCenter="892" yCenter="420" fixedDimensions="TRUE" width="1741" height="775" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB408" type="sdlPrcsDgmFrm" xCenter="595" yCenter="420" fixedDimensions="TRUE" width="1146" height="775" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text></Text>
 
@@ -646,9 +646,9 @@ freeSpots,totalSpots i_spots,pidCtrl,myCtrl PID;</Text>
 <Text>-</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB418" type="sdlSendSig" xCenter="704" yCenter="231" fixedDimensions="FALSE" width="264" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB418" type="sdlSendSig" xCenter="704" yCenter="231" fixedDimensions="FALSE" width="330" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>sInfoZone(freeSpots) To SENDER</Text>
+<Text>sInfoZone(totalSpots,freeSpots) TO SENDER</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB419" type="sdlTask" xCenter="1012" yCenter="220" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
@@ -1213,7 +1213,7 @@ freeSpots,totalSpots i_spots,pidCtrl,myCtrl PID;</Text>
 
 <Symbol symbolId="SYMB123" type="sdlSendSig" xCenter="352" yCenter="418" fixedDimensions="FALSE" width="242" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>sOut_Car(freeSpots) TO pid_Ctrl</Text>
+<Text>sOut_Car(freeSpots) TO myCtrl</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB124" type="sdlInputSig" xCenter="352" yCenter="110" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
@@ -1221,7 +1221,7 @@ freeSpots,totalSpots i_spots,pidCtrl,myCtrl PID;</Text>
 <Text>sLoopInductive_Zone</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB127" type="sdlState" xCenter="792" yCenter="396" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB127" type="sdlState" xCenter="704" yCenter="429" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>Idle</Text>
 </Symbol>
@@ -1251,9 +1251,9 @@ freeSpots,totalSpots i_spots,pidCtrl,myCtrl PID;</Text>
 <Text>Idle</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB611" type="sdlSendSig" xCenter="792" yCenter="330" fixedDimensions="FALSE" width="242" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB611" type="sdlSendSig" xCenter="704" yCenter="341" fixedDimensions="FALSE" width="242" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>sOut_Car(freeSpots) TO pid_Ctrl</Text>
+<Text>sOut_Car(freeSpots) TO myCtrl</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB616" type="sdlResetTimer" xCenter="517" yCenter="198" fixedDimensions="TRUE" width="132" height="44" color="#000000" fillColor="#ffffff">
@@ -1401,7 +1401,7 @@ freeSpots,totalSpots i_spots,pidCtrl,myCtrl PID;</Text>
 
 </Link>
 
-<Link linkId="LINK1552" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK1576" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB611" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -1411,7 +1411,7 @@ freeSpots,totalSpots i_spots,pidCtrl,myCtrl PID;</Text>
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="66"/>
+<LinkSegment orientation="v" length="88"/>
 
 </Link>
 
@@ -1444,7 +1444,7 @@ freeSpots,totalSpots i_spots,pidCtrl,myCtrl PID;</Text>
 
 </Link>
 
-<Link linkId="LINK1551" type="dec" textSegmentNum="1" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK1574" type="dec" textSegmentNum="1" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>true</Text>
 <Connector attachedSymbolId="SYMB818" type="void" isOutside="TRUE" side="y" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -1454,8 +1454,8 @@ freeSpots,totalSpots i_spots,pidCtrl,myCtrl PID;</Text>
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="h" length="275"/>
-<LinkSegment orientation="v" length="66"/>
+<LinkSegment orientation="h" length="187"/>
+<LinkSegment orientation="v" length="77"/>
 
 </Link>
 </DiagramPartition>

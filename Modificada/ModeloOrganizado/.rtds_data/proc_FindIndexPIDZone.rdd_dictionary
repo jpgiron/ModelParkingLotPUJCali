@@ -3,12 +3,11 @@
 <!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
 
 <DictionaryObjects language="sdl" diagramType="prcd">
-<Item id="ITEM1" type="procedure" name="proc_FindIndexPIDZone" scope="current" procedureKind="NORMAL_PROCEDURE" procedureParamTypes="PID table_Zones INTEGER" procedureReturnType="INTEGER">
+<Item id="ITEM1" type="procedure" name="proc_FindIndexPidZone" scope="current" procedureKind="NORMAL_PROCEDURE" procedureParamTypes="PID table_Zones INTEGER" procedureReturnType="INTEGER">
 <UsingSymbols>
 <SymbolReference symbolId="SYMB2"/>
 </UsingSymbols>
 <Prototype>
-<Signature>proc_FindIndexPIDZone</Signature>
 <PrototypeSymbol>
 <SymbolReference symbolId="SYMB3"/>
 <PrototypeText>proc_FindIndexPIDZone</PrototypeText>
@@ -22,17 +21,17 @@
 <SymbolReference symbolId="SYMB5"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM3" type="variable" name="tableZones" parentId="ITEM1" scope="none" variableTypeName="table_Zones" isFormalParam="TRUE">
+<Item id="ITEM3" type="variable" name="index" parentId="ITEM1" scope="none" variableTypeName="INTEGER">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB5"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM4" type="variable" name="index" parentId="ITEM1" scope="none" variableTypeName="INTEGER">
+<Item id="ITEM4" type="variable" name="indexList" parentId="ITEM1" scope="none" variableTypeName="INTEGER" isFormalParam="TRUE">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB5"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM5" type="variable" name="indexList" parentId="ITEM1" scope="none" variableTypeName="INTEGER" isFormalParam="TRUE">
+<Item id="ITEM5" type="variable" name="tableZones" parentId="ITEM1" scope="none" variableTypeName="table_Zones" isFormalParam="TRUE">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB5"/>
 </DefiningSymbols>
