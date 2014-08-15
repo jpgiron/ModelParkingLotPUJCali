@@ -487,9 +487,9 @@ myCtrl,pidCtrl,pidZone PID;</Text>
 <Text>sOkInit</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB56" type="sdlSendSig" xCenter="253" yCenter="396" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB56" type="sdlSendSig" xCenter="253" yCenter="396" fixedDimensions="FALSE" width="242" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>sOkCreation TO myCtrl</Text>
+<Text>sOkCreation(pidZone) TO myCtrl</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB57" type="sdlState" xCenter="253" yCenter="462" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
