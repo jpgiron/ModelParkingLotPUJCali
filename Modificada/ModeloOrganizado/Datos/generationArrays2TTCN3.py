@@ -28,41 +28,45 @@ def getData(nFile):
         sheet=book.sheet_by_index(sheet_index)
         row_index = 1
         value_Cars_WholeSheet = []
-        
+        value_Ctrl_WholeSheet = []
+        value_Zone_WholeSheet = []
         for row_index in range(sheet.nrows):
             col_index=0
             for col_index in range(sheet.ncols):
 
 
                 if (row_index>0):
-                    valueTuple=[]
                     if ( col_index==3 ):
-                        valueTuple.append(sheet.cell(row_index,col_index).value)
-                        valueTuple.append(ctrl0)
-                        valueTuple.append(zone0)
-                        valueWholeSheet.append(valueTuple)
+                        value_Cars_WholeSheet.append(sheet.cell(row_index,col_index).value)
+                        value_Ctrl_WholeSheet.append(ctrl0)
+                        value_Zone_WholeSheet.append(zone0)
+                        #valueWholeSheet.append(valueTuple)
                     elif ( col_index==4 ):
-                        valueTuple.append(sheet.cell(row_index,col_index).value)
-                        valueTuple.append(ctrl0)
-                        valueTuple.append(zone1)
-                        valueWholeSheet.append(valueTuple)
+                        value_Cars_WholeSheet.append(sheet.cell(row_index,col_index).value)
+                        value_Ctrl_WholeSheet.append(ctrl0)
+                        value_Zone_WholeSheet.append(zone1)
+                        #valueWholeSheet.append(valueTuple)
                     elif ( col_index==5 ):
-                        valueTuple.append(sheet.cell(row_index,col_index).value)
-                        valueTuple.append(ctrl1)
-                        valueTuple.append(zone0)
-                        valueWholeSheet.append(valueTuple)
+                        value_Cars_WholeSheet.append(sheet.cell(row_index,col_index).value)
+                        value_Ctrl_WholeSheet.append(ctrl1)
+                        value_Zone_WholeSheet.append(zone0)
+                        #valueWholeSheet.append(valueTuple)
                     elif ( col_index==6 ):
-                        valueTuple.append(sheet.cell(row_index,col_index).value)
-                        valueTuple.append(ctrl1)
-                        valueTuple.append(zone1)
-                        valueWholeSheet.append(valueTuple)
-        dataBook.append(valueWholeSheet)
+                        value_Cars_WholeSheet.append(sheet.cell(row_index,col_index).value)
+                        value_Ctrl_WholeSheet.append(ctrl1)
+                        value_Zone_WholeSheet.append(zone1)
+                        #valueWholeSheet.append(valueTuple)
+        dataBook.append(value_Cars_WholeSheet)
+        dataBook.append(value_Ctrl_WholeSheet)
+        dataBook.append(value_Zone_WholeSheet)
     return dataBook
 
 def conversion2TTCN3(dataWorkBook,nameTTCN3):
 
     ###CONSTANTS###
-    nameArrays_TTCN3=['aEntryCars2Zone','aOutCars2Zone','aFreeSpotsExpecInZone']
+    #nameArrays_TTCN3=['aEntryCars2Zone','aOutCars2Zone','aFreeSpotsExpecInZone']
+    nameArrays_TTCN3=['aEntryCar','aCtrlEntryCar','aZoneEntryCar','aOutCar','aCtrlOutCar','aZoneOutCar',
+                      'aExpectedSpots','aCtrlExpected','aZoneExpected']
     Length_Vec_Datas=len(dataWorkBook)
     Length_Rows_Vec=len(dataWorkBook[0])
     i=0
@@ -75,7 +79,8 @@ def conversion2TTCN3(dataWorkBook,nameTTCN3):
     fileTTCN3.write("/*These are the definitions of the array*/\n")
     fileTTCN3.write("module "+nameTTCN3+" {\n")
     fileTTCN3.write("type integer generic_array_data["+str(Length_Rows_Vec)+
-                    "][3];\n")
+                    "];\n")
+    fileTTCN3.write("const integer length_array_data:="+str(Length_Rows_Vec)+";\n")
     
     for i in range(len(dataWorkBook)):
         data=dataWorkBook[i]

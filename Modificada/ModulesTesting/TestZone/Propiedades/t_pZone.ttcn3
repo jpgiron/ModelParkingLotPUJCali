@@ -202,18 +202,23 @@ module t_pZone
     //var integer freeSpots:=4;
     
     var integer totalSpots:=5;
-    var integer length_Arrays;
     var integer numberCars;
     var integer n,index;
-    //length_Arrays:=length(aEntryCars2Zone);
-    length_Arrays:=4;
+    timer t_waitDynamicZone := 5;
+    
     /*No funciona la funcion lengthof  */
-    for ( index:=0;index<length_Arrays;index:=index+1)
+    
+    
+    
+    for ( index:=0;index<length_array_data;index:=index+1)
     {
-       numberCars:=aEntryCars2Zone[index];
+       numberCars:=aEntryCar[index];
        for ( n:=0;n<=numberCars;n:=n+1 )
        {
+          t_waitDynamicZone.start;
+          t_waitDynamicZone.timeout;
           execute(tc_DynamicEntryZone(/*totalSpots,4*/));
+          t_waitDynamicZone := 5;
        }
     }
    }
