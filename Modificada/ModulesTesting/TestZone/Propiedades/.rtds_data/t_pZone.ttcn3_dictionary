@@ -492,6 +492,33 @@
 <TtcnPortTypeElement way="in" typeId="ITEM17"/>
 <TtcnPortTypeElement way="in" typeId="ITEM6"/>
 <TtcnPortTypeElement way="in" typeId="ITEM10"/>
+<TtcnPortTypeElement way="out" typeId="ITEM3"/>
+<TtcnPortTypeElement way="out" typeId="ITEM15"/>
+<TtcnPortTypeElement way="out" typeId="ITEM7"/>
+<TtcnPortTypeElement way="out" typeId="ITEM16"/>
+<TtcnPortTypeElement way="in" typeId="ITEM11"/>
+<TtcnPortTypeElement way="in" typeId="ITEM8"/>
+<TtcnPortTypeElement way="in" typeId="ITEM17"/>
+<TtcnPortTypeElement way="in" typeId="ITEM6"/>
+<TtcnPortTypeElement way="in" typeId="ITEM10"/>
+<TtcnPortTypeElement way="out" typeId="ITEM3"/>
+<TtcnPortTypeElement way="out" typeId="ITEM15"/>
+<TtcnPortTypeElement way="out" typeId="ITEM7"/>
+<TtcnPortTypeElement way="out" typeId="ITEM16"/>
+<TtcnPortTypeElement way="in" typeId="ITEM11"/>
+<TtcnPortTypeElement way="in" typeId="ITEM8"/>
+<TtcnPortTypeElement way="in" typeId="ITEM17"/>
+<TtcnPortTypeElement way="in" typeId="ITEM6"/>
+<TtcnPortTypeElement way="in" typeId="ITEM10"/>
+<TtcnPortTypeElement way="out" typeId="ITEM3"/>
+<TtcnPortTypeElement way="out" typeId="ITEM15"/>
+<TtcnPortTypeElement way="out" typeId="ITEM7"/>
+<TtcnPortTypeElement way="out" typeId="ITEM16"/>
+<TtcnPortTypeElement way="in" typeId="ITEM11"/>
+<TtcnPortTypeElement way="in" typeId="ITEM8"/>
+<TtcnPortTypeElement way="in" typeId="ITEM17"/>
+<TtcnPortTypeElement way="in" typeId="ITEM6"/>
+<TtcnPortTypeElement way="in" typeId="ITEM10"/>
 </Item>
 <Item id="ITEM15" type="type" name="sInitTotalSpots" parentId="ITEM1" scope="none">
 </Item>
@@ -502,6 +529,21 @@
 <Item id="ITEM18" type="ttcn_port" name="cEnv_Zone" parentId="ITEM12" scope="none" instanciatedTypeId="ITEM19">
 </Item>
 <Item id="ITEM19" type="ttcn_port_type" name="cEnv_Zone_type" parentId="ITEM1" scope="none">
+<TtcnPortTypeElement way="in" typeId="ITEM20"/>
+<TtcnPortTypeElement way="in" typeId="ITEM9"/>
+<TtcnPortTypeElement way="in" typeId="ITEM21"/>
+<TtcnPortTypeElement way="in" typeId="ITEM4"/>
+<TtcnPortTypeElement way="in" typeId="ITEM5"/>
+<TtcnPortTypeElement way="in" typeId="ITEM20"/>
+<TtcnPortTypeElement way="in" typeId="ITEM9"/>
+<TtcnPortTypeElement way="in" typeId="ITEM21"/>
+<TtcnPortTypeElement way="in" typeId="ITEM4"/>
+<TtcnPortTypeElement way="in" typeId="ITEM5"/>
+<TtcnPortTypeElement way="in" typeId="ITEM20"/>
+<TtcnPortTypeElement way="in" typeId="ITEM9"/>
+<TtcnPortTypeElement way="in" typeId="ITEM21"/>
+<TtcnPortTypeElement way="in" typeId="ITEM4"/>
+<TtcnPortTypeElement way="in" typeId="ITEM5"/>
 <TtcnPortTypeElement way="in" typeId="ITEM20"/>
 <TtcnPortTypeElement way="in" typeId="ITEM9"/>
 <TtcnPortTypeElement way="in" typeId="ITEM21"/>

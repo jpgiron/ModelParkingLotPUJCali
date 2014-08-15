@@ -204,7 +204,7 @@ module t_pZone
     var integer totalSpots:=5;
     var integer numberCars;
     var integer n,index;
-    timer t_waitDynamicZone := 5;
+    timer t_waitDynamicZone;
     
     /*No funciona la funcion lengthof  */
     
@@ -215,10 +215,9 @@ module t_pZone
        numberCars:=aEntryCar[index];
        for ( n:=0;n<=numberCars;n:=n+1 )
        {
-          t_waitDynamicZone.start;
+          t_waitDynamicZone.start(5);
           t_waitDynamicZone.timeout;
           execute(tc_DynamicEntryZone(/*totalSpots,4*/));
-          t_waitDynamicZone := 5;
        }
     }
    }
