@@ -2,7 +2,7 @@ module t_pZone
 {
   /*Step 1*/ 
   /*Define the data types that will be used in the signals*/
-  
+  import from def all;
   type integer Spots;
   type integer pidCtrl;
   
@@ -175,14 +175,14 @@ module t_pZone
   }
   
       
-  testcase tc_DynamicEntryZone(Spots p_totalSpots,Spots p_freeExpected) runs on ParkingSystem
+  testcase tc_DynamicEntryZone(/*Spots p_totalSpots,Spots p_freeExpected*/) runs on ParkingSystem
   {
       //EntryCarInZone();
       //var sInfoZone p_p;
       //p_p:={p_totalSpots,p_freeExpected,-};
       EntryCarInZone();
       
-      alt{
+      /*alt{
         []
             cCtrl_Zone.receive(a_sEntered_Car(p_totalSpots,p_freeExpected))
             {
@@ -194,21 +194,27 @@ module t_pZone
             }
         }
         stop;
+      */
   } 
   
   control 
   {
     //var integer freeSpots:=4;
+    
     var integer totalSpots:=5;
-    execute(tc_DynamicEntryZone(totalSpots,4));
-  }
+    var integer length_Arrays;
+    var integer numberCars;
+    var integer n,index;
+    //length_Arrays:=length(aEntryCars2Zone);
+    length_Arrays:=4;
+    /*No funciona la funcion lengthof  */
+    for ( index:=0;index<length_Arrays;index:=index+1)
+    {
+       numberCars:=aEntryCars2Zone[index];
+       for ( n:=0;n<=numberCars;n:=n+1 )
+       {
+          execute(tc_DynamicEntryZone(/*totalSpots,4*/));
+       }
+    }
+   }
 }
-
-
-
-
-
-
-
-
-

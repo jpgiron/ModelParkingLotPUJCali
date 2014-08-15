@@ -5,8 +5,8 @@ from string import *
 
 def main():
 
-    nameWorkBook=input("Type the name of the workbook without ext.")
-    nameOutputFileTTCN3=input("Type the name of the output ttcn3 without ext")
+    nameWorkBook=input("Type the name of the workbook without ext.\n")
+    nameOutputFileTTCN3=input("Type the name of the output ttcn3 without ext:\n")
 
     ArrayData=getData(nameWorkBook)
     conversion2TTCN3(ArrayData,nameOutputFileTTCN3)
@@ -72,6 +72,7 @@ def conversion2TTCN3(dataWorkBook,nameTTCN3):
 
     #Creation of type array in TTCN-3#
     fileTTCN3.write("/*These are the definitions of the array*/\n")
+    fileTTCN3.write("module "+nameTTCN3+" {\n")
     fileTTCN3.write("type integer generic_array_data["+str(Length_Rows_Vec)+
                     "][3];\n")
     
@@ -82,9 +83,7 @@ def conversion2TTCN3(dataWorkBook,nameTTCN3):
         dataStr=dataStr.replace(".0","")
         fileTTCN3.write("const generic_array_data "+nameArrays_TTCN3[i]+
                         ":="+dataStr+";\n")
-        
-                
-
+    fileTTCN3.write("}")
     fileTTCN3.close()
 
 #called to main function:
