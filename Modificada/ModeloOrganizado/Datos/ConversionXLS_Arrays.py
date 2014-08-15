@@ -67,9 +67,8 @@ def conversion2TTCN3(dataWorkBook,nameTTCN3):
     i=0
 
     #Creation of file *.ttcn3#
-    #nameFileTTCN3=input("Type the name of the file *.ttcn3 where are the arrays")
     nameFileTTCN3=nameTTCN3+".ttcn3"
-    fileTTCN3=open(nameFileTTCN3,w)
+    fileTTCN3=open(nameFileTTCN3,'w')
 
     #Creation of type array in TTCN-3#
     fileTTCN3.write("/*These are the definitions of the array*/\n")
@@ -82,8 +81,11 @@ def conversion2TTCN3(dataWorkBook,nameTTCN3):
         dataStr=dataStr.replace("]","}")
         dataStr=dataStr.replace(".0","")
         fileTTCN3.write("const generic_array_data "+nameArrays_TTCN3[i]+
-                        " :="+dataStr+";\n")
+                        ":="+dataStr+";\n")
         
                 
 
     fileTTCN3.close()
+
+#called to main function:
+main()
