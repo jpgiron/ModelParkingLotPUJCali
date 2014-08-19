@@ -1,0 +1,218 @@
+module t_pZone
+{
+  /*Step 1*/ 
+  /*Define the data types that will be used in the signals*/
+  
+  type integer Spots;
+  type integer pidCtrl;
+  type integer pidZone;
+  
+  /*Step 2*/
+  /* Define the signals that have no parameters */
+  /* Channel cEnv_Zone */
+  type enumerated sIR1_Zone {e_sIR1_Zone}
+  type enumerated sIR2_Zone {e_sIR2_Zone} 
+  type enumerated sIR3_Zone {e_sIR3_Zone}
+  type enumerated sIR4_Zone {e_sIR4_Zone}
+  type enumerated sLoopInductive_Zone {e_sLoopInductive_Zone} 
+  /* Channel cCtrl_Zone*/
+  type enumerated sReqInfo {e_sReqInfo}
+  type enumerated sOkInitPid {sOkInitPid}
+  
+  /* Step 3 */
+  /* Define the signals that have parameters */
+  /* Channel cCtrl_Zone */
+  
+  /* IN to pZone*/
+  
+  type record sInitFreeSpot
+  {
+    Spots freeSpots
+  }
+  type record sInitTotalSpots
+  {
+    Spots totalSpots
+  }
+  
+  type record sInitPidCtrl
+  {
+    pidCtrl nCtrl
+  }
+  
+  /* OUT from pZone*/
+  type record sEntered_Car
+  {
+    Spots totalSpots,
+    Spots freeSpots,
+    pidZone pZone
+  }
+  type record sOut_Car
+  {
+    Spots totalSpots,
+    Spots freeSpots,
+    pidZone pZone
+  }
+  type record sOkInit
+  {
+    Spots totalSpots,
+    Spots freeSpots,
+    pidZone pZone
+  }
+  type record sInfoZone
+  {
+    Spots totalSpots,
+    Spots freeSpots,
+    pidZone pZone
+  }
+  
+  /*Step 4*/
+  /* Define the templates */
+  
+  template sEntered_Car a_sEntered_Car(Spots p_totalSpots,Spots p_freeSpots,pidZone p_pidZone) := {
+      totalSpots:=p_totalSpots,
+      freeSpots:=p_freeSpots,
+      pZone:=p_pidZone
+  }
+  
+  template sOut_Car a_sout_Car(Spots p_totalSpots,Spots p_freeSpots,pidZone p_pidZone) := {
+      totalSpots:=p_totalSpots,
+      freeSpots:=p_freeSpots,
+      pZone:=p_pidZone
+  }
+  
+  template sInfoZone a_sInfoZone(Spots p_totalSpots,Spots p_freeSpots,pidZone p_pidZone) := {
+      totalSpots:=p_totalSpots,
+      freeSpots:=p_freeSpots,
+      pZone:=p_pidZone
+  }
+  
+  template sInitFreeSpot a_sInitFreeSpot(Spots p_freeSpots) := {
+      
+      freeSpots:=p_freeSpots
+  
+  }
+  
+  template sInitTotalSpots a_sInitTotalSpots(Spots p_totalSpots) := {
+      
+      totalSpots:=p_totalSpots
+  
+  }
+  
+  template sInitPidCtrl a_sInitPidCtrl(pidCtrl p_pidCtrl) := {
+  
+      n:=p_pidCtrl
+  }
+  
+  template sIR1_Zone a_sIR1_Zone:=?
+  template sIR2_Zone a_sIR2_Zone:=?
+  template sIR3_Zone a_sIR3_Zone:=?
+  template sIR4_Zone a_sIR4_Zone:=?
+  template sLoopInductive_Zone a_sLoopInductive_Zone:=? 
+  template sReqInfo a_sReqInfo:=?
+  template sOkInitPid a_sOkInitPid:=?
+  
+  /* Step 5 */
+  /* Define the ports which will send the messages */
+  
+  type port cEnv_Zone_type message{
+    
+     in sIR1_Zone;
+     in sIR2_Zone;
+     in sIR3_Zone;
+     in sIR4_Zone;
+     in sLoopInductive_Zone
+  };
+  
+  type port cCtrl_Zone_type message {
+    
+      out sInitFreeSpot;
+      out sInitTotalSpots;
+      out sReqInfo;
+      out sInitPidCtrl;
+      in sEntered_Car;
+      in sOut_Car;
+      in sOkInit;
+      in sInfoZone;
+      in sOkInitPid
+  };
+  
+  /* Step 6 */
+  /* Define of the component of testing */
+  
+  type component ParkingSystem{
+        
+        port cEnv_Zone_type cEnv_Zone
+        port cCtrl_Zone_type cCtrl_Zone
+  }
+  
+  /* Step 7 */
+  /* Define the TestCase */
+  
+  function EntryCarInZone() runs on ParkingSystem
+  {
+  
+    cEnv_Zone.send(a_sIR1_Zone);
+    cEnv_Zone.send(a_sIR2_Zone);
+    cEnv_Zone.send(a_sLoopInductive_Zone);
+  }
+ 
+  function OutCarInZone() runs on ParkingSystem
+  {
+    cEnv_Zone.send(a_sIR3_Zone);
+    cEnv_Zone.send(a_sIR4_Zone);
+    cEnv_Zone.send(a_sLoopInductive_Zone);
+  }
+  /*
+  function InitFreeSpotsInZone(Spots freeSpots) runs on ParkingSystem
+  {
+      cCtrl_Zone.send(a_sInitFreeSpot(freeSpots));
+  }
+  
+  function InitTotalSpotsInZone(Spots totalSpots) runs on ParkingSystem
+  {
+      cCtrl_Zone.send(a_sInitTotalSpots(totalSpots));
+  }
+  */
+      
+  testcase tc_DynamicEntryZone(Spots p_freeSpots,Spots p_totalSpots,Spots p_freeExpected) runs on ParkingSystem
+  {
+      //InitFreeSpotsInZone(p_freeSpots);
+      //InitTotalSpotsInZone(p_totalSpots);
+      EntryCarInZone();
+      alt{
+        []
+            cCtrl_Zone.receive(a_sEntered_Car(p_totalSpots,p_freeExpected,omit))
+            {
+                setverdict(pass);
+                
+            }
+        
+        [else]
+            {
+                
+                setverdict(fail);
+            }
+        }
+        stop;
+  } 
+  
+  control 
+  {
+    var integer freeSpots;
+    var integer totalSpots := 10;
+    
+    for ( freeSpots:=0;freeSpots<=totalSpots;freeSpots:=freeSpots+1 )
+    {
+        execute(tc_DynamicEntryZone(freeSpots,totalSpots,freeSpots-1));
+    }
+  }
+}
+
+
+
+
+
+
+
+
+

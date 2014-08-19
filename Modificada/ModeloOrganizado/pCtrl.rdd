@@ -881,7 +881,7 @@ infoCtrlG!listZones(index):=infoTableZone</Text>
 <Description></Description>
 <Text></Text>
 
-<Symbol symbolId="SYMB1539" type="sdlState" xCenter="583" yCenter="44" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB1539" type="sdlState" xCenter="517" yCenter="44" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>Idle</Text>
 </Symbol>
@@ -990,7 +990,7 @@ infoCtrlG!listZones(zone):=tmpInfoZone</Text>
 </Symbol>
 </Symbol>
 
-<Link linkId="LINK2020" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK2039" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB1539" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -1001,12 +1001,12 @@ infoCtrlG!listZones(zone):=tmpInfoZone</Text>
 <Text id="2"></Text>
 </Connector>
 <LinkSegment orientation="v" length="33"/>
-<LinkSegment orientation="h" length="308"/>
+<LinkSegment orientation="h" length="374"/>
 <LinkSegment orientation="v" length="44"/>
 
 </Link>
 
-<Link linkId="LINK1993" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK2037" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB1539" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -1016,13 +1016,11 @@ infoCtrlG!listZones(zone):=tmpInfoZone</Text>
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="33"/>
-<LinkSegment orientation="h" length="-66"/>
-<LinkSegment orientation="v" length="44"/>
+<LinkSegment orientation="v" length="77"/>
 
 </Link>
 
-<Link linkId="LINK1150" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK2038" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB1539" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -1033,7 +1031,7 @@ infoCtrlG!listZones(zone):=tmpInfoZone</Text>
 <Text id="2"></Text>
 </Connector>
 <LinkSegment orientation="v" length="33"/>
-<LinkSegment orientation="h" length="-407"/>
+<LinkSegment orientation="h" length="-341"/>
 <LinkSegment orientation="v" length="33"/>
 
 </Link>
