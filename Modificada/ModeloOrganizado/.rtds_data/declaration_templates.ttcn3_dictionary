@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
+
+<DictionaryObjects language="sdl">
+<Item id="ITEM1" type="ttcn_module" name="declaration_templates" scope="current">
+<TtcnImportedModule moduleId="ITEM2"/>
+</Item>
+<Item id="ITEM2" type="ttcn_module" name="declaration_Signals" scope="package">
+</Item>
+</DictionaryObjects>

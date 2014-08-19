@@ -1,0 +1,56 @@
+
+/* Here is the declarations of the data type
+   and the signals that will be used in the 
+   testcases   */
+   
+/* Code written by: Juan Pablo Giron Ruiz */
+
+
+module declaration_Signals
+{
+
+  /* Step 1. Definition of data Types */
+  
+  type integer spots;
+  type integer numCtrl;
+  type integer numZone;
+    
+  /* Step 2. Declaration of the Signals */
+  /* The PURE Signals are enumerated, signals 
+  with parameters are typre record */
+  /* The name of the signals must be the same that in 
+  SDL system */
+  
+  /*Signals with parameters */
+  /* Channel cDisplay_main*/
+  
+  type record sReqInfoCtrlZone
+  {
+      numCtrl num_Ctrl,
+      numZone num_Zone,
+  }
+  
+  type record sInfoCtrlZone
+  {
+      spots freeSpots  
+  }
+  
+  /* Channel cEnv_pTesting  */
+  
+  type record sEntryCarCtrl
+  {
+      numCtrl num_Ctrl  
+  }
+  type record sOutCarCtrl
+  {
+      numCtrl num_Ctrl
+  }
+  type record sEntryCarZone
+  {
+      numZone num_Zone
+  }
+  type record sOutCarZone
+  {
+      numZone num_Zone
+  }
+  }

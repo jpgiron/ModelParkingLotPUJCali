@@ -1,0 +1,12 @@
+/* Here is the declaration of the ports
+   where the messages are sent, besides
+   is the definition of the component */
+   
+module declaration_portsNComponent
+{
+    
+
+
+
+
+}

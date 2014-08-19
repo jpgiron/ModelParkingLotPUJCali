@@ -1,0 +1,41 @@
+/* Here is the delcarations of the Templates
+    that will be used in the TestCase */
+    
+/* Templates written by Juan Pablo Giron Ruiz */
+
+module declaration_templates
+{
+    
+    import from declaration_Signals all;
+    
+    /*Channel cDisplay_Main*/
+    template sReqInfoCtrlZone a_sReqInfoCtrlZone(numCtrl p_numCtrl,numZone p_numZone):=
+    {
+        num_Ctrl:=p_numCtrl,
+        num_Zone:=p_numZone     
+    } 
+    
+    template sInfoCtrlZone a_sInfoCtrlZone(spots p_freeSpots):=
+    {
+        freeSpots:=p_freeSpots    
+    }
+    
+    /*Channel cEnv_pTesting*/
+    
+    template sEntryCarCtrl a_sEntryCarCtrl(numCtrl p_numCtrl):=
+    {
+        num_Ctrl:=p_numCtrl
+    }        
+    template sOutCarCtrl a_sOutCarCtrl(numCtrl p_numCtrl):=
+    {
+        num_Ctrl:=p_numCtrl
+    }
+    template sEntryCarZone a_sEntryCarZone(numZone p_numZone):=
+    {
+        num_Zone:=p_numZone
+    }   
+    template sOutCarZone a_sOutCarZone(numZone p_numZone):=
+    {
+        num_Zone:=p_numZone
+    }     
+}    
