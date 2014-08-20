@@ -25,6 +25,7 @@ module declaration_portsNComponent
     {
         out sCreateCtrlZone;
         out sAddZone;
+        out sCreateEntryWay;
         in sOkCreateCtrl;
         in sOkCreationZone;
     }     

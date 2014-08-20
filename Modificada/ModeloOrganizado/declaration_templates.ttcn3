@@ -44,6 +44,8 @@ module declaration_templates
     template sCreateCtrlZone a_sCreateCtrlZone:=?
     template sOkCreationZone a_sOkCreationZone:=?
     template sOkCreateCtrl a_sOkCreateCtrl:=?
+    template sCreateEntryWay a_sCreateEntryWay:=?
+    
     
     template sAddZone a_sAddZone(numCtrl p_numCtrl,spots p_totalSpots,spots p_freeSpots):=
     {

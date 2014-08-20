@@ -7,76 +7,87 @@
 <TtcnImportedModule moduleId="ITEM2"/>
 <TtcnImportedModule moduleId="ITEM3"/>
 </Item>
-<Item id="ITEM10" type="ttcn_port" name="cEnv_pTesting" parentId="ITEM8" scope="none" instanciatedTypeId="ITEM11">
+<Item id="ITEM10" type="type" name="sReqInfoCtrlZone" parentId="ITEM2" scope="none">
 </Item>
-<Item id="ITEM11" type="ttcn_port_type" name="cEnv_pTesting_type" parentId="ITEM1" scope="none">
-<TtcnPortTypeElement way="out" typeId="ITEM12"/>
-<TtcnPortTypeElement way="out" typeId="ITEM13"/>
-<TtcnPortTypeElement way="out" typeId="ITEM14"/>
-<TtcnPortTypeElement way="out" typeId="ITEM15"/>
-<TtcnPortTypeElement way="out" typeId="ITEM12"/>
-<TtcnPortTypeElement way="out" typeId="ITEM13"/>
-<TtcnPortTypeElement way="out" typeId="ITEM14"/>
-<TtcnPortTypeElement way="out" typeId="ITEM15"/>
-<TtcnPortTypeElement way="out" typeId="ITEM12"/>
-<TtcnPortTypeElement way="out" typeId="ITEM13"/>
-<TtcnPortTypeElement way="out" typeId="ITEM14"/>
-<TtcnPortTypeElement way="out" typeId="ITEM15"/>
-<TtcnPortTypeElement way="out" typeId="ITEM12"/>
-<TtcnPortTypeElement way="out" typeId="ITEM13"/>
-<TtcnPortTypeElement way="out" typeId="ITEM14"/>
-<TtcnPortTypeElement way="out" typeId="ITEM15"/>
+<Item id="ITEM11" type="type" name="sInfoCtrlZone" parentId="ITEM2" scope="none">
 </Item>
-<Item id="ITEM12" type="type" name="sEntryCarCtrl" parentId="ITEM2" scope="none">
+<Item id="ITEM12" type="ttcn_component" name="System" parentId="ITEM1" scope="none">
 </Item>
-<Item id="ITEM13" type="type" name="sOutCarCtrl" parentId="ITEM2" scope="none">
+<Item id="ITEM13" type="ttcn_port" name="cDisplay_Main" parentId="ITEM12" scope="none" instanciatedTypeId="ITEM9">
 </Item>
-<Item id="ITEM14" type="type" name="sEntryCarZone" parentId="ITEM2" scope="none">
+<Item id="ITEM14" type="ttcn_port" name="cEnv_pTesting" parentId="ITEM12" scope="none" instanciatedTypeId="ITEM4">
 </Item>
-<Item id="ITEM15" type="type" name="sOutCarZone" parentId="ITEM2" scope="none">
+<Item id="ITEM15" type="ttcn_port" name="cEnv_Main" parentId="ITEM12" scope="none" instanciatedTypeId="ITEM16">
 </Item>
-<Item id="ITEM16" type="ttcn_port" name="cEnv_Main" parentId="ITEM8" scope="none" instanciatedTypeId="ITEM17">
-</Item>
-<Item id="ITEM17" type="ttcn_port_type" name="cEnv_Main_type" parentId="ITEM1" scope="none">
+<Item id="ITEM16" type="ttcn_port_type" name="cEnv_Main_type" parentId="ITEM1" scope="none">
+<TtcnPortTypeElement way="out" typeId="ITEM17"/>
 <TtcnPortTypeElement way="out" typeId="ITEM18"/>
-<TtcnPortTypeElement way="out" typeId="ITEM19"/>
+<TtcnPortTypeElement way="out" typeId="ITEM17"/>
 <TtcnPortTypeElement way="out" typeId="ITEM18"/>
-<TtcnPortTypeElement way="out" typeId="ITEM19"/>
+<TtcnPortTypeElement way="out" typeId="ITEM17"/>
 <TtcnPortTypeElement way="out" typeId="ITEM18"/>
-<TtcnPortTypeElement way="out" typeId="ITEM19"/>
+<TtcnPortTypeElement way="in" typeId="ITEM19"/>
 <TtcnPortTypeElement way="in" typeId="ITEM20"/>
-<TtcnPortTypeElement way="in" typeId="ITEM21"/>
+<TtcnPortTypeElement way="out" typeId="ITEM17"/>
+<TtcnPortTypeElement way="out" typeId="ITEM18"/>
+<TtcnPortTypeElement way="out" typeId="ITEM21"/>
+<TtcnPortTypeElement way="in" typeId="ITEM19"/>
+<TtcnPortTypeElement way="in" typeId="ITEM20"/>
 </Item>
-<Item id="ITEM18" type="type" name="sCreateCtrlZone" parentId="ITEM2" scope="none">
+<Item id="ITEM17" type="type" name="sCreateCtrlZone" parentId="ITEM2" scope="none">
 </Item>
-<Item id="ITEM19" type="type" name="sAddZone" parentId="ITEM2" scope="none">
+<Item id="ITEM18" type="type" name="sAddZone" parentId="ITEM2" scope="none">
+</Item>
+<Item id="ITEM19" type="type" name="sOkCreateCtrl" parentId="ITEM2" scope="none">
 </Item>
 <Item id="ITEM2" type="ttcn_module" name="declaration_Signals" scope="package">
 </Item>
-<Item id="ITEM20" type="type" name="sOkCreateCtrl" parentId="ITEM2" scope="none">
+<Item id="ITEM20" type="type" name="sOkCreationZone" parentId="ITEM2" scope="none">
 </Item>
-<Item id="ITEM21" type="type" name="sOkCreationZone" parentId="ITEM2" scope="none">
+<Item id="ITEM21" type="type" name="sCreateEntryWay" parentId="ITEM2" scope="none">
 </Item>
 <Item id="ITEM3" type="ttcn_module" name="declaration_templates" scope="package">
 </Item>
-<Item id="ITEM4" type="ttcn_function" name="&amp;receive" parentId="ITEM1" scope="none">
-</Item>
-<Item id="ITEM5" type="ttcn_port_type" name="cDisplay_Main_type" parentId="ITEM1" scope="none">
+<Item id="ITEM4" type="ttcn_port_type" name="cEnv_pTesting_type" parentId="ITEM1" scope="none">
+<TtcnPortTypeElement way="out" typeId="ITEM5"/>
 <TtcnPortTypeElement way="out" typeId="ITEM6"/>
-<TtcnPortTypeElement way="in" typeId="ITEM7"/>
+<TtcnPortTypeElement way="out" typeId="ITEM7"/>
+<TtcnPortTypeElement way="out" typeId="ITEM8"/>
+<TtcnPortTypeElement way="out" typeId="ITEM5"/>
 <TtcnPortTypeElement way="out" typeId="ITEM6"/>
-<TtcnPortTypeElement way="in" typeId="ITEM7"/>
+<TtcnPortTypeElement way="out" typeId="ITEM7"/>
+<TtcnPortTypeElement way="out" typeId="ITEM8"/>
+<TtcnPortTypeElement way="out" typeId="ITEM5"/>
 <TtcnPortTypeElement way="out" typeId="ITEM6"/>
-<TtcnPortTypeElement way="in" typeId="ITEM7"/>
+<TtcnPortTypeElement way="out" typeId="ITEM7"/>
+<TtcnPortTypeElement way="out" typeId="ITEM8"/>
+<TtcnPortTypeElement way="out" typeId="ITEM5"/>
 <TtcnPortTypeElement way="out" typeId="ITEM6"/>
-<TtcnPortTypeElement way="in" typeId="ITEM7"/>
+<TtcnPortTypeElement way="out" typeId="ITEM7"/>
+<TtcnPortTypeElement way="out" typeId="ITEM8"/>
+<TtcnPortTypeElement way="out" typeId="ITEM5"/>
+<TtcnPortTypeElement way="out" typeId="ITEM6"/>
+<TtcnPortTypeElement way="out" typeId="ITEM7"/>
+<TtcnPortTypeElement way="out" typeId="ITEM8"/>
 </Item>
-<Item id="ITEM6" type="type" name="sReqInfoCtrlZone" parentId="ITEM2" scope="none">
+<Item id="ITEM5" type="type" name="sEntryCarCtrl" parentId="ITEM2" scope="none">
 </Item>
-<Item id="ITEM7" type="type" name="sInfoCtrlZone" parentId="ITEM2" scope="none">
+<Item id="ITEM6" type="type" name="sOutCarCtrl" parentId="ITEM2" scope="none">
 </Item>
-<Item id="ITEM8" type="ttcn_component" name="System" parentId="ITEM1" scope="none">
+<Item id="ITEM7" type="type" name="sEntryCarZone" parentId="ITEM2" scope="none">
 </Item>
-<Item id="ITEM9" type="ttcn_port" name="cDisplay_Main" parentId="ITEM8" scope="none" instanciatedTypeId="ITEM5">
+<Item id="ITEM8" type="type" name="sOutCarZone" parentId="ITEM2" scope="none">
+</Item>
+<Item id="ITEM9" type="ttcn_port_type" name="cDisplay_Main_type" parentId="ITEM1" scope="none">
+<TtcnPortTypeElement way="out" typeId="ITEM10"/>
+<TtcnPortTypeElement way="in" typeId="ITEM11"/>
+<TtcnPortTypeElement way="out" typeId="ITEM10"/>
+<TtcnPortTypeElement way="in" typeId="ITEM11"/>
+<TtcnPortTypeElement way="out" typeId="ITEM10"/>
+<TtcnPortTypeElement way="in" typeId="ITEM11"/>
+<TtcnPortTypeElement way="out" typeId="ITEM10"/>
+<TtcnPortTypeElement way="in" typeId="ITEM11"/>
+<TtcnPortTypeElement way="out" typeId="ITEM10"/>
+<TtcnPortTypeElement way="in" typeId="ITEM11"/>
 </Item>
 </DictionaryObjects>
