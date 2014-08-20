@@ -17,7 +17,7 @@ module declaration_Signals
     
   /* Step 2. Declaration of the Signals */
   /* The PURE Signals are enumerated, signals 
-  with parameters are typre record */
+  with parameters are type record */
   /* The name of the signals must be the same that in 
   SDL system */
   
@@ -27,7 +27,7 @@ module declaration_Signals
   type record sReqInfoCtrlZone
   {
       numCtrl num_Ctrl,
-      numZone num_Zone,
+      numZone num_Zone
   }
   
   type record sInfoCtrlZone
@@ -53,4 +53,18 @@ module declaration_Signals
   {
       numZone num_Zone
   }
+  
+  
+  /*Channel cEnv_Main*/
+  
+  type enumerated sCreateCtrlZone {e_sCreateCtrlZone}
+  type enumerated sOkCreateCtrl {e_sOkCreateCtrl}
+  type enumerated sOkCreationZone {e_sOkCreationZone}
+  
+  type record sAddZone
+  {
+      numCtrl num_Ctrl,
+      spots totalSpots,
+      spots freeSpots
   }
+}

@@ -4,9 +4,35 @@
    
 module declaration_portsNComponent
 {
+    import from declaration_templates all;
+    import from declaration_Signals all;
+
+    type port cDisplay_Main_type message
+    {
+        out sReqInfoCtrlZone;
+        in sInfoCtrlZone    
+    }
+
+    type port cEnv_pTesting_type message
+    {
+        out sEntryCarCtrl;
+        out sOutCarCtrl;
+        out sEntryCarZone;
+        out sOutCarZone;    
+    }
     
-
-
-
-
+    type port cEnv_Main_type message
+    {
+        out sCreateCtrlZone;
+        out sAddZone;
+        in sOkCreateCtrl;
+        in sOkCreationZone;
+    }     
+    
+    type component System
+    {
+        port cDisplay_Main_type cDisplay_Main
+        port cEnv_pTesting_type cEnv_pTesting
+        port cEnv_Main_type cEnv_Main
+    }
 }

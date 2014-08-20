@@ -22,36 +22,6 @@
 </Symbol>
 </Symbol>
 
-<Link linkId="LINK425" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cDisplay_Main</Text>
-<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="y" position="-0.6" endType="midarrow">
-<Text id="1">[sReqInfoCtrlZone]</Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="w" position="-0.402580645161" endType="midarrow">
-<Text id="1">[sInfoCtrlZone]</Text>
-<Text id="2"></Text>
-</Connector>
-<LinkSegment orientation="h" length="-573"/>
-
-</Link>
-
-<Link linkId="LINK407" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cEnv_Zone</Text>
-<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="x" position="0.590909090909" endType="midarrow">
-<Text id="1">[sIR1_Zone,sIR2_Zone,
-sIR3_Zone,sIR4_Zone,
-sLoopInductive_Zone]</Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="n" position="0.247818499127" endType="midarrow">
-<Text id="1">[]</Text>
-<Text id="2"></Text>
-</Connector>
-<LinkSegment orientation="v" length="-264"/>
-
-</Link>
-
 <Link linkId="LINK414" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cEnv_EntryWay</Text>
 <Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
@@ -69,16 +39,15 @@ sDownBarrier]</Text>
 
 </Link>
 
-<Link linkId="LINK406" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cEnv_pTesting</Text>
-<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="x" position="-0.363636363636" endType="midarrow">
-<Text id="1">[sEntryCarCtrl,
-sOutCarCtrl,
-sEntryCarZone,
-sOutCarZone]</Text>
+<Link linkId="LINK407" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cEnv_Zone</Text>
+<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="x" position="0.590909090909" endType="midarrow">
+<Text id="1">[sIR1_Zone,sIR2_Zone,
+sIR3_Zone,sIR4_Zone,
+sLoopInductive_Zone]</Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="n" position="-0.155322862129" endType="midarrow">
+<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="n" position="0.247818499127" endType="midarrow">
 <Text id="1">[]</Text>
 <Text id="2"></Text>
 </Connector>
@@ -109,6 +78,37 @@ sExcEntryWay]</Text>
 <Text id="2"></Text>
 </Connector>
 <LinkSegment orientation="h" length="-572"/>
+
+</Link>
+
+<Link linkId="LINK425" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cDisplay_Main</Text>
+<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="y" position="-0.6" endType="midarrow">
+<Text id="1">[sReqInfoCtrlZone]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="w" position="-0.402580645161" endType="midarrow">
+<Text id="1">[sInfoCtrlZone]</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="h" length="-573"/>
+
+</Link>
+
+<Link linkId="LINK406" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cEnv_pTesting</Text>
+<Connector attachedSymbolId="SYMB28" type="chnl" isOutside="TRUE" side="x" position="-0.363636363636" endType="midarrow">
+<Text id="1">[sEntryCarCtrl,
+sOutCarCtrl,
+sEntryCarZone,
+sOutCarZone]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="n" position="-0.155322862129" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="-264"/>
 
 </Link>
 
@@ -160,20 +160,6 @@ sConfirmOutUser]</Text>
 
 </Link>
 
-<Link linkId="LINK423" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cEnv_Camera</Text>
-<Connector attachedSymbolId="SYMB33" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
-<Text id="1">[sPlateFromEnv]</Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="w" position="0.704516129032" endType="midarrow">
-<Text id="1">[]</Text>
-<Text id="2"></Text>
-</Connector>
-<LinkSegment orientation="h" length="-616"/>
-
-</Link>
-
 <Link linkId="LINK424" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cEnv_CR</Text>
 <Connector attachedSymbolId="SYMB33" type="chnl" isOutside="TRUE" side="y" position="-0.2" endType="midarrow">
@@ -185,6 +171,20 @@ sConfirmOutUser]</Text>
 <Text id="2"></Text>
 </Connector>
 <LinkSegment orientation="h" length="535"/>
+
+</Link>
+
+<Link linkId="LINK423" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cEnv_Camera</Text>
+<Connector attachedSymbolId="SYMB33" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[sPlateFromEnv]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="w" position="0.704516129032" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="h" length="-616"/>
 
 </Link>
 
@@ -269,7 +269,7 @@ ENDNEWTYPE;</Text>
 SYNONYM cNUMMAXCTRL INTEGER = 3;
 SYNONYM cMAX_ZONES INTEGER = 3;
 SYNONYM cNUMMAXZONES_SYSTEM INTEGER = cNUMMAXCTRL*cMAX_ZONES;
-SYNONYM cNUMMAXSPOTS INTEGER = 10;
+SYNONYM cNUMMAXSPOTS INTEGER = 500;
 SYNONYM cNUMMAXENTRYWAY INTEGER = 4;
 SYNONYM cNUMMAXUSERS INTEGER = 40;
 

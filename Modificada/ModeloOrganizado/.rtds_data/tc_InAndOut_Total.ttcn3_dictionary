@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
+
+<DictionaryObjects language="sdl">
+<Item id="ITEM1" type="ttcn_module" name="tc_InAndOut_Total" scope="current">
+<TtcnImportedModule moduleId="ITEM2"/>
+<TtcnImportedModule moduleId="ITEM3"/>
+<TtcnImportedModule moduleId="ITEM4"/>
+<TtcnImportedModule moduleId="ITEM5"/>
+</Item>
+<Item id="ITEM10" type="variable" name="RTDS_param3" parentId="ITEM8" scope="none" variableTypeName="spots" isFormalParam="TRUE">
+</Item>
+<Item id="ITEM11" type="variable" name="RTDS_param2" parentId="ITEM8" scope="none" variableTypeName="numZone" isFormalParam="TRUE">
+</Item>
+<Item id="ITEM12" type="ttcn_function" name="f_RequestInfoCtrl_Zone" parentId="ITEM1" scope="none" runsOn="ITEM7">
+</Item>
+<Item id="ITEM13" type="variable" name="RTDS_param1" parentId="ITEM12" scope="none" variableTypeName="numCtrl" isFormalParam="TRUE">
+</Item>
+<Item id="ITEM14" type="variable" name="RTDS_param2" parentId="ITEM12" scope="none" variableTypeName="numZone" isFormalParam="TRUE">
+</Item>
+<Item id="ITEM15" type="ttcn_test_case" name="tc_CreationZone" parentId="ITEM1" scope="none" runsOn="ITEM7" systemInterface="ITEM7">
+</Item>
+<Item id="ITEM16" type="variable" name="RTDS_param1" parentId="ITEM15" scope="none" variableTypeName="numCtrl" isFormalParam="TRUE">
+</Item>
+<Item id="ITEM17" type="variable" name="RTDS_param3" parentId="ITEM15" scope="none" variableTypeName="spots" isFormalParam="TRUE">
+</Item>
+<Item id="ITEM18" type="variable" name="RTDS_param2" parentId="ITEM15" scope="none" variableTypeName="spots" isFormalParam="TRUE">
+</Item>
+<Item id="ITEM19" type="ttcn_test_case" name="tc_EntryCar" parentId="ITEM1" scope="none" runsOn="ITEM7" systemInterface="ITEM7">
+</Item>
+<Item id="ITEM2" type="ttcn_module" name="declaration_portsNComponent" scope="package">
+</Item>
+<Item id="ITEM20" type="variable" name="RTDS_param1" parentId="ITEM19" scope="none" variableTypeName="numCtrl" isFormalParam="TRUE">
+</Item>
+<Item id="ITEM21" type="variable" name="RTDS_param2" parentId="ITEM19" scope="none" variableTypeName="numZone" isFormalParam="TRUE">
+</Item>
+<Item id="ITEM22" type="ttcn_function" name="f_OutCar" parentId="ITEM1" scope="none" runsOn="ITEM7">
+</Item>
+<Item id="ITEM23" type="variable" name="RTDS_param1" parentId="ITEM22" scope="none" variableTypeName="numCtrl" isFormalParam="TRUE">
+</Item>
+<Item id="ITEM24" type="variable" name="RTDS_param2" parentId="ITEM22" scope="none" variableTypeName="numZone" isFormalParam="TRUE">
+</Item>
+<Item id="ITEM25" type="ttcn_function" name="f_EntryCar" parentId="ITEM1" scope="none" runsOn="ITEM7">
+</Item>
+<Item id="ITEM26" type="variable" name="RTDS_param1" parentId="ITEM25" scope="none" variableTypeName="numCtrl" isFormalParam="TRUE">
+</Item>
+<Item id="ITEM27" type="variable" name="RTDS_param2" parentId="ITEM25" scope="none" variableTypeName="numZone" isFormalParam="TRUE">
+</Item>
+<Item id="ITEM28" type="ttcn_test_case" name="tc_CreationCtrl" parentId="ITEM1" scope="none" runsOn="ITEM7" systemInterface="ITEM7">
+</Item>
+<Item id="ITEM29" type="ttcn_test_case" name="tc_OutCar" parentId="ITEM1" scope="none" runsOn="ITEM7" systemInterface="ITEM7">
+</Item>
+<Item id="ITEM3" type="ttcn_module" name="declaration_templates" scope="package">
+</Item>
+<Item id="ITEM30" type="variable" name="RTDS_param1" parentId="ITEM29" scope="none" variableTypeName="numCtrl" isFormalParam="TRUE">
+</Item>
+<Item id="ITEM31" type="variable" name="RTDS_param2" parentId="ITEM29" scope="none" variableTypeName="numZone" isFormalParam="TRUE">
+</Item>
+<Item id="ITEM4" type="ttcn_module" name="declaration_Signals" scope="package">
+</Item>
+<Item id="ITEM5" type="ttcn_module" name="In_Out_Cars" scope="package">
+</Item>
+<Item id="ITEM6" type="ttcn_test_case" name="tc_initialization" parentId="ITEM1" scope="none" runsOn="ITEM7" systemInterface="ITEM7">
+</Item>
+<Item id="ITEM7" type="ttcn_component" name="System" parentId="ITEM2" scope="none">
+</Item>
+<Item id="ITEM8" type="ttcn_test_case" name="tc_VerifyFreeSpots" parentId="ITEM1" scope="none" runsOn="ITEM7" systemInterface="ITEM7">
+</Item>
+<Item id="ITEM9" type="variable" name="RTDS_param1" parentId="ITEM8" scope="none" variableTypeName="numCtrl" isFormalParam="TRUE">
+</Item>
+</DictionaryObjects>

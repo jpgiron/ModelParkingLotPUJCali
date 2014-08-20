@@ -5,4 +5,26 @@
 <DictionaryObjects language="sdl">
 <Item id="ITEM1" type="ttcn_module" name="declaration_Signals" scope="current">
 </Item>
+<Item id="ITEM10" type="type" name="sCreateCtrlZone" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM11" type="ttcn_function" name="&amp;receive" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM12" type="type" name="sAddZone" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM2" type="type" name="sReqInfoCtrlZone" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM3" type="type" name="sEntryCarCtrl" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM4" type="type" name="sOutCarZone" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM5" type="type" name="sOkCreateCtrl" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM6" type="type" name="sOutCarCtrl" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM7" type="type" name="sEntryCarZone" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM8" type="type" name="sOkCreationZone" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM9" type="type" name="sInfoCtrlZone" parentId="ITEM1" scope="none">
+</Item>
 </DictionaryObjects>

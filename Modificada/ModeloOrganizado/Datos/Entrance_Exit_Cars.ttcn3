@@ -1,0 +1,14 @@
+/*These are the definitions of the array*/
+module Entrance_Exit_Cars {
+type integer generic_array_data[4];
+const integer length_array_data:=4;
+const generic_array_data aEntryCar:={1, 1, 1, 1};
+const generic_array_data aCtrlEntryCar:={0, 0, 1, 1};
+const generic_array_data aZoneEntryCar:={0, 1, 0, 1};
+const generic_array_data aOutCar:={0, 1, 0, 1};
+const generic_array_data aCtrlOutCar:={0, 0, 1, 1};
+const generic_array_data aZoneOutCar:={0, 1, 0, 1};
+const generic_array_data aExpectedSpots:={299, 300, 299, 300};
+const generic_array_data aCtrlExpected:={0, 0, 1, 1};
+const generic_array_data aZoneExpected:={0, 1, 0, 1};
+}

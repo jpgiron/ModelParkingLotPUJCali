@@ -38,4 +38,17 @@ module declaration_templates
     {
         num_Zone:=p_numZone
     }     
+    
+    /*Channel cEnv_Main */
+    
+    template sCreateCtrlZone a_sCreateCtrlZone:=?
+    template sOkCreationZone a_sOkCreationZone:=?
+    template sOkCreateCtrl a_sOkCreateCtrl:=?
+    
+    template sAddZone a_sAddZone(numCtrl p_numCtrl,spots p_totalSpots,spots p_freeSpots):=
+    {
+        num_Ctrl:=p_numCtrl,
+        totalSpots:=p_totalSpots,
+        freeSpots:=p_freeSpots
+    }
 }    

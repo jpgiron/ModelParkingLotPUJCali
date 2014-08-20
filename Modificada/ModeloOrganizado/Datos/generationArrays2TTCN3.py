@@ -23,6 +23,7 @@ def getData(nFile):
     zone1=1
     ctrl0=0
     ctrl1=1
+    CTRL0ZONE0=3
     dataBook=[]
     for sheet_index in range(1,4):
         sheet=book.sheet_by_index(sheet_index)
@@ -33,29 +34,23 @@ def getData(nFile):
         for row_index in range(sheet.nrows):
             col_index=0
             for col_index in range(sheet.ncols):
-
-
                 if (row_index>0):
-                    if ( col_index==3 ):
+                    if ( col_index==CTRL0ZONE0 ):
                         value_Cars_WholeSheet.append(sheet.cell(row_index,col_index).value)
                         value_Ctrl_WholeSheet.append(ctrl0)
                         value_Zone_WholeSheet.append(zone0)
-                        #valueWholeSheet.append(valueTuple)
                     elif ( col_index==4 ):
                         value_Cars_WholeSheet.append(sheet.cell(row_index,col_index).value)
                         value_Ctrl_WholeSheet.append(ctrl0)
                         value_Zone_WholeSheet.append(zone1)
-                        #valueWholeSheet.append(valueTuple)
                     elif ( col_index==5 ):
                         value_Cars_WholeSheet.append(sheet.cell(row_index,col_index).value)
                         value_Ctrl_WholeSheet.append(ctrl1)
                         value_Zone_WholeSheet.append(zone0)
-                        #valueWholeSheet.append(valueTuple)
                     elif ( col_index==6 ):
                         value_Cars_WholeSheet.append(sheet.cell(row_index,col_index).value)
                         value_Ctrl_WholeSheet.append(ctrl1)
                         value_Zone_WholeSheet.append(zone1)
-                        #valueWholeSheet.append(valueTuple)
         dataBook.append(value_Cars_WholeSheet)
         dataBook.append(value_Ctrl_WholeSheet)
         dataBook.append(value_Zone_WholeSheet)
@@ -64,7 +59,7 @@ def getData(nFile):
 def conversion2TTCN3(dataWorkBook,nameTTCN3):
 
     ###CONSTANTS###
-    #nameArrays_TTCN3=['aEntryCars2Zone','aOutCars2Zone','aFreeSpotsExpecInZone']
+    
     nameArrays_TTCN3=['aEntryCar','aCtrlEntryCar','aZoneEntryCar','aOutCar','aCtrlOutCar','aZoneOutCar',
                       'aExpectedSpots','aCtrlExpected','aZoneExpected']
     Length_Vec_Datas=len(dataWorkBook)
@@ -87,8 +82,7 @@ def conversion2TTCN3(dataWorkBook,nameTTCN3):
         dataStr=str(data).replace("[","{")
         dataStr=dataStr.replace("]","}")
         dataStr=dataStr.replace(".0","")
-        fileTTCN3.write("const generic_array_data "+nameArrays_TTCN3[i]+
-                        ":="+dataStr+";\n")
+        fileTTCN3.write("const generic_array_data "+nameArrays_TTCN3[i]+":="+dataStr+";\n")
     fileTTCN3.write("}")
     fileTTCN3.close()
 
